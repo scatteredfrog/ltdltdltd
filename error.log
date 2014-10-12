@@ -1,0 +1,17 @@
+[Sun Oct 05 10:41:48 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Sun Oct 05 10:41:48 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Sat Oct 11 23:41:21 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Sat Oct 11 23:41:21 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Sat Oct 11 23:46:39 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function link_tag() in /Volumes/Junk/Web Sites/LogTheDog/rooooo/views/welcome_message.php on line 67
+[Sat Oct 11 23:46:41 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function link_tag() in /Volumes/Junk/Web Sites/LogTheDog/rooooo/views/welcome_message.php on line 67
+[Sat Oct 11 23:48:51 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:48:53 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:49:16 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:49:17 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:49:25 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:49:36 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:50:05 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:50:06 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:50:51 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css
+[Sat Oct 11 23:51:36 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sat Oct 11 23:52:15 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
