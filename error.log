@@ -15,3 +15,13 @@
 [Sat Oct 11 23:50:51 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css
 [Sat Oct 11 23:51:36 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
 [Sat Oct 11 23:52:15 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
+[Sun Oct 12 00:32:28 2014] [error] [client 127.0.0.1] PHP Parse error:  parse error in /Volumes/Junk/Web Sites/LogTheDog/rooooo/views/welcome_message.php on line 70
+[Sun Oct 12 00:32:30 2014] [error] [client 127.0.0.1] PHP Parse error:  parse error in /Volumes/Junk/Web Sites/LogTheDog/rooooo/views/welcome_message.php on line 70
+[Sun Oct 12 08:53:48 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Sun Oct 12 08:53:48 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Sat Oct 18 10:03:22 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Sat Oct 18 11:34:32 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon-120x120-precomposed.png
+[Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon-120x120.png
+[Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon.png
+[Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon.png

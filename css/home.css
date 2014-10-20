@@ -1,0 +1,38 @@
+#dog_container{
+        -webkit-box-shadow: 0 0 8px #D0D0D0;
+        background-image: url('/assets/images/grass_bg.jpg');
+        border-radius: 8px;
+        box-shadow: 3px 8px 5px 2px #D0D0D0;
+}
+
+#dog_container_mobile {
+        -webkit-box-shadow: 0 0 8px #D0D0D0;
+        background-image: url('/assets/images/grass_bg.jpg');
+        box-shadow: 3px 8px 5px 2px #D0D0D0;
+        width:100%;
+}
+
+#logo {
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    text-align: center;
+}
+
+#login_area { 
+    position: relative;
+    top: 10px;
+    border: #aeaeae 2px solid;
+    border-radius: 5px;
+}
+
+.formField {
+    position: relative;
+    width: 220px;
+    float: none;
+    margin: 0 auto;
+}
+
+.formField input { width: 220px; }
+
+#ltd_home_form { padding-top: 8px; }
+#ltd_home_form_button, #ltd_home_form_create { width: 220px; margin-bottom: 12px; }
