@@ -27,7 +27,7 @@
     </div>
     
     <div class='container' id='ltd_home_form'>
-        <?= form_open('home/login'); ?>
+        <?= form_open('login/log_in'); ?>
         <div id='login_email' class='row-fluid'>
             <div class='formField span12'>
                 <h4>

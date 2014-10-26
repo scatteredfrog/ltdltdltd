@@ -33,4 +33,10 @@ $(document).ready(function () {
         alert("CREATE ACCOUNT");
     });
 
+    $('#ltd_email,#ltd_password').on('keydown',function(e) {
+        if (e.keyCode == 13) {
+            e.preventDefault();
+            $('#ltd_home_form_button').trigger('click');
+        }
+    })
 });
