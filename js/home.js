@@ -11,6 +11,21 @@ $(document).ready(function () {
         if (errors != '') {
             $('#ltd_error_modal_text').html(errors);
             $('#ltd_error_modal').modal('show');
+        } else {
+            // VALIDATION PASSED; CHECK CREDENTIALS
+            var email = $('#ltd_email').val();
+            var password = $('#ltd_password').val();
+            var login_post_data = {
+                'email': email,
+                'password': password
+            };
+            $.post('/index.php/login/log_in',login_post_data,function(result) {
+                var login_result = JSON.parse(result);
+                if (typeof login_result.error != 'undefined') {
+                    $('#ltd_error_modal_text').html("You entered an invalid e-mail or password.");
+                    $('#ltd_error_modal').modal('show');
+                }
+            });
         }
     });
     

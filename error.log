@@ -25,3 +25,110 @@
 [Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon-120x120.png
 [Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon.png
 [Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon.png
+[Thu Oct 23 20:56:33 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
+[Thu Oct 23 22:37:56 2014] [error] [client 127.0.0.1] TEST
+[Thu Oct 23 22:42:28 2014] [error] [client 127.0.0.1] client denied by server configuration: /Volumes/Junk/Web Sites/LogTheDog/rooooo/controllers/login.php
+[Thu Oct 23 22:42:59 2014] [error] [client 127.0.0.1] client denied by server configuration: /Volumes/Junk/Web Sites/LogTheDog/rooooo/controllers/loginf.php
+[Thu Oct 23 22:49:54 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function post() on a non-object in /Volumes/Junk/Web Sites/LogTheDog/rooooo/controllers/login.php on line 15, referer: http://local.logthedog.com/
+[Thu Oct 23 22:50:26 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function helper() on a non-object in /Volumes/Junk/Web Sites/LogTheDog/rooooo/controllers/login.php on line 14, referer: http://local.logthedog.com/
+[Thu Oct 23 22:50:40 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function helper() on a non-object in /Volumes/Junk/Web Sites/LogTheDog/rooooo/controllers/login.php on line 14, referer: http://local.logthedog.com/
+[Thu Oct 23 23:03:37 2014] [error] [client 127.0.0.1] FIRE
+[Thu Oct 23 23:03:37 2014] [error] [client 127.0.0.1] GOT HERE
+[Thu Oct 23 23:03:37 2014] [error] [client 127.0.0.1] 
+[Thu Oct 23 23:03:37 2014] [error] [client 127.0.0.1] d41d8cd98f00b204e9800998ecf8427e
+[Thu Oct 23 23:03:37 2014] [error] [client 127.0.0.1] GOT HERE
+[Thu Oct 23 23:05:00 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:00 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:00 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:00 2014] [error] [client 127.0.0.1] 0934444f88087355ae9edc3beb9ac092, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:00 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:12 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:12 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:12 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:12 2014] [error] [client 127.0.0.1] 0934444f88087355ae9edc3beb9ac092, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:12 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:13 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:13 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:13 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:13 2014] [error] [client 127.0.0.1] 0934444f88087355ae9edc3beb9ac092, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:13 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:39 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:39 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:39 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:39 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:39 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:41 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:41 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:41 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:41 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:41 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:05:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:41 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:41 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:41 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:41 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:41 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:42 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:53 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:54 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:54 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:54 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:54 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:06:54 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] FIRE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] awfewa@wefwf.ergr, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] 45e4812014d83dde5666ebdf5a8ed1ed, referer: http://local.logthedog.com/
+[Thu Oct 23 23:07:08 2014] [error] [client 127.0.0.1] GOT HERE, referer: http://local.logthedog.com/
