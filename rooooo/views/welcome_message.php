@@ -14,7 +14,6 @@
         echo '<script src="'.base_url().'js/home.js"></script>';
     ?>
 
-    <div style='margin-top: 15px;' class='desktop-only'></div>
     <div id="dog_container" class='container desktop-only'>
         <div id='logo' class='span12'>
             <?= img('/assets/images/RuthieMusicSized75.png'); ?>

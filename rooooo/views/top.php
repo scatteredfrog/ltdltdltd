@@ -62,8 +62,47 @@
 <body>
     <?
         echo link_tag(base_url().'css/main.css');
+        echo link_tag(base_url().'css/dauber-navbar.css');
         echo link_tag(base_url().'css/bootstrap-theme.min.css');
         echo link_tag(base_url().'css/bootstrap.min.css');
+        echo link_tag(base_url().'css/glyphicons.css');
+        echo link_tag(base_url().'css/bootstrap.icon-large.css');
         echo '<script src="'.base_url().'js/jquery-2.1.1.min.js"></script>';
         echo '<script src="'.base_url().'js/bootstrap.min.js"></script>';
     ?>
+
+    <div class='dauber-navbar'>
+        <div class='dn-item'>
+            <span class='icon-home icon-white'></span><span class='hidden-xs'> Home</span>
+        </div>
+        <div class='dn-item'>
+            <span class='icon-lock icon-white'></span><span class='hidden-xs'> Privacy Policy</span>
+        </div>
+        <div class='dn-item'>
+            <span class='dn-dog'></span><span class='hidden-xs'> About Log The Dog</span>
+        </div>
+        <div class='dn-item'>
+            <span class='dn-msg'></span><span class='hidden-xs'> Contact Us</span>
+        </div>
+        <?
+            if ($this->session->userdata('firstName') === 'Guest') {
+        ?>
+                <div class='dn-item'>
+                    <span class='icon-user icon-white'></span><span class='hidden-xs'> Create Account</span>
+                </div>
+        <?
+            } else {
+        ?>
+                <div class='dn-item'>
+                    <span class='dn-ext'></span><span class='hidden-xs'> Log Out</span>
+                </div>
+        <?
+            }
+        ?>
+        <div class='dn-item' style="float: right;">
+            Welcome, <? echo $this->session->userdata('firstName'); ?>!
+        </div>
+    </div>
+    
+    <div style='margin-top: 50px;' class='desktop-only'></div>
+    <div style='margin-top: 40px;' class='mobile-only'></div>

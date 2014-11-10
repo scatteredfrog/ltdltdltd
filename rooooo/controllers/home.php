@@ -4,6 +4,10 @@ class Home extends CI_Controller {
 
         public function __construct() {
             parent::__construct();
+            $user_first = $this->session->userdata('firstName');
+            if (empty($user_first)) {
+                $this->session->set_userdata('firstName','Guest');
+            }
         }
         
 	public function index() {
