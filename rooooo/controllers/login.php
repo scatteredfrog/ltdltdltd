@@ -19,4 +19,14 @@ class Login extends CI_Controller {
             $login_attempt = $this->login_model->checkLoginData($email,$password);
             echo json_encode($login_attempt);
         }
+        
+        public function log_out() {
+            $this->session->sess_destroy();
+            $this->session->set_userdata('firstName','Guest');
+            if ($this->session->userdata('firstName') === 'Guest') {
+                echo true;
+            } else {
+                echo false;
+            }
+        }
 }

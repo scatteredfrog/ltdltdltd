@@ -5,11 +5,6 @@
             'content' => 'Log in'
         );
 
-        $create_array = array(
-            'name' => 'ltd_home_form_create',
-            'id' => 'ltd_home_form_create',
-            'content' => 'Create an account'
-        );
         echo link_tag(base_url().'css/home.css');
         echo '<script src="'.base_url().'js/home.js"></script>';
     ?>
@@ -45,12 +40,6 @@
             <div class='formField span12'>
                 <?
                     echo form_button($submit_array);
-                ?>
-        </div>
-        <div class='row-fluid'>
-            <div class='formField span12'>
-                <?
-                    echo form_button($create_array);
                 ?>
         </div>
         <?= form_close(); ?>

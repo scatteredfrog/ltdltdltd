@@ -69,6 +69,7 @@
         echo link_tag(base_url().'css/bootstrap.icon-large.css');
         echo '<script src="'.base_url().'js/jquery-2.1.1.min.js"></script>';
         echo '<script src="'.base_url().'js/bootstrap.min.js"></script>';
+        echo '<script src="'.base_url().'js/top.js"></script>';
     ?>
 
     <div class='dauber-navbar'>
@@ -93,7 +94,7 @@
         <?
             } else {
         ?>
-                <div class='dn-item'>
+                <div class='dn-item' onclick='logOut();'>
                     <span class='dn-ext'></span><span class='hidden-xs'> Log Out</span>
                 </div>
         <?
