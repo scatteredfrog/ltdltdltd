@@ -33,7 +33,10 @@
     margin: 0 auto;
 }
 
-.formField input { width: 220px; }
+.formField input[type='text'], .formField input[type='email'], .formField input[type='password'] { width: 220px; }
+#ltd_remember {
+    margin-left: 0!important;
+}
 
 #ltd_home_form { padding-top: 8px; }
 #ltd_home_form_button, #ltd_home_form_create { width: 220px; margin-bottom: 12px; }

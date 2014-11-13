@@ -20,16 +20,22 @@
                 }
             } else {
                 // user does not exist
+                unset($query_result);
                 $query_result['error'] = true;
+                $query_result['success'] = false;
                 $this->session->set_userdata('nsu',true);
             }
             
-            if (isset($query_result['password']) && $query_result['password'] !== $password) {
+            if (isset($query_result['password']) && $query_result['password'] !== $password && !$query_result['error']) {
                 // incorrect password
                 $this->session->unset_userdata('nsu');
+                unset($query_result);
+                $query_result['success'] = false;
                 $query_result['error'] = true;
-            } else {
+            } else if (!isset($query_result['error']) || !$query_result['error']) {
                 $query_result['logged_in'] = true;
+                $query_result['success'] = true;
+                $this->session->unset_userdata('nsu');
                 $this->session->set_userdata($query_result);
             }
             
