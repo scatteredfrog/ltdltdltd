@@ -63,3 +63,11 @@ body {    background-color: #ffffe4; }
     -webkit-transform: none !important;
     transform: none !important;
 }
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-left-20 {
+    margin-left: 20px;
+}
