@@ -2,7 +2,8 @@
         $submit_array = array(
             'name' => 'ltd_home_form_button',
             'id' => 'ltd_home_form_button',
-            'content' => 'Log in'
+            'content' => 'Log in',
+            'class' => 'ltdButton'
         );
 
         echo link_tag(base_url().'css/home.css');
@@ -34,6 +35,12 @@
                 <h4>
                     <input id='ltd_password' type='password' placeholder='Your password' />
                 </h4>
+            </div>
+        </div>
+        <div class='row-fluid margin-bottom-10' id='login_remember'>
+            <div class='checkbox formField span12'>
+                <input id='ltd_remember' type='checkbox' /> <span class="margin-left-20">Remember Me</span>
+            </div>
             </div>
         </div>
         <div class='row-fluid'>

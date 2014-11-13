@@ -15,11 +15,14 @@ $(document).ready(function () {
             // VALIDATION PASSED; CHECK CREDENTIALS
             var email = $('#ltd_email').val();
             var password = $('#ltd_password').val();
+            var remember = $('#ltd_remember').is(':checked');
             var login_post_data = {
                 'email': email,
-                'password': password
+                'password': password,
+                'remember': remember
             };
             $.post('/index.php/login/log_in',login_post_data,function(result) {
+                console.log(result);
                 var login_result = JSON.parse(result);
                 if (typeof login_result.error != 'undefined') {
                     $('#ltd_error_modal_text').html("You entered an invalid e-mail or password.");
