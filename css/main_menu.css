@@ -1,0 +1,45 @@
+.menuBox {
+    background-color: yellow;
+    border-color: #000;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.menuText {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .menuText {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    .menuBox {
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+@media (min-width: 512px) {
+    .menuText {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .menuBox {
+        margin: 5px;
+        padding: 5px;
+    }
+}
+@media (max-width: 511px) {
+    .menuText {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .menuBox {
+        margin: 3px;
+        padding: 3px;
+    }
+}

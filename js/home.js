@@ -22,11 +22,13 @@ $(document).ready(function () {
                 'remember': remember
             };
             $.post('/index.php/login/log_in',login_post_data,function(result) {
-                console.log(result);
                 var login_result = JSON.parse(result);
                 if (typeof login_result.error != 'undefined') {
                     $('#ltd_error_modal_text').html("You entered an invalid e-mail or password.");
                     $('#ltd_error_modal').modal('show');
+                } else if (typeof login_result.logged_in != 'undefined' && login_result.logged_in) {
+                    // User successfully logged in
+                    location.href = '/index.php/home/main_menu';
                 }
             });
         }

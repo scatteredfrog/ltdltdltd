@@ -35,6 +35,7 @@ class Login extends CI_Controller {
         
         public function log_out() {
             $this->session->sess_destroy();
+            $this->session->set_userdata('loggedOut',true);
             $this->session->set_userdata('firstName','Guest');
             if ($this->session->userdata('firstName') === 'Guest') {
                 echo true;
