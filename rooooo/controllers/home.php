@@ -32,6 +32,7 @@ class Home extends CI_Controller {
         
         //session dump
         public function habbityhabbityhoohoohoo() {
+            return;
             $all_stuff = $this->session->all_userdata();
             echo "<pre>";
             echo print_r($all_stuff,1);

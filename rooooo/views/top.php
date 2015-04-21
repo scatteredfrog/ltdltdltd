@@ -60,7 +60,7 @@
 	</style>
 </head>
 <body>
-    <?
+    <?php
         echo link_tag(base_url().'css/main.css');
         echo link_tag(base_url().'css/dauber-navbar.css');
         echo link_tag(base_url().'css/bootstrap-theme.min.css');
@@ -85,23 +85,23 @@
         <div class='dn-item'>
             <span class='dn-msg'></span><span class='hidden-xs'> Contact Us</span>
         </div>
-        <?
+        <?php
             if ($this->session->userdata('firstName') === 'Guest') {
         ?>
                 <div class='dn-item'>
                     <span class='icon-user icon-white'></span><span class='hidden-xs'> Create Account</span>
                 </div>
-        <?
+        <?php
             } else {
         ?>
                 <div class='dn-item' onclick='logOut();'>
                     <span class='dn-ext'></span><span class='hidden-xs'> Log Out</span>
                 </div>
-        <?
+        <?php
             }
         ?>
         <div class='dn-item' style="float: right;">
-            Welcome, <? echo $this->session->userdata('firstName'); ?>!
+            Welcome, <?= $this->session->userdata('firstName'); ?>!
         </div>
     </div>
     

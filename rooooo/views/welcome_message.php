@@ -1,4 +1,4 @@
-    <?
+    <?php
         $submit_array = array(
             'name' => 'ltd_home_form_button',
             'id' => 'ltd_home_form_button',
