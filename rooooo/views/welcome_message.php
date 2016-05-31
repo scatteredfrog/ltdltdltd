@@ -1,4 +1,4 @@
-    <?php
+    <?
         $submit_array = array(
             'name' => 'ltd_home_form_button',
             'id' => 'ltd_home_form_button',
@@ -11,12 +11,12 @@
     ?>
 
     <div id="dog_container" class='container desktop-only'>
-        <div id='logo' class='span12'>
+        <div id='logo' class='span12 no-select'>
             <?= img('/assets/images/RuthieMusicSized75.png'); ?>
         </div>
     </div>
     <div id="dog_container_mobile" class='container mobile-only'>
-        <div id='logo' class='span12'>
+        <div id='logo' class='span12 no-select'>
             <?= img('/assets/images/RuthieMusicSized75.png'); ?>
         </div>
     </div>

@@ -48,10 +48,26 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'mysql.fab4it.com';
-$db['default']['username'] = 'fab4itcom';
-$db['default']['password'] = '4baf09282004db';
-$db['default']['database'] = 'fab4it_com';
+$rt = $_SERVER['DOCUMENT_ROOT'];
+$hs = $_SERVER['HTTP_HOST'];
+
+if (substr($hs,0,5) === 'local' && stristr($rt,'Junk')) {
+    $db['default']['hostname'] = 'localhost';
+    $db['default']['username'] = 'root';
+    $db['default']['password'] = '3legsramon';
+    $db['default']['database'] = 'pfpdb';
+} else if (substr($hs,0,5) === 'local' && (stristr($rt,'Junk') || stristr($rt,'Coding'))) {
+    $db['default']['hostname'] = 'localhost';
+    $db['default']['username'] = 'root';
+    $db['default']['password'] = 'sqflirzel';
+    $db['default']['database'] = 'fab4it_com';    
+} else {
+    $db['default']['hostname'] = 'mysql.fab4it.com';
+    $db['default']['username'] = 'fab4itcom';
+    $db['default']['password'] = '4baf09282004db';
+    $db['default']['database'] = 'fab4it_com';
+}
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
