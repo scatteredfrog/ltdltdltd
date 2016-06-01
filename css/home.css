@@ -40,3 +40,7 @@
 
 #ltd_home_form { padding-top: 8px; }
 #ltd_home_form_button, #ltd_home_form_create { width: 220px; margin-bottom: 12px; }
+.bottom5 { margin-bottom: 5px; }
+.top5 { margin-top: 5px; }
+.lpad3 { padding-left: 3px; }
+.rpad3 { padding-right: 3px; }
