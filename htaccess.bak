@@ -1,0 +1,1 @@
+php_value include_path ".:home/scourtn3/logthedog.com/ZendFramework-2.1.0/library"
