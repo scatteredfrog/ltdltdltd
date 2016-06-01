@@ -62,6 +62,7 @@
 <body>
     <?php
         echo link_tag(base_url().'css/main.css');
+        echo link_tag(base_url().'css/home.css');
         echo link_tag(base_url().'css/dauber-navbar.css');
         echo link_tag(base_url().'css/bootstrap-theme.min.css');
         echo link_tag(base_url().'css/bootstrap.min.css');
