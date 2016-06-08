@@ -8,18 +8,9 @@
 
         echo link_tag(base_url().'css/home.css');
         echo '<script src="'.base_url().'js/home.js"></script>';
+        $this->load->view('ruthie_graphic');
     ?>
 
-    <div id="dog_container" class='container desktop-only'>
-        <div id='logo' class='span12 no-select'>
-            <?= img('/assets/images/RuthieMusicSized75.png'); ?>
-        </div>
-    </div>
-    <div id="dog_container_mobile" class='container mobile-only'>
-        <div id='logo' class='span12 no-select'>
-            <?= img('/assets/images/RuthieMusicSized75.png'); ?>
-        </div>
-    </div>
     
     <div class='container' id='ltd_home_form'>
         <?= form_open('login/log_in'); ?>

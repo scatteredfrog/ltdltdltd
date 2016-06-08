@@ -74,9 +74,11 @@
     ?>
 
     <div class='dauber-navbar no-select'>
-        <div class='dn-item'>
-            <span class='icon-home icon-white'></span><span class='hidden-xs'> Home</span>
-        </div>
+        <a href="/">
+            <div class='dn-item'>
+                <span class='icon-home icon-white'></span><span class='hidden-xs'> Home</span>
+            </div>
+        </a>
         <div class='dn-item'>
             <span class='icon-lock icon-white'></span><span class='hidden-xs'> Privacy Policy</span>
         </div>

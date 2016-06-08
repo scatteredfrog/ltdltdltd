@@ -45,3 +45,46 @@ $(document).ready(function () {
         }
     })
 });
+
+function submitContact() {
+    var errors = [];
+    var email_regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    // validate name
+    if ($.trim($('#cu_name').val()).length < 2) {
+        errors.push('Please provide a valid name.<br />&nbsp;<br />');
+    }
+    
+    // validate e-mail
+    if (!email_regex.test($.trim($('#cu_email').val()))) {
+        errors.push('Please provide a valid e-mail address.<br />&nbsp;<br />');
+    }
+    
+    // validate comments
+    if ($.trim($('#cu_comments').val()).length < 10) {
+        errors.push('We need helpful comments -- at least ten characters!');
+    }
+    
+    if (errors.length) {
+        $('#ltd_error_modal_text').html(errors);
+        $('#ltd_error_modal').modal('show');
+    } else {
+        var contact_post = {
+            'name' : $.trim($('#cu_name').val()),
+            'email' : $.trim($('#cu_email').val()),
+            'comment' : $.trim($('#cu_comments').val()),
+            'csrf_test_name' : $('[name=csrf_test_name]').val()
+        };
+        $.post('/index.php/home/sendContact', contact_post, function(data) {
+            if (!data.success) {
+                $('#ltd_error_modal_text').html(data.errors);
+                $('#ltd_error_modal').modal('show');
+            } else {
+                $('#ltd_confirm_modal').modal('show');
+            }
+        },'json');
+    }
+    
+    $('#ltd_confirm_modal').on('hidden.bs.modal', function () {
+        $('#cu_name,#cu_email,#cu_comments').val('');
+    });
+}

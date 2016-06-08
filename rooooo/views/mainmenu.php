@@ -1,4 +1,4 @@
-<?php
+    <?php
     echo link_tag(base_url().'css/main_menu.css');
 ?>
 

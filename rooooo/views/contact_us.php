@@ -1,13 +1,18 @@
 <?php
     echo link_tag(base_url().'css/formValidation.css');
-    echo '<script src="'.base_url().'js/base.js"></script>';
-    echo '<script src="'.base_url().'js/helper.js"></script>';
+    echo link_tag(base_url().'css/main.css');
     echo '<script src="'.base_url().'js/home.js"></script>';
-    echo '<script src="'.base_url().'js/home.js"></script>';
-    echo '<script src="'.base_url().'js/home.js"></script>';
+    $this->load->view('ruthie_graphic');
 ?>
 <div id="cactus" class="container">
-    <form class="form-inline">
+    <?php
+        $form_attribs = array(
+            'class' => 'form-inline',
+            'id' => 'ltd_contact_form'
+        );
+        echo form_open('',$form_attribs);
+    ?>
+        <div id="cactus" class="container">
         <div class="row">
             <h1>Contact Us</h1>
         </div>
@@ -16,9 +21,7 @@
                 Your name:
             </div>
             <div class="col-xs-10 bottom5 top5">
-                <input type="text" class="col-xs-2 rpad3" id="cu_first_name" name="cu_first_name" placeholder="First Name" />
-                <span class="col-xs-1"></span>
-                <input type="text" class="col-xs-2 rpad3" id="cu_last_name" name="cu_last_name" placeholder="Last Name" />
+                <input type="text" class="col-xs-5" id="cu_name" name="cu_name" placeholder="Name" />
             </div>
         </div>
         <div class="row">
@@ -37,5 +40,12 @@
                 <textarea class="col-xs-5" id="cu_comments" name="cu_comments"></textarea>
             </div>
         </div>
-    </form>
+        <div class="row">
+            <div class="col-xs-2 bottom5 top5">
+            </div>
+            <div class="col-xs-10 bottom5 top5">
+                <input type="button" value="Submit" onclick="submitContact();"/>
+            </div>
+        </div>
+    <?= form_close(); ?>
 </div>

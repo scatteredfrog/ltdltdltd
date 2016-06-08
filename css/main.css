@@ -22,7 +22,17 @@ body {    background-color: #ffffe4; }
 .modal-dialog { width: 300px !important; }
 #ltd_error_modal_ok { width: 100%; font-weight: bold; }
 
-.modal-header {
+#ltd_confirm_modal .modal-header {
+    background-color: greenyellow;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#ltd_confirm_modal #ltd_error_modal_subheader { text-align: center; }
+
+#ltd_error_modal .modal-header {
+    text-align: center;
     background-color: red;
     color: yellow;
     border-radius: 5px;
