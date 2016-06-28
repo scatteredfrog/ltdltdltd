@@ -78,7 +78,11 @@
         $this->load->helper('form');
         echo form_open();
     ?>
+    <? if ($this->session->userdata('logged_in')) : ?>
+        <a href="/home/main_menu">
+    <? else: ?>
         <a href="/">
+    <? endif ?>
             <div class='dn-item'>
                 <span class='icon-home icon-white'></span><span class='hidden-xs'> Home</span>
             </div>
