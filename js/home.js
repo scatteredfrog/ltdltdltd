@@ -19,7 +19,8 @@ $(document).ready(function () {
             var login_post_data = {
                 'email': email,
                 'password': password,
-                'remember': remember
+                'remember': remember,
+                'csrf_test_name' : $('[name=csrf_test_name]').val()
             };
             $.post('/index.php/login/log_in',login_post_data,function(result) {
                 var login_result = JSON.parse(result);
@@ -34,16 +35,13 @@ $(document).ready(function () {
         }
     });
     
-    $('#ltd_home_form_create').on('click', function() {
-        alert("CREATE ACCOUNT");
-    });
-
     $('#ltd_email,#ltd_password').on('keydown',function(e) {
         if (e.keyCode == 13) {
             e.preventDefault();
             $('#ltd_home_form_button').trigger('click');
         }
-    })
+    });
+    
 });
 
 function submitContact() {
@@ -87,4 +85,39 @@ function submitContact() {
     $('#ltd_confirm_modal').on('hidden.bs.modal', function () {
         $('#cu_name,#cu_email,#cu_comments').val('');
     });
+}
+
+function submitCreate() {
+    var create_post = {
+        'user_email': $('#user_email').val(),
+        'user_remail': $('#user_remail').val(),
+        'user_name' :  $('#user_name').val(),
+        'user_password' : $('#user_password').val(),
+        'user_repass' : $('#re_pass').val(),
+        'csrf_test_name' : $('[name=csrf_test_name]').val()
+    };
+    $.post('/index.php/login/create_account', create_post, function(data) {
+        // DO SOMETHING
+        if (data.success) {
+            var conf_text = 'Thank you. Your account has been created, and ';
+            conf_text += 'you will be logged in.';
+            $('#ltd_confirm_modal_subheader').text(conf_text);
+            var login_json = {
+                'email' : $('#user_email').val(),
+                'csrf_test_name' : $('[name=csrf_test_name]').val(),
+                'password' : $('#user_password').val()
+            };
+            $('#ltd_confirm_modal_ok').on('click', function() {
+                $.post('/index.php/login/log_in', login_json, function(lData) {
+                    if (lData.success) {
+                        location.href = '/index.php/home/main_menu';
+                    }
+                },'json');
+            });
+            $('#ltd_confirm_modal').modal('show');
+        } else {
+            $('#ltd_error_modal_text').html(data.error);
+            $('#ltd_error_modal').modal('show');
+        }
+    },'json');
 }

@@ -1,29 +1,806 @@
-[Sun Oct 05 10:41:48 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
-[Sun Oct 05 10:41:48 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
-[Sat Oct 11 23:41:21 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
-[Sat Oct 11 23:41:21 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
-[Sat Oct 11 23:46:39 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function link_tag() in /Volumes/Junk/Web Sites/LogTheDog/rooooo/views/welcome_message.php on line 67
-[Sat Oct 11 23:46:41 2014] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function link_tag() in /Volumes/Junk/Web Sites/LogTheDog/rooooo/views/welcome_message.php on line 67
-[Sat Oct 11 23:48:51 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:48:53 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:49:16 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:49:17 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:49:25 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:49:36 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:50:05 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:50:06 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:50:51 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css
-[Sat Oct 11 23:51:36 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sat Oct 11 23:52:15 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/css, referer: http://local.logthedog.com/
-[Sun Oct 12 00:32:28 2014] [error] [client 127.0.0.1] PHP Parse error:  parse error in /Volumes/Junk/Web Sites/LogTheDog/rooooo/views/welcome_message.php on line 70
-[Sun Oct 12 00:32:30 2014] [error] [client 127.0.0.1] PHP Parse error:  parse error in /Volumes/Junk/Web Sites/LogTheDog/rooooo/views/welcome_message.php on line 70
-[Sun Oct 12 08:53:48 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
-[Sun Oct 12 08:53:48 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
-[Sat Oct 18 10:03:22 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
-[Sat Oct 18 11:34:32 2014] [error] [client 127.0.0.1] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/favicon.ico
-[Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon-120x120-precomposed.png
-[Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon-120x120.png
-[Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon.png
-[Sun Oct 19 12:00:25 2014] [error] [client 192.168.1.100] File does not exist: /Volumes/Junk/Web Sites/LogTheDog/apple-touch-icon.png
-[Tue May 31 13:33:42.443810 2016] [:error] [pid 213] [client 127.0.0.1:49152] PHP Fatal error:  Call to a member function userdata() on a non-object in /Volumes/Coding/logthedog.com/rooooo/controllers/home.php on line 7
-[Wed Jun 01 12:49:33.610334 2016] [:error] [pid 888] [client 127.0.0.1:49278] PHP Fatal error:  Call to undefined function form_open() in /Volumes/Coding/logthedog.com/rooooo/views/welcome_message.php on line 25
+[12-Jun-2016 20:01:18 America/Chicago] Joined: 2016-06-15 01:13:18
+[12-Jun-2016 20:01:18 America/Chicago] Today: 2016-06-12 08:01:18
+[12-Jun-2016 20:01:18 America/Chicago] Joined < today? 
+[12-Jun-2016 20:01:18 America/Chicago] Joined > today? 1
+[20-Jun-2016 12:57:21 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[20-Jun-2016 12:57:47 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 13:43:30 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 1
+    [row_data] => 
+)
+
+[23-Jun-2016 13:43:55 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 13:44:33 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 13:47:45 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 13:47:57 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 13:53:18 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 13:53:26 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 13:53:46 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:06:29 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:06:50 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:08:13 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:08:27 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:08:38 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:08:46 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:13:40 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:13:57 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[23-Jun-2016 14:14:12 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 12:55:33 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:02:54 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 1
+    [row_data] => 
+)
+
+[27-Jun-2016 13:03:16 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 1
+    [row_data] => 
+)
+
+[27-Jun-2016 13:03:46 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #32
+    [result_id] => Resource id #37
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 1
+    [row_data] => 
+)
+
+[27-Jun-2016 13:04:05 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:10:35 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:10:46 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:11:50 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:12:52 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 1
+    [row_data] => 
+)
+
+[27-Jun-2016 13:13:08 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 1
+    [row_data] => 
+)
+
+[27-Jun-2016 13:21:48 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:23:04 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:26:05 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:27:14 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:28:33 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:30:34 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:31:27 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:37:42 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:38:31 America/Chicago] Query result: CI_DB_mysql_result Object
+(
+    [conn_id] => Resource id #31
+    [result_id] => Resource id #36
+    [result_array] => Array
+        (
+        )
+
+    [result_object] => Array
+        (
+        )
+
+    [custom_result_object] => Array
+        (
+        )
+
+    [current_row] => 0
+    [num_rows] => 0
+    [row_data] => 
+)
+
+[27-Jun-2016 13:44:56 America/Chicago] PHP Fatal error:  Call to undefined function form_open() in /Volumes/Coding/logthedog.com/rooooo/views/top.php on line 78
+[27-Jun-2016 13:45:40 America/Chicago] PHP Fatal error:  Call to undefined function form_open() in /Volumes/Coding/logthedog.com/rooooo/views/top.php on line 78
+[27-Jun-2016 13:45:55 America/Chicago] PHP Fatal error:  Call to undefined function form_open() in /Volumes/Coding/logthedog.com/rooooo/views/top.php on line 78
+[27-Jun-2016 13:45:56 America/Chicago] PHP Fatal error:  Call to undefined function form_open() in /Volumes/Coding/logthedog.com/rooooo/views/top.php on line 78

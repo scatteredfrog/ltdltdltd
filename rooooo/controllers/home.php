@@ -6,10 +6,8 @@ class Home extends CI_Controller {
             parent::__construct();
             $user_first = $this->session->userdata('firstName');
             if (empty($user_first)) {
-                $this->session->set_userdata('firstName','Guest');
+                $this->session->set_userdata('firstName','Friend');
             }
-            $this->load->helper('html');
-            $this->load->helper('url');
             $this->load->view('top');
         }
         
@@ -30,6 +28,12 @@ class Home extends CI_Controller {
             $this->load->view('mainmenu');
         }
         
+        public function create_account() {
+            $this->load->helper('form');
+            $this->load->view('new_user');
+            $this->load->view('error_modal');
+        }
+        
         public function contact_us() {
             $this->load->helper('form');
             $this->load->view('contact_us');
@@ -40,7 +44,6 @@ class Home extends CI_Controller {
             $name = $this->input->post('name', TRUE);
             $email = $this->input->post('email', TRUE);
             $comment = $this->input->post('comment', TRUE);
-            $email_regex = '/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
             $errors = '';
             $success = true;
             
@@ -50,7 +53,7 @@ class Home extends CI_Controller {
                 $errors .= 'Please provide a valid name.<br />&nbsp;<br />';
             }
             
-            if (!preg_match($email_regex, $email)) {
+            if (!email_valid($email)) {
                 $success = false;
                 $errors .= 'Please provide a valid e-mail address.<br />&nbsp;<br />';
             }

@@ -74,6 +74,10 @@
     ?>
 
     <div class='dauber-navbar no-select'>
+    <?
+        $this->load->helper('form');
+        echo form_open();
+    ?>
         <a href="/">
             <div class='dn-item'>
                 <span class='icon-home icon-white'></span><span class='hidden-xs'> Home</span>
@@ -85,15 +89,19 @@
         <div class='dn-item'>
             <span class='dn-dog'></span><span class='hidden-xs'> About Log The Dog</span>
         </div>
-        <div class='dn-item'>
-            <span class='dn-msg'></span><span class='hidden-xs'> Contact Us</span>
-        </div>
+        <a href="/home/contact_us">
+            <div class='dn-item'>
+                <span class='dn-msg'></span><span class='hidden-xs'> Contact Us</span>
+            </div>
+        </a>
         <?
-            if ($this->session->userdata('firstName') === 'Guest') {
-        ?>
-                <div class='dn-item'>
-                    <span class='icon-user icon-white'></span><span class='hidden-xs'> Create Account</span>
-                </div>
+            if ($this->session->userdata('firstName') === 'Friend') {
+                ?> 
+                <a href="/home/create_account">
+                    <div class='dn-item'>
+                        <span class='icon-user icon-white'></span><span class='hidden-xs'> Create Account</span>
+                    </div>
+                </a>
         <?
             } else {
         ?>
@@ -106,6 +114,9 @@
         <div class='dn-item' style="float: right;">
             Welcome, <? echo $this->session->userdata('firstName'); ?>!
         </div>
+        <?
+            echo form_close();
+        ?>
     </div>
     
     <div style='margin-top: 50px;' class='desktop-only'></div>

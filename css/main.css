@@ -1,4 +1,4 @@
-body {    background-color: #ffffe4; }
+body {    background-color: #ffffe4!important; }
 
 @media (min-width: 992px) {
     .desktop-only {
@@ -10,17 +10,17 @@ body {    background-color: #ffffe4; }
 }
 
 @media (max-width: 992px) {
-    .mobile-only {
-        display: block !important;
-    }
-    
-    .desktop-only {
-        display: none !important;
-    }
+    .mobile-only {        display: block !important;    }    
+    .desktop-only {        display: none !important;    }
 }
 
 .modal-dialog { width: 300px !important; }
-#ltd_error_modal_ok { width: 100%; font-weight: bold; }
+
+#ltd_error_modal_ok, #ltd_confirm_modal_ok { 
+    width: 100%; 
+    font-weight: bold;
+    background-color: #ffffe4;
+}
 
 #ltd_confirm_modal .modal-header {
     background-color: greenyellow;
@@ -29,7 +29,7 @@ body {    background-color: #ffffe4; }
     text-align: center;
 }
 
-#ltd_confirm_modal #ltd_error_modal_subheader { text-align: center; }
+#ltd_confirm_modal_subheader { text-align: center; }
 
 #ltd_error_modal .modal-header {
     text-align: center;
@@ -74,13 +74,8 @@ body {    background-color: #ffffe4; }
     transform: none !important;
 }
 
-.margin-bottom-10 {
-    margin-bottom: 10px;
-}
-
-.margin-left-20 {
-    margin-left: 20px;
-}
+.margin-bottom-10 {    margin-bottom: 10px; }
+.margin-left-20 {    margin-left: 20px; }
 
 .no-select {
     -webkit-touch-callout: none;
@@ -90,3 +85,15 @@ body {    background-color: #ffffe4; }
     -ms-user-select: none;
     user-select: none;
 }
+
+#new_user {
+    position: relative;
+    top: -21px!important;
+}
+
+.fine-print {
+    font-size: 12px;
+    font-style: italic;
+}
+
+#create_account h1 {    font-size: 24px!important; }
