@@ -41,6 +41,12 @@ function valid_password($password, $email, $username) {
         $error .= 'That password is much too easy to guess.' . $sp;
     }
     
+    if (stristr(strtolower($password), 'password')) {
+        $valid = false;
+        $error .= 'Please do not use the word "password" in your password. ';
+        $error .= 'That makes it too easy to guess.' . $sp;
+    }
+    
     $retArray['valid'] = $valid;
     $retArray['error'] = $error;
     return $retArray;

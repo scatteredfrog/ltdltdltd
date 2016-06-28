@@ -137,6 +137,7 @@ function submitCreate() {
         for (var x = 0; x < pr_len; x++) {
             if (!pass_reg[x].test($('#user_password').val())) {
                 success = false;
+                invalid = true;
                 error += 'Your password must contain at least one capital letter, at least one ';
                 error += 'number, and at least one lower-case letter.' + sp;
                 break;
@@ -144,6 +145,13 @@ function submitCreate() {
         }
     }
     
+    if (!invalid) {
+        if ($('#user_password').val().toUpperCase().indexOf('PASSWORD') > -1) {
+            success = false;
+            error += 'Please do not use the word "password" as part of your password. ';
+            error += 'That makes it too easy to guess.' + sp;
+        }
+    }
     // If anything went wrong, alert modal.
     if (!success) {
         $('#ltd_error_modal_text').html(error);
