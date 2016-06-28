@@ -88,6 +88,69 @@ function submitContact() {
 }
 
 function submitCreate() {
+    var error = '';
+    var success = true;
+    var invalid = false;
+    var sp = '<br />&nbsp;<br />';
+    
+    $('#user_name').val($.trim($('#user_name').val()));
+    $('#user_email').val($.trim($('#user_email').val()));
+    $('#user_remail').val($.trim($('#user_remail').val()));
+    $('#user_password').val($.trim($('#user_password').val()));
+    $('#re_pass').val($.trim($('#re_pass').val()));
+
+    // Validate user name
+    if ($('#user_name').val().length < 2) {
+        success = false;
+        error += 'Please provide your name.';
+        if ($('#user_name').val().length === 1) {
+            error += ' (Seriously? Just one character?!)';
+        }
+        error += sp;
+    }
+    
+    // Validate e-mail
+    var email_regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!email_regex.test($('#user_email').val())) {
+        success = false;
+        invalid = true;
+        error += 'Please provide a valid e-mail address.' + sp;
+    }
+    
+    if (!invalid && $('#user_email').val() !== $('#user_remail').val()) {
+        success = false;
+        error += 'Please ensure your e-mail address is the same in both e-mail fields.' + sp;
+    }
+    invalid = false;
+    
+    // Validate the password
+    var pass_reg = [/[A-Z]/,/[a-z]/,/[0-9]/];
+    var pr_len = pass_reg.length;
+    
+    if ($('#user_password').val().length < 8) {
+        success = false;
+        error += 'Your password is too short; make it at least 8 characters.' + sp;
+        invalid = true;
+    }
+    
+    if (!invalid) {
+        for (var x = 0; x < pr_len; x++) {
+            if (!pass_reg[x].test($('#user_password').val())) {
+                success = false;
+                error += 'Your password must contain at least one capital letter, at least one ';
+                error += 'number, and at least one lower-case letter.' + sp;
+                break;
+            }
+        }
+    }
+    
+    // If anything went wrong, alert modal.
+    if (!success) {
+        $('#ltd_error_modal_text').html(error);
+        $('#ltd_error_modal').modal('show');
+        return false;
+    }
+    
     var create_post = {
         'user_email': $('#user_email').val(),
         'user_remail': $('#user_remail').val(),
@@ -97,7 +160,6 @@ function submitCreate() {
         'csrf_test_name' : $('[name=csrf_test_name]').val()
     };
     $.post('/index.php/login/create_account', create_post, function(data) {
-        // DO SOMETHING
         if (data.success) {
             var conf_text = 'Thank you. Your account has been created, and ';
             conf_text += 'you will be logged in.';
