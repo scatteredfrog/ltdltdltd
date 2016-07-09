@@ -149,6 +149,7 @@ class Login extends CI_Controller {
                     );
                     $this->input->set_cookie($cookie);
                 }
+                $this->login_model->retrieveDogs($this->session->userdata('eMail'));
             }
             echo json_encode($login_attempt);
         }

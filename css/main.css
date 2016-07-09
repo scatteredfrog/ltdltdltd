@@ -15,6 +15,15 @@ body {    background-color: #ffffe4!important; }
 }
 
 .modal-dialog { width: 300px !important; }
+#chip_block, #reg_ex_container, #physical_description, #dog_misc { display: none; }
+#dog_registry a { cursor: pointer; }
+.menuAnchor { color: #000; }
+
+.underscore {
+    border-bottom-color: #aeaeae;
+    border-bottom-style: groove;
+    border-bottom-width: 6px;
+}
 
 #ltd_error_modal_ok, #ltd_confirm_modal_ok { 
     width: 100%; 

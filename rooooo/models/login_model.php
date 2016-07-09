@@ -21,14 +21,20 @@
             foreach ($query->result() as $row) {
                 $the_date = $row->joined;
             }
-            $today = date('Y-m-d h:i:s');
-            error_log("Joined: " . print_r($the_date,1));
-            error_log("Today: " . print_r($today,1));
-            error_log("Joined < today? ". print_r($the_date < $today,1));
-            error_log("Joined > today? ". print_r($the_date > $today,1));
             return;
         }
         
+        public function retrieveDogs($userID) {
+            $this->db->select('*');
+            $query = $this->db->get_where('LTDtbCaretaker', array('caretakerEmail' => $this->session->userdata('eMail')));
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
+                    error_log("Row: " . print_r($row,1));
+                }
+            }
+        }
+
+
         public function checkForGmail($gmail) {
             $user_exists = true;
             $this->db->select('gmail');
@@ -74,6 +80,7 @@
                     $query_result['eMail'] = $row->eMail;
                     $query_result['language'] = $row->language;
                     $query_result['password'] = $row->password;
+                    $query_result['error'] = false;
                 }
             } else {
                 // user does not exist

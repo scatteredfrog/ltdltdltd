@@ -21,10 +21,18 @@
             <img src="/assets/images/menu_treat.png" class="img-responsive" />
             <div class="menuText">Log a Treat</div>
         </div>
-        <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox">
-            <img src="/assets/images/menu_registry.png" class="img-responsive" />
-            <div class="menuText"><span class="hidden-xs">Dog </span>Registry</div>
-        </div>
+        <a class="menuAnchor" href="/log/register_dog">
+            <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox" data-toggle="tooltip" data-placement="right" title="Register a dog to your account">
+                <img src="/assets/images/menu_registry.png" class="img-responsive" />
+                <div class="menuText"><span class="hidden-xs">Dog </span>Registry</div>
+            </div>
+        </a>
         <div class="col-xs-2 col-lg-4 col-md-3 col-sm-2"></div>
     </div>
 </div>
+
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

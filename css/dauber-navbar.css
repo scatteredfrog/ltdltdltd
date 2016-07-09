@@ -5,6 +5,7 @@
     top: 0px;
     background-color: #000;
     color: #fff;
+    z-index: 1;
 }
 
 .dn-item {
