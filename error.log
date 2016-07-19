@@ -1,8 +1,1235 @@
-[09-Jul-2016 02:40:46 America/Chicago] Row: stdClass Object
+[14-Jul-2016 14:01:43 America/Chicago] Dog count: 18
+[14-Jul-2016 14:01:43 America/Chicago] Dog IDs: Array
 (
-    [id] => 5
-    [dogID] => 30
-    [caretakerName] => Flirzel Kwerp
-    [caretakerEmail] => flirzel@kwerp.com
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+)
+
+[14-Jul-2016 14:01:43 America/Chicago] 5 dogs registered
+[14-Jul-2016 14:08:48 America/Chicago] Dog count: 19
+[14-Jul-2016 14:08:48 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[14-Jul-2016 14:08:48 America/Chicago] 6 dogs registered
+[14-Jul-2016 14:09:15 America/Chicago] Dog count: 19
+[14-Jul-2016 14:09:15 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[14-Jul-2016 14:09:15 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:04:54 America/Chicago] Dog count: 19
+[18-Jul-2016 14:04:54 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:04:54 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:06:53 America/Chicago] Dog count: 19
+[18-Jul-2016 14:06:53 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:06:53 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:07:24 America/Chicago] Dog count: 19
+[18-Jul-2016 14:07:24 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:07:24 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:08:22 America/Chicago] Dog count: 19
+[18-Jul-2016 14:08:22 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:08:22 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:10:48 America/Chicago] Dog count: 19
+[18-Jul-2016 14:10:48 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:10:48 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:13:30 America/Chicago] Dog count: 19
+[18-Jul-2016 14:13:30 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:13:30 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:13:53 America/Chicago] Dog count: 19
+[18-Jul-2016 14:13:53 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:13:53 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:13:56 America/Chicago] Dog count: 19
+[18-Jul-2016 14:13:56 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:13:56 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:15:48 America/Chicago] Dog count: 19
+[18-Jul-2016 14:15:48 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:15:48 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:16:19 America/Chicago] Dog count: 19
+[18-Jul-2016 14:16:19 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:16:19 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:16:48 America/Chicago] Dog count: 19
+[18-Jul-2016 14:16:48 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:16:48 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:17:18 America/Chicago] Dog count: 19
+[18-Jul-2016 14:17:18 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:17:18 America/Chicago] 6 dogs registered
+[18-Jul-2016 14:18:52 America/Chicago] Dog count: 19
+[18-Jul-2016 14:18:52 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+)
+
+[18-Jul-2016 14:18:52 America/Chicago] 6 dogs registered
+[19-Jul-2016 13:26:06 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => false
+)
+
+[19-Jul-2016 13:27:29 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => false
+)
+
+[19-Jul-2016 13:29:31 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => false
+)
+
+[19-Jul-2016 13:29:31 America/Chicago] Dog confirm:
+[19-Jul-2016 13:29:31 America/Chicago] 
+[19-Jul-2016 13:30:01 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => false
+)
+
+[19-Jul-2016 13:30:01 America/Chicago] Dog confirm:
+[19-Jul-2016 13:30:01 America/Chicago] false
+[19-Jul-2016 13:30:41 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => false
+)
+
+[19-Jul-2016 13:30:41 America/Chicago] Dog confirm:
+[19-Jul-2016 13:30:41 America/Chicago] 
+[19-Jul-2016 13:34:47 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => 0
+)
+
+[19-Jul-2016 13:34:47 America/Chicago] Dog confirm:
+[19-Jul-2016 13:34:47 America/Chicago] 1
+[19-Jul-2016 13:34:47 America/Chicago] About to check...
+[19-Jul-2016 13:34:47 America/Chicago] Dog count: 27
+[19-Jul-2016 13:34:47 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+    [19] => 50
+    [20] => 51
+    [21] => 52
+    [22] => 53
+    [23] => 54
+    [24] => 55
+    [25] => 56
+    [26] => 57
+)
+
+[19-Jul-2016 13:34:47 America/Chicago] 14 dogs registered
+[19-Jul-2016 13:40:03 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => 0
+)
+
+[19-Jul-2016 13:40:03 America/Chicago] Dog confirm:
+[19-Jul-2016 13:40:03 America/Chicago] 1
+[19-Jul-2016 13:40:03 America/Chicago] About to check...
+[19-Jul-2016 13:40:03 America/Chicago] Dog count: 27
+[19-Jul-2016 13:40:03 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+    [19] => 50
+    [20] => 51
+    [21] => 52
+    [22] => 53
+    [23] => 54
+    [24] => 55
+    [25] => 56
+    [26] => 57
+)
+
+[19-Jul-2016 13:40:03 America/Chicago] 14 dogs registered
+[19-Jul-2016 13:40:30 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => beagle
+    [gender] => 0
+    [color] => tricolor
+    [features] => heart-shapped butthole
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => 0
+)
+
+[19-Jul-2016 13:40:30 America/Chicago] Dog confirm:
+[19-Jul-2016 13:40:30 America/Chicago] 1
+[19-Jul-2016 13:40:30 America/Chicago] About to check...
+[19-Jul-2016 13:40:30 America/Chicago] Dog count: 27
+[19-Jul-2016 13:40:30 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+    [19] => 50
+    [20] => 51
+    [21] => 52
+    [22] => 53
+    [23] => 54
+    [24] => 55
+    [25] => 56
+    [26] => 57
+)
+
+[19-Jul-2016 13:40:30 America/Chicago] 14 dogs registered
+[19-Jul-2016 13:40:45 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:40:45 America/Chicago] Dog confirm:
+[19-Jul-2016 13:40:45 America/Chicago] 
+[19-Jul-2016 13:40:45 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => beagle
+    [gender] => 0
+    [color] => tricolor
+    [features] => heart-shapped butthole
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:40:45 America/Chicago] Dog confirm:
+[19-Jul-2016 13:40:45 America/Chicago] 
+[19-Jul-2016 13:40:47 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:40:47 America/Chicago] Dog confirm:
+[19-Jul-2016 13:40:47 America/Chicago] 
+[19-Jul-2016 13:40:47 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => beagle
+    [gender] => 0
+    [color] => tricolor
+    [features] => heart-shapped butthole
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:40:47 America/Chicago] Dog confirm:
+[19-Jul-2016 13:40:47 America/Chicago] 
+[19-Jul-2016 13:40:48 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:40:48 America/Chicago] Dog confirm:
+[19-Jul-2016 13:40:48 America/Chicago] 
+[19-Jul-2016 13:40:48 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => beagle
+    [gender] => 0
+    [color] => tricolor
+    [features] => heart-shapped butthole
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:40:48 America/Chicago] Dog confirm:
+[19-Jul-2016 13:40:48 America/Chicago] 
+[19-Jul-2016 13:42:34 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => 0
+)
+
+[19-Jul-2016 13:42:34 America/Chicago] Dog confirm:
+[19-Jul-2016 13:42:34 America/Chicago] 1
+[19-Jul-2016 13:42:34 America/Chicago] About to check...
+[19-Jul-2016 13:42:34 America/Chicago] Dog count: 33
+[19-Jul-2016 13:42:34 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+    [19] => 50
+    [20] => 51
+    [21] => 52
+    [22] => 53
+    [23] => 54
+    [24] => 55
+    [25] => 56
+    [26] => 57
+    [27] => 58
+    [28] => 59
+    [29] => 60
+    [30] => 61
+    [31] => 62
+    [32] => 63
+)
+
+[19-Jul-2016 13:42:34 America/Chicago] 20 dogs registered
+[19-Jul-2016 13:42:36 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:42:36 America/Chicago] Dog confirm:
+[19-Jul-2016 13:42:36 America/Chicago] 
+[19-Jul-2016 13:43:35 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => 0
+)
+
+[19-Jul-2016 13:43:35 America/Chicago] Dog confirm:
+[19-Jul-2016 13:43:35 America/Chicago] 1
+[19-Jul-2016 13:43:35 America/Chicago] About to check...
+[19-Jul-2016 13:43:35 America/Chicago] Dog count: 34
+[19-Jul-2016 13:43:35 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+    [19] => 50
+    [20] => 51
+    [21] => 52
+    [22] => 53
+    [23] => 54
+    [24] => 55
+    [25] => 56
+    [26] => 57
+    [27] => 58
+    [28] => 59
+    [29] => 60
+    [30] => 61
+    [31] => 62
+    [32] => 63
+    [33] => 64
+)
+
+[19-Jul-2016 13:43:35 America/Chicago] 21 dogs registered
+[19-Jul-2016 13:43:37 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:43:37 America/Chicago] Dog confirm:
+[19-Jul-2016 13:43:37 America/Chicago] 
+[19-Jul-2016 13:44:23 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => 0
+)
+
+[19-Jul-2016 13:44:23 America/Chicago] Dog confirm:
+[19-Jul-2016 13:44:23 America/Chicago] 1
+[19-Jul-2016 13:44:23 America/Chicago] About to check...
+[19-Jul-2016 13:44:23 America/Chicago] Dog count: 35
+[19-Jul-2016 13:44:23 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+    [19] => 50
+    [20] => 51
+    [21] => 52
+    [22] => 53
+    [23] => 54
+    [24] => 55
+    [25] => 56
+    [26] => 57
+    [27] => 58
+    [28] => 59
+    [29] => 60
+    [30] => 61
+    [31] => 62
+    [32] => 63
+    [33] => 64
+    [34] => 65
+)
+
+[19-Jul-2016 13:44:23 America/Chicago] 22 dogs registered
+[19-Jul-2016 13:44:26 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:44:26 America/Chicago] Dog confirm:
+[19-Jul-2016 13:44:26 America/Chicago] 
+[19-Jul-2016 13:44:57 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => 0
+)
+
+[19-Jul-2016 13:44:57 America/Chicago] Dog confirm:
+[19-Jul-2016 13:44:57 America/Chicago] 1
+[19-Jul-2016 13:44:57 America/Chicago] About to check...
+[19-Jul-2016 13:44:57 America/Chicago] Dog count: 36
+[19-Jul-2016 13:44:57 America/Chicago] Dog IDs: Array
+(
+    [0] => 13
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 20
+    [8] => 21
+    [9] => 22
+    [10] => 23
+    [11] => 24
+    [12] => 25
+    [13] => 26
+    [14] => 45
+    [15] => 46
+    [16] => 47
+    [17] => 48
+    [18] => 49
+    [19] => 50
+    [20] => 51
+    [21] => 52
+    [22] => 53
+    [23] => 54
+    [24] => 55
+    [25] => 56
+    [26] => 57
+    [27] => 58
+    [28] => 59
+    [29] => 60
+    [30] => 61
+    [31] => 62
+    [32] => 63
+    [33] => 64
+    [34] => 65
+    [35] => 66
+)
+
+[19-Jul-2016 13:44:57 America/Chicago] 23 dogs registered
+[19-Jul-2016 13:44:58 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
+)
+
+[19-Jul-2016 13:44:58 America/Chicago] Dog confirm:
+[19-Jul-2016 13:44:58 America/Chicago] 
+[19-Jul-2016 13:50:16 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => 0
+)
+
+[19-Jul-2016 13:50:18 America/Chicago] Dog params: Array
+(
+    [name] => Ruthie
+    [weight] => 
+    [height] => 
+    [length] => 
+    [neutered] => 0
+    [breed] => 
+    [gender] => 0
+    [color] => 
+    [features] => 
+    [alt_name] => 
+    [afflictions] => 
+    [fears] => 
+    [commands] => 
+    [chipped] => 0
+    [chip_brand] => 
+    [chip_id] => 
+    [birth_date] => 
+    [confirm] => true
 )
 

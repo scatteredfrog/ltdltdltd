@@ -31,6 +31,9 @@
             if ($this->db->insert('LTDtbDog', $insert)) {
                 $success = true;
                 $insert_id = $this->db->insert_id();
+                $insert['dogID'] = $insert_id;
+                // Add to session
+                $_SESSION['dogs'][] = $insert;
             }
             
             $retArray = array(
@@ -56,5 +59,30 @@
                     $success = true;
                 }
             }
+        }
+        
+        public function retrieveCaretakerDog($email, $dog_name) {
+            $dogs_registered = (int)0;
+            $dog_ids = array();
+
+            // Get the IDs of all dogs with that name
+            $this->db->select('dogID');
+            $query = $this->db->get_where('LTDtbDog', array('dogName' => $dog_name));
+            if ($query->num_rows() > 0) {
+                foreach($query->result() as $row) {
+                    $dog_ids[] = $row->dogID;
+                }
+                $dog_count = count($dog_ids);
+                // Check each dog match with caretaker
+                for ($x = 0; $x < $dog_count; $x++) {
+                    $this->db->select('dogID');
+                    $query = $this->db->get_where('LTDtbCaretaker', array('caretakerEmail' => $email, 'dogID' => $dog_ids[$x]));
+                    if ($query->num_rows() > 0) {
+                        $dogs_registered++;
+                    }
+                }
+            }
+            
+            return $dogs_registered;
         }
     }

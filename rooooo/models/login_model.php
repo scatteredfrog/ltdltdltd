@@ -25,16 +25,45 @@
         }
         
         public function retrieveDogs($userID) {
+            $registered_dog = array();
             $this->db->select('*');
             $query = $this->db->get_where('LTDtbCaretaker', array('caretakerEmail' => $this->session->userdata('eMail')));
             if ($query->num_rows() > 0) {
                 foreach ($query->result() as $row) {
-                    error_log("Row: " . print_r($row,1));
+                    $registered_dog[] = $row->dogID;
                 }
             }
+            return (array)$registered_dog;
         }
 
-
+        public function fetchDog($dogID) {
+            $this->db->select('*');
+            $query = $this->db->get_where('LTDtbDog', array('dogID' => $dogID));
+            foreach ($query->result() as $row) {
+                $dog = array(
+                    'dogID' => $row->dogID,
+                    'dogName' => $row->dogName,
+                    'gender' => $row->gender,
+                    'spayneuter' => $row->spayneuter,
+                    'breed' => $row->breed,
+                    'dogWeight' => $row->dogWeight,
+                    'dogLength' => $row->dogLength,
+                    'dogHeight' => $row->dogHeight,
+                    'dogColor' => $row->dogColor,
+                    'dogFeatures' => $row->dogFeatures,
+                    'dogBirthdate' => $row->dogBirthdate,
+                    'dogAltName' => $row->dogAltName,
+                    'dogFear' => $row->dogFear,
+                    'dogAfflictions' => $row->dogAfflictions,
+                    'chipped' => $row->chipped,
+                    'chip_brand' => $row->chip_brand,
+                    'chip_id' => $row->chip_id,
+                    'commands' => $row->commands
+                );
+            }
+            return $dog;
+        }
+        
         public function checkForGmail($gmail) {
             $user_exists = true;
             $this->db->select('gmail');

@@ -38,6 +38,13 @@ body {    background-color: #ffffe4!important; }
     text-align: center;
 }
 
+#ltd_dual_options_modal .modal-header {
+    background-color: #00efff;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
 #ltd_confirm_modal_subheader { text-align: center; }
 
 #ltd_error_modal .modal-header {

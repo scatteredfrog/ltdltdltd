@@ -117,11 +117,33 @@ function registerDog() {
         chip_brand: $('#chip_brand').val(),
         chip_id: $('#chip_id').val(),
         caretakers: caretakers,
-        'csrf_test_name' : $('[name=csrf_test_name]').val()
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+        confirm: 0
     };
     
     $.post('/index.php/log/register_a_dog', register_data, function(data) {
-        // DO SOMETHING
+        if (data['success']) {
+            // dog successfully registered
+            dogRegistered($('#dog_name').val());
+        } else if (data['error'].indexOf('Do you want to add this dog anyway') > 0) {
+            $('#ltd_dual_options_modal_subheader').html(data['error']);
+            $('#ltd_dual_options_left_button').html('No');
+            $('#ltd_dual_options_right_button').html('Yes');
+            $('#ltd_dual_options_modal').modal('show');
+            $('#ltd_dual_options_right_button').on('click', function() {
+                $('#ltd_dual_options_modal').modal('hide');
+                register_data.confirm = true;
+                $.post('/index.php/log/register_a_dog', register_data, function(subData) {
+                    if (subData['success']) {
+                        // dog successfully registered
+                        dogRegistered($('#dog_name').val());
+                    }
+                },'json');
+            });
+        } else {
+            $('#ltd_error_modal_text').html(data['error']);
+            $('#ltd_error_modal').modal('show');
+        }
     }, 'json');
 }
 
@@ -129,3 +151,10 @@ $(document).on('click', '.deleteCt', function() {
     $(this).parent().remove();
 });    
 
+function dogRegistered(name) {
+    $('#ltd_confirm_modal_subheader').html(name + ' has been registered.');
+    $('#ltd_confirm_modal').modal('show');
+    $('#ltd_confirm_modal_ok').on('click', function() {
+        location.href = '/';
+    });
+}

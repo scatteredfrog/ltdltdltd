@@ -13,15 +13,19 @@ class Home extends CI_Controller {
         
 	public function index() {
             $this->load->helper('form');
-            $this->load->view('welcome_message');
-            $this->load->view('error_modal');
-            $cookie = json_decode($this->input->cookie('ltd-login',TRUE),1);
-            if ($cookie && $this->session->userdata('loggedOut'!= true)) {
-                $email = $cookie['1I1T1TLI11II'];
-                $password = $cookie['I11T1TLI11IT'];
-                $this->load->model('login_model');
-                $this->login_model->checkLoginData($email,md5($password));
+            if ($this->session->userdata('logged_in') == '1') {
+                $this->load->view('mainmenu');
+            } else {
+                $this->load->view('welcome_message');
+                $cookie = json_decode($this->input->cookie('ltd-login',TRUE),1);
+                if ($cookie && $this->session->userdata('loggedOut'!= true)) {
+                    $email = $cookie['1I1T1TLI11II'];
+                    $password = $cookie['I11T1TLI11IT'];
+                    $this->load->model('login_model');
+                    $this->login_model->checkLoginData($email,md5($password));
+                }
             }
+            $this->load->view('error_modal');
 	}
         
         public function main_menu() {
@@ -97,6 +101,8 @@ class Home extends CI_Controller {
             $all_stuff = $this->session->all_userdata();
             echo "<pre>";
             echo print_r($all_stuff,1);
+            echo "</pre><hr>PHP NATIVE SESSION:<pre>";
+            echo print_r($_SESSION,1);
             echo "</pre>";
         }
 }
