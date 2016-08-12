@@ -112,4 +112,11 @@ body {    background-color: #ffffe4!important; }
     font-style: italic;
 }
 
+.bdr-bot {
+    border-bottom-color: #aeaeae;
+    border-bottom-width: 1px;
+    border-bottom-style: ridge;
+    padding-bottom: 14px;
+}
+
 #create_account h1 {    font-size: 24px!important; }

@@ -36,6 +36,7 @@
             return (array)$registered_dog;
         }
 
+        // get all info about a given dog
         public function fetchDog($dogID) {
             $this->db->select('*');
             $query = $this->db->get_where('LTDtbDog', array('dogID' => $dogID));

@@ -34,6 +34,61 @@ class Log extends CI_Controller {
         $this->load->view('registry');
         $this->load->view('error_modal');
     }
+    
+    public function getDogNames($user) {
+        if (empty($user)) {
+            return array('success' => false);
+        }
+        
+        $this->load->model('log_model');
+        $dog_names = $this->log_model->retrieveDogNames($user);
+        return $dog_names;
+    }
+
+    // Load the "Log a Walk" page - turns dog names and IDs into select options
+    public function walk() {
+        if (!$this->session->userdata('logged_in')) {
+            header('Location: /');
+        }
+        $currentUser = $this->session->userdata('eMail');
+        $retrievedDogs = $this->getDogNames($currentUser);
+        $currentDogs = empty($retrievedDogs) ? NULL : explode('~',$retrievedDogs);
+        $dogOptions = '';
+        
+        if (count($currentDogs) > 1) {
+            $dogOptions .= '<select id="dog_selector">';
+            foreach ($currentDogs as $d) {
+                $dog = explode('^', $d);
+                $id = $dog[0];
+                $name = $dog[1];
+
+                $dogOptions .= '<option value="' . $id . '">' . $name . '</option>';
+            }
+            $dogOptions .= '</select>';
+            $dogOptions .= '<input type="button" id="select_this_dog" value="Log this dog" />';
+        } else if (count($currentDogs) === 1) {
+            $dog = explode('^', $currentDogs[0]);
+            $id = $dog[0];
+            $name = $dog[1];
+            $dogOptions .= '<input id="dog_selector" type="hidden" value="' . $id. '" />        ';
+            $dogOptions .= '<script>getDogDeets("' . $id . '");</script>';
+        } else { // redirect to main menu if there are no dogs; show modal first
+            $dogOptions .= '<script>';
+            $dogOptions .= '$(document).ready(function() {';
+            $dogOptions .= '$("#ltd_error_modal_header_text").html("Cannot log a walk");';
+            $dogOptions .= '$("#ltd_error_modal_text").html("There are no dogs registered to your account.");';
+            $dogOptions .= "$('#ltd_error_modal').modal('show');";
+            $dogOptions .= "$('#ltd_error_modal_ok').on('click',function() {";
+            $dogOptions .= " location.href='/';";
+            $dogOptions .= "});";
+            $dogOptions .= "});</script>";
+        }
+        
+        $data = array('dogs' =>$dogOptions);
+        $this->load->helper('form');
+        $this->load->view('log_a_walk', $data);
+        $this->load->view('error_modal');
+    }
 
     public function register_a_dog() {
         $success = true;
@@ -123,7 +178,6 @@ class Log extends CI_Controller {
             'confirm' => $this->input->post('confirm')
         );
 
-        error_log("Dog params: " . print_r($dog,1));
         if (strlen($dog['name']) < 1) {
             $error = 'Make sure the dog has a name!<br />&nbsp;<br />' . $error;
             $success = false;
@@ -176,6 +230,60 @@ class Log extends CI_Controller {
             $retArray['error'] = $error;
         }
         echo json_encode($retArray);
+        exit();
+    }
+    
+    public function getDogInfo() {
+        $resp = array();
+        $resp['success'] = false;
+        $dogID = $this->input->post('dogID');
+        if ($dogID) {
+            $this->load->model('login_model');
+            $dogInfo = $this->login_model->fetchDog($dogID);
+            if (is_array($dogInfo)) {
+                $resp['dog'] = $dogInfo;
+                $resp['dog']['latest_walk'] = $this->getLatestWalk($dogID);
+                $resp['success'] = true;
+            }
+        }
+        
+        echo json_encode($resp);
+        exit();
+    }
+    
+    public function getLatestWalk($dogID) {
+        $this->load->model('log_model');
+        $walkInfo = $this->log_model->retrieveLatestWalk($dogID);
+        if ($walkInfo['action'] > -1) {
+            $now = time();
+            $walkdate = strtotime($walkInfo['datetime']);
+            $tempdatetime = new DateTime($walkInfo['datetime']);
+            $timediff = (int)floor(($now - $walkdate) / 86400);
+            if ($timediff === 0) {
+                $walkInfo['date'] = 'today';
+            } else if ($timediff === 1) {
+                $walkInfo['date'] = 'yesterday'; 
+            } else if ($timediff > 2 && $timediff < 7) {
+                $walkInfo['date'] = date_format($tempdatetime,'l');
+            } else {
+                $walkInfo['date'] = date_format($tempdatetime,'F j');
+            }
+            $walkInfo['time'] = date_format($tempdatetime,'g:i a');
+        }
+        return $walkInfo;
+    }
+    
+    public function logWalk() {
+        // TODO: validation (date, missing data, etc.)
+        $walk_data = array();
+        $walk_data['dogID'] = $this->input->post('dogID');
+        $walk_data['walkDate'] = $this->input->post('walkDate');
+        $walk_data['action'] = $this->input->post('action');
+        $walk_data['walkNotes'] = $this->input->post('walkNotes');
+        $walk_data['userID'] = $this->input->post('userID');
+        $this->load->model('log_model');
+        $success = $this->log_model->addWalk($walk_data);
+        echo json_encode($success);
         exit();
     }
 }

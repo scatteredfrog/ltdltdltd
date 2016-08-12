@@ -1,1235 +1,1791 @@
-[14-Jul-2016 14:01:43 America/Chicago] Dog count: 18
-[14-Jul-2016 14:01:43 America/Chicago] Dog IDs: Array
+[03-Aug-2016 22:44:12 America/Chicago] Got here
+[03-Aug-2016 22:44:12 America/Chicago] fetching dog...
+[03-Aug-2016 22:44:12 America/Chicago] fetched dog!
+[03-Aug-2016 22:44:12 America/Chicago] Resp: Array
 (
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-)
-
-[14-Jul-2016 14:01:43 America/Chicago] 5 dogs registered
-[14-Jul-2016 14:08:48 America/Chicago] Dog count: 19
-[14-Jul-2016 14:08:48 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[14-Jul-2016 14:08:48 America/Chicago] 6 dogs registered
-[14-Jul-2016 14:09:15 America/Chicago] Dog count: 19
-[14-Jul-2016 14:09:15 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[14-Jul-2016 14:09:15 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:04:54 America/Chicago] Dog count: 19
-[18-Jul-2016 14:04:54 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:04:54 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:06:53 America/Chicago] Dog count: 19
-[18-Jul-2016 14:06:53 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:06:53 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:07:24 America/Chicago] Dog count: 19
-[18-Jul-2016 14:07:24 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:07:24 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:08:22 America/Chicago] Dog count: 19
-[18-Jul-2016 14:08:22 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:08:22 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:10:48 America/Chicago] Dog count: 19
-[18-Jul-2016 14:10:48 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:10:48 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:13:30 America/Chicago] Dog count: 19
-[18-Jul-2016 14:13:30 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:13:30 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:13:53 America/Chicago] Dog count: 19
-[18-Jul-2016 14:13:53 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:13:53 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:13:56 America/Chicago] Dog count: 19
-[18-Jul-2016 14:13:56 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:13:56 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:15:48 America/Chicago] Dog count: 19
-[18-Jul-2016 14:15:48 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:15:48 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:16:19 America/Chicago] Dog count: 19
-[18-Jul-2016 14:16:19 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:16:19 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:16:48 America/Chicago] Dog count: 19
-[18-Jul-2016 14:16:48 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:16:48 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:17:18 America/Chicago] Dog count: 19
-[18-Jul-2016 14:17:18 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:17:18 America/Chicago] 6 dogs registered
-[18-Jul-2016 14:18:52 America/Chicago] Dog count: 19
-[18-Jul-2016 14:18:52 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-)
-
-[18-Jul-2016 14:18:52 America/Chicago] 6 dogs registered
-[19-Jul-2016 13:26:06 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => false
-)
-
-[19-Jul-2016 13:27:29 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => false
-)
-
-[19-Jul-2016 13:29:31 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => false
-)
-
-[19-Jul-2016 13:29:31 America/Chicago] Dog confirm:
-[19-Jul-2016 13:29:31 America/Chicago] 
-[19-Jul-2016 13:30:01 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => false
-)
-
-[19-Jul-2016 13:30:01 America/Chicago] Dog confirm:
-[19-Jul-2016 13:30:01 America/Chicago] false
-[19-Jul-2016 13:30:41 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => false
-)
-
-[19-Jul-2016 13:30:41 America/Chicago] Dog confirm:
-[19-Jul-2016 13:30:41 America/Chicago] 
-[19-Jul-2016 13:34:47 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => 0
-)
-
-[19-Jul-2016 13:34:47 America/Chicago] Dog confirm:
-[19-Jul-2016 13:34:47 America/Chicago] 1
-[19-Jul-2016 13:34:47 America/Chicago] About to check...
-[19-Jul-2016 13:34:47 America/Chicago] Dog count: 27
-[19-Jul-2016 13:34:47 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-    [19] => 50
-    [20] => 51
-    [21] => 52
-    [22] => 53
-    [23] => 54
-    [24] => 55
-    [25] => 56
-    [26] => 57
-)
-
-[19-Jul-2016 13:34:47 America/Chicago] 14 dogs registered
-[19-Jul-2016 13:40:03 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => 0
-)
-
-[19-Jul-2016 13:40:03 America/Chicago] Dog confirm:
-[19-Jul-2016 13:40:03 America/Chicago] 1
-[19-Jul-2016 13:40:03 America/Chicago] About to check...
-[19-Jul-2016 13:40:03 America/Chicago] Dog count: 27
-[19-Jul-2016 13:40:03 America/Chicago] Dog IDs: Array
-(
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-    [19] => 50
-    [20] => 51
-    [21] => 52
-    [22] => 53
-    [23] => 54
-    [24] => 55
-    [25] => 56
-    [26] => 57
-)
-
-[19-Jul-2016 13:40:03 America/Chicago] 14 dogs registered
-[19-Jul-2016 13:40:30 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
+    [dogID] => 24
+    [dogName] => Ruthie
+    [gender] => 1
+    [spayneuter] => 1
     [breed] => beagle
-    [gender] => 0
-    [color] => tricolor
-    [features] => heart-shapped butthole
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => 0
+    [dogWeight] => 26
+    [dogLength] => 20
+    [dogHeight] => 13
+    [dogColor] => tricolor
+    [dogFeatures] => heart-shaped asshole
+    [dogBirthdate] => July 25, 2004
+    [dogAltName] => Ruthann
+    [dogFear] => Swiffer
+    [dogAfflictions] => arthritis
+    [chipped] => 1
+    [chip_brand] => ChipCo
+    [chip_id] => 7474505B
+    [commands] => speak, sit, stay
 )
 
-[19-Jul-2016 13:40:30 America/Chicago] Dog confirm:
-[19-Jul-2016 13:40:30 America/Chicago] 1
-[19-Jul-2016 13:40:30 America/Chicago] About to check...
-[19-Jul-2016 13:40:30 America/Chicago] Dog count: 27
-[19-Jul-2016 13:40:30 America/Chicago] Dog IDs: Array
+[03-Aug-2016 22:47:34 America/Chicago] Got here
+[03-Aug-2016 22:47:34 America/Chicago] fetching dog...
+[03-Aug-2016 22:47:34 America/Chicago] fetched dog!
+[03-Aug-2016 22:47:34 America/Chicago] Resp: Array
 (
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-    [19] => 50
-    [20] => 51
-    [21] => 52
-    [22] => 53
-    [23] => 54
-    [24] => 55
-    [25] => 56
-    [26] => 57
-)
-
-[19-Jul-2016 13:40:30 America/Chicago] 14 dogs registered
-[19-Jul-2016 13:40:45 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
-)
-
-[19-Jul-2016 13:40:45 America/Chicago] Dog confirm:
-[19-Jul-2016 13:40:45 America/Chicago] 
-[19-Jul-2016 13:40:45 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
+    [dogID] => 24
+    [dogName] => Ruthie
+    [gender] => 1
+    [spayneuter] => 1
     [breed] => beagle
-    [gender] => 0
-    [color] => tricolor
-    [features] => heart-shapped butthole
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
+    [dogWeight] => 26
+    [dogLength] => 20
+    [dogHeight] => 13
+    [dogColor] => tricolor
+    [dogFeatures] => heart-shaped asshole
+    [dogBirthdate] => July 25, 2004
+    [dogAltName] => Ruthann
+    [dogFear] => Swiffer
+    [dogAfflictions] => arthritis
+    [chipped] => 1
+    [chip_brand] => ChipCo
+    [chip_id] => 7474505B
+    [commands] => speak, sit, stay
 )
 
-[19-Jul-2016 13:40:45 America/Chicago] Dog confirm:
-[19-Jul-2016 13:40:45 America/Chicago] 
-[19-Jul-2016 13:40:47 America/Chicago] Dog params: Array
+[03-Aug-2016 22:47:44 America/Chicago] Got here
+[03-Aug-2016 22:47:44 America/Chicago] fetching dog...
+[03-Aug-2016 22:47:44 America/Chicago] fetched dog!
+[03-Aug-2016 22:47:44 America/Chicago] Resp: Array
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
-)
-
-[19-Jul-2016 13:40:47 America/Chicago] Dog confirm:
-[19-Jul-2016 13:40:47 America/Chicago] 
-[19-Jul-2016 13:40:47 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
+    [dogID] => 24
+    [dogName] => Ruthie
+    [gender] => 1
+    [spayneuter] => 1
     [breed] => beagle
-    [gender] => 0
-    [color] => tricolor
-    [features] => heart-shapped butthole
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
+    [dogWeight] => 26
+    [dogLength] => 20
+    [dogHeight] => 13
+    [dogColor] => tricolor
+    [dogFeatures] => heart-shaped asshole
+    [dogBirthdate] => July 25, 2004
+    [dogAltName] => Ruthann
+    [dogFear] => Swiffer
+    [dogAfflictions] => arthritis
+    [chipped] => 1
+    [chip_brand] => ChipCo
+    [chip_id] => 7474505B
+    [commands] => speak, sit, stay
 )
 
-[19-Jul-2016 13:40:47 America/Chicago] Dog confirm:
-[19-Jul-2016 13:40:47 America/Chicago] 
-[19-Jul-2016 13:40:48 America/Chicago] Dog params: Array
+[03-Aug-2016 22:48:26 America/Chicago] Got here
+[03-Aug-2016 22:48:26 America/Chicago] fetching dog...
+[03-Aug-2016 22:48:26 America/Chicago] fetched dog!
+[03-Aug-2016 22:48:26 America/Chicago] Resp: Array
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
-)
-
-[19-Jul-2016 13:40:48 America/Chicago] Dog confirm:
-[19-Jul-2016 13:40:48 America/Chicago] 
-[19-Jul-2016 13:40:48 America/Chicago] Dog params: Array
-(
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
+    [dogID] => 24
+    [dogName] => Ruthie
+    [gender] => 1
+    [spayneuter] => 1
     [breed] => beagle
-    [gender] => 0
-    [color] => tricolor
-    [features] => heart-shapped butthole
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
+    [dogWeight] => 26
+    [dogLength] => 20
+    [dogHeight] => 13
+    [dogColor] => tricolor
+    [dogFeatures] => heart-shaped asshole
+    [dogBirthdate] => July 25, 2004
+    [dogAltName] => Ruthann
+    [dogFear] => Swiffer
+    [dogAfflictions] => arthritis
+    [chipped] => 1
+    [chip_brand] => ChipCo
+    [chip_id] => 7474505B
+    [commands] => speak, sit, stay
 )
 
-[19-Jul-2016 13:40:48 America/Chicago] Dog confirm:
-[19-Jul-2016 13:40:48 America/Chicago] 
-[19-Jul-2016 13:42:34 America/Chicago] Dog params: Array
+[03-Aug-2016 23:00:05 America/Chicago] Got here
+[03-Aug-2016 23:00:05 America/Chicago] fetching dog...
+[03-Aug-2016 23:00:05 America/Chicago] fetched dog!
+[03-Aug-2016 23:00:05 America/Chicago] Resp: Array
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => 0
+    [dogID] => 24
+    [dogName] => Ruthie
+    [gender] => 1
+    [spayneuter] => 1
+    [breed] => beagle
+    [dogWeight] => 26
+    [dogLength] => 20
+    [dogHeight] => 13
+    [dogColor] => tricolor
+    [dogFeatures] => heart-shaped asshole
+    [dogBirthdate] => July 25, 2004
+    [dogAltName] => Ruthann
+    [dogFear] => Swiffer
+    [dogAfflictions] => arthritis
+    [chipped] => 1
+    [chip_brand] => ChipCo
+    [chip_id] => 7474505B
+    [commands] => speak, sit, stay
 )
 
-[19-Jul-2016 13:42:34 America/Chicago] Dog confirm:
-[19-Jul-2016 13:42:34 America/Chicago] 1
-[19-Jul-2016 13:42:34 America/Chicago] About to check...
-[19-Jul-2016 13:42:34 America/Chicago] Dog count: 33
-[19-Jul-2016 13:42:34 America/Chicago] Dog IDs: Array
+[03-Aug-2016 23:01:16 America/Chicago] Got here
+[03-Aug-2016 23:01:16 America/Chicago] fetching dog...
+[03-Aug-2016 23:01:16 America/Chicago] fetched dog!
+[03-Aug-2016 23:01:16 America/Chicago] Resp: Array
 (
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-    [19] => 50
-    [20] => 51
-    [21] => 52
-    [22] => 53
-    [23] => 54
-    [24] => 55
-    [25] => 56
-    [26] => 57
-    [27] => 58
-    [28] => 59
-    [29] => 60
-    [30] => 61
-    [31] => 62
-    [32] => 63
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
 )
 
-[19-Jul-2016 13:42:34 America/Chicago] 20 dogs registered
-[19-Jul-2016 13:42:36 America/Chicago] Dog params: Array
+[04-Aug-2016 13:26:08 America/Chicago] Got here
+[04-Aug-2016 13:26:08 America/Chicago] fetching dog...
+[04-Aug-2016 13:26:08 America/Chicago] fetched dog!
+[04-Aug-2016 13:26:08 America/Chicago] Resp: Array
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
 )
 
-[19-Jul-2016 13:42:36 America/Chicago] Dog confirm:
-[19-Jul-2016 13:42:36 America/Chicago] 
-[19-Jul-2016 13:43:35 America/Chicago] Dog params: Array
+[04-Aug-2016 14:12:04 America/Chicago] Got here
+[04-Aug-2016 14:12:04 America/Chicago] fetching dog...
+[04-Aug-2016 14:12:04 America/Chicago] fetched dog!
+[04-Aug-2016 14:12:04 America/Chicago] Resp: Array
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => 0
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
 )
 
-[19-Jul-2016 13:43:35 America/Chicago] Dog confirm:
-[19-Jul-2016 13:43:35 America/Chicago] 1
-[19-Jul-2016 13:43:35 America/Chicago] About to check...
-[19-Jul-2016 13:43:35 America/Chicago] Dog count: 34
-[19-Jul-2016 13:43:35 America/Chicago] Dog IDs: Array
+[04-Aug-2016 14:12:04 America/Chicago] PHP Fatal error:  Call to undefined method Log_model::retrieveLatestWalk() in /Volumes/Coding/logthedog.com/rooooo/controllers/log.php on line 256
+[04-Aug-2016 14:12:35 America/Chicago] Got here
+[04-Aug-2016 14:12:35 America/Chicago] fetching dog...
+[04-Aug-2016 14:12:35 America/Chicago] fetched dog!
+[04-Aug-2016 14:12:35 America/Chicago] Resp: Array
 (
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-    [19] => 50
-    [20] => 51
-    [21] => 52
-    [22] => 53
-    [23] => 54
-    [24] => 55
-    [25] => 56
-    [26] => 57
-    [27] => 58
-    [28] => 59
-    [29] => 60
-    [30] => 61
-    [31] => 62
-    [32] => 63
-    [33] => 64
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
 )
 
-[19-Jul-2016 13:43:35 America/Chicago] 21 dogs registered
-[19-Jul-2016 13:43:37 America/Chicago] Dog params: Array
+[04-Aug-2016 14:12:35 America/Chicago] Row: stdClass Object
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
+    [MAX(walkDate)] => 2016-08-10 07:05:36
+    [action] => 0
+    [walkNotes] => 
 )
 
-[19-Jul-2016 13:43:37 America/Chicago] Dog confirm:
-[19-Jul-2016 13:43:37 America/Chicago] 
-[19-Jul-2016 13:44:23 America/Chicago] Dog params: Array
+[04-Aug-2016 14:13:29 America/Chicago] Got here
+[04-Aug-2016 14:13:29 America/Chicago] fetching dog...
+[04-Aug-2016 14:13:29 America/Chicago] fetched dog!
+[04-Aug-2016 14:13:29 America/Chicago] Resp: Array
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => 0
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
 )
 
-[19-Jul-2016 13:44:23 America/Chicago] Dog confirm:
-[19-Jul-2016 13:44:23 America/Chicago] 1
-[19-Jul-2016 13:44:23 America/Chicago] About to check...
-[19-Jul-2016 13:44:23 America/Chicago] Dog count: 35
-[19-Jul-2016 13:44:23 America/Chicago] Dog IDs: Array
+[04-Aug-2016 14:13:29 America/Chicago] Row: stdClass Object
 (
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-    [19] => 50
-    [20] => 51
-    [21] => 52
-    [22] => 53
-    [23] => 54
-    [24] => 55
-    [25] => 56
-    [26] => 57
-    [27] => 58
-    [28] => 59
-    [29] => 60
-    [30] => 61
-    [31] => 62
-    [32] => 63
-    [33] => 64
-    [34] => 65
+    [MAX(walkDate)] => 2016-08-10 07:05:36
+    [action] => 2
+    [walkNotes] => 
 )
 
-[19-Jul-2016 13:44:23 America/Chicago] 22 dogs registered
-[19-Jul-2016 13:44:26 America/Chicago] Dog params: Array
+[04-Aug-2016 14:14:29 America/Chicago] Got here
+[04-Aug-2016 14:14:29 America/Chicago] fetching dog...
+[04-Aug-2016 14:14:29 America/Chicago] fetched dog!
+[04-Aug-2016 14:14:29 America/Chicago] Resp: Array
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
 )
 
-[19-Jul-2016 13:44:26 America/Chicago] Dog confirm:
-[19-Jul-2016 13:44:26 America/Chicago] 
-[19-Jul-2016 13:44:57 America/Chicago] Dog params: Array
+[04-Aug-2016 14:14:29 America/Chicago] Row: stdClass Object
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => 0
+    [action] => 2
+    [walkNotes] => 
+    [walkDate] => 2016-08-10 07:05:36
 )
 
-[19-Jul-2016 13:44:57 America/Chicago] Dog confirm:
-[19-Jul-2016 13:44:57 America/Chicago] 1
-[19-Jul-2016 13:44:57 America/Chicago] About to check...
-[19-Jul-2016 13:44:57 America/Chicago] Dog count: 36
-[19-Jul-2016 13:44:57 America/Chicago] Dog IDs: Array
+[04-Aug-2016 14:15:09 America/Chicago] Got here
+[04-Aug-2016 14:15:09 America/Chicago] fetching dog...
+[04-Aug-2016 14:15:09 America/Chicago] fetched dog!
+[04-Aug-2016 14:15:09 America/Chicago] Resp: Array
 (
-    [0] => 13
-    [1] => 14
-    [2] => 15
-    [3] => 16
-    [4] => 17
-    [5] => 18
-    [6] => 19
-    [7] => 20
-    [8] => 21
-    [9] => 22
-    [10] => 23
-    [11] => 24
-    [12] => 25
-    [13] => 26
-    [14] => 45
-    [15] => 46
-    [16] => 47
-    [17] => 48
-    [18] => 49
-    [19] => 50
-    [20] => 51
-    [21] => 52
-    [22] => 53
-    [23] => 54
-    [24] => 55
-    [25] => 56
-    [26] => 57
-    [27] => 58
-    [28] => 59
-    [29] => 60
-    [30] => 61
-    [31] => 62
-    [32] => 63
-    [33] => 64
-    [34] => 65
-    [35] => 66
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
 )
 
-[19-Jul-2016 13:44:57 America/Chicago] 23 dogs registered
-[19-Jul-2016 13:44:58 America/Chicago] Dog params: Array
+[04-Aug-2016 14:15:09 America/Chicago] Row: stdClass Object
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
+    [action] => 1
+    [walkNotes] => Ruthie peed.
+    [walkDate] => 2016-08-10 07:05:36
 )
 
-[19-Jul-2016 13:44:58 America/Chicago] Dog confirm:
-[19-Jul-2016 13:44:58 America/Chicago] 
-[19-Jul-2016 13:50:16 America/Chicago] Dog params: Array
+[04-Aug-2016 14:15:09 America/Chicago] Got here
+[04-Aug-2016 14:15:09 America/Chicago] fetching dog...
+[04-Aug-2016 14:15:09 America/Chicago] fetched dog!
+[04-Aug-2016 14:15:09 America/Chicago] Resp: Array
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => 0
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
 )
 
-[19-Jul-2016 13:50:18 America/Chicago] Dog params: Array
+[04-Aug-2016 14:15:09 America/Chicago] Row: stdClass Object
 (
-    [name] => Ruthie
-    [weight] => 
-    [height] => 
-    [length] => 
-    [neutered] => 0
-    [breed] => 
-    [gender] => 0
-    [color] => 
-    [features] => 
-    [alt_name] => 
-    [afflictions] => 
-    [fears] => 
-    [commands] => 
-    [chipped] => 0
-    [chip_brand] => 
-    [chip_id] => 
-    [birth_date] => 
-    [confirm] => true
+    [action] => 1
+    [walkNotes] => Ruthie peed.
+    [walkDate] => 2016-08-10 07:05:36
+)
+
+[04-Aug-2016 17:59:24 America/Chicago] Got here
+[04-Aug-2016 17:59:24 America/Chicago] fetching dog...
+[04-Aug-2016 17:59:24 America/Chicago] fetched dog!
+[04-Aug-2016 17:59:24 America/Chicago] Resp: Array
+(
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
+)
+
+[04-Aug-2016 18:00:12 America/Chicago] Got here
+[04-Aug-2016 18:00:12 America/Chicago] fetching dog...
+[04-Aug-2016 18:00:12 America/Chicago] fetched dog!
+[04-Aug-2016 18:00:12 America/Chicago] Resp: Array
+(
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
+)
+
+[04-Aug-2016 18:00:49 America/Chicago] Got here
+[04-Aug-2016 18:00:49 America/Chicago] fetching dog...
+[04-Aug-2016 18:00:49 America/Chicago] fetched dog!
+[04-Aug-2016 18:00:49 America/Chicago] Resp: Array
+(
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
+)
+
+[04-Aug-2016 18:01:16 America/Chicago] Got here
+[04-Aug-2016 18:01:16 America/Chicago] fetching dog...
+[04-Aug-2016 18:01:16 America/Chicago] fetched dog!
+[04-Aug-2016 18:01:16 America/Chicago] Resp: Array
+(
+    [success] => 1
+    [dog] => Array
+        (
+            [dogID] => 24
+            [dogName] => Ruthie
+            [gender] => 1
+            [spayneuter] => 1
+            [breed] => beagle
+            [dogWeight] => 26
+            [dogLength] => 20
+            [dogHeight] => 13
+            [dogColor] => tricolor
+            [dogFeatures] => heart-shaped asshole
+            [dogBirthdate] => July 25, 2004
+            [dogAltName] => Ruthann
+            [dogFear] => Swiffer
+            [dogAfflictions] => arthritis
+            [chipped] => 1
+            [chip_brand] => ChipCo
+            [chip_id] => 7474505B
+            [commands] => speak, sit, stay
+        )
+
+)
+
+[04-Aug-2016 18:06:43 America/Chicago] Got here
+[04-Aug-2016 18:06:43 America/Chicago] fetching dog...
+[04-Aug-2016 18:06:43 America/Chicago] fetched dog!
+[04-Aug-2016 18:08:01 America/Chicago] Got here
+[04-Aug-2016 18:08:01 America/Chicago] fetching dog...
+[04-Aug-2016 18:08:01 America/Chicago] fetched dog!
+[04-Aug-2016 18:08:51 America/Chicago] Got here
+[04-Aug-2016 18:08:51 America/Chicago] fetching dog...
+[04-Aug-2016 18:08:51 America/Chicago] fetched dog!
+[04-Aug-2016 18:09:10 America/Chicago] Got here
+[04-Aug-2016 18:09:10 America/Chicago] fetching dog...
+[04-Aug-2016 18:09:10 America/Chicago] fetched dog!
+[04-Aug-2016 18:09:24 America/Chicago] Got here
+[04-Aug-2016 18:09:24 America/Chicago] fetching dog...
+[04-Aug-2016 18:09:24 America/Chicago] fetched dog!
+[04-Aug-2016 18:24:16 America/Chicago] Got here
+[04-Aug-2016 18:24:16 America/Chicago] fetching dog...
+[04-Aug-2016 18:24:16 America/Chicago] fetched dog!
+[04-Aug-2016 18:26:18 America/Chicago] Got here
+[04-Aug-2016 18:26:18 America/Chicago] fetching dog...
+[04-Aug-2016 18:26:18 America/Chicago] fetched dog!
+[04-Aug-2016 18:26:43 America/Chicago] Got here
+[04-Aug-2016 18:26:43 America/Chicago] fetching dog...
+[04-Aug-2016 18:26:43 America/Chicago] fetched dog!
+[04-Aug-2016 18:31:23 America/Chicago] Got here
+[04-Aug-2016 18:31:23 America/Chicago] fetching dog...
+[04-Aug-2016 18:31:23 America/Chicago] fetched dog!
+[04-Aug-2016 18:31:43 America/Chicago] Got here
+[04-Aug-2016 18:31:43 America/Chicago] fetching dog...
+[04-Aug-2016 18:31:43 America/Chicago] fetched dog!
+[04-Aug-2016 18:32:50 America/Chicago] Got here
+[04-Aug-2016 18:32:50 America/Chicago] fetching dog...
+[04-Aug-2016 18:32:50 America/Chicago] fetched dog!
+[04-Aug-2016 18:33:49 America/Chicago] Got here
+[04-Aug-2016 18:33:49 America/Chicago] fetching dog...
+[04-Aug-2016 18:33:49 America/Chicago] fetched dog!
+[04-Aug-2016 18:35:37 America/Chicago] Got here
+[04-Aug-2016 18:35:37 America/Chicago] fetching dog...
+[04-Aug-2016 18:35:37 America/Chicago] fetched dog!
+[04-Aug-2016 23:16:00 America/Chicago] Got here
+[04-Aug-2016 23:16:00 America/Chicago] fetching dog...
+[04-Aug-2016 23:16:00 America/Chicago] fetched dog!
+[06-Aug-2016 17:32:23 America/Chicago] Got here
+[06-Aug-2016 17:32:23 America/Chicago] fetching dog...
+[06-Aug-2016 17:32:23 America/Chicago] fetched dog!
+[06-Aug-2016 17:42:07 America/Chicago] Got here
+[06-Aug-2016 17:42:07 America/Chicago] fetching dog...
+[06-Aug-2016 17:42:07 America/Chicago] fetched dog!
+[06-Aug-2016 17:43:17 America/Chicago] Got here
+[06-Aug-2016 17:43:17 America/Chicago] fetching dog...
+[06-Aug-2016 17:43:17 America/Chicago] fetched dog!
+[06-Aug-2016 17:43:18 America/Chicago] Got here
+[06-Aug-2016 17:43:18 America/Chicago] fetching dog...
+[06-Aug-2016 17:43:18 America/Chicago] fetched dog!
+[06-Aug-2016 17:43:37 America/Chicago] Got here
+[06-Aug-2016 17:43:37 America/Chicago] fetching dog...
+[06-Aug-2016 17:43:37 America/Chicago] fetched dog!
+[06-Aug-2016 17:44:05 America/Chicago] Got here
+[06-Aug-2016 17:44:05 America/Chicago] fetching dog...
+[06-Aug-2016 17:44:05 America/Chicago] fetched dog!
+[06-Aug-2016 17:58:50 America/Chicago] Got here
+[06-Aug-2016 17:58:50 America/Chicago] fetching dog...
+[06-Aug-2016 17:58:50 America/Chicago] fetched dog!
+[07-Aug-2016 01:30:52 America/Chicago] Got here
+[07-Aug-2016 01:30:52 America/Chicago] fetching dog...
+[07-Aug-2016 01:30:52 America/Chicago] fetched dog!
+[07-Aug-2016 10:59:52 America/Chicago] Got here
+[07-Aug-2016 10:59:52 America/Chicago] fetching dog...
+[07-Aug-2016 10:59:52 America/Chicago] fetched dog!
+[07-Aug-2016 11:00:02 America/Chicago] Got here
+[07-Aug-2016 11:00:02 America/Chicago] fetching dog...
+[07-Aug-2016 11:00:02 America/Chicago] fetched dog!
+[07-Aug-2016 11:13:41 America/Chicago] Got here
+[07-Aug-2016 11:13:41 America/Chicago] fetching dog...
+[07-Aug-2016 11:13:41 America/Chicago] fetched dog!
+[07-Aug-2016 11:38:43 America/Chicago] Got here
+[07-Aug-2016 11:38:43 America/Chicago] fetching dog...
+[07-Aug-2016 11:38:43 America/Chicago] fetched dog!
+[07-Aug-2016 11:52:12 America/Chicago] Got here
+[07-Aug-2016 11:52:12 America/Chicago] fetching dog...
+[07-Aug-2016 11:52:12 America/Chicago] fetched dog!
+[07-Aug-2016 11:56:03 America/Chicago] Got here
+[07-Aug-2016 11:56:03 America/Chicago] fetching dog...
+[07-Aug-2016 11:56:03 America/Chicago] fetched dog!
+[07-Aug-2016 11:57:24 America/Chicago] Got here
+[07-Aug-2016 11:57:24 America/Chicago] fetching dog...
+[07-Aug-2016 11:57:24 America/Chicago] fetched dog!
+[07-Aug-2016 11:57:47 America/Chicago] Got here
+[07-Aug-2016 11:57:47 America/Chicago] fetching dog...
+[07-Aug-2016 11:57:47 America/Chicago] fetched dog!
+[07-Aug-2016 11:58:24 America/Chicago] Got here
+[07-Aug-2016 11:58:24 America/Chicago] fetching dog...
+[07-Aug-2016 11:58:24 America/Chicago] fetched dog!
+[07-Aug-2016 11:58:58 America/Chicago] Got here
+[07-Aug-2016 11:58:58 America/Chicago] fetching dog...
+[07-Aug-2016 11:58:58 America/Chicago] fetched dog!
+[07-Aug-2016 11:59:43 America/Chicago] Got here
+[07-Aug-2016 11:59:43 America/Chicago] fetching dog...
+[07-Aug-2016 11:59:43 America/Chicago] fetched dog!
+[07-Aug-2016 12:00:40 America/Chicago] Got here
+[07-Aug-2016 12:00:40 America/Chicago] fetching dog...
+[07-Aug-2016 12:00:40 America/Chicago] fetched dog!
+[07-Aug-2016 12:29:49 America/Chicago] Got here
+[07-Aug-2016 12:29:49 America/Chicago] fetching dog...
+[07-Aug-2016 12:29:49 America/Chicago] fetched dog!
+[07-Aug-2016 12:30:46 America/Chicago] Got here
+[07-Aug-2016 12:30:46 America/Chicago] fetching dog...
+[07-Aug-2016 12:30:46 America/Chicago] fetched dog!
+[07-Aug-2016 12:31:09 America/Chicago] Got here
+[07-Aug-2016 12:31:09 America/Chicago] fetching dog...
+[07-Aug-2016 12:31:09 America/Chicago] fetched dog!
+[07-Aug-2016 12:32:26 America/Chicago] Got here
+[07-Aug-2016 12:32:26 America/Chicago] fetching dog...
+[07-Aug-2016 12:32:26 America/Chicago] fetched dog!
+[07-Aug-2016 13:47:13 America/Chicago] Got here
+[07-Aug-2016 13:47:13 America/Chicago] fetching dog...
+[07-Aug-2016 13:47:13 America/Chicago] fetched dog!
+[07-Aug-2016 13:48:34 America/Chicago] Got here
+[07-Aug-2016 13:48:34 America/Chicago] fetching dog...
+[07-Aug-2016 13:48:34 America/Chicago] fetched dog!
+[07-Aug-2016 13:50:04 America/Chicago] Got here
+[07-Aug-2016 13:50:04 America/Chicago] fetching dog...
+[07-Aug-2016 13:50:04 America/Chicago] fetched dog!
+[07-Aug-2016 13:50:49 America/Chicago] Got here
+[07-Aug-2016 13:50:49 America/Chicago] fetching dog...
+[07-Aug-2016 13:50:49 America/Chicago] fetched dog!
+[07-Aug-2016 13:50:54 America/Chicago] Got here
+[07-Aug-2016 13:50:54 America/Chicago] fetching dog...
+[07-Aug-2016 13:50:54 America/Chicago] fetched dog!
+[07-Aug-2016 13:51:56 America/Chicago] Got here
+[07-Aug-2016 13:51:56 America/Chicago] fetching dog...
+[07-Aug-2016 13:51:56 America/Chicago] fetched dog!
+[07-Aug-2016 13:53:00 America/Chicago] Got here
+[07-Aug-2016 13:53:00 America/Chicago] fetching dog...
+[07-Aug-2016 13:53:00 America/Chicago] fetched dog!
+[07-Aug-2016 13:53:00 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:54:07 America/Chicago] Got here
+[07-Aug-2016 13:54:07 America/Chicago] fetching dog...
+[07-Aug-2016 13:54:07 America/Chicago] fetched dog!
+[07-Aug-2016 13:54:07 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:55:26 America/Chicago] Got here
+[07-Aug-2016 13:55:26 America/Chicago] fetching dog...
+[07-Aug-2016 13:55:26 America/Chicago] fetched dog!
+[07-Aug-2016 13:55:26 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:56:45 America/Chicago] Got here
+[07-Aug-2016 13:56:45 America/Chicago] fetching dog...
+[07-Aug-2016 13:56:45 America/Chicago] fetched dog!
+[07-Aug-2016 13:56:45 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 13:56:47 America/Chicago] Got here
+[07-Aug-2016 13:56:47 America/Chicago] fetching dog...
+[07-Aug-2016 13:56:47 America/Chicago] fetched dog!
+[07-Aug-2016 13:56:47 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:57:18 America/Chicago] Got here
+[07-Aug-2016 13:57:18 America/Chicago] fetching dog...
+[07-Aug-2016 13:57:18 America/Chicago] fetched dog!
+[07-Aug-2016 13:57:18 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 13:57:21 America/Chicago] Got here
+[07-Aug-2016 13:57:21 America/Chicago] fetching dog...
+[07-Aug-2016 13:57:21 America/Chicago] fetched dog!
+[07-Aug-2016 13:57:21 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:58:09 America/Chicago] Got here
+[07-Aug-2016 13:58:09 America/Chicago] fetching dog...
+[07-Aug-2016 13:58:09 America/Chicago] fetched dog!
+[07-Aug-2016 13:58:09 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:58:12 America/Chicago] Got here
+[07-Aug-2016 13:58:12 America/Chicago] fetching dog...
+[07-Aug-2016 13:58:12 America/Chicago] fetched dog!
+[07-Aug-2016 13:58:12 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:58:16 America/Chicago] Got here
+[07-Aug-2016 13:58:16 America/Chicago] fetching dog...
+[07-Aug-2016 13:58:16 America/Chicago] fetched dog!
+[07-Aug-2016 13:58:16 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:58:19 America/Chicago] Got here
+[07-Aug-2016 13:58:19 America/Chicago] fetching dog...
+[07-Aug-2016 13:58:19 America/Chicago] fetched dog!
+[07-Aug-2016 13:58:19 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[07-Aug-2016 13:58:22 America/Chicago] Got here
+[07-Aug-2016 13:58:22 America/Chicago] fetching dog...
+[07-Aug-2016 13:58:22 America/Chicago] fetched dog!
+[07-Aug-2016 13:58:22 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 20:58:10 America/Chicago] data: Array
+(
+    [dogs] => <script>$(document).ready(function() {$("#ltd_error_modal_header_text").html("Cannot log a walk");$("#ltd_error_modal_text").html("There are no dogs registered to your account.");$('#ltd_error_modal').modal('show');$('#ltd_error_modal_ok').on('click',function() { location.href='/';});});</script>
+)
+
+[07-Aug-2016 21:19:38 America/Chicago] fetching dog...
+[07-Aug-2016 21:19:38 America/Chicago] fetched dog!
+[07-Aug-2016 21:19:38 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:21:05 America/Chicago] fetching dog...
+[07-Aug-2016 21:21:05 America/Chicago] fetched dog!
+[07-Aug-2016 21:21:05 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:24:22 America/Chicago] fetching dog...
+[07-Aug-2016 21:24:22 America/Chicago] fetched dog!
+[07-Aug-2016 21:24:22 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:25:31 America/Chicago] fetching dog...
+[07-Aug-2016 21:25:31 America/Chicago] fetched dog!
+[07-Aug-2016 21:25:31 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:25:35 America/Chicago] fetching dog...
+[07-Aug-2016 21:25:35 America/Chicago] fetched dog!
+[07-Aug-2016 21:25:35 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:26:00 America/Chicago] fetching dog...
+[07-Aug-2016 21:26:00 America/Chicago] fetched dog!
+[07-Aug-2016 21:26:00 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:26:14 America/Chicago] fetching dog...
+[07-Aug-2016 21:26:14 America/Chicago] fetched dog!
+[07-Aug-2016 21:26:14 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:27:18 America/Chicago] fetching dog...
+[07-Aug-2016 21:27:18 America/Chicago] fetched dog!
+[07-Aug-2016 21:27:18 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:28:43 America/Chicago] fetching dog...
+[07-Aug-2016 21:28:43 America/Chicago] fetched dog!
+[07-Aug-2016 21:28:43 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:28:56 America/Chicago] fetching dog...
+[07-Aug-2016 21:28:56 America/Chicago] fetched dog!
+[07-Aug-2016 21:28:56 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:29:19 America/Chicago] fetching dog...
+[07-Aug-2016 21:29:19 America/Chicago] fetched dog!
+[07-Aug-2016 21:29:19 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:33:20 America/Chicago] fetching dog...
+[07-Aug-2016 21:33:20 America/Chicago] fetched dog!
+[07-Aug-2016 21:33:20 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:34:35 America/Chicago] fetching dog...
+[07-Aug-2016 21:34:35 America/Chicago] fetched dog!
+[07-Aug-2016 21:34:35 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 21:35:19 America/Chicago] fetching dog...
+[07-Aug-2016 21:35:19 America/Chicago] fetched dog!
+[07-Aug-2016 21:35:19 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:00:37 America/Chicago] fetching dog...
+[07-Aug-2016 22:00:37 America/Chicago] fetched dog!
+[07-Aug-2016 22:00:37 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:03:56 America/Chicago] fetching dog...
+[07-Aug-2016 22:03:56 America/Chicago] fetched dog!
+[07-Aug-2016 22:03:56 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:17:37 America/Chicago] fetching dog...
+[07-Aug-2016 22:17:37 America/Chicago] fetched dog!
+[07-Aug-2016 22:17:37 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:18:01 America/Chicago] fetching dog...
+[07-Aug-2016 22:18:01 America/Chicago] fetched dog!
+[07-Aug-2016 22:18:01 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:18:10 America/Chicago] fetching dog...
+[07-Aug-2016 22:18:10 America/Chicago] fetched dog!
+[07-Aug-2016 22:18:10 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:21:18 America/Chicago] fetching dog...
+[07-Aug-2016 22:21:18 America/Chicago] fetched dog!
+[07-Aug-2016 22:21:18 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:23:24 America/Chicago] fetching dog...
+[07-Aug-2016 22:23:24 America/Chicago] fetched dog!
+[07-Aug-2016 22:23:24 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:24:42 America/Chicago] fetching dog...
+[07-Aug-2016 22:24:42 America/Chicago] fetched dog!
+[07-Aug-2016 22:24:42 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:26:11 America/Chicago] fetching dog...
+[07-Aug-2016 22:26:11 America/Chicago] fetched dog!
+[07-Aug-2016 22:26:11 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:26:21 America/Chicago] fetching dog...
+[07-Aug-2016 22:26:21 America/Chicago] fetched dog!
+[07-Aug-2016 22:26:21 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:27:32 America/Chicago] fetching dog...
+[07-Aug-2016 22:27:32 America/Chicago] fetched dog!
+[07-Aug-2016 22:27:32 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:28:40 America/Chicago] fetching dog...
+[07-Aug-2016 22:28:40 America/Chicago] fetched dog!
+[07-Aug-2016 22:28:40 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:29:38 America/Chicago] fetching dog...
+[07-Aug-2016 22:29:38 America/Chicago] fetched dog!
+[07-Aug-2016 22:29:38 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:31:25 America/Chicago] fetching dog...
+[07-Aug-2016 22:31:25 America/Chicago] fetched dog!
+[07-Aug-2016 22:31:25 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:32:50 America/Chicago] fetching dog...
+[07-Aug-2016 22:32:50 America/Chicago] fetched dog!
+[07-Aug-2016 22:32:50 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:34:04 America/Chicago] fetching dog...
+[07-Aug-2016 22:34:04 America/Chicago] fetched dog!
+[07-Aug-2016 22:34:04 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:34:52 America/Chicago] fetching dog...
+[07-Aug-2016 22:34:52 America/Chicago] fetched dog!
+[07-Aug-2016 22:34:52 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:36:10 America/Chicago] fetching dog...
+[07-Aug-2016 22:36:10 America/Chicago] fetched dog!
+[07-Aug-2016 22:36:10 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:38:22 America/Chicago] fetching dog...
+[07-Aug-2016 22:38:22 America/Chicago] fetched dog!
+[07-Aug-2016 22:38:22 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:41:59 America/Chicago] fetching dog...
+[07-Aug-2016 22:41:59 America/Chicago] fetched dog!
+[07-Aug-2016 22:41:59 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:42:28 America/Chicago] fetching dog...
+[07-Aug-2016 22:42:28 America/Chicago] fetched dog!
+[07-Aug-2016 22:42:28 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:43:08 America/Chicago] fetching dog...
+[07-Aug-2016 22:43:08 America/Chicago] fetched dog!
+[07-Aug-2016 22:43:08 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:45:42 America/Chicago] fetching dog...
+[07-Aug-2016 22:45:42 America/Chicago] fetched dog!
+[07-Aug-2016 22:45:42 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:48:48 America/Chicago] fetching dog...
+[07-Aug-2016 22:48:48 America/Chicago] fetched dog!
+[07-Aug-2016 22:48:48 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 22:49:24 America/Chicago] fetching dog...
+[07-Aug-2016 22:49:24 America/Chicago] fetched dog!
+[07-Aug-2016 22:49:24 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:06:20 America/Chicago] fetching dog...
+[07-Aug-2016 23:06:20 America/Chicago] fetched dog!
+[07-Aug-2016 23:06:20 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:07:09 America/Chicago] fetching dog...
+[07-Aug-2016 23:07:09 America/Chicago] fetched dog!
+[07-Aug-2016 23:07:09 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:07:29 America/Chicago] fetching dog...
+[07-Aug-2016 23:07:29 America/Chicago] fetched dog!
+[07-Aug-2016 23:07:29 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:08:49 America/Chicago] fetching dog...
+[07-Aug-2016 23:08:49 America/Chicago] fetched dog!
+[07-Aug-2016 23:08:49 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:12:53 America/Chicago] fetching dog...
+[07-Aug-2016 23:12:53 America/Chicago] fetched dog!
+[07-Aug-2016 23:12:53 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:26:55 America/Chicago] fetching dog...
+[07-Aug-2016 23:26:55 America/Chicago] fetched dog!
+[07-Aug-2016 23:26:55 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:27:27 America/Chicago] fetching dog...
+[07-Aug-2016 23:27:27 America/Chicago] fetched dog!
+[07-Aug-2016 23:27:27 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:08:00 America/Chicago] fetching dog...
+[07-Aug-2016 23:08:00 America/Chicago] fetched dog!
+[07-Aug-2016 23:08:00 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:08:54 America/Chicago] fetching dog...
+[07-Aug-2016 23:08:54 America/Chicago] fetched dog!
+[07-Aug-2016 23:08:54 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:10:27 America/Chicago] fetching dog...
+[07-Aug-2016 23:10:27 America/Chicago] fetched dog!
+[07-Aug-2016 23:10:27 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:14:06 America/Chicago] fetching dog...
+[07-Aug-2016 23:14:06 America/Chicago] fetched dog!
+[07-Aug-2016 23:14:06 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:15:30 America/Chicago] fetching dog...
+[07-Aug-2016 23:15:30 America/Chicago] fetched dog!
+[07-Aug-2016 23:15:30 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 11:15:42 America/Chicago] fetching dog...
+[07-Aug-2016 11:15:42 America/Chicago] fetched dog!
+[07-Aug-2016 11:15:42 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:36:01 America/Chicago] fetching dog...
+[07-Aug-2016 23:36:01 America/Chicago] fetched dog!
+[07-Aug-2016 23:36:01 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:48:25 America/Chicago] fetching dog...
+[07-Aug-2016 23:48:25 America/Chicago] fetched dog!
+[07-Aug-2016 23:48:25 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:48:54 America/Chicago] fetching dog...
+[07-Aug-2016 23:48:54 America/Chicago] fetched dog!
+[07-Aug-2016 23:48:54 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:49:06 America/Chicago] fetching dog...
+[07-Aug-2016 23:49:06 America/Chicago] fetched dog!
+[07-Aug-2016 23:49:06 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:51:15 America/Chicago] fetching dog...
+[07-Aug-2016 23:51:15 America/Chicago] fetched dog!
+[07-Aug-2016 23:51:15 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:51:48 America/Chicago] fetching dog...
+[07-Aug-2016 23:51:48 America/Chicago] fetched dog!
+[07-Aug-2016 23:51:48 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:52:19 America/Chicago] fetching dog...
+[07-Aug-2016 23:52:19 America/Chicago] fetched dog!
+[07-Aug-2016 23:52:19 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:52:38 America/Chicago] fetching dog...
+[07-Aug-2016 23:52:38 America/Chicago] fetched dog!
+[07-Aug-2016 23:52:38 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:53:07 America/Chicago] fetching dog...
+[07-Aug-2016 23:53:07 America/Chicago] fetched dog!
+[07-Aug-2016 23:53:07 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:54:01 America/Chicago] fetching dog...
+[07-Aug-2016 23:54:01 America/Chicago] fetched dog!
+[07-Aug-2016 23:54:01 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:54:35 America/Chicago] fetching dog...
+[07-Aug-2016 23:54:35 America/Chicago] fetched dog!
+[07-Aug-2016 23:54:35 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:55:11 America/Chicago] fetching dog...
+[07-Aug-2016 23:55:11 America/Chicago] fetched dog!
+[07-Aug-2016 23:55:11 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:56:21 America/Chicago] fetching dog...
+[07-Aug-2016 23:56:21 America/Chicago] fetched dog!
+[07-Aug-2016 23:56:21 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:56:59 America/Chicago] fetching dog...
+[07-Aug-2016 23:56:59 America/Chicago] fetched dog!
+[07-Aug-2016 23:56:59 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:57:23 America/Chicago] fetching dog...
+[07-Aug-2016 23:57:23 America/Chicago] fetched dog!
+[07-Aug-2016 23:57:23 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:59:23 America/Chicago] fetching dog...
+[07-Aug-2016 23:59:23 America/Chicago] fetched dog!
+[07-Aug-2016 23:59:23 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[07-Aug-2016 23:59:40 America/Chicago] fetching dog...
+[07-Aug-2016 23:59:40 America/Chicago] fetched dog!
+[07-Aug-2016 23:59:40 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:00:01 America/Chicago] fetching dog...
+[08-Aug-2016 00:00:01 America/Chicago] fetched dog!
+[08-Aug-2016 00:00:01 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:01:41 America/Chicago] fetching dog...
+[08-Aug-2016 00:01:41 America/Chicago] fetched dog!
+[08-Aug-2016 00:01:41 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:02:24 America/Chicago] fetching dog...
+[08-Aug-2016 00:02:24 America/Chicago] fetched dog!
+[08-Aug-2016 00:02:24 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:03:17 America/Chicago] fetching dog...
+[08-Aug-2016 00:03:17 America/Chicago] fetched dog!
+[08-Aug-2016 00:03:17 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:03:37 America/Chicago] fetching dog...
+[08-Aug-2016 00:03:37 America/Chicago] fetched dog!
+[08-Aug-2016 00:03:37 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:04:09 America/Chicago] fetching dog...
+[08-Aug-2016 00:04:09 America/Chicago] fetched dog!
+[08-Aug-2016 00:04:09 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:06:27 America/Chicago] fetching dog...
+[08-Aug-2016 00:06:27 America/Chicago] fetched dog!
+[08-Aug-2016 00:06:27 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:06:45 America/Chicago] fetching dog...
+[08-Aug-2016 00:06:45 America/Chicago] fetched dog!
+[08-Aug-2016 00:06:46 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:07:09 America/Chicago] fetching dog...
+[08-Aug-2016 00:07:09 America/Chicago] fetched dog!
+[08-Aug-2016 00:07:09 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:07:30 America/Chicago] fetching dog...
+[08-Aug-2016 00:07:30 America/Chicago] fetched dog!
+[08-Aug-2016 00:07:30 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:08:18 America/Chicago] fetching dog...
+[08-Aug-2016 00:08:18 America/Chicago] fetched dog!
+[08-Aug-2016 00:08:18 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:10:42 America/Chicago] fetching dog...
+[08-Aug-2016 00:10:42 America/Chicago] fetched dog!
+[08-Aug-2016 00:10:42 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:10:54 America/Chicago] fetching dog...
+[08-Aug-2016 00:10:54 America/Chicago] fetched dog!
+[08-Aug-2016 00:10:54 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:24:03 America/Chicago] fetching dog...
+[08-Aug-2016 00:24:03 America/Chicago] fetched dog!
+[08-Aug-2016 00:24:03 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 00:25:26 America/Chicago] fetching dog...
+[08-Aug-2016 00:25:26 America/Chicago] fetched dog!
+[08-Aug-2016 00:25:26 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 07:17:12 America/Chicago] fetching dog...
+[08-Aug-2016 07:17:12 America/Chicago] fetched dog!
+[08-Aug-2016 07:17:12 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 07:17:26 America/Chicago] fetching dog...
+[08-Aug-2016 07:17:26 America/Chicago] fetched dog!
+[08-Aug-2016 07:17:26 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 07:20:00 America/Chicago] fetching dog...
+[08-Aug-2016 07:20:00 America/Chicago] fetched dog!
+[08-Aug-2016 07:20:00 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 07:21:06 America/Chicago] fetching dog...
+[08-Aug-2016 07:21:06 America/Chicago] fetched dog!
+[08-Aug-2016 07:21:06 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 13:36:46 America/Chicago] fetching dog...
+[08-Aug-2016 13:36:46 America/Chicago] fetched dog!
+[08-Aug-2016 13:36:46 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 13:39:36 America/Chicago] fetching dog...
+[08-Aug-2016 13:39:36 America/Chicago] fetched dog!
+[08-Aug-2016 13:39:36 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 13:45:20 America/Chicago] fetching dog...
+[08-Aug-2016 13:45:20 America/Chicago] fetched dog!
+[08-Aug-2016 13:45:20 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 13:49:20 America/Chicago] fetching dog...
+[08-Aug-2016 13:49:20 America/Chicago] fetched dog!
+[08-Aug-2016 13:49:20 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 13:55:49 America/Chicago] fetching dog...
+[08-Aug-2016 13:55:49 America/Chicago] fetched dog!
+[08-Aug-2016 13:55:49 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 14:13:07 America/Chicago] fetching dog...
+[08-Aug-2016 14:13:07 America/Chicago] fetched dog!
+[08-Aug-2016 14:13:07 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 14:15:29 America/Chicago] fetching dog...
+[08-Aug-2016 14:15:29 America/Chicago] fetched dog!
+[08-Aug-2016 14:15:29 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 14:17:30 America/Chicago] fetching dog...
+[08-Aug-2016 14:17:30 America/Chicago] fetched dog!
+[08-Aug-2016 14:17:30 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 14:25:29 America/Chicago] fetching dog...
+[08-Aug-2016 14:25:29 America/Chicago] fetched dog!
+[08-Aug-2016 14:25:29 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 14:26:28 America/Chicago] fetching dog...
+[08-Aug-2016 14:26:28 America/Chicago] fetched dog!
+[08-Aug-2016 14:26:28 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[08-Aug-2016 14:27:34 America/Chicago] fetching dog...
+[08-Aug-2016 14:27:34 America/Chicago] fetched dog!
+[08-Aug-2016 14:27:34 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[12-Aug-2016 09:21:55 America/Chicago] fetching dog...
+[12-Aug-2016 09:21:55 America/Chicago] fetched dog!
+[12-Aug-2016 09:21:55 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[12-Aug-2016 09:22:20 America/Chicago] fetching dog...
+[12-Aug-2016 09:22:20 America/Chicago] fetched dog!
+[12-Aug-2016 09:22:20 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[12-Aug-2016 10:09:12 America/Chicago] fetching dog...
+[12-Aug-2016 10:09:12 America/Chicago] fetched dog!
+[12-Aug-2016 10:09:12 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-02 07:05:36
+    [notes] => 
+)
+
+[12-Aug-2016 10:10:05 America/Chicago] fetching dog...
+[12-Aug-2016 10:10:05 America/Chicago] fetched dog!
+[12-Aug-2016 10:10:05 America/Chicago] Walk info: Array
+(
+    [action] => 1
+    [datetime] => 2016-08-12 10:09:12
+    [notes] => She's such a puppy!
+)
+
+[12-Aug-2016 10:22:53 America/Chicago] fetching dog...
+[12-Aug-2016 10:22:53 America/Chicago] fetched dog!
+[12-Aug-2016 10:22:53 America/Chicago] Walk info: Array
+(
+    [action] => 1
+    [datetime] => 2016-08-12 10:09:12
+    [notes] => She's such a puppy!
+)
+
+[12-Aug-2016 10:27:55 America/Chicago] fetching dog...
+[12-Aug-2016 10:27:55 America/Chicago] fetched dog!
+[12-Aug-2016 10:27:55 America/Chicago] Walk info: Array
+(
+    [action] => 3
+    [datetime] => 2016-08-12 10:22:53
+    [notes] => Damn dog!
+)
+
+[12-Aug-2016 10:56:52 America/Chicago] fetching dog...
+[12-Aug-2016 10:56:52 America/Chicago] fetched dog!
+[12-Aug-2016 10:56:52 America/Chicago] Walk info: Array
+(
+    [action] => 1
+    [datetime] => 2016-08-12 10:27:55
+    [notes] => What....a.....beagle.
+)
+
+[12-Aug-2016 10:57:28 America/Chicago] fetching dog...
+[12-Aug-2016 10:57:28 America/Chicago] fetched dog!
+[12-Aug-2016 10:57:28 America/Chicago] Walk info: Array
+(
+    [action] => 1
+    [datetime] => 2016-08-12 10:56:52
+    [notes] => Man, this dog pees a lot, doesn't she?
+)
+
+[12-Aug-2016 10:57:51 America/Chicago] fetching dog...
+[12-Aug-2016 10:57:51 America/Chicago] fetched dog!
+[12-Aug-2016 10:57:51 America/Chicago] Walk info: Array
+(
+    [action] => 2
+    [datetime] => 2016-08-12 10:57:28
+    [notes] => OOps...she had to poop, too!
+)
+
+[12-Aug-2016 11:30:09 America/Chicago] Current dogs: Array
+(
+    [0] => 69^Fluffybones
+)
+
+[12-Aug-2016 11:31:08 America/Chicago] Current dogs: Array
+(
+    [0] => 69^Fluffybones
+)
+
+[12-Aug-2016 11:32:17 America/Chicago] Current dogs: Array
+(
+    [0] => 69^Fluffybones
+)
+
+[12-Aug-2016 11:32:18 America/Chicago] fetching dog...
+[12-Aug-2016 11:32:18 America/Chicago] fetched dog!
+[12-Aug-2016 11:32:18 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[12-Aug-2016 11:36:13 America/Chicago] fetching dog...
+[12-Aug-2016 11:36:13 America/Chicago] fetched dog!
+[12-Aug-2016 11:36:13 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[12-Aug-2016 11:43:36 America/Chicago] fetching dog...
+[12-Aug-2016 11:43:36 America/Chicago] fetched dog!
+[12-Aug-2016 11:43:36 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[12-Aug-2016 11:47:32 America/Chicago] fetching dog...
+[12-Aug-2016 11:47:32 America/Chicago] fetched dog!
+[12-Aug-2016 11:47:32 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[12-Aug-2016 11:47:35 America/Chicago] fetching dog...
+[12-Aug-2016 11:47:35 America/Chicago] fetched dog!
+[12-Aug-2016 11:47:35 America/Chicago] Walk info: Array
+(
+    [action] => -1
+)
+
+[12-Aug-2016 11:47:57 America/Chicago] fetching dog...
+[12-Aug-2016 11:47:57 America/Chicago] fetched dog!
+[12-Aug-2016 11:47:57 America/Chicago] Walk info: Array
+(
+    [action] => 1
+    [datetime] => 2016-08-12 11:47:35
+    [notes] => fluffffffffy
 )
 

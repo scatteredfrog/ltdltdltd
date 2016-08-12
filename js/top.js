@@ -158,3 +158,116 @@ function dogRegistered(name) {
         location.href = '/';
     });
 }
+
+$(document).on('click', '#select_this_dog', function () {
+   getDogDeets($('#dog_selector').val());
+}); 
+
+function getDogDeets(dogID) {
+    var post_data = {
+        'dogID' : dogID,
+        'csrf_test_name' : $('[name=csrf_test_name]').val()
+    };
+    
+    $.post('/index.php/log/getDogInfo', post_data, function(data) {
+        if (data && data['success']) {
+            $('.dogName').html(data['dog']['dogName']);
+            $('#doggie_data').css('display','block');
+            if (data['dog']['latest_walk']['date']) {
+                var gender_walk = data['dog']['gender'] == '1' ? 'Her ' : 'His ';
+                gender_walk += 'latest walk was ';
+                $('#gender_walk').html(gender_walk);
+                $('#when_walk_was').html(data['dog']['latest_walk']['date'] + ' at ' + data['dog']['latest_walk']['time']);
+            } else {
+                $('#gender_walk').html('This will be ' + data['dog']['dogName'] + '\'s first logged walk!');
+                $('#when_walk_was').html('');
+            }
+            var today = new Date();
+            var hh = today.getHours();
+            var h = hh;
+            var ampm = 'am';
+
+            if (h >= 12) {
+                h = hh-12;
+                ampm = 'pm';
+            }
+            if (h == 0) {
+                h = 12;
+            }
+
+            $('#walk_date').val(("0" + (today.getMonth() + 1)).slice(-2) + '/' + ("0" + today.getDate()).slice(-2) + '/' + today.getFullYear());
+            $('#walk_date').datepick({
+                showOnFocus: true,
+                rangeSelect: false,
+                maxDate: "new Date()"
+            });
+            $('#walk_time').val(("0" + h).slice(-2) + ':' + ("0" + today.getMinutes()).slice(-2));
+            $('#walk_seconds').val(("0" + today.getSeconds()).slice(-2));
+            $('#walk_ampm').val(ampm);
+        } else {
+            $('#ltd_error_modal_text').html('There was a problem and we couldn\'t retrieve your dog\'s information.');
+            $('#ltd_error_modal').modal('show');
+        }
+    }, 'json');
+}
+
+function submitWalk() {
+    var date_parts = $('#walk_date').val().split('/');
+    var time_parts = $('#walk_time').val().split(':');
+    time_parts[2] = $('#walk_seconds').val();
+    time_parts[0] = parseInt(time_parts[0]);
+    
+    // format the time
+    if ($('#walk_ampm').val() === 'pm') {
+        if (time_parts[0] != 12) {
+            time_parts[0] += 12;
+        }
+    } else if (time_parts[0] == 12) {
+        time_parts[0] = '00';
+    } else {
+        time_parts[0] = ("0" + time_parts[0]).slice(-2);
+    }
+    
+    var walkDate = date_parts[2] + '-' + date_parts[0] + '-' + date_parts[1];
+    var action = 0;
+    
+    walkDate += ' ' + time_parts[0] + ':' + time_parts[1] + ':' + time_parts[2];
+    
+    if ($('#num1').prop('checked') == true) {
+        if ($('#num2').prop('checked') == true) {
+            action = 3;
+        } else {
+            action = 1;
+        }
+    } else if ($('#num2').prop('checked')) {
+        action = 2;
+    }
+    
+    var post_vars = {
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+        'dogID' : $('#dog_selector').val(),
+        'walkDate' : walkDate,
+        'action' : action,
+        'walkNotes' : $('#walk_notes').val(),
+        'userID' : $('#user_id').val()
+    };
+    
+    $.post('/index.php/log/logWalk', post_vars, function (data) {
+        if (data['success'] == true) {
+            $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
+            $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s walk has been logged!');
+            $('#ltd_dual_options_left_button').html('Return home');
+            $('#ltd_dual_options_right_button').html('Log another walk');
+            $('#ltd_dual_options_modal').modal('show');
+            $('#ltd_dual_options_left_button').on('click', function () {
+                location.href = '/';
+            });
+            $('#ltd_dual_options_right_button').on('click', function () {
+                location.href = '/log/walk';
+            });
+        } else {
+            $('#ltd_error_modal_text').html('There was a problem; this walk might not have been logged.');
+            $('#ltd_error_modal').modal('show');
+        }
+    },'json');
+}

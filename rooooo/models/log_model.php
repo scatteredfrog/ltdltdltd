@@ -61,6 +61,26 @@
             }
         }
         
+        // Retrieve all dogs assigned to a care taker, return names and IDs
+        public function retrieveDogNames($caretaker) {
+            $this->db->select('c.dogID, d.dogName');
+            $this->db->from('LTDtbCaretaker c, LTDtbDog d');
+            $this->db->where('c.dogID = d.dogID');
+            $this->db->where(array('c.caretakerEmail' => $caretaker));
+            $query = $this->db->get();
+            $dogInfo = '';
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
+                    if (strlen($dogInfo) > 0) {
+                        $dogInfo .= '~';
+                    }
+                    $dogInfo .= $row->dogID .= '^';
+                    $dogInfo .= $row->dogName;
+                }
+            }
+            return $dogInfo;
+        }
+        
         public function retrieveCaretakerDog($email, $dog_name) {
             $dogs_registered = (int)0;
             $dog_ids = array();
@@ -84,5 +104,42 @@
             }
             
             return $dogs_registered;
+        }
+        
+        public function retrieveLatestWalk($dogID) {
+            $retArray = array();
+            $retArray['action'] = -1;
+            // action: 1 = #1, 2 = #2, 3 = both, 0 = neither
+            $this->db->select('walkDate,action,walkNotes');
+            $this->db->from('LTDtbWalk');
+            $this->db->where(array('dogID' => $dogID));
+            $this->db->order_by('walkDate', 'desc');
+            $this->db->limit(1);
+            $query = $this->db->get();
+            foreach ($query->result() as $row) {
+                $retArray['datetime'] = $row->walkDate;
+                $retArray['action'] = $row->action;
+                $retArray['notes'] = $row->walkNotes;
+            }
+            return $retArray;
+        }
+        
+        public function addWalk($walkData) {
+            $success = false;
+            $retArray = array();
+            $insert = array (
+                'dogID' => $walkData['dogID'],
+                'walkDate' => $walkData['walkDate'],
+                'action' => $walkData['action'],
+                'walkNotes' => $walkData['walkNotes'],
+                'userID' => $walkData['userID'],
+            );
+            
+            if ($this->db->insert('LTDtbWalk', $insert)) {
+                $success = true;
+            }
+            
+            $retArray['success'] = $success;
+            return $retArray;
         }
     }

@@ -108,6 +108,23 @@
                 </a>
         <?
             } else {
+                switch ($this->session->userdata('language')) {
+                    case '0': // physiological terms
+                        define('PEED', 'urinated');
+                        define('POOPED', 'defecated');
+                        define('BOTH', 'urinated and defecated');
+                        break;
+                    case '1': // numeric slang
+                        define('PEED', 'did #1');
+                        define('POOPED', 'did #2');
+                        define('BOTH', 'did #1 and #2');
+                        break;
+                    case '2': // crude slang
+                        define('PEED', 'peed');
+                        define('POOPED', 'pooped');
+                        define('BOTH', 'peed and pooped');
+                        break;
+                }
         ?>
                 <div class='dn-item' onclick='logOut();'>
                     <span class='dn-ext'></span><span class='hidden-xs'> Log Out</span>

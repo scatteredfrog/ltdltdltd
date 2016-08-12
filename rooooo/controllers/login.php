@@ -138,7 +138,7 @@ class Login extends CI_Controller {
         $password = $this->blow_me($this->input->post('password', TRUE));
         $remember_me = $this->input->post('remember',TRUE);
         $login_attempt = $this->login_model->checkLoginData($email,$password);
-        if ($login_attempt['success']) {
+        if ($login_attempt['success']) {            
             if ($remember_me) {
                 $cookie = array(
                     'name' => 'ltd-login',
@@ -155,8 +155,9 @@ class Login extends CI_Controller {
                     $current_dog[] = (array)$this->login_model->fetchDog($k);
                 }
             }
-            $_SESSION['dogs'] = $current_dog;
-
+            if (isset($current_dog)) {
+                $_SESSION['dogs'] = $current_dog;
+            }
         }
         echo json_encode($login_attempt);
     }
@@ -165,6 +166,10 @@ class Login extends CI_Controller {
         $this->session->sess_destroy();
         $this->session->set_userdata('loggedOut',true);
         $this->session->set_userdata('firstName','Friend');
+        foreach ($_SESSION as $k) {
+            unset($_SESSION[$k]);
+        }
+        
         if ($this->session->userdata('firstName') === 'Friend') {
             echo true;
         } else {
