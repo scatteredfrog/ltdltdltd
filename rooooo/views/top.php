@@ -57,6 +57,7 @@
 		margin: 20px 0 0 0;
 	}
 	
+        a, a:link, a:visited { color: #fff; }
 	</style>
 </head>
 <body>
@@ -126,6 +127,12 @@
                         break;
                 }
         ?>
+                <a href="#">
+                    <div class="dn-item">
+                        <span class="icon-cog icon-white"></span>
+                        <span class="hidden-xs"> My Account</span>
+                    </div>
+                </a>
                 <div class='dn-item' onclick='logOut();'>
                     <span class='dn-ext'></span><span class='hidden-xs'> Log Out</span>
                 </div>
