@@ -25,6 +25,7 @@ class Login extends CI_Controller {
         $user_password = $this->input->post('user_password', TRUE);
         $user_name = $this->input->post('user_name', TRUE);
         $user_repass = $this->input->post('user_repass', TRUE);
+        $user_language = $this->input->post('language', TRUE);
         $gmail = '';
         $g_exists = false;
         $account = array();
@@ -100,11 +101,12 @@ class Login extends CI_Controller {
             }
 
             if ($success) { // no Gmail alias found; continue to create acct
-                $password = $this->blow_me($user_password);
+                $password = password_hash($user_password, PASSWORD_BCRYPT);
                 $account['username'] = $user_name;
                 $account['email'] = $user_email;
                 $account['password'] = $password;
                 $account['gmail'] = $gmail;
+                $account['language'] = $user_language;
                 if (!$this->login_model->addAccount($account)) {
                     $success = false;
                     $error .= 'There was a problem creating your account. ';
@@ -135,7 +137,10 @@ class Login extends CI_Controller {
         $this->load->helper('form');
         $this->load->model('login_model');
         $email = $this->input->post('email',TRUE);
-        $password = $this->blow_me($this->input->post('password', TRUE));
+        $post_password = $this->input->post('password', TRUE);
+        $getPassword = $this->getPassword($email);
+        $fudgicle = substr($getPassword,0,29);
+        $password = crypt($post_password, $fudgicle);
         $remember_me = $this->input->post('remember',TRUE);
         $login_attempt = $this->login_model->checkLoginData($email,$password);
         if ($login_attempt['success']) {            
@@ -164,11 +169,9 @@ class Login extends CI_Controller {
 
     public function log_out() {
         $this->session->sess_destroy();
+        unset($_SESSION);
         $this->session->set_userdata('loggedOut',true);
         $this->session->set_userdata('firstName','Friend');
-        foreach ($_SESSION as $k) {
-            unset($_SESSION[$k]);
-        }
         
         if ($this->session->userdata('firstName') === 'Friend') {
             echo true;
@@ -176,8 +179,13 @@ class Login extends CI_Controller {
             echo false;
         }
     }
-
-    private function blow_me($password) {
-        return crypt($password, '$2y$09$fudgicleforthrillhouse$');
+    
+    public function getPassword($email) {
+        $returnPassword = '';
+        if (strlen($email) > 4) {
+            $this->load->model('login_model');
+            $returnPassword = $this->login_model->retrievePassword($email);
+        }
+        return $returnPassword;
     }
 }

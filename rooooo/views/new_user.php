@@ -51,6 +51,22 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-xs-12 bottom5 top5">
+                <fieldset>
+                    <legend id="langpref">Please choose a language preference:</legend>
+                    <input type="radio" name="language" value="0" checked="checked" />
+                    log when my dog 'urinates' and 'defecates' 
+                    <span class="fine-print">(default)</span><br />
+                    <input type="radio" name="language" value="1" />
+                    log when my dog 'does #1' and '#2'<br />
+                    <input type="radio" name="language" value="2" />
+                    log when my dog 'pees' and 'poops'<br />
+                </fieldset>
+                <span class="fine-print text-red">Please note that the verbiage you select 
+                will only appear under your login.</span>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-xs-4 bottom5 top5">
             </div>
             <div class="col-xs-8 bottom5 top5">

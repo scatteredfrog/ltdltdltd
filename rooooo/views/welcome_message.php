@@ -39,6 +39,13 @@
                 <?
                     echo form_button($submit_array);
                 ?>
+            </div>
+        </div>
+        <div class='row-fluid'>
+            <div class='formField span12 fine-print text-center'>
+                Don't have an account?<br />
+                <a href='/home/create_account'>You can create one!</a>
+            </div>
         </div>
         <?= form_close(); ?>
     </div>

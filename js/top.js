@@ -271,3 +271,22 @@ function submitWalk() {
         }
     },'json');
 }
+
+function languageChange() {
+    var sd = $('#slang_def');
+    var lt = $('#language_type');
+    switch ($('#language').val()) {
+        case '0':
+            lt.text('technical physiological language');
+            sd.text('urinates and defecates');
+            break;
+        case '1':
+            lt.text('numeric slang');
+            sd.text('does #1 and #2');
+            break;
+        case '2':
+            lt.text('crude slang');
+            sd.text('pees and poops');
+            break;  
+    }
+}

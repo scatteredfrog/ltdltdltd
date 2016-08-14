@@ -165,8 +165,10 @@ function submitCreate() {
         'user_name' :  $('#user_name').val(),
         'user_password' : $('#user_password').val(),
         'user_repass' : $('#re_pass').val(),
+        'language' : $('[name=language]:checked').val(),
         'csrf_test_name' : $('[name=csrf_test_name]').val()
     };
+    
     $.post('/index.php/login/create_account', create_post, function(data) {
         if (data.success) {
             var conf_text = 'Thank you. Your account has been created, and ';

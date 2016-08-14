@@ -86,7 +86,7 @@
                 'eMail' => $account['email'],
                 'password' => $account['password'],
                 'gmail' => $account['gmail'],
-                'language' => (int) 0,
+                'language' => (int)$account['language'],
                 'joined' => $today,
                 'last_logged_in' => $today
             );
@@ -133,6 +133,22 @@
                 $this->session->set_userdata($query_result);
             }
             
+            return $query_result;
+        }
+        
+        public function retrievePassword($email) {
+            $query_result = '';
+            $this->db->select('password');
+            $query = $this->db->get_where('LTDtbUser', array('eMail' => $email));
+            if ($query->num_rows() > 0) {
+                foreach($query->result() as $row) {
+                    $query_result = $row->password;
+                    if ($query_result) {
+                        $query_result = explode(',', $query_result);
+                        $query_result = $query_result[0];
+                    }
+                }
+            }
             return $query_result;
         }
     }
