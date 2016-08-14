@@ -24,13 +24,24 @@
             return;
         }
         
-        public function retrieveDogs($userID) {
+        public function retrieveDogs($userID, $getName = false) {
             $registered_dog = array();
             $this->db->select('*');
             $query = $this->db->get_where('LTDtbCaretaker', array('caretakerEmail' => $this->session->userdata('eMail')));
             if ($query->num_rows() > 0) {
                 foreach ($query->result() as $row) {
                     $registered_dog[] = $row->dogID;
+                }
+            }
+            if ($getName && (count($registered_dog) > 0)) {
+                $this->db->select('dogName');
+                $this->db->where_in('dogID',$registered_dog);
+                $query = $this->db->get('LTDtbDog');
+                if ($query->num_rows() > 0) {
+                    unset($registered_dog);
+                    foreach ($query->result() as $row) {
+                        $registered_dog[] = $row->dogName;
+                    }
                 }
             }
             return (array)$registered_dog;
@@ -91,6 +102,9 @@
                 'last_logged_in' => $today
             );
             if ($this->db->insert('LTDtbUser', $insert)) {
+                $insert_id = $this->db->insert_id();
+                $this->session->set_userdata('insert_id', $insert_id);
+                $this->session->set_userdata('eMail', $account['email']);
                 $success = true;
             }
             

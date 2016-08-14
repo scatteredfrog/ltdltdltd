@@ -173,7 +173,20 @@ function submitCreate() {
         if (data.success) {
             var conf_text = 'Thank you. Your account has been created, and ';
             conf_text += 'you will be logged in.';
-            $('#ltd_confirm_modal_subheader').text(conf_text);
+            if (typeof data.dogs !== 'undefined') { // pre-registered dog[s] found!
+                var dog_length = data.dogs.length;
+                conf_text += '<br />&nbsp;<br />It looks like somebody has ';
+                conf_text += 'already designated you to be ';
+                if (dog_length === 1) {
+                    conf_text += '<span class="bold">' + data.dogs[0] + '\'s</span> caretaker!';
+                } else if (dog_length > 1) {
+                    conf_text += 'the caretaker of the following dogs:<br />';
+                    for (var x = 0; x < dog_length; x++) {
+                        conf_text += '<span class="bold">' + data.dogs[x] + '</span><br />';
+                    }
+                }
+            }
+            $('#ltd_confirm_modal_subheader').html(conf_text);
             var login_json = {
                 'email' : $('#user_email').val(),
                 'csrf_test_name' : $('[name=csrf_test_name]').val(),

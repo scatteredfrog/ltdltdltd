@@ -107,7 +107,8 @@ class Login extends CI_Controller {
                 $account['password'] = $password;
                 $account['gmail'] = $gmail;
                 $account['language'] = $user_language;
-                if (!$this->login_model->addAccount($account)) {
+                $go_create = $this->login_model->addAccount($account);
+                if (!$go_create) {
                     $success = false;
                     $error .= 'There was a problem creating your account. ';
                     $error .= 'We don\'t know what happened, but it was ';
@@ -121,6 +122,13 @@ class Login extends CI_Controller {
         // Return stuff
         $retArray['success'] = $success;
         if ($success) {
+            // see if the user has any dogs already registered
+            $dogs = $this->login_model->retrieveDogs($this->session->userdata('insert_id'), true);
+
+            if ($dogs) {
+                $retArray['dogs'] = $dogs;
+            }
+            
             $retArray['creds'] = array(
                 'email' => $user_email,
                 'password' => $user_password
