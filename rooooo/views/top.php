@@ -58,6 +58,8 @@
 	}
 	
         a, a:link, a:visited { color: #fff; }
+        
+        .menuAnchor { color: #000 !important;}
 	</style>
 </head>
 <body>
