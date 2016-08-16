@@ -91,3 +91,13 @@
 )
 
 [13-Aug-2016 10:59:27 America/Chicago] Password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+[Sun Aug 14 20:25:00.144865 2016] [:error] [pid 5076] [client 127.0.0.1:49443] PHP Fatal error:  Class 'Account_model' not found in /Volumes/Coding/logthedog.com/system/core/Loader.php on line 303, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 13:57:50.770910 2016] [:error] [pid 1643] [client 127.0.0.1:49992] PHP Fatal error:  Call to undefined method Account_model::update_account() in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php on line 33, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 13:59:27.693592 2016] [:error] [pid 842] [client 127.0.0.1:50006] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => \n)\n, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 14:00:36.832712 2016] [:error] [pid 1644] [client 127.0.0.1:50018] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 14:00:38.467698 2016] [:error] [pid 1644] [client 127.0.0.1:50018] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 20:37:38.304624 2016] [:error] [pid 1572] [client 127.0.0.1:49398] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 20:43:04.750469 2016] [:error] [pid 1575] [client 127.0.0.1:49411] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 20:47:36.220184 2016] [:error] [pid 213] [client 127.0.0.1:49424] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 20:47:48.440995 2016] [:error] [pid 1575] [client 127.0.0.1:49425] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
+[Mon Aug 15 20:47:48.466006 2016] [:error] [pid 1574] [client 127.0.0.1:49426] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount

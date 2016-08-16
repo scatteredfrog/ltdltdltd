@@ -14,7 +14,6 @@ body {    background-color: #ffffe4!important; }
     .desktop-only {        display: none !important;    }
 }
 
-.modal-dialog { width: 300px !important; }
 #chip_block, #reg_ex_container, #physical_description, #dog_misc { display: none; }
 #dog_registry a { cursor: pointer; }
 .menuAnchor { color: #000; }

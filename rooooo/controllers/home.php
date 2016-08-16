@@ -106,6 +106,3 @@ class Home extends CI_Controller {
             echo "</pre>";
         }
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

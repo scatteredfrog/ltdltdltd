@@ -272,21 +272,52 @@ function submitWalk() {
     },'json');
 }
 
-function languageChange() {
-    var sd = $('#slang_def');
-    var lt = $('#language_type');
-    switch ($('#language').val()) {
+function saveAccountChanges() {
+    var lang = '';
+    switch ($('[name=language]:checked').val()) {
         case '0':
-            lt.text('technical physiological language');
-            sd.text('urinates and defecates');
+            lang = 'professional';
             break;
         case '1':
-            lt.text('numeric slang');
-            sd.text('does #1 and #2');
+            lang = 'numeric';
             break;
         case '2':
-            lt.text('crude slang');
-            sd.text('pees and poops');
-            break;  
+            lang = 'slang';
+            break;
     }
+    var conf_text = 'You are about to save the following information:<br /><br />';
+    conf_text += '<span class="bold col-xs-6">Your name:</span> <span class="col-xs-6 plain">';
+    conf_text += $('#username').val() + '</span><br />';
+    conf_text += '<span class="bold col-xs-6">Your e-mail:</span> <span class="plain col-xs-6">';
+    conf_text += $('#email').val() + '</span><br />';
+    conf_text += '<span class="bold col-xs-6">Language preference:</span> <span class="plain col-xs-6">';
+    conf_text += lang + '</span>';
+    $('#ltd_dual_options_modal_subheader').html(conf_text);
+    $('#ltd_dual_options_left_button').html('Cancel');
+    $('#ltd_dual_options_right_button').html('OK');
+    $('#ltd_dual_options_modal').modal('show');
+    
+    $('#ltd_dual_options_right_button').on('click', function() {
+        var post_vars = {
+            'username' : $('#username').val(),
+            'email' : $('#email').val(),
+            'language' : $('[name=language]:checked').val(),
+            'csrf_test_name' : $('[name=csrf_test_name]').val()
+        };
+        
+        $.post('/index.php/account/saveAccountChanges', post_vars, function(data) {
+            $('#ltd_dual_options_modal').modal('hide');
+            if (data == true) {
+                $('.yay-update').css('display', 'block');
+            } else {
+                $('#ltd_error_modal_header_text').html('There was a problem...');
+                $('#ltd_error_modal_text').html('Your information might not have been saved.');
+                $('#ltd_error_modal').modal('show');
+            }
+        })
+    });
+}
+
+function hideYay() {
+    $('.yay-update').css('display','none');
 }

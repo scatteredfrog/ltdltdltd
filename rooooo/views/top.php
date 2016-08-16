@@ -129,7 +129,7 @@
                         break;
                 }
         ?>
-                <a href="#">
+                <a href="/account/getAccount">
                     <div class="dn-item">
                         <span class="icon-cog icon-white"></span>
                         <span class="hidden-xs"> My Account</span>
