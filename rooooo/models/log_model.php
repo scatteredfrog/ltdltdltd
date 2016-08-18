@@ -62,8 +62,18 @@
         }
         
         // Retrieve all dogs assigned to a care taker, return names and IDs
-        public function retrieveDogNames($caretaker) {
-            $this->db->select('c.dogID, d.dogName');
+        /** 
+         * 
+         * @param string $caretaker
+         * @param boolean $is_account
+         * @return string
+         */
+        public function retrieveDogNames($caretaker, $is_account) {
+            $select_stuff = 'c.dogID, d.dogName';
+            if ($is_account) {
+                $select_stuff .= ', d.breed';
+            }
+            $this->db->select($select_stuff);
             $this->db->from('LTDtbCaretaker c, LTDtbDog d');
             $this->db->where('c.dogID = d.dogID');
             $this->db->where(array('c.caretakerEmail' => $caretaker));
@@ -76,6 +86,9 @@
                     }
                     $dogInfo .= $row->dogID .= '^';
                     $dogInfo .= $row->dogName;
+                    if ($is_account) {
+                        $dogInfo .= '*' . $row->breed;
+                    }
                 }
             }
             return $dogInfo;

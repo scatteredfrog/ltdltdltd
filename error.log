@@ -1,103 +1,244 @@
-[Sat Aug 13 10:49:26.191797 2016] [:error] [pid 2322] [client 127.0.0.1:51260] Row: stdClass Object\n(\n    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa\n)\n, referer: http://local.logthedog.com/
-[Sat Aug 13 10:49:26.191881 2016] [:error] [pid 2322] [client 127.0.0.1:51260] query result: Array\n(\n    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa\n)\n, referer: http://local.logthedog.com/
-[Sat Aug 13 10:49:26.191893 2016] [:error] [pid 2322] [client 127.0.0.1:51260] Fudgicle: $2y$09$fudgicleforthrillhouse, referer: http://local.logthedog.com/
-[Sat Aug 13 10:49:26.191900 2016] [:error] [pid 2322] [client 127.0.0.1:51260] Thrillhouse: 61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa, referer: http://local.logthedog.com/
-[Sat Aug 13 10:49:26.192143 2016] [:error] [pid 2322] [client 127.0.0.1:51260] Password: *0, referer: http://local.logthedog.com/
-[Sat Aug 13 10:53:28.388518 2016] [:error] [pid 2321] [client 127.0.0.1:51313] Row: stdClass Object\n(\n    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa\n)\n, referer: http://local.logthedog.com/
-[Sat Aug 13 10:53:28.388652 2016] [:error] [pid 2321] [client 127.0.0.1:51313] query result: Array\n(\n    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa\n)\n, referer: http://local.logthedog.com/
-[Sat Aug 13 10:53:28.388668 2016] [:error] [pid 2321] [client 127.0.0.1:51313] Fudgicle: $2y$09$fudgicleforthrillhouse, referer: http://local.logthedog.com/
-[Sat Aug 13 10:53:28.388675 2016] [:error] [pid 2321] [client 127.0.0.1:51313] Thrillhouse: 61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa, referer: http://local.logthedog.com/
-[Sat Aug 13 10:53:28.388938 2016] [:error] [pid 2321] [client 127.0.0.1:51313] Password: *0, referer: http://local.logthedog.com/
-[13-Aug-2016 10:54:17 America/Chicago] Row: stdClass Object
+[16-Aug-2016 14:07:22 America/Chicago] DOGS: Array
 (
-    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+    [0] => Array
+        (
+            [name] => Ruthie
+            [breed] => beagle
+        )
+
+    [1] => Array
+        (
+            [name] => Spot
+            [breed] => beagle mix
+        )
+
+    [2] => Array
+        (
+            [name] => Nifty
+            [breed] => malamute
+        )
+
+    [3] => Array
+        (
+            [name] => Nifty
+            [breed] => malamute
+        )
+
+    [4] => Array
+        (
+            [name] => Nifty
+            [breed] => malamute
+        )
+
+    [5] => Array
+        (
+            [name] => Nifty
+            [breed] => malamute
+        )
+
+    [6] => Array
+        (
+            [name] => Nifty
+            [breed] => malamute
+        )
+
+    [7] => Array
+        (
+            [name] => Nerfy
+            [breed] => 
+        )
+
+    [8] => Array
+        (
+            [name] => Nerfy
+            [breed] => 
+        )
+
+    [9] => Array
+        (
+            [name] => Nerfy
+            [breed] => 
+        )
+
+    [10] => Array
+        (
+            [name] => Nerfy
+            [breed] => 
+        )
+
+    [11] => Array
+        (
+            [name] => Nerfy
+            [breed] => 
+        )
+
+    [12] => Array
+        (
+            [name] => Nerfy
+            [breed] => 
+        )
+
+    [13] => Array
+        (
+            [name] => Nerfy
+            [breed] => 
+        )
+
+    [14] => Array
+        (
+            [name] => Doofy
+            [breed] => 
+        )
+
+    [15] => Array
+        (
+            [name] => Snoopy
+            [breed] => 
+        )
+
+    [16] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [17] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [18] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [19] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [20] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [21] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [22] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [23] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [24] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [25] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [26] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [27] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [28] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [29] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [30] => Array
+        (
+            [name] => Ruthie
+            [breed] => beagle
+        )
+
+    [31] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [32] => Array
+        (
+            [name] => Ruthie
+            [breed] => beagle
+        )
+
+    [33] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [34] => Array
+        (
+            [name] => Ruthie
+            [breed] => beagle
+        )
+
+    [35] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [36] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [37] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [38] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
+    [39] => Array
+        (
+            [name] => Ruthie
+            [breed] => 
+        )
+
 )
 
-[13-Aug-2016 10:54:17 America/Chicago] query result: Array
-(
-    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:54:17 America/Chicago] Fudgicle: $2y$09$fudgicleforthrillhouse
-[13-Aug-2016 10:54:17 America/Chicago] Thrillhouse: 61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-[13-Aug-2016 10:54:17 America/Chicago] Password: *0
-[13-Aug-2016 10:55:00 America/Chicago] Row: stdClass Object
-(
-    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:55:00 America/Chicago] query result: Array
-(
-    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:55:00 America/Chicago] Fudgicle: $2y$09$fudgicleforthrillhouse
-[13-Aug-2016 10:55:00 America/Chicago] Thrillhouse: 61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-[13-Aug-2016 10:55:00 America/Chicago] Password: $2y$09$fudgicleforthrillhouseezTLmZ7c4xuYIvtNFdHA9qBx7yTw/hi
-[13-Aug-2016 10:55:47 America/Chicago] Row: stdClass Object
-(
-    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:55:47 America/Chicago] query result: Array
-(
-    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:55:47 America/Chicago] Fudgicle: $2y$09$fudgicleforthrillhouse
-[13-Aug-2016 10:55:47 America/Chicago] Thrillhouse: 61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-[13-Aug-2016 10:55:47 America/Chicago] Password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-[13-Aug-2016 10:56:38 America/Chicago] Row: stdClass Object
-(
-    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:56:38 America/Chicago] query result: Array
-(
-    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:56:38 America/Chicago] Password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-[13-Aug-2016 10:57:31 America/Chicago] Row: stdClass Object
-(
-    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:57:31 America/Chicago] query result: Array
-(
-    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:57:31 America/Chicago] Password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-[13-Aug-2016 10:58:31 America/Chicago] Row: stdClass Object
-(
-    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:58:31 America/Chicago] query result: Array
-(
-    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:58:31 America/Chicago] Password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-[13-Aug-2016 10:59:27 America/Chicago] Row: stdClass Object
-(
-    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:59:27 America/Chicago] query result: Array
-(
-    [0] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-)
-
-[13-Aug-2016 10:59:27 America/Chicago] Password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
-[Sun Aug 14 20:25:00.144865 2016] [:error] [pid 5076] [client 127.0.0.1:49443] PHP Fatal error:  Class 'Account_model' not found in /Volumes/Coding/logthedog.com/system/core/Loader.php on line 303, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 13:57:50.770910 2016] [:error] [pid 1643] [client 127.0.0.1:49992] PHP Fatal error:  Call to undefined method Account_model::update_account() in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php on line 33, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 13:59:27.693592 2016] [:error] [pid 842] [client 127.0.0.1:50006] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => \n)\n, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 14:00:36.832712 2016] [:error] [pid 1644] [client 127.0.0.1:50018] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 14:00:38.467698 2016] [:error] [pid 1644] [client 127.0.0.1:50018] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 20:37:38.304624 2016] [:error] [pid 1572] [client 127.0.0.1:49398] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 20:43:04.750469 2016] [:error] [pid 1575] [client 127.0.0.1:49411] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 20:47:36.220184 2016] [:error] [pid 213] [client 127.0.0.1:49424] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 20:47:48.440995 2016] [:error] [pid 1575] [client 127.0.0.1:49425] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount
-[Mon Aug 15 20:47:48.466006 2016] [:error] [pid 1574] [client 127.0.0.1:49426] Account: Array\n(\n    [username] => Flirzel Kwerp\n    [eMail] => flirzel@kwerp.com\n    [language] => 1\n)\n, referer: http://local.logthedog.com/account/getAccount

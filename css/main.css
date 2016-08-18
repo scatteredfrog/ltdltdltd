@@ -118,4 +118,28 @@ body {    background-color: #ffffe4!important; }
     padding-bottom: 14px;
 }
 
+#dog_list_container {
+    max-height: 200px;
+    overflow-y: scroll;
+    background-color: #f8f8f8;
+    border-radius: 9px;
+    border-style: inset;
+    border-width: 1px;
+    padding-top: 5px;
+}
+
+.dog-row {
+    height: 45px;
+    line-height: 40px;
+}
+
+.thinButt {
+    border-radius: 8px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    top: 5px;
+}
+
 #create_account h1 {    font-size: 24px!important; }
+.oddReg { background-color: #ffffff; }

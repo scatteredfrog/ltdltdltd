@@ -13,6 +13,7 @@ class Account extends CI_Controller {
     
     public function getAccount() {
         $account = $this->getUserAccount($this->session->userdata('userID'));
+        $account['dogs'] = $this->getRegisteredDogs($this->session->userdata('eMail'));
         $this->load->view('account', $account);
         $this->load->view('error_modal');
     }
@@ -34,5 +35,19 @@ class Account extends CI_Controller {
         $success = $this->account_model->updateAccount($changes);
         echo $success;
         exit();
+    }
+    
+    public function getRegisteredDogs($email) {
+        $this->load->model('log_model');
+        $dogs = $this->log_model->retrieveDogNames($email,true);
+        $expDogs= explode('~', $dogs);
+        $regDogs = array();
+        foreach ($expDogs as $dog => $deets) {
+            $tempDog = explode('^', $deets);
+            $tempBreed = explode('*', $tempDog[1]);
+            $regDogs[$dog]['name'] = $tempBreed[0];
+            $regDogs[$dog]['breed'] = $tempBreed[1];
+        }
+        return $regDogs;
     }
 }

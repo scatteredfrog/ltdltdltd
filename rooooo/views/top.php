@@ -57,7 +57,7 @@
 		margin: 20px 0 0 0;
 	}
 	
-        a, a:link, a:visited { color: #fff; }
+        .dauber-navbar a, .dauber-navbar a:link, .dauber-navbar a:visited { color: #fff; }
         
         .menuAnchor { color: #000 !important;}
 	</style>

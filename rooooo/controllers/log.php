@@ -41,7 +41,7 @@ class Log extends CI_Controller {
         }
         
         $this->load->model('log_model');
-        $dog_names = $this->log_model->retrieveDogNames($user);
+        $dog_names = $this->log_model->retrieveDogNames($user, false);
         return $dog_names;
     }
 
