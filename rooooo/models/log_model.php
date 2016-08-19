@@ -137,6 +137,21 @@
             return $retArray;
         }
         
+        public function retrieveLatestMeal($dogID) {
+            $retArray = array();
+            $this->db->select('mealDate,mealNotes');
+            $this->db->from('LTDtbMeal');
+            $this->db->where(array('dogID' => $dogID));
+            $this->db->order_by('mealDate', 'desc');
+            $this->db->limit(1);
+            $query = $this->db->get();
+            foreach ($query->result() as $row) {
+                $retArray['datetime'] = $row->mealDate;
+                $retArray['notes'] = $row->mealNotes;
+            }
+            return $retArray;
+        }
+
         public function addWalk($walkData) {
             $success = false;
             $retArray = array();
@@ -149,6 +164,24 @@
             );
             
             if ($this->db->insert('LTDtbWalk', $insert)) {
+                $success = true;
+            }
+            
+            $retArray['success'] = $success;
+            return $retArray;
+        }
+
+        public function addMeal($mealData) {
+            $success = false;
+            $retArray = array();
+            $insert = array (
+                'dogID' => $mealData['dogID'],
+                'mealDate' => $mealData['mealDate'],
+                'mealNotes' => $mealData['mealNotes'],
+                'userID' => $mealData['userID'],
+            );
+            
+            if ($this->db->insert('LTDtbMeal', $insert)) {
                 $success = true;
             }
             

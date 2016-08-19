@@ -45,44 +45,13 @@ class Log extends CI_Controller {
         return $dog_names;
     }
 
-    // Load the "Log a Walk" page - turns dog names and IDs into select options
+    // Load the "Log a Walk" page
     public function walk() {
         if (!$this->session->userdata('logged_in')) {
             header('Location: /');
         }
-        $currentUser = $this->session->userdata('eMail');
-        $retrievedDogs = $this->getDogNames($currentUser);
-        $currentDogs = empty($retrievedDogs) ? NULL : explode('~',$retrievedDogs);
-        $dogOptions = '';
         
-        if (count($currentDogs) > 1) {
-            $dogOptions .= '<select id="dog_selector">';
-            foreach ($currentDogs as $d) {
-                $dog = explode('^', $d);
-                $id = $dog[0];
-                $name = $dog[1];
-
-                $dogOptions .= '<option value="' . $id . '">' . $name . '</option>';
-            }
-            $dogOptions .= '</select>';
-            $dogOptions .= '<input type="button" id="select_this_dog" value="Log this dog" />';
-        } else if (count($currentDogs) === 1) {
-            $dog = explode('^', $currentDogs[0]);
-            $id = $dog[0];
-            $name = $dog[1];
-            $dogOptions .= '<input id="dog_selector" type="hidden" value="' . $id. '" />        ';
-            $dogOptions .= '<script>getDogDeets("' . $id . '");</script>';
-        } else { // redirect to main menu if there are no dogs; show modal first
-            $dogOptions .= '<script>';
-            $dogOptions .= '$(document).ready(function() {';
-            $dogOptions .= '$("#ltd_error_modal_header_text").html("Cannot log a walk");';
-            $dogOptions .= '$("#ltd_error_modal_text").html("There are no dogs registered to your account.");';
-            $dogOptions .= "$('#ltd_error_modal').modal('show');";
-            $dogOptions .= "$('#ltd_error_modal_ok').on('click',function() {";
-            $dogOptions .= " location.href='/';";
-            $dogOptions .= "});";
-            $dogOptions .= "});</script>";
-        }
+        $dogOptions = $this->_getDogOptions();
         
         $data = array('dogs' =>$dogOptions);
         $this->load->helper('form');
@@ -90,6 +59,20 @@ class Log extends CI_Controller {
         $this->load->view('error_modal');
     }
 
+    // Load the "Log a Meal" page
+    public function meal() {
+        if (!$this->session->userdata('logged_in')) {
+            header('Location: /');
+        }
+        
+        $dogOptions = $this->_getDogOptions();
+        
+        $data = array('dogs' =>$dogOptions);
+        $this->load->helper('form');
+        $this->load->view('log_a_meal', $data);
+        $this->load->view('error_modal');
+    }
+    
     public function register_a_dog() {
         $success = true;
         $error = '';
@@ -236,13 +219,21 @@ class Log extends CI_Controller {
     public function getDogInfo() {
         $resp = array();
         $resp['success'] = false;
-        $dogID = $this->input->post('dogID');
+        $dogID = $this->input->post('dogID', TRUE);
+        $activity = $this->input->post('activity', TRUE);
         if ($dogID) {
             $this->load->model('login_model');
             $dogInfo = $this->login_model->fetchDog($dogID);
             if (is_array($dogInfo)) {
                 $resp['dog'] = $dogInfo;
-                $resp['dog']['latest_walk'] = $this->getLatestWalk($dogID);
+                switch ($activity) {
+                    case 'walk' :
+                        $resp['dog']['latest_walk'] = $this->getLatestWalk($dogID);
+                        break;
+                    case 'meal' :
+                        $resp['dog']['latest_meal'] = $this->getLatestMeal($dogID);
+                        break;
+                }
                 $resp['success'] = true;
             }
         }
@@ -272,6 +263,41 @@ class Log extends CI_Controller {
         }
         return $walkInfo;
     }
+
+    public function getLatestMeal($dogID) {
+        $this->load->model('log_model');
+        $mealInfo = $this->log_model->retrieveLatestMeal($dogID);
+        if (isset($mealInfo['datetime'])) {
+            $now = time();
+            $mealdate = strtotime($mealInfo['datetime']);
+            $tempdatetime = new DateTime($mealInfo['datetime']);
+            $timediff = (int)floor(($now - $mealdate) / 86400);
+            if ($timediff === 0) {
+                $mealInfo['date'] = 'today';
+            } else if ($timediff === 1) {
+                $mealInfo['date'] = 'yesterday'; 
+            } else if ($timediff > 2 && $timediff < 7) {
+                $mealInfo['date'] = date_format($tempdatetime,'l');
+            } else {
+                $mealInfo['date'] = date_format($tempdatetime,'F j');
+            }
+            $mealInfo['time'] = date_format($tempdatetime,'g:i a');
+        }
+        return $mealInfo;
+    }
+    
+    public function logMeal() {
+        // TODO: validation (date, missing data, etc.)
+        $meal_data = array();
+        $meal_data['dogID'] = $this->input->post('dogID');
+        $meal_data['mealDate'] = $this->input->post('mealDate');
+        $meal_data['mealNotes'] = $this->input->post('mealNotes');
+        $meal_data['userID'] = $this->input->post('userID');
+        $this->load->model('log_model');
+        $success = $this->log_model->addMeal($meal_data);
+        echo json_encode($success);
+        exit();
+    }
     
     public function logWalk() {
         // TODO: validation (date, missing data, etc.)
@@ -285,5 +311,44 @@ class Log extends CI_Controller {
         $success = $this->log_model->addWalk($walk_data);
         echo json_encode($success);
         exit();
+    }
+    
+    // turns dog names and IDs into select options
+    private function _getDogOptions() {
+        $currentUser = $this->session->userdata('eMail');
+        $retrievedDogs = $this->getDogNames($currentUser);
+        $currentDogs = empty($retrievedDogs) ? NULL : explode('~',$retrievedDogs);
+        $dogOptions = '';
+        
+        if (count($currentDogs) > 1) {
+            $dogOptions .= '<select id="dog_selector">';
+            foreach ($currentDogs as $d) {
+                $dog = explode('^', $d);
+                $id = $dog[0];
+                $name = $dog[1];
+
+                $dogOptions .= '<option value="' . $id . '">' . $name . '</option>';
+            }
+            $dogOptions .= '</select>';
+            $dogOptions .= '<input type="button" id="select_this_dog" value="Log this dog" />';
+        } else if (count($currentDogs) === 1) {
+            $dog = explode('^', $currentDogs[0]);
+            $id = $dog[0];
+            $name = $dog[1];
+            $dogOptions .= '<input id="dog_selector" type="hidden" value="' . $id. '" />        ';
+            $dogOptions .= '<script>getDogDeets("' . $id . '");</script>';
+        } else { // redirect to main menu if there are no dogs; show modal first
+            $dogOptions .= '<script>';
+            $dogOptions .= '$(document).ready(function() {';
+            $dogOptions .= '$("#ltd_error_modal_header_text").html("Cannot log a walk");';
+            $dogOptions .= '$("#ltd_error_modal_text").html("There are no dogs registered to your account.");';
+            $dogOptions .= "$('#ltd_error_modal').modal('show');";
+            $dogOptions .= "$('#ltd_error_modal_ok').on('click',function() {";
+            $dogOptions .= " location.href='/';";
+            $dogOptions .= "});";
+            $dogOptions .= "});</script>";
+        }
+        
+        return $dogOptions;
     }
 }

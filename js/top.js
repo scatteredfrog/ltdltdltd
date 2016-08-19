@@ -164,23 +164,26 @@ $(document).on('click', '#select_this_dog', function () {
 }); 
 
 function getDogDeets(dogID) {
+    var url_parts = location.href.split('/');
+    var activity = url_parts[url_parts.length-1];
     var post_data = {
         'dogID' : dogID,
-        'csrf_test_name' : $('[name=csrf_test_name]').val()
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+        'activity' : activity
     };
     
     $.post('/index.php/log/getDogInfo', post_data, function(data) {
         if (data && data['success']) {
             $('.dogName').html(data['dog']['dogName']);
             $('#doggie_data').css('display','block');
-            if (data['dog']['latest_walk']['date']) {
+            if (data['dog']['latest_' + activity]['date']) {
                 var gender_walk = data['dog']['gender'] == '1' ? 'Her ' : 'His ';
-                gender_walk += 'latest walk was ';
-                $('#gender_walk').html(gender_walk);
-                $('#when_walk_was').html(data['dog']['latest_walk']['date'] + ' at ' + data['dog']['latest_walk']['time']);
+                gender_walk += 'latest ' + activity + ' was ';
+                $('#gender_' + activity).html(gender_walk);
+                $('#when_' + activity + '_was').html(data['dog']['latest_' + activity]['date'] + ' at ' + data['dog']['latest_' + activity]['time']);
             } else {
-                $('#gender_walk').html('This will be ' + data['dog']['dogName'] + '\'s first logged walk!');
-                $('#when_walk_was').html('');
+                $('#gender_' + activity).html('This will be ' + data['dog']['dogName'] + '\'s first logged ' + activity + '!');
+                $('#when_' + activity + '_was').html('');
             }
             var today = new Date();
             var hh = today.getHours();
@@ -195,15 +198,15 @@ function getDogDeets(dogID) {
                 h = 12;
             }
 
-            $('#walk_date').val(("0" + (today.getMonth() + 1)).slice(-2) + '/' + ("0" + today.getDate()).slice(-2) + '/' + today.getFullYear());
-            $('#walk_date').datepick({
+            $('#' + activity + '_date').val(("0" + (today.getMonth() + 1)).slice(-2) + '/' + ("0" + today.getDate()).slice(-2) + '/' + today.getFullYear());
+            $('#' + activity + '_date').datepick({
                 showOnFocus: true,
                 rangeSelect: false,
                 maxDate: "new Date()"
             });
-            $('#walk_time').val(("0" + h).slice(-2) + ':' + ("0" + today.getMinutes()).slice(-2));
-            $('#walk_seconds').val(("0" + today.getSeconds()).slice(-2));
-            $('#walk_ampm').val(ampm);
+            $('#' + activity + '_time').val(("0" + h).slice(-2) + ':' + ("0" + today.getMinutes()).slice(-2));
+            $('#' + activity + '_seconds').val(("0" + today.getSeconds()).slice(-2));
+            $('#' + activity + '_ampm').val(ampm);
         } else {
             $('#ltd_error_modal_text').html('There was a problem and we couldn\'t retrieve your dog\'s information.');
             $('#ltd_error_modal').modal('show');
@@ -267,6 +270,56 @@ function submitWalk() {
             });
         } else {
             $('#ltd_error_modal_text').html('There was a problem; this walk might not have been logged.');
+            $('#ltd_error_modal').modal('show');
+        }
+    },'json');
+}
+
+function submitMeal() {
+    var date_parts = $('#meal_date').val().split('/');
+    var time_parts = $('#meal_time').val().split(':');
+    time_parts[2] = $('#meal_seconds').val();
+    time_parts[0] = parseInt(time_parts[0]);
+    
+    // format the time
+    if ($('#meal_ampm').val() === 'pm') {
+        if (time_parts[0] != 12) {
+            time_parts[0] += 12;
+        }
+    } else if (time_parts[0] == 12) {
+        time_parts[0] = '00';
+    } else {
+        time_parts[0] = ("0" + time_parts[0]).slice(-2);
+    }
+    
+    var mealDate = date_parts[2] + '-' + date_parts[0] + '-' + date_parts[1];
+    var action = 0;
+    
+    mealDate += ' ' + time_parts[0] + ':' + time_parts[1] + ':' + time_parts[2];
+    
+    var post_vars = {
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+        'dogID' : $('#dog_selector').val(),
+        'mealDate' : mealDate,
+        'mealNotes' : $('#meal_notes').val(),
+        'userID' : $('#user_id').val()
+    };
+    
+    $.post('/index.php/log/logMeal', post_vars, function (data) {
+        if (data['success'] == true) {
+            $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
+            $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s meal has been logged!');
+            $('#ltd_dual_options_left_button').html('Return home');
+            $('#ltd_dual_options_right_button').html('Log another meal');
+            $('#ltd_dual_options_modal').modal('show');
+            $('#ltd_dual_options_left_button').on('click', function () {
+                location.href = '/';
+            });
+            $('#ltd_dual_options_right_button').on('click', function () {
+                location.href = '/log/meal';
+            });
+        } else {
+            $('#ltd_error_modal_text').html('There was a problem; this meal might not have been logged.');
             $('#ltd_error_modal').modal('show');
         }
     },'json');
