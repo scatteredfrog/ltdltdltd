@@ -123,13 +123,20 @@ class Login extends CI_Controller {
         $retArray['success'] = $success;
         if ($success) {
             // notify the webmaster that a new user has registered
+            $mailfig['mailtype'] = 'html';
+            $mailfig['charset'] = 'utf-8';
             $this->load->library('email');
+            $this->email->initialize($mailfig);
             $this->email->from('webmaster@logthedog.com', 'Log the Dog');
             $this->email->to('webmaster@logthedog.com');
             $this->email->subject(' *** NEW LTD USER ***');
-            $message = 'The following user has registered for an account: \n';
+            $message = 'The following user has registered for an account:<br />';
             foreach ($account as $k => $v) {
-                $message .= $k . ': ' . $v . '\n';
+                $message .= $k . ': ' . $v . '<br />';
+            }
+            $message .= '<br />Server info:<br />';
+            foreach ($_SERVER as $kk => $vv) {
+                $message .= $kk . ': ' . $vv . '<br />';
             }
             $this->email->message($message);
             $this->email->send();
