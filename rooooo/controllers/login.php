@@ -122,6 +122,17 @@ class Login extends CI_Controller {
         // Return stuff
         $retArray['success'] = $success;
         if ($success) {
+            // notify the webmaster that a new user has registered
+            $this->load->library('email');
+            $this->email->from('webmaster@logthedog.com', 'Log the Dog');
+            $this->email->to('webmaster@logthedog.com');
+            $this->email->subject(' *** NEW LTD USER ***');
+            $message = 'The following user has registered for an account: \n';
+            foreach ($account as $k => $v) {
+                $message .= $k . ': ' . $v . '\n';
+            }
+            $this->email->message($message);
+            $this->email->send();
             // see if the user has any dogs already registered
             $dogs = $this->login_model->retrieveDogs($this->session->userdata('insert_id'), true);
 

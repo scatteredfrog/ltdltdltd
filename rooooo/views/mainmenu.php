@@ -1,9 +1,9 @@
 <?= link_tag(base_url().'css/main_menu.css'); ?>
-
+<script src="/js/home.js"></script>
 <div class="container">
     <div class="row">
         <div class="col-xs-2 col-lg-4 col-md-3 col-sm-2"></div>
-        <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox">
+        <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox" onclick="notYetAvailable('log meals');">
             <img src="/assets/images/menu_feed.png" class="img-responsive" />
             <div class="menuText">Log a Meal</div>
         </div>
@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col-xs-2 col-lg-4 col-md-3 col-sm-2"></div>
-        <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox">
+        <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox" onclick="notYetAvailable('log treats');">
             <img src="/assets/images/menu_treat.png" class="img-responsive" />
             <div class="menuText">Log a Treat</div>
         </div>

@@ -90,10 +90,10 @@
                 <span class='icon-home icon-white'></span><span class='hidden-xs'> Home</span>
             </div>
         </a>
-        <div class='dn-item'>
+        <div class='dn-item' onclick="notYetAvailable('provide our privacy policy');">
             <span class='icon-lock icon-white'></span><span class='hidden-xs'> Privacy Policy</span>
         </div>
-        <div class='dn-item'>
+        <div class='dn-item' onclick="notYetAvailable('tell you about Log the Dog');">
             <span class='dn-dog'></span><span class='hidden-xs'> About Log The Dog</span>
         </div>
         <a href="/home/contact_us">

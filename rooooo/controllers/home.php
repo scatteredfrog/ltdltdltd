@@ -30,6 +30,7 @@ class Home extends CI_Controller {
         
         public function main_menu() {
             $this->load->view('mainmenu');
+            $this->load->view('error_modal');
         }
         
         public function create_account() {

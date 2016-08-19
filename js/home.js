@@ -206,3 +206,10 @@ function submitCreate() {
         }
     },'json');
 }
+
+function notYetAvailable(verb) {
+    $('#ltd_error_modal .modal-dialog').addClass('modal-sm');
+    $('#ltd_error_modal_header_text').html('Function Not Yet Implemented');
+    $('#ltd_error_modal_text').html('Sorry -- we can\'t ' + verb + ' yet.');
+    $('#ltd_error_modal').modal('show');
+}
