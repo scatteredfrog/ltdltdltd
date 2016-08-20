@@ -17,13 +17,6 @@ class Home extends CI_Controller {
                 $this->load->view('mainmenu');
             } else {
                 $this->load->view('welcome_message');
-                $cookie = json_decode($this->input->cookie('ltd-login',TRUE),1);
-                if ($cookie && $this->session->userdata('loggedOut') != true) {
-                    $email = $cookie['1I1T1TLI11II'];
-                    $password = $cookie['I11T1TLI11IT'];
-                    $this->load->model('login_model');
-                    $this->login_model->checkLoginData($email,md5($password));
-                }
             }
             $this->load->view('error_modal');
 	}
