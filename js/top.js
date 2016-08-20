@@ -325,6 +325,57 @@ function submitMeal() {
     },'json');
 }
 
+function submitTreat() {
+    var date_parts = $('#treat_date').val().split('/');
+    var time_parts = $('#treat_time').val().split(':');
+    time_parts[2] = $('#treat_seconds').val();
+    time_parts[0] = parseInt(time_parts[0]);
+    
+    // format the time
+    if ($('#treat_ampm').val() === 'pm') {
+        if (time_parts[0] != 12) {
+            time_parts[0] += 12;
+        }
+    } else if (time_parts[0] == 12) {
+        time_parts[0] = '00';
+    } else {
+        time_parts[0] = ("0" + time_parts[0]).slice(-2);
+    }
+    
+    var treatDate = date_parts[2] + '-' + date_parts[0] + '-' + date_parts[1];
+    var action = 0;
+    
+    treatDate += ' ' + time_parts[0] + ':' + time_parts[1] + ':' + time_parts[2];
+    
+    var post_vars = {
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+        'dogID' : $('#dog_selector').val(),
+        'treatDate' : treatDate,
+        'treatNotes' : $('#treat_notes').val(),
+        'treatType' : $('#treat_type').val(),
+        'userID' : $('#user_id').val()
+    };
+    
+    $.post('/index.php/log/logTreat', post_vars, function (data) {
+        if (data['success'] == true) {
+            $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
+            $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s treat has been logged!');
+            $('#ltd_dual_options_left_button').html('Return home');
+            $('#ltd_dual_options_right_button').html('Log another treat');
+            $('#ltd_dual_options_modal').modal('show');
+            $('#ltd_dual_options_left_button').on('click', function () {
+                location.href = '/';
+            });
+            $('#ltd_dual_options_right_button').on('click', function () {
+                location.href = '/log/treat';
+            });
+        } else {
+            $('#ltd_error_modal_text').html('There was a problem; this treat might not have been logged.');
+            $('#ltd_error_modal').modal('show');
+        }
+    },'json');
+}
+
 function saveAccountChanges() {
     var lang = '';
     switch ($('[name=language]:checked').val()) {

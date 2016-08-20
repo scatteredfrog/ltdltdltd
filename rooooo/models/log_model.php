@@ -152,6 +152,21 @@
             return $retArray;
         }
 
+        public function retrieveLatestTreat($dogID) {
+            $retArray = array();
+            $this->db->select('treatDate,treatNotes');
+            $this->db->from('LTDtbTreat');
+            $this->db->where(array('dogID' => $dogID));
+            $this->db->order_by('treatDate', 'desc');
+            $this->db->limit(1);
+            $query = $this->db->get();
+            foreach ($query->result() as $row) {
+                $retArray['datetime'] = $row->treatDate;
+                $retArray['notes'] = $row->treatNotes;
+            }
+            return $retArray;
+        }
+
         public function addWalk($walkData) {
             $success = false;
             $retArray = array();
@@ -188,4 +203,24 @@
             $retArray['success'] = $success;
             return $retArray;
         }
+
+        public function addTreat($treatData) {
+            $success = false;
+            $retArray = array();
+            $insert = array (
+                'dogID' => $treatData['dogID'],
+                'treatDate' => $treatData['treatDate'],
+                'treatType' => $treatData['treatType'],
+                'treatNotes' => $treatData['treatNotes'],
+                'userID' => $treatData['userID'],
+            );
+            
+            if ($this->db->insert('LTDtbTreat', $insert)) {
+                $success = true;
+            }
+            
+            $retArray['success'] = $success;
+            return $retArray;
+        }
+
     }

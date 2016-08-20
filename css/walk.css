@@ -1,14 +1,14 @@
 #doggie_data {  display: none; }
-#walk_date, #meal_date { float: left; width: 83px; }
-#walk_time, #meal_time { width: 50px; }
-#gender_walk, #gender_meal { font-weight: bold; }
+#walk_date, #meal_date, #treat_date { float: left; width: 83px; }
+#walk_time, #meal_time, treat_time { width: 50px; }
+#gender_walk, #gender_meal, #gender_treat { font-weight: bold; }
 
-#walk_cal, #meal_cal { 
+#walk_cal, #meal_cal, #treat_cal { 
     display: none;
     float: left; 
 }
 
-#walk_date_container .trigger, #meal_date_container .trigger {
+#walk_date_container .trigger, #meal_date_container .trigger, #treat_date_container .trigger {
     padding-left: 6px;
     padding-top: 5px;
 }

@@ -242,3 +242,5 @@
 
 )
 
+[Fri Aug 19 22:40:09.180068 2016] [:error] [pid 4542] [client 127.0.0.1:50965] PHP Fatal error:  Call to undefined method Log::getLatestTreat() in /Volumes/Coding/logthedog.com/rooooo/controllers/log.php on line 251, referer: http://local.logthedog.com/log/treat
+[Fri Aug 19 22:40:10.735800 2016] [:error] [pid 4542] [client 127.0.0.1:50965] PHP Fatal error:  Call to undefined method Log::getLatestTreat() in /Volumes/Coding/logthedog.com/rooooo/controllers/log.php on line 251, referer: http://local.logthedog.com/log/treat

@@ -73,6 +73,20 @@ class Log extends CI_Controller {
         $this->load->view('error_modal');
     }
     
+    // Load the "Log a Treat" page
+    public function treat() {
+        if (!$this->session->userdata('logged_in')) {
+            header('Location: /');
+        }
+        
+        $dogOptions = $this->_getDogOptions();
+        
+        $data = array('dogs' =>$dogOptions);
+        $this->load->helper('form');
+        $this->load->view('log_a_treat', $data);
+        $this->load->view('error_modal');
+    }
+
     public function register_a_dog() {
         $success = true;
         $error = '';
@@ -233,6 +247,9 @@ class Log extends CI_Controller {
                     case 'meal' :
                         $resp['dog']['latest_meal'] = $this->getLatestMeal($dogID);
                         break;
+                    case 'treat' :
+                        $resp['dog']['latest_treat'] = $this->getLatestTreat($dogID);
+                        break;
                 }
                 $resp['success'] = true;
             }
@@ -286,6 +303,28 @@ class Log extends CI_Controller {
         return $mealInfo;
     }
     
+    public function getLatestTreat($dogID) {
+        $this->load->model('log_model');
+        $treatInfo = $this->log_model->retrieveLatestTreat($dogID);
+        if (isset($treatInfo['datetime'])) {
+            $now = time();
+            $treatdate = strtotime($treatInfo['datetime']);
+            $tempdatetime = new DateTime($treatInfo['datetime']);
+            $timediff = (int)floor(($now - $treatdate) / 86400);
+            if ($timediff === 0) {
+                $treatInfo['date'] = 'today';
+            } else if ($timediff === 1) {
+                $treatInfo['date'] = 'yesterday'; 
+            } else if ($timediff > 2 && $timediff < 7) {
+                $treatInfo['date'] = date_format($tempdatetime,'l');
+            } else {
+                $treatInfo['date'] = date_format($tempdatetime,'F j');
+            }
+            $treatInfo['time'] = date_format($tempdatetime,'g:i a');
+        }
+        return $treatInfo;
+    }
+
     public function logMeal() {
         // TODO: validation (date, missing data, etc.)
         $meal_data = array();
@@ -295,6 +334,20 @@ class Log extends CI_Controller {
         $meal_data['userID'] = $this->input->post('userID');
         $this->load->model('log_model');
         $success = $this->log_model->addMeal($meal_data);
+        echo json_encode($success);
+        exit();
+    }
+    
+    public function logTreat() {
+        // TODO: validation (date, missing data, etc.)
+        $treat_data = array();
+        $treat_data['dogID'] = $this->input->post('dogID');
+        $treat_data['treatDate'] = $this->input->post('treatDate');
+        $treat_data['treatNotes'] = $this->input->post('treatNotes');
+        $treat_data['treatType'] = $this->input->post('treatType');
+        $treat_data['userID'] = $this->input->post('userID');
+        $this->load->model('log_model');
+        $success = $this->log_model->addTreat($treat_data);
         echo json_encode($success);
         exit();
     }
