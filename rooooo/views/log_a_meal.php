@@ -53,7 +53,7 @@
     </div>
     <div class="row">
         <div class="col-xs-6 bdr-bot bottom5 top5" id="meal_time_container">
-            <textarea id="meal_notes" rows="3" cols="36"></textarea>
+            <textarea id="meal_notes" rows="2" cols="36"></textarea>
         </div>
         <div class="col-xs-6"></div>
     </div>

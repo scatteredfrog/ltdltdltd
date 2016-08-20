@@ -18,7 +18,7 @@ class Home extends CI_Controller {
             } else {
                 $this->load->view('welcome_message');
                 $cookie = json_decode($this->input->cookie('ltd-login',TRUE),1);
-                if ($cookie && $this->session->userdata('loggedOut'!= true)) {
+                if ($cookie && $this->session->userdata('loggedOut') != true) {
                     $email = $cookie['1I1T1TLI11II'];
                     $password = $cookie['I11T1TLI11IT'];
                     $this->load->model('login_model');

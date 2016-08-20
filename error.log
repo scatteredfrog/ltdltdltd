@@ -1,246 +1,149 @@
-[16-Aug-2016 14:07:22 America/Chicago] DOGS: Array
+[Sat Aug 20 15:36:45.832247 2016] [:error] [pid 3303] [client 127.0.0.1:49400] Checking for cookie...
+[Sat Aug 20 15:37:23.315777 2016] [:error] [pid 3253] [client 127.0.0.1:49401] Checking for cookie..., referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 15:37:43.251357 2016] [:error] [pid 213] [client 127.0.0.1:49402] Checking for cookie..., referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 15:38:57.477682 2016] [:error] [pid 3255] [client 127.0.0.1:49403] Checking for cookie..., referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 15:38:57.477766 2016] [:error] [pid 3255] [client 127.0.0.1:49403] , referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 15:40:23.984967 2016] [:error] [pid 3254] [client 127.0.0.1:49404] Checking for cookie..., referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 15:40:23.985054 2016] [:error] [pid 3254] [client 127.0.0.1:49404] , referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 15:40:23.985065 2016] [:error] [pid 3254] [client 127.0.0.1:49404] FOUND COOKIE, referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:00:28.941169 2016] [:error] [pid 3304] [client 127.0.0.1:49432] Checking for cookie..., referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:00:28.941335 2016] [:error] [pid 3304] [client 127.0.0.1:49432] , referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:00:28.941347 2016] [:error] [pid 3304] [client 127.0.0.1:49432] FOUND COOKIE, referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:00:40.320843 2016] [:error] [pid 213] [client 127.0.0.1:49437] Checking for cookie..., referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:00:40.320958 2016] [:error] [pid 213] [client 127.0.0.1:49437] , referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:00:40.320977 2016] [:error] [pid 213] [client 127.0.0.1:49437] FOUND COOKIE, referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:01:41.201293 2016] [:error] [pid 3256] [client 127.0.0.1:49443] Checking for cookie..., referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:01:41.201420 2016] [:error] [pid 3256] [client 127.0.0.1:49443] , referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:01:41.201450 2016] [:error] [pid 3256] [client 127.0.0.1:49443] FOUND COOKIE, referer: http://local.logthedog.com/home/main_menu
+[Sat Aug 20 16:01:41.203076 2016] [:error] [pid 3256] [client 127.0.0.1:49443] cookie try: Array\n(\n    [success] => \n    [error] => 1\n)\n, referer: http://local.logthedog.com/home/main_menu
+[20-Aug-2016 16:02:25 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:02:25 America/Chicago] 
+[20-Aug-2016 16:02:25 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:02:25 America/Chicago] cookie try: Array
 (
-    [0] => Array
-        (
-            [name] => Ruthie
-            [breed] => beagle
-        )
-
-    [1] => Array
-        (
-            [name] => Spot
-            [breed] => beagle mix
-        )
-
-    [2] => Array
-        (
-            [name] => Nifty
-            [breed] => malamute
-        )
-
-    [3] => Array
-        (
-            [name] => Nifty
-            [breed] => malamute
-        )
-
-    [4] => Array
-        (
-            [name] => Nifty
-            [breed] => malamute
-        )
-
-    [5] => Array
-        (
-            [name] => Nifty
-            [breed] => malamute
-        )
-
-    [6] => Array
-        (
-            [name] => Nifty
-            [breed] => malamute
-        )
-
-    [7] => Array
-        (
-            [name] => Nerfy
-            [breed] => 
-        )
-
-    [8] => Array
-        (
-            [name] => Nerfy
-            [breed] => 
-        )
-
-    [9] => Array
-        (
-            [name] => Nerfy
-            [breed] => 
-        )
-
-    [10] => Array
-        (
-            [name] => Nerfy
-            [breed] => 
-        )
-
-    [11] => Array
-        (
-            [name] => Nerfy
-            [breed] => 
-        )
-
-    [12] => Array
-        (
-            [name] => Nerfy
-            [breed] => 
-        )
-
-    [13] => Array
-        (
-            [name] => Nerfy
-            [breed] => 
-        )
-
-    [14] => Array
-        (
-            [name] => Doofy
-            [breed] => 
-        )
-
-    [15] => Array
-        (
-            [name] => Snoopy
-            [breed] => 
-        )
-
-    [16] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [17] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [18] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [19] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [20] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [21] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [22] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [23] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [24] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [25] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [26] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [27] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [28] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [29] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [30] => Array
-        (
-            [name] => Ruthie
-            [breed] => beagle
-        )
-
-    [31] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [32] => Array
-        (
-            [name] => Ruthie
-            [breed] => beagle
-        )
-
-    [33] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [34] => Array
-        (
-            [name] => Ruthie
-            [breed] => beagle
-        )
-
-    [35] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [36] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [37] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [38] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
-    [39] => Array
-        (
-            [name] => Ruthie
-            [breed] => 
-        )
-
+    [success] => 
+    [error] => 1
 )
 
-[Fri Aug 19 22:40:09.180068 2016] [:error] [pid 4542] [client 127.0.0.1:50965] PHP Fatal error:  Call to undefined method Log::getLatestTreat() in /Volumes/Coding/logthedog.com/rooooo/controllers/log.php on line 251, referer: http://local.logthedog.com/log/treat
-[Fri Aug 19 22:40:10.735800 2016] [:error] [pid 4542] [client 127.0.0.1:50965] PHP Fatal error:  Call to undefined method Log::getLatestTreat() in /Volumes/Coding/logthedog.com/rooooo/controllers/log.php on line 251, referer: http://local.logthedog.com/log/treat
+[20-Aug-2016 16:17:48 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:17:48 America/Chicago] 
+[20-Aug-2016 16:17:48 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:17:48 America/Chicago] PHP Fatal error:  Using $this when not in object context in /Volumes/Coding/logthedog.com/rooooo/helpers/validation_helper.php on line 58
+[20-Aug-2016 16:18:58 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:18:58 America/Chicago] 
+[20-Aug-2016 16:18:58 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:18:58 America/Chicago] PHP Fatal error:  Using $this when not in object context in /Volumes/Coding/logthedog.com/rooooo/helpers/validation_helper.php on line 56
+[20-Aug-2016 16:19:05 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:19:05 America/Chicago] 
+[20-Aug-2016 16:19:05 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:19:05 America/Chicago] PHP Fatal error:  Using $this when not in object context in /Volumes/Coding/logthedog.com/rooooo/helpers/validation_helper.php on line 56
+[20-Aug-2016 16:24:15 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:24:15 America/Chicago] 
+[20-Aug-2016 16:24:15 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:24:15 America/Chicago] PHP Fatal error:  Call to a member function model() on a non-object in /Volumes/Coding/logthedog.com/rooooo/libraries/Beagle.php on line 6
+[20-Aug-2016 16:34:29 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:34:29 America/Chicago] 
+[20-Aug-2016 16:34:29 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:34:29 America/Chicago] PHP Fatal error:  Call to a member function model() on a non-object in /Volumes/Coding/logthedog.com/rooooo/libraries/Beagle.php on line 6
+[20-Aug-2016 16:34:58 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:34:58 America/Chicago] 
+[20-Aug-2016 16:34:58 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:34:58 America/Chicago] PHP Fatal error:  Call to a member function model() on a non-object in /Volumes/Coding/logthedog.com/rooooo/libraries/Beagle.php on line 6
+[20-Aug-2016 16:38:41 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:38:41 America/Chicago] 
+[20-Aug-2016 16:38:41 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:38:41 America/Chicago] cookie try: Array
+(
+    [success] => 
+    [error] => 1
+)
+
+[20-Aug-2016 16:39:23 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:39:23 America/Chicago] 
+[20-Aug-2016 16:39:23 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:39:23 America/Chicago] return password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+[20-Aug-2016 16:39:23 America/Chicago] cookie try: Array
+(
+    [success] => 
+    [error] => 1
+)
+
+[20-Aug-2016 16:40:24 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:40:24 America/Chicago] 
+[20-Aug-2016 16:40:24 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:40:24 America/Chicago] return password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+[20-Aug-2016 16:40:24 America/Chicago] Final password: $2y$09$fudgicleforthrillhouseYqKbPmv6Zbt5P/sEMokKj1V9Ep4XY.O
+[20-Aug-2016 16:40:24 America/Chicago] cookie try: Array
+(
+    [success] => 
+    [error] => 1
+)
+
+[20-Aug-2016 16:41:53 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:41:53 America/Chicago] 
+[20-Aug-2016 16:41:53 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:41:53 America/Chicago] return password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+[20-Aug-2016 16:41:53 America/Chicago] Cookie password: Test1234
+[20-Aug-2016 16:41:53 America/Chicago] Final password: $2y$09$fudgicleforthrillhouseYqKbPmv6Zbt5P/sEMokKj1V9Ep4XY.O
+[20-Aug-2016 16:41:53 America/Chicago] cookie try: Array
+(
+    [success] => 
+    [error] => 1
+)
+
+[20-Aug-2016 16:44:41 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:44:41 America/Chicago] 
+[20-Aug-2016 16:44:41 America/Chicago] FOUND COOKIE
+[20-Aug-2016 16:44:41 America/Chicago] return password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+[20-Aug-2016 16:44:41 America/Chicago] Cookie password: Test1234
+[20-Aug-2016 16:44:41 America/Chicago] Final password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+[20-Aug-2016 16:44:41 America/Chicago] cookie try: Array
+(
+    [userID] => 42
+    [username] => Flirzel Kwerp
+    [firstName] => Flirzel
+    [lastName] => 
+    [eMail] => flirzel@kwerp.com
+    [language] => 1
+    [password] => $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+    [error] => 
+    [logged_in] => 1
+    [success] => 1
+)
+
+[20-Aug-2016 16:48:06 America/Chicago] Checking for cookie...
+[20-Aug-2016 16:48:06 America/Chicago] 
+[20-Aug-2016 16:48:06 America/Chicago] return password: $2y$09$fudgicleforthrillhouse61gMmEM3vgz1j5JJNbFMpUBbhXd1rsa
+[20-Aug-2016 17:02:45 America/Chicago] cookie: Array
+(
+    [1I1T1TLI11II] => flirzel@kwerp.com
+    [I11T1TLI11IT] => Test1234
+)
+
+[20-Aug-2016 17:03:17 America/Chicago] cookie: Array
+(
+    [1I1T1TLI11II] => flirzel@kwerp.com
+    [I11T1TLI11IT] => Test1234
+)
+
+[20-Aug-2016 17:03:47 America/Chicago] cookie: Array
+(
+    [1I1T1TLI11II] => flirzel@kwerp.com
+    [I11T1TLI11IT] => Test1234
+)
+
+[20-Aug-2016 17:03:47 America/Chicago] GOT Here
+[20-Aug-2016 17:05:23 America/Chicago] cookie: Array
+(
+    [1I1T1TLI11II] => flirzel@kwerp.com
+    [I11T1TLI11IT] => Test1234
+)
+
+[20-Aug-2016 17:05:23 America/Chicago] GOT Here
+[20-Aug-2016 17:06:41 America/Chicago] cookie: Array
+(
+    [1I1T1TLI11II] => flirzel@kwerp.com
+    [I11T1TLI11IT] => Test1234
+)
+
+[20-Aug-2016 17:06:41 America/Chicago] GOT Here

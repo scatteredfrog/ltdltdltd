@@ -7,7 +7,7 @@ function email_valid($email) {
 
 function valid_password($password, $email, $username) {
     $sp = '<br />&nbsp;<br />';
-    $error = '';    
+    $error = '';
     $valid = true;
     $retArray = array();
 
@@ -15,9 +15,9 @@ function valid_password($password, $email, $username) {
         $valid = false;
         $error .= 'Your password is too short; make it at least 8 characters.'. $sp;
     }
-    
+
     // Make sure password matches security criteria
-    if (!preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) || 
+    if (!preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) ||
             !preg_match('/[0-9]/', $password)) {
         $valid = false;
         $error .= 'Your password must contain at least one capital letter, at least one ';
@@ -25,7 +25,7 @@ function valid_password($password, $email, $username) {
     }
 
     $password = strtolower($password);
-        
+
     if (strtoupper($password) == strtoupper($email)) {
         $valid = false;
         $error .= 'Please do not use your e-mail address as your password.' . $sp;
@@ -35,18 +35,18 @@ function valid_password($password, $email, $username) {
         $valid = false;
         $error .= 'Please do not use your user name as your password.' . $sp;
     }
-    
+
     if ($password == 'logthedog' || $password == 'logthedog.com') {
         $valid = false;
         $error .= 'That password is much too easy to guess.' . $sp;
     }
-    
+
     if (stristr(strtolower($password), 'password')) {
         $valid = false;
         $error .= 'Please do not use the word "password" in your password. ';
         $error .= 'That makes it too easy to guess.' . $sp;
     }
-    
+
     $retArray['valid'] = $valid;
     $retArray['error'] = $error;
     return $retArray;
