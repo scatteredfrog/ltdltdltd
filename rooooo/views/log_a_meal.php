@@ -58,10 +58,10 @@
         <div class="col-xs-6"></div>
     </div>
     <div class="row">
-        <div class="col-xs-6">
-            <input id="meal_submit" type="button" value="Submit Meal" onclick="submitMeal();" />
+        <div class="col-xs-12 col-lg-6">
+            <input class="pull-right" id="meal_submit" type="button" value="Submit Meal" onclick="submitMeal();" />
         </div>
-        <div class="col-xs-6"></div>
+        <div class="col-lg-6"></div>
     </div>
 </div>
 <?

@@ -160,6 +160,8 @@ class Login extends CI_Controller {
     }
 
     public function log_in() {
+        $this->load->helper('cookie');
+        error_log("LOG IN");
         $this->load->helper('form');
         $this->load->model('login_model');
         $email = $this->input->post('email',TRUE);
@@ -170,7 +172,7 @@ class Login extends CI_Controller {
         $remember_me = $this->input->post('remember',TRUE);
         $login_attempt = $this->login_model->checkLoginData($email,$password);
         if ($login_attempt['success']) {            
-            if ($remember_me) {
+            if ($remember_me == 'true') {
                 $cookie = array(
                     'name' => 'ltd-login',
                     'value' => json_encode(array('1I1T1TLI11II' => $email, 'I11T1TLI11IT' => $this->input->post('password',TRUE))),
@@ -179,6 +181,16 @@ class Login extends CI_Controller {
                     'domain' => '.logthedog.com'
                 );
                 $this->input->set_cookie($cookie);
+            } else {
+                // delete remember cookie
+                $cookie = array (
+                    'name' => 'ltd-login',
+                    'value' => '',
+                    'expire' => '0',
+                    'domain' => '.logthedog.com'
+                );
+                $rex = delete_cookie($cookie);
+                error_log("Rex: " . print_r($rex,1));
             }
             $dogs = $this->login_model->retrieveDogs($this->session->userdata('eMail'));
             if (count($dogs) > 0) {

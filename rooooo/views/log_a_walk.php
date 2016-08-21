@@ -70,10 +70,10 @@
         <div class="col-xs-6"></div>
     </div>
     <div class="row">
-        <div class="col-xs-6">
-            <input id="walk_submit" type="button" value="Submit Walk" onclick="submitWalk();" />
+        <div class="col-xs-12 col-lg-6">
+            <input class="pull-right" id="walk_submit" type="button" value="Submit Walk" onclick="submitWalk();" />
         </div>
-        <div class="col-xs-6"></div>
+        <div class="col-lg-6"></div>
     </div>
 </div>
 <?
