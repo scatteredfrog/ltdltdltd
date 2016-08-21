@@ -18,6 +18,7 @@ class Login extends CI_Controller {
     }
 
     public function create_account() {
+        //TODO: verify created account
         $sp = '<br />&nbsp;<br />';
         $this->load->model('login_model');
         $user_email = $this->input->post('user_email', TRUE);
@@ -161,7 +162,6 @@ class Login extends CI_Controller {
 
     public function log_in() {
         $this->load->helper('cookie');
-        error_log("LOG IN");
         $this->load->helper('form');
         $this->load->model('login_model');
         $email = $this->input->post('email',TRUE);
@@ -190,7 +190,6 @@ class Login extends CI_Controller {
                     'domain' => '.logthedog.com'
                 );
                 $rex = delete_cookie($cookie);
-                error_log("Rex: " . print_r($rex,1));
             }
             $dogs = $this->login_model->retrieveDogs($this->session->userdata('eMail'));
             if (count($dogs) > 0) {

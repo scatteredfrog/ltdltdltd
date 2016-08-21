@@ -13,13 +13,80 @@ class Home extends CI_Controller {
         
 	public function index() {
             $this->load->helper('form');
+            $cookie = json_decode($this->input->cookie('ok-computer',TRUE),1);
+            // REMOVE COOKIE CONDITIONAL WHEN DONE TESTING.
+            // Keep the code withn the conditional, though.
+            if ($cookie && ($cookie['T1I1T1TLI11TT'] === "it's okay"))    {
+                if ($this->session->userdata('logged_in') == '1') {
+                    $this->load->view('mainmenu');
+                } else {
+                    $this->load->view('welcome_message');
+                }
+            } else {
+                $this->load->view('tester');
+            }
+            $this->load->view('error_modal');
+	}
+
+        public function continue_start() {
             if ($this->session->userdata('logged_in') == '1') {
                 $this->load->view('mainmenu');
             } else {
                 $this->load->view('welcome_message');
             }
-            $this->load->view('error_modal');
-	}
+        }
+        
+        public function beagle() {
+            $solve = $_POST['solve'];
+            $solution = $_POST['solution'];
+            $result = 'wrong';
+            switch($solve) {
+                case '0':
+                    if ($solution === '987.4') {
+                        $result = 'right';
+                    }
+                    break;
+                case '1':
+                    if ($solution === 'ornge') {
+                        $result = 'right';
+                    }
+            }
+
+            if ($result === 'right') {
+                $cookie = array(
+                    'name' => 'ok-computer',
+                    'value' => json_encode(array('T1I1T1TLI11TT' => "it's okay")),
+                    'expire' => '328500',
+                    'secure' => FALSE,
+                    'domain' => '.logthedog.com'
+                );
+                $this->input->set_cookie($cookie);
+
+                $this->continue_start();
+            } else {
+                $sn = mt_rand(0,5);
+                $site = 'http://www.google.com';
+                
+                switch ($sn) {
+                    case 0:
+                        $site = 'http://www.piefactorypodcast.com';
+                        break;
+                    case 1:
+                        $site = 'http://www.beagles-on-the-web.com';
+                        break;
+                    case 2:
+                        $site = 'http://www.brewbeagles.org';
+                        break;
+                    case 3:
+                        $site = 'http://www.paws.org';
+                        break;
+                    case 4:
+                        $site = 'http://www.menwholooklikekennyrogers.com';
+                        break;
+                }
+                header('Location: ' . $site);
+            }
+        }
         
         public function main_menu() {
             $this->load->view('mainmenu');
