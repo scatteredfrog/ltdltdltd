@@ -49,3 +49,14 @@
 .bold { font-weight: bolder; }
 .plain { font-weight: normal!important;}
 .yay-update { color: #0a0; font-weight: bold; display: none; }
+
+@media only screen and (min-width: 501px) {
+    .phoneOnly {
+        display: none;
+    }
+}
+@media only screen and (max-width:500px) {
+    .landscapeOnly {
+        display: none;
+    }
+}
