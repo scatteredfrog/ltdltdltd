@@ -167,6 +167,21 @@
             return $retArray;
         }
 
+        public function retrieveLatestMed($dogID) {
+            $retArray = array();
+            $this->db->select('medDate,medNotes');
+            $this->db->from('LTDtbMed');
+            $this->db->where(array('dogID' => $dogID));
+            $this->db->order_by('medDate', 'desc');
+            $this->db->limit(1);
+            $query = $this->db->get();
+            foreach ($query->result() as $row) {
+                $retArray['datetime'] = $row->medDate;
+                $retArray['notes'] = $row->medNotes;
+            }
+            return $retArray;
+        }
+        
         public function addWalk($walkData) {
             $success = false;
             $retArray = array();
@@ -197,6 +212,24 @@
             );
             
             if ($this->db->insert('LTDtbMeal', $insert)) {
+                $success = true;
+            }
+            
+            $retArray['success'] = $success;
+            return $retArray;
+        }
+
+        public function addMed($medData) {
+            $success = false;
+            $retArray = array();
+            $insert = array (
+                'dogID' => $medData['dogID'],
+                'medDate' => $medData['medDate'],
+                'medNotes' => $medData['medNotes'],
+                'userID' => $medData['userID'],
+            );
+            
+            if ($this->db->insert('LTDtbMed', $insert)) {
                 $success = true;
             }
             

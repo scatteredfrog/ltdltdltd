@@ -31,7 +31,7 @@
                 <div class="menuText"><span class="hidden-xs hidden-md">Dog </span>Registry</div>
             </div>
         </a>
-        <a class="menuAnchor" href="/log/">
+        <a class="menuAnchor" href="/log/med">
             <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox">
                 <img src="/assets/images/menu_meds.png" class="img-responsive" />
                 <div class="menuText"><span class="hidden-xs hidden-md">Log a </span>Medicine</div>
@@ -81,7 +81,7 @@
     </div>
     <div class="row">
         <div class="col-xs-2 col-lg-4 col-md-3 col-sm-2"></div>
-        <a class="menuAnchor" href="/log/treat">
+        <a class="menuAnchor" href="/log/med">
             <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox">
                 <img src="/assets/images/menu_meds.png" class="img-responsive" />
                 <div class="menuText"><span class="hidden-xs">Log a </span>Medicine</div>
