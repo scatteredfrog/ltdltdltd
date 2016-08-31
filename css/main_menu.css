@@ -5,8 +5,13 @@
     border-style: solid;
 }
 
-.menuText {
-    text-align: center;
+.menuText {    text-align: center; }
+#ql_modal_text legend { margin-bottom: 0; }
+#ql_modal_text fieldset { padding-bottom: 15px; }
+
+#ql_modal_text {
+    max-height: 200px;
+    overflow-y: scroll;
 }
 
 @media (min-width: 768px) {

@@ -213,3 +213,22 @@ function notYetAvailable(verb) {
     $('#ltd_error_modal_text').html('Sorry -- we can\'t ' + verb + ' yet.');
     $('#ltd_error_modal').modal('show');
 }
+
+function quickLook() {
+    var post_vars = {
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+    };
+    
+    $.post('/log/getQuickLook', post_vars, function(data) {
+        var dogData = data.substr(81);
+        var dogID = dogData.split('"');
+        dogID = dogID[0];
+        if (data.indexOf('<select') === 0) {
+            $('#ql_modal_header_text').html('Please choose a dog: ' + data);
+        } else {
+            // only one dog
+            getDogDeets(dogID);
+        }   
+    }, 'json');
+    $('#ql_modal').modal('show');    
+}

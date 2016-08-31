@@ -25,7 +25,6 @@ class Log extends CI_Controller {
     public function index() {
     }
 
-
     public function register_dog() {
         if (!$this->session->userdata('logged_in')) {
             header('Location: /');
@@ -35,6 +34,11 @@ class Log extends CI_Controller {
         $this->load->view('error_modal');
     }
     
+    public function getQuickLook() {
+        $dogOptions = $this->_getDogOptions(true);
+        echo json_encode($dogOptions);
+        exit();
+    }
     public function getDogNames($user) {
         if (empty($user)) {
             return array('success' => false);
@@ -267,6 +271,70 @@ class Log extends CI_Controller {
                     case 'med' :
                         $resp['dog']['latest_med'] = $this->getLatestMed($dogID);
                         break;
+                    case 'quick_look' :
+                        $resp['dog']['latest_quick_look'] = 'not yet there';
+                        $this->load->model('log_model');
+                        $resp['dog']['quick_look'] = $this->log_model->retrieveLatestData($dogID, 10);
+                        // generate the HTML
+                        $resp['html'] = '<form>';
+                        foreach ($resp['dog']['quick_look'] as $k => $v) {
+                            $renderDate = $k;
+                            if (date('Y-m-d') === $renderDate) {
+                                $renderDate = 'Today';
+                            } else {
+                                $date_parts = explode('-', $k);
+                                $date_parts[1] = ltrim($date_parts[1], '0');
+                                $date_parts[2] = ltrim($date_parts[2], '0');
+                                $renderDate = $this->_months[$date_parts[1]];
+                                $renderDate .= ' ' . $date_parts[2];
+                            }
+                            $renderDate .= ':';
+                            $resp['html'] .= '<fieldset><legend>' . $renderDate . '</legend>';
+                            foreach ($v as $vk => $vv) {
+                                $time_parts = explode(':', $vk);
+                                // parse 24-hour format down to 12
+                                $light = 'am';
+                                if ($time_parts[0] === '00') {
+                                    $hour = 12;
+                                    if ($time_parts[1] === '00') {
+                                        $light = ' midnight';
+                                    }
+                                } else {
+                                    $hour = (int)$time_parts[0];
+                                    if ($hour > 11) {
+                                        if ($hour === '12' && $time_parts[1] === '00') {
+                                            $light = ' noon';
+                                        } else {
+                                            if ($hour > 12) {
+                                                $hour -= 12;
+                                            }
+                                            $light = 'pm';
+                                        }
+                                    }
+                                }
+                                switch ($vv['activity']) {
+                                    case 'walk':
+                                        $v_activity = 'Went for a walk ';
+                                        break;
+                                    case 'med':
+                                        $v_activity = 'Took some medicine ';
+                                        break;
+                                    case 'treat':
+                                        $v_activity = 'Had a treat ';
+                                        break;
+                                    case 'meal':
+                                        $v_activity = 'Ate ';
+                                }
+                                if (!empty($vv['notes'])) {
+                                    $v_activity .= '(' . $vv['notes'] . ')';
+                                }
+                                
+                                $resp['html'] .= $hour . ':' . $time_parts[1] . $light . ': ' . $v_activity . '<br />';
+                            }
+                            $resp['html'] .= '</fieldset>';
+                        }
+                        $resp['html'] .= '</form>';
+                        break;
                 }
                 $resp['success'] = true;
             }
@@ -419,7 +487,7 @@ class Log extends CI_Controller {
     }
     
     // turns dog names and IDs into select options
-    private function _getDogOptions() {
+    private function _getDogOptions($is_quick = false) {
         $currentUser = $this->session->userdata('eMail');
         $retrievedDogs = $this->getDogNames($currentUser);
         $currentDogs = empty($retrievedDogs) ? NULL : explode('~',$retrievedDogs);
@@ -435,7 +503,9 @@ class Log extends CI_Controller {
                 $dogOptions .= '<option value="' . $id . '">' . $name . '</option>';
             }
             $dogOptions .= '</select>';
-            $dogOptions .= '<input type="button" id="select_this_dog" value="Log this dog" />';
+            $dogOptions .= '<input type="button" id="select_this_dog" value="';
+            $dogOptions .= $is_quick ? 'Get a quick look at this dog' : 'Log this dog';
+            $dogOptions .= '" />';
         } else if (count($currentDogs) === 1) {
             $dog = explode('^', $currentDogs[0]);
             $id = $dog[0];

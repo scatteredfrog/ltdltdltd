@@ -1,75 +1,422 @@
-[20-Aug-2016 21:36:22 America/Chicago] Cookie: Array
+[30-Aug-2016 09:03:14 America/Chicago] Render date: August 21:
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 07:40:12
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
 (
-    [1I1T1TLI11II] => flirzel@kwerp.com
-    [I11T1TLI11IT] => Test1234
+    [activity] => med
+    [notes] => 
 )
 
-[20-Aug-2016 21:36:43 America/Chicago] LOG IN
-[20-Aug-2016 21:36:43 America/Chicago] remember me: false
-[20-Aug-2016 21:36:59 America/Chicago] Cookie: Array
+[30-Aug-2016 09:03:14 America/Chicago] Render date: August 19:
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 22:41:57
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
 (
-    [1I1T1TLI11II] => flirzel@kwerp.com
-    [I11T1TLI11IT] => Test1234
+    [activity] => treat
+    [notes] => 
 )
 
-[20-Aug-2016 21:37:05 America/Chicago] LOG IN
-[20-Aug-2016 21:37:05 America/Chicago] remember me: false
-[20-Aug-2016 21:37:06 America/Chicago] Cookie: Array
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 13:59:57
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
 (
-    [1I1T1TLI11II] => flirzel@kwerp.com
-    [I11T1TLI11IT] => Test1234
+    [activity] => meal
+    [notes] => Damn dog is HUNGRY!!!
 )
 
-[20-Aug-2016 21:37:56 America/Chicago] LOG IN
-[20-Aug-2016 21:37:56 America/Chicago] remember me: false
-[20-Aug-2016 21:37:56 America/Chicago] PHP Fatal error:  Call to undefined method CI_Input::delete_cookie() in /Volumes/Coding/logthedog.com/rooooo/controllers/login.php on line 186
-[20-Aug-2016 21:42:22 America/Chicago] LOG IN
-[20-Aug-2016 21:42:23 America/Chicago] remember me: false
-[20-Aug-2016 21:42:23 America/Chicago] PHP Fatal error:  Call to undefined function delete_cookie() in /Volumes/Coding/logthedog.com/rooooo/controllers/login.php on line 186
-[20-Aug-2016 21:43:00 America/Chicago] LOG IN
-[20-Aug-2016 21:43:00 America/Chicago] remember me: false
-[20-Aug-2016 21:43:03 America/Chicago] Cookie: Array
+[30-Aug-2016 09:03:14 America/Chicago] Render date: August 12:
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:57:51
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
 (
-    [1I1T1TLI11II] => flirzel@kwerp.com
-    [I11T1TLI11IT] => Test1234
+    [activity] => walk
+    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
 )
 
-[20-Aug-2016 21:43:57 America/Chicago] LOG IN
-[20-Aug-2016 21:43:57 America/Chicago] remember me: false
-[20-Aug-2016 21:43:57 America/Chicago] Deleting cookie...
-[20-Aug-2016 21:44:05 America/Chicago] Cookie: Array
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:57:28
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
 (
-    [1I1T1TLI11II] => flirzel@kwerp.com
-    [I11T1TLI11IT] => Test1234
+    [activity] => walk
+    [notes] => OOps...she had to poop, too!
 )
 
-[20-Aug-2016 21:44:35 America/Chicago] LOG IN
-[20-Aug-2016 21:44:35 America/Chicago] remember me: false
-[20-Aug-2016 21:44:35 America/Chicago] Deleting cookie...
-[20-Aug-2016 21:45:15 America/Chicago] Cookie: Array
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:56:52
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
 (
-    [1I1T1TLI11II] => flirzel@kwerp.com
-    [I11T1TLI11IT] => Test1234
+    [activity] => walk
+    [notes] => Man, this dog pees a lot, doesn't she?
 )
 
-[20-Aug-2016 21:50:56 America/Chicago] LOG IN
-[20-Aug-2016 21:50:56 America/Chicago] remember me: false
-[20-Aug-2016 21:50:56 America/Chicago] Deleting cookie...
-[20-Aug-2016 21:50:56 America/Chicago] Rex: 
-[20-Aug-2016 21:50:59 America/Chicago] Cookie: 
-[20-Aug-2016 21:51:12 America/Chicago] LOG IN
-[20-Aug-2016 21:51:12 America/Chicago] remember me: true
-[20-Aug-2016 21:51:12 America/Chicago] setting cookie...
-[20-Aug-2016 21:51:15 America/Chicago] Cookie: Array
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:27:55
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
 (
-    [1I1T1TLI11II] => flirzel@kwerp.com
-    [I11T1TLI11IT] => Test1234
+    [activity] => walk
+    [notes] => What....a.....beagle.
 )
 
-[20-Aug-2016 22:43:55 America/Chicago] Result: right
-[20-Aug-2016 22:45:22 America/Chicago] Result: right
-[20-Aug-2016 22:48:43 America/Chicago] Result: right
-[20-Aug-2016 22:49:57 America/Chicago] Result: right
-[20-Aug-2016 22:50:54 America/Chicago] Result: right
-[20-Aug-2016 23:03:49 America/Chicago] BEAGLE
-[21-Aug-2016 11:23:19 America/Chicago] LOG IN
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:22:53
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+(
+    [activity] => walk
+    [notes] => Damn dog!
+)
+
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:09:12
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+(
+    [activity] => walk
+    [notes] => She's such a puppy!
+)
+
+[30-Aug-2016 09:03:14 America/Chicago] Render date: August 2:
+[30-Aug-2016 09:03:14 America/Chicago] Vk: 07:05:36
+[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+(
+    [activity] => walk
+    [notes] => 
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] Render date: August 21:
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => med
+    [notes] => 
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] Render date: August 19:
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => treat
+    [notes] => 
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => meal
+    [notes] => Damn dog is HUNGRY!!!
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] Render date: August 12:
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => OOps...she had to poop, too!
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Man, this dog pees a lot, doesn't she?
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => What....a.....beagle.
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Damn dog!
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => She's such a puppy!
+)
+
+[30-Aug-2016 13:44:56 America/Chicago] Render date: August 2:
+[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => 
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] Render date: August 21:
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => med
+    [notes] => 
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] Render date: August 19:
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => treat
+    [notes] => 
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => meal
+    [notes] => Damn dog is HUNGRY!!!
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] Render date: August 12:
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => OOps...she had to poop, too!
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Man, this dog pees a lot, doesn't she?
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => What....a.....beagle.
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Damn dog!
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => She's such a puppy!
+)
+
+[30-Aug-2016 13:51:13 America/Chicago] Render date: August 2:
+[30-Aug-2016 13:51:13 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => 
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] Render date: August 21:
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => med
+    [notes] => 
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] Render date: August 19:
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => treat
+    [notes] => 
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => meal
+    [notes] => Damn dog is HUNGRY!!!
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] Render date: August 12:
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => OOps...she had to poop, too!
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Man, this dog pees a lot, doesn't she?
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => What....a.....beagle.
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Damn dog!
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => She's such a puppy!
+)
+
+[30-Aug-2016 13:55:02 America/Chicago] Render date: August 2:
+[30-Aug-2016 13:55:02 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => 
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] Render date: August 21:
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => med
+    [notes] => 
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] Render date: August 19:
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => treat
+    [notes] => 
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => meal
+    [notes] => Damn dog is HUNGRY!!!
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] Render date: August 12:
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => OOps...she had to poop, too!
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Man, this dog pees a lot, doesn't she?
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => What....a.....beagle.
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Damn dog!
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => She's such a puppy!
+)
+
+[30-Aug-2016 21:00:37 America/Chicago] Render date: August 2:
+[30-Aug-2016 21:00:37 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => 
+)
+
+[30-Aug-2016 21:18:42 America/Chicago] Render date: August 12:
+[30-Aug-2016 21:18:42 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => fluffffffffy
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] Render date: August 21:
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => med
+    [notes] => 
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] Render date: August 19:
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => treat
+    [notes] => 
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => meal
+    [notes] => Damn dog is HUNGRY!!!
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] Render date: August 12:
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => OOps...she had to poop, too!
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Man, this dog pees a lot, doesn't she?
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => What....a.....beagle.
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => Damn dog!
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => She's such a puppy!
+)
+
+[31-Aug-2016 05:45:42 America/Chicago] Render date: August 2:
+[31-Aug-2016 05:45:42 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => 
+)
+
+[31-Aug-2016 05:54:44 America/Chicago] Render date: August 12:
+[31-Aug-2016 05:54:44 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => fluffffffffy
+)
+
+[31-Aug-2016 05:55:11 America/Chicago] Render date: August 12:
+[31-Aug-2016 05:55:11 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => fluffffffffy
+)
+
+[31-Aug-2016 05:57:01 America/Chicago] Render date: August 12:
+[31-Aug-2016 05:57:01 America/Chicago] vk: Array
+(
+    [activity] => walk
+    [notes] => fluffffffffy
+)
+

@@ -1,5 +1,6 @@
 <?= link_tag(base_url().'css/main_menu.css'); ?>
 <script src="/js/home.js"></script>
+<?= form_open() ?>
 <div class="container landscapeOnly">
     <div class="row">
         <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3"></div>
@@ -37,8 +38,8 @@
                 <div class="menuText"><span class="hidden-xs hidden-md">Log a </span>Medicine</div>
             </div>
         </a>
-        <a class="menuAnchor" href="/log/">
-            <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox" data-toggle="tooltip" data-placement="right" title="Register a dog to your account">
+        <a class="menuAnchor" onclick="quickLook();">
+            <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox">
                 <img src="/assets/images/menu_kwik.png" class="img-responsive" />
                 <div class="menuText">Quick Look</div>
             </div>
@@ -87,8 +88,8 @@
                 <div class="menuText"><span class="hidden-xs">Log a </span>Medicine</div>
             </div>
         </a>
-        <a class="menuAnchor" href="/log/register_dog">
-            <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox" data-toggle="tooltip" data-placement="right" title="Register a dog to your account">
+        <a class="menuAnchor" onclick="quikLook();">
+            <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox">
                 <img src="/assets/images/menu_kwik.png" class="img-responsive" />
                 <div class="menuText">Quick Look</div>
             </div>
@@ -97,6 +98,23 @@
     </div>
 </div>
 
+<div id="ql_modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id='ql_modal_header_text' class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <h4 id='ql_modal_subheader'></h4>
+                <p id='ql_modal_text'></p>
+            </div>
+            <div class="modal-footer">
+                <button id='ql_modal_ok' class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<?= form_close() ?>
 <script>
     $(function() {
         $('[data-toggle="tooltip"]').tooltip();

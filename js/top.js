@@ -166,6 +166,8 @@ $(document).on('click', '#select_this_dog', function () {
 function getDogDeets(dogID) {
     var url_parts = location.href.split('/');
     var activity = url_parts[url_parts.length-1];
+    activity = activity === 'main_menu' ? 'quick_look' : activity;
+
     var post_data = {
         'dogID' : dogID,
         'csrf_test_name' : $('[name=csrf_test_name]').val(),
@@ -176,37 +178,44 @@ function getDogDeets(dogID) {
         if (data && data['success']) {
             $('.dogName').html(data['dog']['dogName']);
             $('#doggie_data').css('display','block');
-            if (data['dog']['latest_' + activity]['date']) {
-                var gender_walk = data['dog']['gender'] == '1' ? 'Her ' : 'His ';
-                gender_walk += 'latest ' + activity + ' was ';
-                $('#gender_' + activity).html(gender_walk);
-                $('#when_' + activity + '_was').html(data['dog']['latest_' + activity]['date'] + ' at ' + data['dog']['latest_' + activity]['time']);
+            if (activity == 'quick_look') {
+                if (data.success == true && typeof data.html !== 'undefined') {
+                    $('#ql_modal_header_text').html(data.dog.dogName + "'s Recent Activities");
+                    $('#ql_modal_text').html(data.html);
+                }
             } else {
-                $('#gender_' + activity).html('This will be ' + data['dog']['dogName'] + '\'s first logged ' + activity + '!');
-                $('#when_' + activity + '_was').html('');
-            }
-            var today = new Date();
-            var hh = today.getHours();
-            var h = hh;
-            var ampm = 'am';
+                if (data['dog']['latest_' + activity]['date']) {
+                    var gender_walk = data['dog']['gender'] == '1' ? 'Her ' : 'His ';
+                    gender_walk += 'latest ' + activity + ' was ';
+                    $('#gender_' + activity).html(gender_walk);
+                    $('#when_' + activity + '_was').html(data['dog']['latest_' + activity]['date'] + ' at ' + data['dog']['latest_' + activity]['time']);
+                } else {
+                    $('#gender_' + activity).html('This will be ' + data['dog']['dogName'] + '\'s first logged ' + activity + '!');
+                    $('#when_' + activity + '_was').html('');
+                }
+                var today = new Date();
+                var hh = today.getHours();
+                var h = hh;
+                var ampm = 'am';
 
-            if (h >= 12) {
-                h = hh-12;
-                ampm = 'pm';
-            }
-            if (h == 0) {
-                h = 12;
-            }
+                if (h >= 12) {
+                    h = hh-12;
+                    ampm = 'pm';
+                }
+                if (h == 0) {
+                    h = 12;
+                }
 
-            $('#' + activity + '_date').val(("0" + (today.getMonth() + 1)).slice(-2) + '/' + ("0" + today.getDate()).slice(-2) + '/' + today.getFullYear());
-            $('#' + activity + '_date').datepick({
-                showOnFocus: true,
-                rangeSelect: false,
-                maxDate: "new Date()"
-            });
-            $('#' + activity + '_time').val(("0" + h).slice(-2) + ':' + ("0" + today.getMinutes()).slice(-2));
-            $('#' + activity + '_seconds').val(("0" + today.getSeconds()).slice(-2));
-            $('#' + activity + '_ampm').val(ampm);
+                $('#' + activity + '_date').val(("0" + (today.getMonth() + 1)).slice(-2) + '/' + ("0" + today.getDate()).slice(-2) + '/' + today.getFullYear());
+                $('#' + activity + '_date').datepick({
+                    showOnFocus: true,
+                    rangeSelect: false,
+                    maxDate: "new Date()"
+                });
+                $('#' + activity + '_time').val(("0" + h).slice(-2) + ':' + ("0" + today.getMinutes()).slice(-2));
+                $('#' + activity + '_seconds').val(("0" + today.getSeconds()).slice(-2));
+                $('#' + activity + '_ampm').val(ampm);
+            }
         } else {
             $('#ltd_error_modal_text').html('There was a problem and we couldn\'t retrieve your dog\'s information.');
             $('#ltd_error_modal').modal('show');

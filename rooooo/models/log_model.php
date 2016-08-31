@@ -167,6 +167,98 @@
             return $retArray;
         }
 
+        public function retrieveActivityDeets($activity, $id, $justAction = false) {
+            $retArray = array();
+            $table = 'LTDtb' . ucfirst($activity);
+            if (($activity === 'treat') || ($activity === 'med')) {
+                if ($justAction) {
+                    $select = $activity . 'Type';
+                } else {
+                    $select = $activity . 'Date,' . $activity . 'Type,' . $activity . 'Notes';
+                }
+            } else if ($activity === 'walk') {
+                if ($justAction) {
+                    $select = 'action';
+                } else {
+                    $select = 'walkDate,action,walkNotes';
+                }
+            } else { // right now, just meal
+                $select = $activity . 'Date,' . $activity . 'Notes';
+            }
+            
+            $this->db->select($select);
+            $this->db->from($table);
+            $this->db->where(array($activity . 'ID' => $id));
+            $query = $this->db->get();
+            foreach($query->result() as $row) {
+                if (!$justAction) {
+                    $datetime = explode(' ',$row->$activity . 'Date');
+                    $retArray['date'] = $datetime[0];
+                    $retArray['time'] = $datetime[1];
+                }
+                if (($activity === 'treat') || ($activity === 'med')) {
+                    $aEv = $activity . 'Type';
+                    $retArray['type'] = $row->$aEv;
+                } else if ($activity === 'walk') {
+                    $retArray['action'] = $row->action;
+                }
+                if (!$justAction) {
+                    $retArray['notes'] = $row->$activity . 'Notes';
+                }
+            }
+            return $retArray;
+        }
+
+        public function retrieveLatestData($dogID, $howMany) {
+            $getArray = array();
+            $retArray = array();
+            $sql = "SELECT mealID lid, mealDate ldate, mealNotes lnotes, 'meal' as type FROM LTDtbMeal WHERE dogID=? ";
+            $sql .= "UNION ALL ";
+            $sql .= "SELECT medID lid, medDate ldate, medNotes lnotes, 'med' as type FROM LTDtbMed WHERE dogID=? ";
+            $sql .= "UNION ALL ";
+            $sql .= "SELECT treatID lid, treatDate ldate, treatNotes lnotes, 'treat' as type FROM LTDtbTreat WHERE dogID=? ";
+            $sql .= "UNION ALL ";
+            $sql .= "SELECT walkID lid, walkDate ldate, walkNotes lnotes, 'walk' as type FROM LTDtbWalk WHERE dogID=? ";
+            $sql .= "ORDER BY lDate DESC ";
+            $sql .= "LIMIT $howMany";
+            
+            $query = $this->db->query($sql, array($dogID, $dogID, $dogID, $dogID));
+            $x = 0;
+            foreach ($query->result() as $row) {
+                $datetime = explode(' ',$row->ldate);
+                $getArray[$x]['activity'] = $row->type;
+                $getArray[$x]['date'] = $datetime[0];
+                $getArray[$x]['time'] = $datetime[1];
+                if ($row->type === 'walk') {
+                    $action = $this->retrieveActivityDeets('walk', $row->lid, true);
+                    $getArray[$x]['type'] = $action['action'];
+                } else if (($row->type === 'med') || ($row->type === 'treat')) {
+                    $type = $this->retrieveActivityDeets($row->type, $row->lid, true);
+                    $getArray[$x]['type'] = $type['type'];
+                }
+                $getArray[$x]['notes'] = $row->lnotes;
+                $x++;
+            }
+
+            $tempDate = $getArray[0]['date'];
+            $gc = count($getArray);
+            for ($i = 0; $i < $gc; $i++) {
+                if ($getArray[$i]['date'] !== $tempDate) {
+                    $tempDate = $getArray[$i]['date'];
+                }
+                if (isset($retArray[$tempDate][$getArray[$i]['time']]['action'])) {
+                    $retArray[$tempDate][$getArray[$i]['time']]['action'] = $getArray[$i]['action'];
+                }
+                $retArray[$tempDate][$getArray[$i]['time']]['activity'] = $getArray[$i]['activity'];
+                if (isset($retArray[$tempDate][$getArray[$i]['time']]['type'])) {
+                    $retArray[$tempDate][$getArray[$i]['time']]['type'] = $getArray[$i]['type'];
+                }
+                $retArray[$tempDate][$getArray[$i]['time']]['notes'] = $getArray[$i]['notes'];
+            }
+            return $retArray;
+
+        }
+        
         public function retrieveLatestMed($dogID) {
             $retArray = array();
             $this->db->select('medDate,medNotes');
