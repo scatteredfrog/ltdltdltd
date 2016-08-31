@@ -220,8 +220,8 @@ function quickLook() {
     };
     
     $.post('/log/getQuickLook', post_vars, function(data) {
-        var dogData = data.substr(81);
-        var dogID = dogData.split('"');
+        var dataSplit = data.split('<script>getDogDeets("');
+        var dogID = dataSplit[1].split('"');
         dogID = dogID[0];
         if (data.indexOf('<select') === 0) {
             $('#ql_modal_header_text').html('Please choose a dog: ' + data);
