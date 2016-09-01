@@ -47,5 +47,10 @@
                 <input type="button" value="Submit" onclick="submitContact();"/>
             </div>
         </div>
-    <?= form_close(); ?>
-</div>
+        <?
+            for ($x = 0; $x < 5; $x++) {
+                echo '&nbsp;<br />';
+            }
+            echo form_close();
+        ?>
+    </div>

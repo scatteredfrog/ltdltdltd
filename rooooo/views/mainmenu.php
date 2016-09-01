@@ -88,7 +88,7 @@
                 <div class="menuText"><span class="hidden-xs">Log a </span>Medicine</div>
             </div>
         </a>
-        <a class="menuAnchor" onclick="quikLook();">
+        <a class="menuAnchor" onclick="quickLook();">
             <div class="col-xs-4 col-lg-2 col-md-3 col-sm-4 menuBox">
                 <img src="/assets/images/menu_kwik.png" class="img-responsive" />
                 <div class="menuText">Quick Look</div>

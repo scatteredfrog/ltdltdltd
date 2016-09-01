@@ -73,5 +73,10 @@
                 <input type="button" value="Create Account" onclick="submitCreate();"/>
             </div>
         </div>
-    <?= form_close(); ?>
+    <?
+        for ($x = 0; $x < 5; $x++) {
+            echo '&nbsp;<br />';
+        }
+        echo form_close();
+    ?>
 </div>

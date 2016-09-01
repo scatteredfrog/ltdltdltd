@@ -73,5 +73,8 @@
     </div>
 </div>
 <?
+    for ($x = 0; $x < 5; $x++) {
+        echo '&nbsp;<br />';
+    }
     echo form_close();
 ?>
