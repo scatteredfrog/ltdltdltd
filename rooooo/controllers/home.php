@@ -33,6 +33,7 @@ class Home extends CI_Controller {
                 $this->load->view('mainmenu');
             } else {
                 $this->load->view('welcome_message');
+                $this->load->view('error_modal');
             }
         }
         
