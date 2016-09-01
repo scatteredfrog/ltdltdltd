@@ -5,13 +5,19 @@
         <group>
             <file>file:/Volumes/Coding/logthedog.com/rooooo/views/contact_us.php</file>
             <file>file:/Volumes/Coding/logthedog.com/rooooo/views/log_a_treat.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/log_a_meal.php</file>
             <file>file:/Volumes/Coding/logthedog.com/rooooo/views/log_a_med.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/log_a_walk.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/mainmenu.php</file>
             <file>file:/Volumes/Coding/logthedog.com/js/home.js</file>
+            <file>file:/Volumes/Coding/logthedog.com/css/walk.css</file>
             <file>file:/Volumes/Coding/logthedog.com/rooooo/views/new_user.php</file>
             <file>file:/Volumes/Coding/logthedog.com/rooooo/views/registry.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/controllers/log.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/controllers/home.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/css/main_menu.css</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/log_a_walk.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/mainmenu.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/top.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/js/top.js</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/models/log_model.php</file>
         </group>
     </open-files>
 </project-private>

@@ -142,7 +142,9 @@
             }
         ?>
         <div class='dn-item' style="float: right;">
-            Welcome, <? echo $this->session->userdata('firstName'); ?>!
+            <span class="hidden-xs hidden-sm">Welcome, </span>
+            <span class="hidden-md hidden-lg">Hi, </span>
+                <? echo $this->session->userdata('firstName'); ?>!
         </div>
         <?
             echo form_close();

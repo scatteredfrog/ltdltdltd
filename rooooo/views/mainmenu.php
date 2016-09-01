@@ -7,19 +7,19 @@
         <a class="menuAnchor" href="/log/meal">
             <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox">
                 <img src="/assets/images/menu_feed.png" class="img-responsive" />
-                <div class="menuText">Log a Meal</div>
+                <div class="menuText"><span class="hidden-xs">Log a </span>Meal</div>
             </div>
         </a>
         <a class="menuAnchor" href="/log/walk">
             <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox">
                 <img src="/assets/images/menu_dogwalk.png" class="img-responsive" />
-                <div class="menuText">Log a Walk</div>
+                <div class="menuText"><span class="hidden-xs">Log a </span>Walk</div>
             </div>
         </a>
         <a class="menuAnchor" href="/log/treat">
             <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox">
                 <img src="/assets/images/menu_treat.png" class="img-responsive" />
-                <div class="menuText">Log a Treat</div>
+                <div class="menuText"><span class="hidden-xs">Log a </span>Treat</div>
             </div>
         </a>
         <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3"></div>
@@ -29,19 +29,20 @@
         <a class="menuAnchor" href="/log/register_dog">
             <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox" data-toggle="tooltip" data-placement="right" title="Register a dog to your account">
                 <img src="/assets/images/menu_registry.png" class="img-responsive" />
-                <div class="menuText"><span class="hidden-xs hidden-md">Dog </span>Registry</div>
+                <div class="menuText"><span class="hidden-xs hidden-sm hidden-md">Dog </span>Registry</div>
             </div>
         </a>
         <a class="menuAnchor" href="/log/med">
             <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox">
                 <img src="/assets/images/menu_meds.png" class="img-responsive" />
-                <div class="menuText"><span class="hidden-xs hidden-md">Log a </span>Medicine</div>
+                <div class="menuText"><span class="hidden-xs hidden-md hidden-sm">Log a </span>Medicine</div>
             </div>
         </a>
         <a class="menuAnchor" onclick="quickLook();">
             <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 menuBox">
                 <img src="/assets/images/menu_kwik.png" class="img-responsive" />
-                <div class="menuText">Quick Look</div>
+                <div class="menuText hidden-xs">Quick Look</div>
+                <div class="menuText hidden-sm hidden-md hidden-lg">Quick</div>
             </div>
         </a>
         <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3"></div>

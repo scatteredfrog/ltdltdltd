@@ -56,7 +56,7 @@ class Home extends CI_Controller {
                 $cookie = array(
                     'name' => 'ok-computer',
                     'value' => json_encode(array('T1I1T1TLI11TT' => "it's okay")),
-                    'expire' => '328500',
+                    'expire' => '2590000',
                     'secure' => FALSE,
                     'domain' => '.logthedog.com'
                 );

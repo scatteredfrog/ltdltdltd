@@ -26,9 +26,9 @@
     }
 }
 
-@media (min-width: 512px) {
+@media (min-width: 568px) {
     .menuText {
-        font-size: 24px;
+        font-size: 19px;
         font-weight: bold;
     }
     
@@ -37,7 +37,7 @@
         padding: 5px;
     }
 }
-@media (max-width: 511px) {
+@media (max-width: 567px) {
     .menuText {
         font-size: 16px;
         font-weight: bold;
@@ -48,3 +48,5 @@
         padding: 3px;
     }
 }
+
+.menuText-xs { font-size: 14px; }
