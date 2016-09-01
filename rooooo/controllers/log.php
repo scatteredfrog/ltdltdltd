@@ -39,6 +39,7 @@ class Log extends CI_Controller {
         echo json_encode($dogOptions);
         exit();
     }
+    
     public function getDogNames($user) {
         if (empty($user)) {
             return array('success' => false);
@@ -275,65 +276,69 @@ class Log extends CI_Controller {
                         $resp['dog']['latest_quick_look'] = 'not yet there';
                         $this->load->model('log_model');
                         $resp['dog']['quick_look'] = $this->log_model->retrieveLatestData($dogID, 10);
-                        // generate the HTML
-                        $resp['html'] = '<form>';
-                        foreach ($resp['dog']['quick_look'] as $k => $v) {
-                            $renderDate = $k;
-                            if (date('Y-m-d') === $renderDate) {
-                                $renderDate = 'Today';
-                            } else {
-                                $date_parts = explode('-', $k);
-                                $date_parts[1] = ltrim($date_parts[1], '0');
-                                $date_parts[2] = ltrim($date_parts[2], '0');
-                                $renderDate = $this->_months[$date_parts[1]];
-                                $renderDate .= ' ' . $date_parts[2];
-                            }
-                            $renderDate .= ':';
-                            $resp['html'] .= '<fieldset><legend>' . $renderDate . '</legend>';
-                            foreach ($v as $vk => $vv) {
-                                $time_parts = explode(':', $vk);
-                                // parse 24-hour format down to 12
-                                $light = 'am';
-                                if ($time_parts[0] === '00') {
-                                    $hour = 12;
-                                    if ($time_parts[1] === '00') {
-                                        $light = ' midnight';
-                                    }
+                        if (isset($resp['dog']['quick_look']['none']) && $resp['dog']['quick_look']['none']) {
+                            $resp['html'] = "We don't have any logged data for this dog. Sorry!";
+                        } else {
+                            // generate the HTML
+                            $resp['html'] = '<form>';
+                            foreach ($resp['dog']['quick_look'] as $k => $v) {
+                                $renderDate = $k;
+                                if (date('Y-m-d') === $renderDate) {
+                                    $renderDate = 'Today';
                                 } else {
-                                    $hour = (int)$time_parts[0];
-                                    if ($hour > 11) {
-                                        if ($hour === '12' && $time_parts[1] === '00') {
-                                            $light = ' noon';
-                                        } else {
-                                            if ($hour > 12) {
-                                                $hour -= 12;
+                                    $date_parts = explode('-', $k);
+                                    $date_parts[1] = ltrim($date_parts[1], '0');
+                                    $date_parts[2] = ltrim($date_parts[2], '0');
+                                    $renderDate = $this->_months[$date_parts[1]];
+                                    $renderDate .= ' ' . $date_parts[2];
+                                }
+                                $renderDate .= ':';
+                                $resp['html'] .= '<fieldset><legend>' . $renderDate . '</legend>';
+                                foreach ($v as $vk => $vv) {
+                                    $time_parts = explode(':', $vk);
+                                    // parse 24-hour format down to 12
+                                    $light = 'am';
+                                    if ($time_parts[0] === '00') {
+                                        $hour = 12;
+                                        if ($time_parts[1] === '00') {
+                                            $light = ' midnight';
+                                        }
+                                    } else {
+                                        $hour = (int)$time_parts[0];
+                                        if ($hour > 11) {
+                                            if ($hour === '12' && $time_parts[1] === '00') {
+                                                $light = ' noon';
+                                            } else {
+                                                if ($hour > 12) {
+                                                    $hour -= 12;
+                                                }
+                                                $light = 'pm';
                                             }
-                                            $light = 'pm';
                                         }
                                     }
+                                    switch ($vv['activity']) {
+                                        case 'walk':
+                                            $v_activity = 'Went for a walk ';
+                                            break;
+                                        case 'med':
+                                            $v_activity = 'Took some medicine ';
+                                            break;
+                                        case 'treat':
+                                            $v_activity = 'Had a treat ';
+                                            break;
+                                        case 'meal':
+                                            $v_activity = 'Ate ';
+                                    }
+                                    if (!empty($vv['notes'])) {
+                                        $v_activity .= '(' . $vv['notes'] . ')';
+                                    }
+
+                                    $resp['html'] .= $hour . ':' . $time_parts[1] . $light . ': ' . $v_activity . '<br />';
                                 }
-                                switch ($vv['activity']) {
-                                    case 'walk':
-                                        $v_activity = 'Went for a walk ';
-                                        break;
-                                    case 'med':
-                                        $v_activity = 'Took some medicine ';
-                                        break;
-                                    case 'treat':
-                                        $v_activity = 'Had a treat ';
-                                        break;
-                                    case 'meal':
-                                        $v_activity = 'Ate ';
-                                }
-                                if (!empty($vv['notes'])) {
-                                    $v_activity .= '(' . $vv['notes'] . ')';
-                                }
-                                
-                                $resp['html'] .= $hour . ':' . $time_parts[1] . $light . ': ' . $v_activity . '<br />';
+                                $resp['html'] .= '</fieldset>';
                             }
-                            $resp['html'] .= '</fieldset>';
+                            $resp['html'] .= '</form>';
                         }
-                        $resp['html'] .= '</form>';
                         break;
                 }
                 $resp['success'] = true;

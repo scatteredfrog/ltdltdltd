@@ -215,18 +215,19 @@ function notYetAvailable(verb) {
 }
 
 function quickLook() {
+    $('#ql_modal_header_text,#ql_modal_text').html('');
     var post_vars = {
         'csrf_test_name' : $('[name=csrf_test_name]').val(),
     };
     
     $.post('/log/getQuickLook', post_vars, function(data) {
-        var dataSplit = data.split('<script>getDogDeets("');
-        var dogID = dataSplit[1].split('"');
-        dogID = dogID[0];
         if (data.indexOf('<select') === 0) {
             $('#ql_modal_header_text').html('Please choose a dog: ' + data);
         } else {
             // only one dog
+            var dataSplit = data.split('<script>getDogDeets("');
+            var dogID = dataSplit[1].split('"');
+            dogID = dogID[0];
             getDogDeets(dogID);
         }   
     }, 'json');

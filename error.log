@@ -1,422 +1,626 @@
-[30-Aug-2016 09:03:14 America/Chicago] Render date: August 21:
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 07:40:12
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[Thu Sep 01 06:55:22.858393 2016] [:error] [pid 9118] [client 127.0.0.1:51241] Retrieved dogs: 24^Ruthie~30^Spot~31^Nifty~32^Nifty~33^Nifty~34^Nifty~35^Nifty~36^Nerfy~37^Nerfy~38^Nerfy~39^Nerfy~40^Nerfy~41^Nerfy~42^Nerfy~43^Doofy~44^Snoopy~45^Ruthie~46^Ruthie~47^Ruthie~48^Ruthie~49^Ruthie~50^Ruthie~51^Ruthie~52^Ruthie~53^Ruthie~54^Ruthie~55^Ruthie~56^Ruthie~57^Ruthie~58^Ruthie~59^Ruthie~60^Ruthie~61^Ruthie~62^Ruthie~63^Ruthie~64^Ruthie~65^Ruthie~66^Ruthie~67^Ruthie~68^Ruthie, referer: http://local.logthedog.com/home/main_menu
+[Thu Sep 01 06:56:21.573864 2016] [:error] [pid 9119] [client 127.0.0.1:51243] Retrieved dogs: Array\n(\n    [0] => 24^Ruthie\n    [1] => 30^Spot\n    [2] => 31^Nifty\n    [3] => 32^Nifty\n    [4] => 33^Nifty\n    [5] => 34^Nifty\n    [6] => 35^Nifty\n    [7] => 36^Nerfy\n    [8] => 37^Nerfy\n    [9] => 38^Nerfy\n    [10] => 39^Nerfy\n    [11] => 40^Nerfy\n    [12] => 41^Nerfy\n    [13] => 42^Nerfy\n    [14] => 43^Doofy\n    [15] => 44^Snoopy\n    [16] => 45^Ruthie\n    [17] => 46^Ruthie\n    [18] => 47^Ruthie\n    [19] => 48^Ruthie\n    [20] => 49^Ruthie\n    [21] => 50^Ruthie\n    [22] => 51^Ruthie\n    [23] => 52^Ruthie\n    [24] => 53^Ruthie\n    [25] => 54^Ruthie\n    [26] => 55^Ruthie\n    [27] => 56^Ruthie\n    [28] => 57^Ruthie\n    [29] => 58^Ruthie\n    [30] => 59^Ruthie\n    [31] => 60^Ruthie\n    [32] => 61^Ruthie\n    [33] => 62^Ruthie\n    [34] => 63^Ruthie\n    [35] => 64^Ruthie\n    [36] => 65^Ruthie\n    [37] => 66^Ruthie\n    [38] => 67^Ruthie\n    [39] => 68^Ruthie\n)\n, referer: http://local.logthedog.com/home/main_menu
+[01-Sep-2016 06:56:53 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => med
-    [notes] => 
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Render date: August 19:
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 22:41:57
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 06:57:37 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => treat
-    [notes] => 
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 13:59:57
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 06:58:16 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => meal
-    [notes] => Damn dog is HUNGRY!!!
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Render date: August 12:
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:57:51
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 07:00:49 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:57:28
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 07:01:06 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => OOps...she had to poop, too!
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:56:52
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 07:01:11 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => Man, this dog pees a lot, doesn't she?
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:27:55
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 07:01:14 America/Chicago] number of rows: 0
+[01-Sep-2016 07:03:27 America/Chicago] GOT DOGS!
+[01-Sep-2016 07:03:27 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => What....a.....beagle.
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:22:53
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 07:03:39 America/Chicago] GOT DOGS!
+[01-Sep-2016 07:03:39 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => Damn dog!
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 10:09:12
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 07:04:50 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => She's such a puppy!
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 09:03:14 America/Chicago] Render date: August 2:
-[30-Aug-2016 09:03:14 America/Chicago] Vk: 07:05:36
-[30-Aug-2016 09:03:14 America/Chicago] Vv: Array
+[01-Sep-2016 07:07:03 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => 
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 13:44:56 America/Chicago] Render date: August 21:
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+[01-Sep-2016 07:08:38 America/Chicago] resp ql: Array
 (
-    [activity] => med
-    [notes] => 
+    [none] => 1
 )
 
-[30-Aug-2016 13:44:56 America/Chicago] Render date: August 19:
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+[01-Sep-2016 07:11:00 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => treat
-    [notes] => 
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+[01-Sep-2016 07:13:01 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => meal
-    [notes] => Damn dog is HUNGRY!!!
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 13:44:56 America/Chicago] Render date: August 12:
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+[01-Sep-2016 07:13:05 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
+[01-Sep-2016 07:13:11 America/Chicago] Retrieved dogs: Array
 (
-    [activity] => walk
-    [notes] => OOps...she had to poop, too!
-)
-
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Man, this dog pees a lot, doesn't she?
-)
-
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => What....a.....beagle.
-)
-
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Damn dog!
-)
-
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => She's such a puppy!
-)
-
-[30-Aug-2016 13:44:56 America/Chicago] Render date: August 2:
-[30-Aug-2016 13:44:56 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => 
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] Render date: August 21:
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => med
-    [notes] => 
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] Render date: August 19:
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => treat
-    [notes] => 
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => meal
-    [notes] => Damn dog is HUNGRY!!!
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] Render date: August 12:
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => OOps...she had to poop, too!
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Man, this dog pees a lot, doesn't she?
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => What....a.....beagle.
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Damn dog!
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => She's such a puppy!
-)
-
-[30-Aug-2016 13:51:13 America/Chicago] Render date: August 2:
-[30-Aug-2016 13:51:13 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => 
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] Render date: August 21:
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => med
-    [notes] => 
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] Render date: August 19:
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => treat
-    [notes] => 
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => meal
-    [notes] => Damn dog is HUNGRY!!!
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] Render date: August 12:
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => OOps...she had to poop, too!
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Man, this dog pees a lot, doesn't she?
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => What....a.....beagle.
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Damn dog!
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => She's such a puppy!
-)
-
-[30-Aug-2016 13:55:02 America/Chicago] Render date: August 2:
-[30-Aug-2016 13:55:02 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => 
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] Render date: August 21:
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => med
-    [notes] => 
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] Render date: August 19:
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => treat
-    [notes] => 
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => meal
-    [notes] => Damn dog is HUNGRY!!!
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] Render date: August 12:
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => OOps...she had to poop, too!
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Man, this dog pees a lot, doesn't she?
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => What....a.....beagle.
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Damn dog!
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => She's such a puppy!
-)
-
-[30-Aug-2016 21:00:37 America/Chicago] Render date: August 2:
-[30-Aug-2016 21:00:37 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => 
-)
-
-[30-Aug-2016 21:18:42 America/Chicago] Render date: August 12:
-[30-Aug-2016 21:18:42 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => fluffffffffy
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] Render date: August 21:
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => med
-    [notes] => 
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] Render date: August 19:
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => treat
-    [notes] => 
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => meal
-    [notes] => Damn dog is HUNGRY!!!
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] Render date: August 12:
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => OOps...she had to poop, too!
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Man, this dog pees a lot, doesn't she?
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => What....a.....beagle.
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => Damn dog!
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => She's such a puppy!
-)
-
-[31-Aug-2016 05:45:42 America/Chicago] Render date: August 2:
-[31-Aug-2016 05:45:42 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => 
-)
-
-[31-Aug-2016 05:54:44 America/Chicago] Render date: August 12:
-[31-Aug-2016 05:54:44 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => fluffffffffy
-)
-
-[31-Aug-2016 05:55:11 America/Chicago] Render date: August 12:
-[31-Aug-2016 05:55:11 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => fluffffffffy
-)
-
-[31-Aug-2016 05:57:01 America/Chicago] Render date: August 12:
-[31-Aug-2016 05:57:01 America/Chicago] vk: Array
-(
-    [activity] => walk
-    [notes] => fluffffffffy
+    [0] => 24^Ruthie
+    [1] => 30^Spot
+    [2] => 31^Nifty
+    [3] => 32^Nifty
+    [4] => 33^Nifty
+    [5] => 34^Nifty
+    [6] => 35^Nifty
+    [7] => 36^Nerfy
+    [8] => 37^Nerfy
+    [9] => 38^Nerfy
+    [10] => 39^Nerfy
+    [11] => 40^Nerfy
+    [12] => 41^Nerfy
+    [13] => 42^Nerfy
+    [14] => 43^Doofy
+    [15] => 44^Snoopy
+    [16] => 45^Ruthie
+    [17] => 46^Ruthie
+    [18] => 47^Ruthie
+    [19] => 48^Ruthie
+    [20] => 49^Ruthie
+    [21] => 50^Ruthie
+    [22] => 51^Ruthie
+    [23] => 52^Ruthie
+    [24] => 53^Ruthie
+    [25] => 54^Ruthie
+    [26] => 55^Ruthie
+    [27] => 56^Ruthie
+    [28] => 57^Ruthie
+    [29] => 58^Ruthie
+    [30] => 59^Ruthie
+    [31] => 60^Ruthie
+    [32] => 61^Ruthie
+    [33] => 62^Ruthie
+    [34] => 63^Ruthie
+    [35] => 64^Ruthie
+    [36] => 65^Ruthie
+    [37] => 66^Ruthie
+    [38] => 67^Ruthie
+    [39] => 68^Ruthie
 )
 

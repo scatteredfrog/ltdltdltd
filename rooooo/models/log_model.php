@@ -223,37 +223,42 @@
             $sql .= "LIMIT $howMany";
             
             $query = $this->db->query($sql, array($dogID, $dogID, $dogID, $dogID));
-            $x = 0;
-            foreach ($query->result() as $row) {
-                $datetime = explode(' ',$row->ldate);
-                $getArray[$x]['activity'] = $row->type;
-                $getArray[$x]['date'] = $datetime[0];
-                $getArray[$x]['time'] = $datetime[1];
-                if ($row->type === 'walk') {
-                    $action = $this->retrieveActivityDeets('walk', $row->lid, true);
-                    $getArray[$x]['type'] = $action['action'];
-                } else if (($row->type === 'med') || ($row->type === 'treat')) {
-                    $type = $this->retrieveActivityDeets($row->type, $row->lid, true);
-                    $getArray[$x]['type'] = $type['type'];
-                }
-                $getArray[$x]['notes'] = $row->lnotes;
-                $x++;
-            }
 
-            $tempDate = $getArray[0]['date'];
-            $gc = count($getArray);
-            for ($i = 0; $i < $gc; $i++) {
-                if ($getArray[$i]['date'] !== $tempDate) {
-                    $tempDate = $getArray[$i]['date'];
+            if ($query->num_rows() > 0) {
+                $x = 0;
+                foreach ($query->result() as $row) {
+                    $datetime = explode(' ',$row->ldate);
+                    $getArray[$x]['activity'] = $row->type;
+                    $getArray[$x]['date'] = $datetime[0];
+                    $getArray[$x]['time'] = $datetime[1];
+                    if ($row->type === 'walk') {
+                        $action = $this->retrieveActivityDeets('walk', $row->lid, true);
+                        $getArray[$x]['type'] = $action['action'];
+                    } else if (($row->type === 'med') || ($row->type === 'treat')) {
+                        $type = $this->retrieveActivityDeets($row->type, $row->lid, true);
+                        $getArray[$x]['type'] = $type['type'];
+                    }
+                    $getArray[$x]['notes'] = $row->lnotes;
+                    $x++;
                 }
-                if (isset($retArray[$tempDate][$getArray[$i]['time']]['action'])) {
-                    $retArray[$tempDate][$getArray[$i]['time']]['action'] = $getArray[$i]['action'];
+
+                $tempDate = $getArray[0]['date'];
+                $gc = count($getArray);
+                for ($i = 0; $i < $gc; $i++) {
+                    if ($getArray[$i]['date'] !== $tempDate) {
+                        $tempDate = $getArray[$i]['date'];
+                    }
+                    if (isset($retArray[$tempDate][$getArray[$i]['time']]['action'])) {
+                        $retArray[$tempDate][$getArray[$i]['time']]['action'] = $getArray[$i]['action'];
+                    }
+                    $retArray[$tempDate][$getArray[$i]['time']]['activity'] = $getArray[$i]['activity'];
+                    if (isset($retArray[$tempDate][$getArray[$i]['time']]['type'])) {
+                        $retArray[$tempDate][$getArray[$i]['time']]['type'] = $getArray[$i]['type'];
+                    }
+                    $retArray[$tempDate][$getArray[$i]['time']]['notes'] = $getArray[$i]['notes'];
                 }
-                $retArray[$tempDate][$getArray[$i]['time']]['activity'] = $getArray[$i]['activity'];
-                if (isset($retArray[$tempDate][$getArray[$i]['time']]['type'])) {
-                    $retArray[$tempDate][$getArray[$i]['time']]['type'] = $getArray[$i]['type'];
-                }
-                $retArray[$tempDate][$getArray[$i]['time']]['notes'] = $getArray[$i]['notes'];
+            } else {
+                $retArray['none'] = true;
             }
             return $retArray;
 
