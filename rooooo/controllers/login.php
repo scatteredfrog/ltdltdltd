@@ -176,7 +176,7 @@ class Login extends CI_Controller {
                 $cookie = array(
                     'name' => 'ltd-login',
                     'value' => json_encode(array('1I1T1TLI11II' => $email, 'I11T1TLI11IT' => $this->input->post('password',TRUE))),
-                    'expire' => '328500',
+                    'expire' => '2592000',
                     'secure' => FALSE,
                     'domain' => '.logthedog.com'
                 );
