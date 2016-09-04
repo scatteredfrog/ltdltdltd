@@ -72,7 +72,7 @@ class Account extends CI_Controller {
             $link = base_url() . 'account/user_reset?flirzel=' . $acctinfo['id'] . '&kwerp=' . $rndpw;
             $genMail['message'] = 'We have received your request to reset your password. Please ';
             $genMail['message'] .= 'click on the following link:<br />&nbsp;<br />';
-            $genMail['message'] .= '<a href="' . $link . '>' . $link . '</a><br />&nbsp;<br />';
+            $genMail['message'] .= '<a href="' . $link . '">' . $link . '</a><br />&nbsp;<br />';
             $genMail['message'] .= "If the link doesn't work, then copy the following line ";
             $genMail['message'] .= "and paste it into your web browser's address bar:<br />&nbsp;<br />";
             $genMail['message'] .= $link;
