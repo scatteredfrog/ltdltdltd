@@ -20,7 +20,13 @@
         }
     ?>
 
-    
+    <div class='row-fluid drop12'>
+        <div class='formField span12 fine-print text-center'>
+            <a href='/home/create_account'>Don't have an account?<br />
+            You can create one!</a>
+        </div>
+    </div>
+
     <div class='container' id='ltd_home_form'>
         <?= form_open('login/log_in'); ?>
         <div id='login_email' class='row-fluid'>
@@ -50,13 +56,14 @@
                 ?>
             </div>
         </div>
-        <div class='row-fluid'>
-            <div class='formField span12 fine-print text-center'>
-                Don't have an account?<br />
-                <a href='/home/create_account'>You can create one!</a>
-            </div>
-        </div>
         <?= form_close(); ?>
+    <div class='row-fluid'>
+        <div class='formField span12 fine-print text-center'>
+            <a class='pointer' onclick="forgotPassword();">Forgot your password?<br />
+            You can reset it!</a>
+        </div>
+    </div>
+
     </div>
 
 </body>

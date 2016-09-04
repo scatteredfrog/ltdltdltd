@@ -13,6 +13,7 @@ class Home extends CI_Controller {
         
 	public function index() {
             $this->load->helper('form');
+            error_log(print_r(base_url(),1));
             $cookie = json_decode($this->input->cookie('ok-computer',TRUE),1);
             // REMOVE COOKIE CONDITIONAL WHEN DONE TESTING.
             // Keep the code withn the conditional, though.

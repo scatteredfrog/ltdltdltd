@@ -152,6 +152,13 @@ function submitCreate() {
             error += 'That makes it too easy to guess.' + sp;
         }
     }
+    
+    // Make sure the passwords match
+    if ($('#user_password').val() !== $('#re_pass').val()) {
+        success = false;
+        error += 'Please ensure your password is the same in both password fields.';
+    }
+    
     // If anything went wrong, alert modal.
     if (!success) {
         $('#ltd_error_modal_text').html(error);
@@ -232,4 +239,35 @@ function quickLook() {
         }   
     }, 'json');
     $('#ql_modal').modal('show');    
+}
+
+function forgotPassword() {
+    var fp_html = 'Enter your e-mail address so we can reset your password:<br />';
+    fp_html += '<input type="text" id="fp_email" placeholder="your e-mail goes here" maxlength="255" />';
+    $('#ltd_confirm_modal_header_text').html('Forgot your password?');
+    $('#ltd_confirm_modal_subheader').html(fp_html);
+    $('#ltd_confirm_modal').modal('show');
+    $('#ltd_confirm_modal_ok').on('click', function() {
+        $('#ltd_confirm_modal_ok').off('click');
+        var post_vars = {
+            'csrf_test_name' : $('[name=csrf_test_name]').val(),
+            'email' : $('#fp_email').val()
+        };
+        $.post('/account/forgotPassword', post_vars, function(data) {
+            $('#ltd_confirm_modal,#ltd_error_modal').modal('hide');
+            if (!data.success) {
+                $('#ltd_error_modal_text').html(data.message);
+                setTimeout(function() {
+                    $('#ltd_error_modal').modal('show');                
+                }, 400);
+            } else {
+                $('#ltd_confirm_modal,#ltd_error_modal').modal('hide');
+                $('#ltd_confirm_modal_subheader').html(data.message);
+                setTimeout(function() {
+                    $('#ltd_confirm_modal_ok').off('click');
+                    $('#ltd_confirm_modal').modal('show');
+                }, 400);
+            }
+        }, 'json');
+    });
 }

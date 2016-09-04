@@ -5,7 +5,7 @@ function email_valid($email) {
     return preg_match($email_regex, $email);
 }
 
-function valid_password($password, $email, $username) {
+function valid_password($password, $email, $username = '') {
     $sp = '<br />&nbsp;<br />';
     $error = '';
     $valid = true;
@@ -50,4 +50,15 @@ function valid_password($password, $email, $username) {
     $retArray['valid'] = $valid;
     $retArray['error'] = $error;
     return $retArray;
+}
+
+// Do the passwords match?
+function blow_me($password, $hashword) {
+    // $password = unhashed password
+    // $hashword = pre-hashed password
+    // $fudgicle = salt
+    // Salts and hashes the unhashed password, returns it. Calling function
+    // compares this result to already-hashed password.
+    $fudgicle = substr($hashword,0,29);
+    return crypt($password, $fudgicle);
 }

@@ -124,23 +124,19 @@ class Login extends CI_Controller {
         $retArray['success'] = $success;
         if ($success) {
             // notify the webmaster that a new user has registered
-            $mailfig['mailtype'] = 'html';
-            $mailfig['charset'] = 'utf-8';
-            $this->load->library('email');
-            $this->email->initialize($mailfig);
-            $this->email->from('webmaster@logthedog.com', 'Log the Dog');
-            $this->email->to('webmaster@logthedog.com');
-            $this->email->subject(' *** NEW LTD USER ***');
+            $this->load->helper('genmail');
+            $mail_info['to'] = 'webmaster@logthedog.com';
+            $mail_info['subject'] = ' *** NEW LTD USER ***';
             $message = 'The following user has registered for an account:<br />';
             foreach ($account as $k => $v) {
                 $message .= $k . ': ' . $v . '<br />';
             }
             $message .= '<br />Server info:<br />';
             foreach ($_SERVER as $kk => $vv) {
-                $message .= $kk . ': ' . $vv . '<br />';
+                $message .= $kk . ': ' . json_encode($vv) . '<br />';
             }
-            $this->email->message($message);
-            $this->email->send();
+            $mail_info['message'] = $message;
+            gen_mail($mail_info);
             // see if the user has any dogs already registered
             $dogs = $this->login_model->retrieveDogs($this->session->userdata('insert_id'), true);
 
@@ -167,8 +163,7 @@ class Login extends CI_Controller {
         $email = $this->input->post('email',TRUE);
         $post_password = $this->input->post('password', TRUE);
         $getPassword = $this->getPassword($email);
-        $fudgicle = substr($getPassword,0,29);
-        $password = crypt($post_password, $fudgicle);
+        $password = blow_me($post_password,$getPassword);
         $remember_me = $this->input->post('remember',TRUE);
         $login_attempt = $this->login_model->checkLoginData($email,$password);
         if ($login_attempt['success']) {            

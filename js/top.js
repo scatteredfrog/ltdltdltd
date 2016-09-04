@@ -164,10 +164,14 @@ $(document).on('click', '#select_this_dog', function () {
 }); 
 
 function getDogDeets(dogID) {
-    var url_parts = location.href.split('/');
-    var activity = url_parts[url_parts.length-1];
-    activity = activity === 'main_menu' ? 'quick_look' : activity;
-
+    var activity;
+    if (location.href.substr(-5) === '.com/') { 
+        activity = 'quick_look';
+    } else {
+        var url_parts = location.href.split('/');
+        activity = url_parts[url_parts.length-1];
+        activity = activity === 'main_menu' ? 'quick_look' : activity;
+    }
     var post_data = {
         'dogID' : dogID,
         'csrf_test_name' : $('[name=csrf_test_name]').val(),
@@ -481,4 +485,77 @@ function saveAccountChanges() {
 
 function hideYay() {
     $('.yay-update').css('display','none');
+}
+
+function updatePassword(id) {
+    var success = true;
+    var invalid = false;
+    var sp = '<br />&nbsp;<br />';
+    var error = '';
+    
+    // Validate the password
+    var pass_reg = [/[A-Z]/,/[a-z]/,/[0-9]/];
+    var pr_len = pass_reg.length;
+    
+    if ($('#reset_pw').val().length < 8) {
+        success = false;
+        error += 'Your password is too short; make it at least 8 characters.' + sp;
+        invalid = true;
+    }
+    
+    if (!invalid) {
+        for (var x = 0; x < pr_len; x++) {
+            if (!pass_reg[x].test($('#reset_pw').val())) {
+                success = false;
+                invalid = true;
+                error += 'Your password must contain at least one capital letter, at least one ';
+                error += 'number, and at least one lower-case letter.' + sp;
+                break;
+            }
+        }
+    }
+    
+    if (!invalid) {
+        if ($('#reset_pw').val().toUpperCase().indexOf('PASSWORD') > -1) {
+            success = false;
+            error += 'Please do not use the word "password" as part of your password. ';
+            error += 'That makes it too easy to guess.' + sp;
+        }
+    }
+
+    // Make sure the passwords match
+    if ($('#reset_pw').val() !== $('#reset_conf').val()) {
+        success = false;
+        error += 'Please ensure your password is the same in both password fields.';
+    }
+    
+    // If anything went wrong, alert modal.
+    if (!success) {
+        $('#ltd_error_modal_text').html(error);
+        $('#ltd_error_modal').modal('show');
+        return false;
+    } else { // all went right so far
+        var post_vars = {
+            'csrf_test_name' : $('[name=csrf_test_name]').val(),
+            'reset_pw' : $('#reset_pw').val(),
+            'reset_conf' : $('#reset_conf').val(),
+            'username' : $('#username').val(),
+            'email' : $('#email').val()
+        };
+        
+        $.post('/account/doResetPassword', post_vars, function(data) {
+            if (!data.success) {
+                $('#ltd_error_modal_text').html(data.error_message);
+                $('#ltd_error_modal').modal('show');
+            } else {
+                $('#ltd_confirm_modal_header_text').html('Your password has been changed!');
+                $('#ltd_confirm_modal_subheader').html(data.message);
+                $('#ltd_confirm_modal').modal('show');
+                $('#ltd_confirm_modal_ok').on('click', function() {
+                    $('ltd_confirm_modal').modal('hide');
+                    location.href = '/';
+                });
+            }
+        }, 'json');
+    }
 }

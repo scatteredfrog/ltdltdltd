@@ -141,5 +141,20 @@ body {    background-color: #ffffe4!important; }
     top: 5px;
 }
 
+.drop12 { 
+    position: relative;
+    top: 12px;
+}
+
+#fp_email {
+    margin-top: 11px;
+    width: 300px;
+    background-color: #ffffe4;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-top: 3px;
+}
+
 #create_account h1 {    font-size: 24px!important; }
 .oddReg { background-color: #ffffff; }
+.pointer { cursor: pointer; }
