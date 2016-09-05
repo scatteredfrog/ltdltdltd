@@ -457,6 +457,10 @@ function saveAccountChanges() {
     conf_text += $('#email').val() + '</span><br />';
     conf_text += '<span class="bold col-xs-6">Language preference:</span> <span class="plain col-xs-6">';
     conf_text += lang + '</span>';
+    conf_text += '<span class="bold col-xs-6">Quick Look limit:</span> <span class="plain col-xs-6">';
+    conf_text += $('#ql_num').val() + ' entries</span><br />';
+    conf_text += '<span class="bold col-xs-6">Quick Look order:</span> <span class="plain col-xs-6">';
+    conf_text += ($('#ql_ord').val() === '1' ? 'ascending' : 'descending') + '</span><br />';
     $('#ltd_dual_options_modal_subheader').html(conf_text);
     $('#ltd_dual_options_left_button').html('Cancel');
     $('#ltd_dual_options_right_button').html('OK');
@@ -467,7 +471,9 @@ function saveAccountChanges() {
             'username' : $('#username').val(),
             'email' : $('#email').val(),
             'language' : $('[name=language]:checked').val(),
-            'csrf_test_name' : $('[name=csrf_test_name]').val()
+            'csrf_test_name' : $('[name=csrf_test_name]').val(),
+            'ql_num' : $('#ql_num').val(),
+            'ql_ord' : $('#ql_ord').val(),
         };
         
         $.post('/index.php/account/saveAccountChanges', post_vars, function(data) {

@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/welcome_message.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/helpers/validation_helper.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/controllers/account.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/js/home.js</file>
             <file>file:/Volumes/Coding/logthedog.com/css/main.css</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/controllers/login.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/js/top.js</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/models/account_model.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/log_a_meal.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/account.php</file>
         </group>
     </open-files>
 </project-private>

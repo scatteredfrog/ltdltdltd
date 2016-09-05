@@ -275,7 +275,7 @@ class Log extends CI_Controller {
                     case 'quick_look' :
                         $resp['dog']['latest_quick_look'] = 'not yet there';
                         $this->load->model('log_model');
-                        $resp['dog']['quick_look'] = $this->log_model->retrieveLatestData($dogID, 10);
+                        $resp['dog']['quick_look'] = $this->log_model->retrieveLatestData($dogID);
                         if (isset($resp['dog']['quick_look']['none']) && $resp['dog']['quick_look']['none']) {
                             $resp['html'] = "We don't have any logged data for this dog. Sorry!";
                         } else {

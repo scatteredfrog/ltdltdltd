@@ -1,161 +1,77 @@
-[03-Sep-2016 01:25:29 America/Chicago] Link: http://local.logthedog.com/account/user_reset&flirzel=42&kwerp=ltMsnLFi
-[03-Sep-2016 01:43:24 America/Chicago] Link: http://local.logthedog.com/account/user_reset&flirzel=42&kwerp=XoQPwD5i
-[03-Sep-2016 01:44:57 America/Chicago] user ID: 42
-[03-Sep-2016 01:44:57 America/Chicago] password: XoQPwD5i
-[03-Sep-2016 01:49:48 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 01:50:06 America/Chicago] PHP Fatal error:  Using $this when not in object context in /Volumes/Coding/logthedog.com/rooooo/controllers/login.php on line 219
-[03-Sep-2016 01:51:09 America/Chicago] PHP Fatal error:  Using $this when not in object context in /Volumes/Coding/logthedog.com/rooooo/controllers/login.php on line 219
-[03-Sep-2016 09:22:04 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 09:50:57 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 09:59:44 America/Chicago] PHP Fatal error:  Call to undefined method Account_model::retrievePassword() in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php on line 96
-[03-Sep-2016 10:00:18 America/Chicago] they match
-[03-Sep-2016 10:00:34 America/Chicago] * NOT A MATCH *
-[03-Sep-2016 10:07:11 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 2 to be DateTimeZone, string given' in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php:98
-Stack trace:
-#0 /Volumes/Coding/logthedog.com/rooooo/controllers/account.php(98): DateTime->__construct('Y-m-d H:i:s', '2016-09-03 02:4...')
-#1 [internal function]: Account->user_reset()
-#2 /Volumes/Coding/logthedog.com/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
-#3 /Volumes/Coding/logthedog.com/index.php(203): require_once('/Volumes/Coding...')
-#4 {main}
-  thrown in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php on line 98
-[03-Sep-2016 10:07:42 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 2 to be DateTimeZone, integer given' in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php:98
-Stack trace:
-#0 /Volumes/Coding/logthedog.com/rooooo/controllers/account.php(98): DateTime->__construct('Y-m-d H:i:s', 1472888604)
-#1 [internal function]: Account->user_reset()
-#2 /Volumes/Coding/logthedog.com/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
-#3 /Volumes/Coding/logthedog.com/index.php(203): require_once('/Volumes/Coding...')
-#4 {main}
-  thrown in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php on line 98
-[03-Sep-2016 10:09:25 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 2 to be DateTimeZone, integer given' in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php:98
-Stack trace:
-#0 /Volumes/Coding/logthedog.com/rooooo/controllers/account.php(98): DateTime->__construct('Y-m-d H:i:s', 1472888604)
-#1 [internal function]: Account->user_reset()
-#2 /Volumes/Coding/logthedog.com/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
-#3 /Volumes/Coding/logthedog.com/index.php(203): require_once('/Volumes/Coding...')
-#4 {main}
-  thrown in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php on line 98
-[03-Sep-2016 10:09:35 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 2 to be DateTimeZone, integer given' in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php:99
-Stack trace:
-#0 /Volumes/Coding/logthedog.com/rooooo/controllers/account.php(99): DateTime->__construct('Y-m-d H:i:s', 1472915375)
-#1 [internal function]: Account->user_reset()
-#2 /Volumes/Coding/logthedog.com/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
-#3 /Volumes/Coding/logthedog.com/index.php(203): require_once('/Volumes/Coding...')
-#4 {main}
-  thrown in /Volumes/Coding/logthedog.com/rooooo/controllers/account.php on line 99
-[03-Sep-2016 10:10:43 America/Chicago] Time elapsed: 19
-[03-Sep-2016 10:10:43 America/Chicago] they match
-[03-Sep-2016 10:11:37 America/Chicago] Start time: DateTime Object
+[04-Sep-2016 23:06:33 America/Chicago] http://local.logthedog.com/
+[05-Sep-2016 00:00:42 America/Chicago] http://local.logthedog.com/
+[05-Sep-2016 00:52:05 America/Chicago] http://local.logthedog.com/
+[05-Sep-2016 00:56:57 America/Chicago] Account: Array
 (
-    [date] => 2016-09-03 02:43:24.000000
-    [timezone_type] => 3
-    [timezone] => America/Chicago
+    [username] => Flirzel Kwerp
+    [eMail] => flirzel@kwerp.com
+    [language] => 2
+    [ql_num] => 42
+    [ql_ord] => 0
 )
 
-[03-Sep-2016 10:11:37 America/Chicago] Now: DateTime Object
+[05-Sep-2016 00:56:57 America/Chicago] Account: Array
 (
-    [date] => 2016-09-03 10:11:37.000000
-    [timezone_type] => 3
-    [timezone] => America/Chicago
+    [username] => Flirzel Kwerp
+    [eMail] => flirzel@kwerp.com
+    [language] => 2
+    [ql_num] => 42
+    [ql_ord] => 0
 )
 
-[03-Sep-2016 10:11:37 America/Chicago] Time elapsed: 13
-[03-Sep-2016 10:11:37 America/Chicago] they match
-[03-Sep-2016 10:12:35 America/Chicago] Start time: DateTime Object
+[05-Sep-2016 00:57:37 America/Chicago] Account: Array
 (
-    [date] => 2016-09-03 02:43:24.000000
-    [timezone_type] => 3
-    [timezone] => America/Chicago
+    [username] => Flirzel Kwerp
+    [eMail] => flirzel@kwerp.com
+    [language] => 2
+    [ql_num] => 42
+    [ql_ord] => 1
 )
 
-[03-Sep-2016 10:12:35 America/Chicago] Now: DateTime Object
+[05-Sep-2016 01:02:14 America/Chicago] Account: Array
 (
-    [date] => 2016-09-03 10:12:35.000000
-    [timezone_type] => 3
-    [timezone] => America/Chicago
+    [username] => Flirzel Kwerp
+    [eMail] => flirzel@kwerp.com
+    [language] => 2
+    [ql_num] => 39
+    [ql_ord] => 1
 )
 
-[03-Sep-2016 10:12:35 America/Chicago] Time elapsed object: DateInterval Object
+[05-Sep-2016 01:02:14 America/Chicago] Account: Array
 (
-    [y] => 0
-    [m] => 0
-    [d] => 0
-    [h] => 7
-    [i] => 29
-    [s] => 11
-    [weekday] => 0
-    [weekday_behavior] => 0
-    [first_last_day_of] => 0
-    [invert] => 1
-    [days] => 0
-    [special_type] => 0
-    [special_amount] => 0
-    [have_weekday_relative] => 0
-    [have_special_relative] => 0
+    [username] => Flirzel Kwerp
+    [eMail] => flirzel@kwerp.com
+    [language] => 2
+    [ql_num] => 39
+    [ql_ord] => 1
 )
 
-[03-Sep-2016 10:12:35 America/Chicago] Time elapsed: 11
-[03-Sep-2016 10:12:35 America/Chicago] they match
-[03-Sep-2016 10:13:09 America/Chicago] Start time: DateTime Object
+[05-Sep-2016 01:09:57 America/Chicago] Account: Array
 (
-    [date] => 2016-09-03 02:43:24.000000
-    [timezone_type] => 3
-    [timezone] => America/Chicago
+    [username] => Flirzel Kwerp
+    [eMail] => flirzel@kwerp.com
+    [language] => 2
+    [ql_num] => 4
+    [ql_ord] => 1
 )
 
-[03-Sep-2016 10:13:09 America/Chicago] Now: DateTime Object
+[05-Sep-2016 01:10:49 America/Chicago] Account: Array
 (
-    [date] => 2016-09-03 10:13:09.000000
-    [timezone_type] => 3
-    [timezone] => America/Chicago
+    [username] => Flirzel Kwerp
+    [eMail] => flirzel@kwerp.com
+    [language] => 2
+    [ql_num] => 4
+    [ql_ord] => 0
 )
 
-[03-Sep-2016 10:13:09 America/Chicago] Time elapsed object: DateInterval Object
+[05-Sep-2016 01:11:31 America/Chicago] Account: Array
 (
-    [y] => 0
-    [m] => 0
-    [d] => 0
-    [h] => 7
-    [i] => 29
-    [s] => 45
-    [weekday] => 0
-    [weekday_behavior] => 0
-    [first_last_day_of] => 0
-    [invert] => 1
-    [days] => 0
-    [special_type] => 0
-    [special_amount] => 0
-    [have_weekday_relative] => 0
-    [have_special_relative] => 0
+    [username] => Flirzel Kwerp
+    [eMail] => flirzel@kwerp.com
+    [language] => 2
+    [ql_num] => 7
+    [ql_ord] => 1
 )
 
-[03-Sep-2016 10:13:09 America/Chicago] Time elapsed: 45
-[03-Sep-2016 10:13:09 America/Chicago] they match
-[03-Sep-2016 10:29:59 America/Chicago] retArray: Array
-(
-    [success] => 
-    [message] => Sorry, your temporary password has expired.
-)
-
-[03-Sep-2016 10:30:21 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 10:30:31 America/Chicago] Link: http://local.logthedog.com/account/user_reset?flirzel=42&kwerp=f7jnbaAP
-[03-Sep-2016 10:31:15 America/Chicago] they match
-[03-Sep-2016 10:31:15 America/Chicago] retArray: Array
-(
-    [success] => 1
-)
-
-[03-Sep-2016 10:50:52 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 11:01:54 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 11:17:07 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 11:52:39 America/Chicago] Test1234 - Test1234 - Flirzel Kwerp/><div class= - flirzel@kwerp.com
-[03-Sep-2016 11:53:37 America/Chicago] Test1234 - Test1234 - Flirzel Kwerp - flirzel@kwerp.com
-[03-Sep-2016 21:59:41 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 21:59:59 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 22:00:10 America/Chicago] http://local.logthedog.com/
-[03-Sep-2016 23:16:53 America/Chicago] Test1234 - Test1234 - Flirzel Kwerp - flirzel@kwerp.com
-[03-Sep-2016 23:53:35 America/Chicago] Test4321 - Test4321 - Flirzel Kwerp - flirzel@kwerp.com
-[03-Sep-2016 23:54:08 America/Chicago] Test9876 - Test9876 - Flirzel Kwerp - flirzel@kwerp.com
-[03-Sep-2016 23:54:12 America/Chicago] http://local.logthedog.com/
-[04-Sep-2016 00:06:39 America/Chicago] http://local.logthedog.com/
-[04-Sep-2016 00:07:19 America/Chicago] http://local.logthedog.com/
-[04-Sep-2016 00:07:44 America/Chicago] http://local.logthedog.com/
+[05-Sep-2016 01:22:20 America/Chicago] http://local.logthedog.com/
+[05-Sep-2016 01:22:42 America/Chicago] http://local.logthedog.com/

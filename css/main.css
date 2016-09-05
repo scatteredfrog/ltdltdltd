@@ -158,3 +158,4 @@ body {    background-color: #ffffe4!important; }
 #create_account h1 {    font-size: 24px!important; }
 .oddReg { background-color: #ffffff; }
 .pointer { cursor: pointer; }
+#ql_num { width: 50px; }

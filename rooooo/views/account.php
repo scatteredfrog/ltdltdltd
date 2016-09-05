@@ -5,19 +5,19 @@
     </legend>
     <div class="row">
         <div class="col-xs-12 col-lg-6 bottom5 top5">
-            User name:<br />
+            <span class="bold">User name:</span><br />
             <input type="text" onchange="hideYay();" class="col-lg-6 col-xs-10" id="username" name="username" value="<?= $username ?>" />
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-lg-6 bottom5 top5">
-            E-mail address:<br />
+            <span class="bold">E-mail address:</span><br />
             <input type="text" onchange="hideYay();" class="col-xs-10 col-lg-6  " id="email" name="email" value="<?= $eMail ?>" />
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 bottom5 top5">
-            Language preference:<br />
+            <span class="bold">Language preference:</span><br />
             <input type="radio" name="language" value="0" onchange="hideYay();" 
                 <? if ($language == 0): ?> checked="checked"<? endif ?> /> professional (log when my dog 'urinates' and 'defecates')<br />
             <input type="radio" name="language" value="1" onchange="hideYay();" 
@@ -30,6 +30,17 @@
                    checked="checked"
                 <? endif ?>
             /> slang (log when my dog 'pees' and 'poops')<br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 bottom5 top5">
+            <span class="bold">"Quick Look" preference:</span><br />
+            I want Quick Look to show me the last
+            <input id="ql_num" type="number" value ="<?= $this->session->userdata('ql_num') ?>" max="100" min="1" /> activities logged in 
+            <select id="ql_ord">
+                <option value="0" <? if (!$this->session->userdata('ql_ord')) { echo 'selected'; }?>>descending</option>
+                <option value="1" <? if ($this->session->userdata('ql_ord')) { echo 'selected'; } ?>>ascending</option>
+            </select> order.
         </div>
     </div>
 </fieldset>
@@ -60,6 +71,7 @@
 </fieldset>
 <fieldset class="container">
     <div class="row">
+        <br />
         <div class="col-xs-6 bottom5 top5">
             <input type="button" value="Save Changes" onclick="saveAccountChanges();" />
         </div>
@@ -70,4 +82,10 @@
         </div>
     </div>
 </fieldset>
-<?= form_close(); ?>
+<?
+    echo form_close();
+    for ($x = 0; $x < 5; $x++) {
+        echo '&nbsp;<br />';
+    }
+    echo form_close();
+?>

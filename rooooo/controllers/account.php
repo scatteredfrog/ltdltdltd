@@ -28,11 +28,17 @@ class Account extends CI_Controller {
         $changes = array(
             'username' => $this->input->post('username', TRUE),
             'eMail' => $this->input->post('email', TRUE),
-            'language' => $this->input->post('language', TRUE)
+            'language' => $this->input->post('language', TRUE),
+            'ql_num' => $this->input->post('ql_num', TRUE),
+            'ql_ord' => $this->input->post('ql_ord', TRUE)
         );
-        error_log("Account: " . print_r($changes,1));
         $this->load->model('account_model');
         $success = $this->account_model->updateAccount($changes);
+        if ($success) {
+            $this->session->set_userdata('language', $changes['language']);
+            $this->session->set_userdata('ql_num', $changes['ql_num']);
+            $this->session->set_userdata('ql_ord', $changes['ql_ord']);
+        }
         echo $success;
         exit();
     }

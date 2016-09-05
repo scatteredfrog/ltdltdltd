@@ -209,7 +209,7 @@
             return $retArray;
         }
 
-        public function retrieveLatestData($dogID, $howMany) {
+        public function retrieveLatestData($dogID) {
             $getArray = array();
             $retArray = array();
             $sql = "SELECT mealID lid, mealDate ldate, mealNotes lnotes, 'meal' as type FROM LTDtbMeal WHERE dogID=? ";
@@ -219,8 +219,11 @@
             $sql .= "SELECT treatID lid, treatDate ldate, treatNotes lnotes, 'treat' as type FROM LTDtbTreat WHERE dogID=? ";
             $sql .= "UNION ALL ";
             $sql .= "SELECT walkID lid, walkDate ldate, walkNotes lnotes, 'walk' as type FROM LTDtbWalk WHERE dogID=? ";
-            $sql .= "ORDER BY lDate DESC ";
-            $sql .= "LIMIT $howMany";
+            $sql .= "ORDER BY lDate ";
+            if (!$this->session->userdata('ql_ord')) {
+                $sql .= ' DESC ';
+            }
+            $sql .= "LIMIT " . $this->session->userdata('ql_num');
             
             $query = $this->db->query($sql, array($dogID, $dogID, $dogID, $dogID));
 

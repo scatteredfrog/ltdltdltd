@@ -112,7 +112,7 @@
         }
         
         public function checkLoginData($email,$password) {
-            $this->db->select('userID,username,firstName,lastName,eMail,password,language');
+            $this->db->select('userID,username,firstName,lastName,eMail,password,language,ql_num,ql_ord');
             $query = $this->db->get_where('LTDtbUser',array('eMail' => $email));
             if ($query->num_rows() > 0) {
                 $this->session->unset_userdata('nsu');
@@ -124,6 +124,8 @@
                     $query_result['eMail'] = $row->eMail;
                     $query_result['language'] = $row->language;
                     $query_result['password'] = $row->password;
+                    $query_result['ql_num'] = $row->ql_num;
+                    $query_result['ql_ord'] = $row->ql_ord;
                     $query_result['error'] = false;
                 }
             } else {
@@ -143,6 +145,9 @@
             } else if (!isset($query_result['error']) || !$query_result['error']) {
                 $query_result['logged_in'] = true;
                 $query_result['success'] = true;
+                if (empty($query_result['ql_num'])) {
+                    $query_result['ql_num'] = 10;
+                }
                 $this->session->unset_userdata('nsu');
                 $this->session->set_userdata($query_result);
             }
