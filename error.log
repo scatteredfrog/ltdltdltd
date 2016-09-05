@@ -75,3 +75,8 @@
 
 [05-Sep-2016 01:22:20 America/Chicago] http://local.logthedog.com/
 [05-Sep-2016 01:22:42 America/Chicago] http://local.logthedog.com/
+[Mon Sep 05 09:14:44.329679 2016] [:error] [pid 702] [client 127.0.0.1:49330] http://local.logthedog.com/
+[Mon Sep 05 09:22:45.960621 2016] [:error] [pid 702] [client 127.0.0.1:49417] http://local.logthedog.com/
+[Mon Sep 05 09:23:02.795813 2016] [:error] [pid 697] [client 127.0.0.1:49424] http://local.logthedog.com/, referer: http://local.logthedog.com/home/main_menu
+[Mon Sep 05 09:25:09.964036 2016] [:error] [pid 700] [client 127.0.0.1:49437] http://local.logthedog.com/, referer: http://local.logthedog.com/index.php/home/main_menu
+[Mon Sep 05 09:28:06.560760 2016] [:error] [pid 215] [client 127.0.0.1:49465] http://local.logthedog.com/, referer: http://local.logthedog.com/home/main_menu

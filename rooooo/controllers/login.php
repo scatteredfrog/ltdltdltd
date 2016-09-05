@@ -201,7 +201,7 @@ class Login extends CI_Controller {
 
     public function log_out() {
         $this->session->sess_destroy();
-        unset($_SESSION);
+        session_unset();
         $this->session->set_userdata('loggedOut',true);
         $this->session->set_userdata('firstName','Friend');
         
