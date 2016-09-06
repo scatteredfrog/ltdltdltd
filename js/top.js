@@ -565,3 +565,48 @@ function updatePassword(id) {
         }, 'json');
     }
 }
+
+function selectDog() {
+    populateDog($('#dog_choice').val())
+}
+
+function populateDog(idx) {
+    var post_vars = { 
+        'idx' : idx,
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+    };
+    $.post('/log/popDogDeets', post_vars, function(data) {
+        if (typeof data.dogID !== 'undefined') {
+            // DO STUFF
+            $('#dog_id').val(data.dogID);
+            $('#dog_name').val(data.dogName);
+            $('#dog_registry').css('display', 'block');
+            if (data.dogWeight != '0') {
+                $('#weight').val(data.dogWeight);
+            }
+            if (data.dogHeight != '0') {
+                $('#height').val(data.dogHeight);
+            }
+            if (data.dogLength != '0') {
+                $('#length').val(data.dogLength);
+            }
+            
+            switch(data.gender) {
+                case '2':
+                    $('#dog_gender').val('m');
+                    break;
+                case '1':
+                    $('#dog_gender').val('f');
+                    break;
+            }
+            
+            if (data.spayneuter == '1') {
+                $('#neutered').prop('checked',true);
+            } else {
+                $('#neutered').prop('checked', false);
+            }
+            
+            $('#breed').val(data.breed);
+        }
+    }, 'json');
+}

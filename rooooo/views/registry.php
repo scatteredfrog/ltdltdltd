@@ -7,7 +7,7 @@
     echo form_open('', $form_attribs);
     
     ?>
-
+    <input type="hidden" id="dog_id" />
     <div id="dog_registry" class="container">
         <div class="row">
             <h1>Register a Dog</h1>
