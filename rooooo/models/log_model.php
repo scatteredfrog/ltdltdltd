@@ -219,10 +219,7 @@
             $sql .= "SELECT treatID lid, treatDate ldate, treatNotes lnotes, 'treat' as type FROM LTDtbTreat WHERE dogID=? ";
             $sql .= "UNION ALL ";
             $sql .= "SELECT walkID lid, walkDate ldate, walkNotes lnotes, 'walk' as type FROM LTDtbWalk WHERE dogID=? ";
-            $sql .= "ORDER BY lDate ";
-            if (!$this->session->userdata('ql_ord')) {
-                $sql .= ' DESC ';
-            }
+            $sql .= "ORDER BY lDate DESC ";
             $sql .= "LIMIT " . $this->session->userdata('ql_num');
             
             $query = $this->db->query($sql, array($dogID, $dogID, $dogID, $dogID));
@@ -259,6 +256,12 @@
                         $retArray[$tempDate][$getArray[$i]['time']]['type'] = $getArray[$i]['type'];
                     }
                     $retArray[$tempDate][$getArray[$i]['time']]['notes'] = $getArray[$i]['notes'];
+                }
+                if ($this->session->userdata('ql_ord') == '1') {
+                    $retArray = array_reverse($retArray);
+                    foreach ($retArray as $k => $v) {
+                        $retArray[$k] = array_reverse($retArray[$k]);
+                    }
                 }
             } else {
                 $retArray['none'] = true;

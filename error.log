@@ -1,82 +1,344 @@
-[04-Sep-2016 23:06:33 America/Chicago] http://local.logthedog.com/
-[05-Sep-2016 00:00:42 America/Chicago] http://local.logthedog.com/
-[05-Sep-2016 00:52:05 America/Chicago] http://local.logthedog.com/
-[05-Sep-2016 00:56:57 America/Chicago] Account: Array
+[06-Sep-2016 06:55:38 America/Chicago] K:Array
 (
-    [username] => Flirzel Kwerp
-    [eMail] => flirzel@kwerp.com
-    [language] => 2
-    [ql_num] => 42
-    [ql_ord] => 0
+    [10:57:51] => Array
+        (
+            [activity] => walk
+            [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+        )
+
+    [10:57:28] => Array
+        (
+            [activity] => walk
+            [notes] => OOps...she had to poop, too!
+        )
+
+    [10:56:52] => Array
+        (
+            [activity] => walk
+            [notes] => Man, this dog pees a lot, doesn't she?
+        )
+
+    [10:27:55] => Array
+        (
+            [activity] => walk
+            [notes] => What....a.....beagle.
+        )
+
 )
 
-[05-Sep-2016 00:56:57 America/Chicago] Account: Array
+[06-Sep-2016 06:55:38 America/Chicago] K:Array
 (
-    [username] => Flirzel Kwerp
-    [eMail] => flirzel@kwerp.com
-    [language] => 2
-    [ql_num] => 42
-    [ql_ord] => 0
+    [22:41:57] => Array
+        (
+            [activity] => treat
+            [notes] => 
+        )
+
+    [13:59:57] => Array
+        (
+            [activity] => meal
+            [notes] => Damn dog is HUNGRY!!!
+        )
+
 )
 
-[05-Sep-2016 00:57:37 America/Chicago] Account: Array
+[06-Sep-2016 06:55:38 America/Chicago] K:Array
 (
-    [username] => Flirzel Kwerp
-    [eMail] => flirzel@kwerp.com
-    [language] => 2
-    [ql_num] => 42
-    [ql_ord] => 1
+    [07:40:12] => Array
+        (
+            [activity] => med
+            [notes] => 
+        )
+
 )
 
-[05-Sep-2016 01:02:14 America/Chicago] Account: Array
+[06-Sep-2016 06:55:38 America/Chicago] retArray: Array
 (
-    [username] => Flirzel Kwerp
-    [eMail] => flirzel@kwerp.com
-    [language] => 2
-    [ql_num] => 39
-    [ql_ord] => 1
+    [2016-08-12] => Array
+        (
+            [10:57:51] => Array
+                (
+                    [activity] => walk
+                    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+                )
+
+            [10:57:28] => Array
+                (
+                    [activity] => walk
+                    [notes] => OOps...she had to poop, too!
+                )
+
+            [10:56:52] => Array
+                (
+                    [activity] => walk
+                    [notes] => Man, this dog pees a lot, doesn't she?
+                )
+
+            [10:27:55] => Array
+                (
+                    [activity] => walk
+                    [notes] => What....a.....beagle.
+                )
+
+        )
+
+    [2016-08-19] => Array
+        (
+            [22:41:57] => Array
+                (
+                    [activity] => treat
+                    [notes] => 
+                )
+
+            [13:59:57] => Array
+                (
+                    [activity] => meal
+                    [notes] => Damn dog is HUNGRY!!!
+                )
+
+        )
+
+    [2016-08-21] => Array
+        (
+            [07:40:12] => Array
+                (
+                    [activity] => med
+                    [notes] => 
+                )
+
+        )
+
 )
 
-[05-Sep-2016 01:02:14 America/Chicago] Account: Array
+[06-Sep-2016 06:56:44 America/Chicago] retArray: Array
 (
-    [username] => Flirzel Kwerp
-    [eMail] => flirzel@kwerp.com
-    [language] => 2
-    [ql_num] => 39
-    [ql_ord] => 1
+    [2016-08-12] => Array
+        (
+            [10:57:51] => Array
+                (
+                    [activity] => walk
+                    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+                )
+
+            [10:57:28] => Array
+                (
+                    [activity] => walk
+                    [notes] => OOps...she had to poop, too!
+                )
+
+            [10:56:52] => Array
+                (
+                    [activity] => walk
+                    [notes] => Man, this dog pees a lot, doesn't she?
+                )
+
+            [10:27:55] => Array
+                (
+                    [activity] => walk
+                    [notes] => What....a.....beagle.
+                )
+
+        )
+
+    [2016-08-19] => Array
+        (
+            [22:41:57] => Array
+                (
+                    [activity] => treat
+                    [notes] => 
+                )
+
+            [13:59:57] => Array
+                (
+                    [activity] => meal
+                    [notes] => Damn dog is HUNGRY!!!
+                )
+
+        )
+
+    [2016-08-21] => Array
+        (
+            [07:40:12] => Array
+                (
+                    [activity] => med
+                    [notes] => 
+                )
+
+        )
+
 )
 
-[05-Sep-2016 01:09:57 America/Chicago] Account: Array
+[06-Sep-2016 06:57:36 America/Chicago] retArray: Array
 (
-    [username] => Flirzel Kwerp
-    [eMail] => flirzel@kwerp.com
-    [language] => 2
-    [ql_num] => 4
-    [ql_ord] => 1
+    [2016-08-12] => Array
+        (
+            [10:27:55] => Array
+                (
+                    [activity] => walk
+                    [notes] => What....a.....beagle.
+                )
+
+            [10:56:52] => Array
+                (
+                    [activity] => walk
+                    [notes] => Man, this dog pees a lot, doesn't she?
+                )
+
+            [10:57:28] => Array
+                (
+                    [activity] => walk
+                    [notes] => OOps...she had to poop, too!
+                )
+
+            [10:57:51] => Array
+                (
+                    [activity] => walk
+                    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+                )
+
+        )
+
+    [2016-08-19] => Array
+        (
+            [13:59:57] => Array
+                (
+                    [activity] => meal
+                    [notes] => Damn dog is HUNGRY!!!
+                )
+
+            [22:41:57] => Array
+                (
+                    [activity] => treat
+                    [notes] => 
+                )
+
+        )
+
+    [2016-08-21] => Array
+        (
+            [07:40:12] => Array
+                (
+                    [activity] => med
+                    [notes] => 
+                )
+
+        )
+
 )
 
-[05-Sep-2016 01:10:49 America/Chicago] Account: Array
+[06-Sep-2016 06:57:58 America/Chicago] retArray: Array
 (
-    [username] => Flirzel Kwerp
-    [eMail] => flirzel@kwerp.com
-    [language] => 2
-    [ql_num] => 4
-    [ql_ord] => 0
+    [2016-08-21] => Array
+        (
+            [07:40:12] => Array
+                (
+                    [activity] => med
+                    [notes] => 
+                )
+
+        )
+
+    [2016-08-19] => Array
+        (
+            [22:41:57] => Array
+                (
+                    [activity] => treat
+                    [notes] => 
+                )
+
+            [13:59:57] => Array
+                (
+                    [activity] => meal
+                    [notes] => Damn dog is HUNGRY!!!
+                )
+
+        )
+
+    [2016-08-12] => Array
+        (
+            [10:57:51] => Array
+                (
+                    [activity] => walk
+                    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+                )
+
+            [10:57:28] => Array
+                (
+                    [activity] => walk
+                    [notes] => OOps...she had to poop, too!
+                )
+
+            [10:56:52] => Array
+                (
+                    [activity] => walk
+                    [notes] => Man, this dog pees a lot, doesn't she?
+                )
+
+            [10:27:55] => Array
+                (
+                    [activity] => walk
+                    [notes] => What....a.....beagle.
+                )
+
+        )
+
 )
 
-[05-Sep-2016 01:11:31 America/Chicago] Account: Array
+[06-Sep-2016 06:58:17 America/Chicago] retArray: Array
 (
-    [username] => Flirzel Kwerp
-    [eMail] => flirzel@kwerp.com
-    [language] => 2
-    [ql_num] => 7
-    [ql_ord] => 1
+    [2016-08-12] => Array
+        (
+            [10:27:55] => Array
+                (
+                    [activity] => walk
+                    [notes] => What....a.....beagle.
+                )
+
+            [10:56:52] => Array
+                (
+                    [activity] => walk
+                    [notes] => Man, this dog pees a lot, doesn't she?
+                )
+
+            [10:57:28] => Array
+                (
+                    [activity] => walk
+                    [notes] => OOps...she had to poop, too!
+                )
+
+            [10:57:51] => Array
+                (
+                    [activity] => walk
+                    [notes] => I'm thinking Ruthie needs to reduce her fiber intake.
+                )
+
+        )
+
+    [2016-08-19] => Array
+        (
+            [13:59:57] => Array
+                (
+                    [activity] => meal
+                    [notes] => Damn dog is HUNGRY!!!
+                )
+
+            [22:41:57] => Array
+                (
+                    [activity] => treat
+                    [notes] => 
+                )
+
+        )
+
+    [2016-08-21] => Array
+        (
+            [07:40:12] => Array
+                (
+                    [activity] => med
+                    [notes] => 
+                )
+
+        )
+
 )
 
-[05-Sep-2016 01:22:20 America/Chicago] http://local.logthedog.com/
-[05-Sep-2016 01:22:42 America/Chicago] http://local.logthedog.com/
-[Mon Sep 05 09:14:44.329679 2016] [:error] [pid 702] [client 127.0.0.1:49330] http://local.logthedog.com/
-[Mon Sep 05 09:22:45.960621 2016] [:error] [pid 702] [client 127.0.0.1:49417] http://local.logthedog.com/
-[Mon Sep 05 09:23:02.795813 2016] [:error] [pid 697] [client 127.0.0.1:49424] http://local.logthedog.com/, referer: http://local.logthedog.com/home/main_menu
-[Mon Sep 05 09:25:09.964036 2016] [:error] [pid 700] [client 127.0.0.1:49437] http://local.logthedog.com/, referer: http://local.logthedog.com/index.php/home/main_menu
-[Mon Sep 05 09:28:06.560760 2016] [:error] [pid 215] [client 127.0.0.1:49465] http://local.logthedog.com/, referer: http://local.logthedog.com/home/main_menu
