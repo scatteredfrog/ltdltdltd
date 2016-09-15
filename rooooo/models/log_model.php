@@ -4,6 +4,15 @@
         function __construct() {
             parent::__construct();
         }
+        
+        private function _checkCaretaker($dogID, $email) {
+            $retArray = array();
+            $this->db->select('dogID,caretakerEmail');
+            $this->db->from('LTDtbCaretaker');
+            $this->db->where(array('dogID' => $dogID, 'caretakerEmail' => $email));
+            $query = $this->db->get();
+            return ($query->num_rows() < 1);
+        }
 
         public function addDog($dog) {
             $success = false;
@@ -56,9 +65,11 @@
                 );
 
                 if ($this->db->insert('LTDtbCaretaker', $insert)) {
-                    $success = true;
+                    $success = $this->db->insert_id();
                 }
             }
+            
+            return $success;
         }
         
         // Retrieve all dogs assigned to a care taker, return names and IDs
@@ -92,6 +103,32 @@
                 }
             }
             return $dogInfo;
+        }
+        
+        public function retrieveCaretakers($dogID, $include_user = false) {
+            $retArray = array();
+            /*
+             * Table: LTDtbCaretaker
+             * Fields: id, dogID, caretakerName, caretakerEmail
+             */
+            $this->db->select('id,dogID,caretakerName,caretakerEmail');
+            $this->db->where('dogID = ' . $dogID);
+            if (!$include_user) {
+                $this->db->where("caretakerEmail != '" . $this->session->userdata('eMail') . "'");
+            }
+            $query = $this->db->get('LTDtbCaretaker');
+            if ($query->num_rows() > 0) {
+                $x = 0;
+                foreach($query->result() as $row) {
+                    $retArray[$x]['id'] = $row->id;
+                    $retArray[$x]['dogID'] = $row->dogID;
+                    $retArray[$x]['caretakerName'] = $row->caretakerName;
+                    $retArray[$x]['caretakerEmail'] = $row->caretakerEmail;
+                    $x++;
+                }
+            }
+            
+            return $retArray;
         }
         
         public function retrieveCaretakerDog($email, $dog_name) {
@@ -358,5 +395,77 @@
             $retArray['success'] = $success;
             return $retArray;
         }
+        
+        public function updateDog($dog) {
+            $success = false;
+            $id = $dog['dog_id'];
+            $update = array(
+                'dogName' => $dog['name'],
+                'gender' => $dog['gender'],
+                'spayneuter' => $dog['neutered'],
+                'breed' => $dog['breed'],
+                'dogWeight' => $dog['weight'],
+                'dogHeight' => $dog['height'],
+                'dogLength' => $dog['length'],
+                'dogColor' => $dog['color'],
+                'dogFeatures' => $dog['features'],
+                'dogBirthdate' => $dog['birth_date'],
+                'dogAltName' => $dog['alt_name'],
+                'dogFear' => $dog['fears'],
+                'dogAfflictions' => $dog['afflictions'],
+                'chipped' => $dog['chipped'],
+                'chip_brand' => $dog['chip_brand'],
+                'chip_id' => $dog['chip_id'],
+                'commands' => $dog['commands']
+            );
+            
+            $this->db->where('dogID', $id);
+            $success = $this->db->update('LTDtbDog', $update);
+            
+            return $success;            
+        }
+        
+        public function deleteCaretaker($id) {
+            $retArray = array();
+            $retArray['success'] = $this->db->delete('LTDtbCaretaker', array('id' => $id));
+            return $retArray;
+        }
 
+        public function updateCaretaker($ct) {
+            $retArray = array();
+            $ctDeets = array(
+                'caretakerName' => $ct['caretakerName'],
+                'caretakerEmail' => $ct['caretakerEmail']
+            );
+            $this->db->where('id', $ct['id']);
+            $retArray['success'] = $this->db->update('LTDtbCaretaker', $ctDeets);
+            
+            return $retArray;
+        }
+        
+        public function insertCaretaker($ct) {
+            $retArray = array();
+            $addArray = array();
+            $success = $this->_checkCaretaker($ct['dogID'], $ct['caretakerEmail']);
+            if ($success) {
+                // Go ahead and add the caretaker
+                $addArray[0] = array(
+                    'email' => $ct['caretakerEmail'],
+                    'name' => $ct['caretakerName']
+                );
+                $success = $this->addCaretaker($addArray, $ct['dogID']);
+                
+                if (!$success) {
+                    $retArray['error'] = 'There was a problem, and that caretaker might not have been added.';
+                } else {
+                    $retArray['insert_id'] = $success;
+                }
+            } else {
+                $retArray['error'] = 'That caretaker has already been designated.';
+            }
+            
+            $retArray['success'] = $success;
+            
+            return $retArray;
+        }
     }

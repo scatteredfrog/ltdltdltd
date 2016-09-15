@@ -14,7 +14,7 @@ body {    background-color: #ffffe4!important; }
     .desktop-only {        display: none !important;    }
 }
 
-#chip_block, #reg_ex_container, #physical_description, #dog_misc { display: none; }
+#chip_block, #caretakers, #physical_description, #dog_misc { display: none; }
 #dog_registry a { cursor: pointer; }
 .menuAnchor { color: #000; }
 
@@ -75,8 +75,7 @@ body {    background-color: #ffffe4!important; }
     left: 0.04em;
 }
 
-.modal.fade .modal-dialog 
-{
+.modal.fade .modal-dialog {
     -moz-transition: none !important;
     -o-transition: none !important;
     -webkit-transition: none !important;
@@ -155,7 +154,39 @@ body {    background-color: #ffffe4!important; }
     padding-top: 3px;
 }
 
+#designated_edit .container {
+    border-radius: 5px;
+    border-color: #000;
+    border-width: 1px;
+    border-style: solid;
+    display: none;
+    background-color: #ccc;
+}
+
+#designated_edit .row {
+    border-color: #000;
+    border-width: 1px;
+    border-style: solid;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+#designated_edit .container .row {
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
 #create_account h1 {    font-size: 24px!important; }
 .oddReg { background-color: #ffffff; }
 .pointer { cursor: pointer; }
 #ql_num { width: 50px; }
+#register_the_dog, #change_the_dog { display: none; }
+.add-dog, .edit-dog { display: none;}
+.pad-right-20 { padding-right: 20px; }
+.pad-bot-10 { padding-bottom: 10px; }
+.pad-left-20 { padding-left: 20px; }
+.font-size-12 { font-size: 12px; }
+.font-size-16 { font-size: 16px; }
+.yella { background-color: #ffff42; }
+.dark-red { color: #a00; }
+.italic { font-style: italic; }

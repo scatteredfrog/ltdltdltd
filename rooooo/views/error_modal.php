@@ -41,7 +41,7 @@
                 <h4 id="ltd_dual_options_modal_subheader"></h4>
             </div>
             <div class="modal-footer">
-                <button id="ltd_dual_options_left_button" class="btn" data-dismiss="modal"></button>
+                <button id="ltd_dual_options_left_button" class="btn pull-left" data-dismiss="modal"></button>
                 <button id="ltd_dual_options_right_button" class="btn btn-default"></button>
             </div>
         </div>

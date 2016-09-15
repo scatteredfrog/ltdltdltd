@@ -63,16 +63,13 @@ function chipClick() {
     }
 }
 
-function additionalDetails() {
-    $('#reg_ex_container').show();
-    $('#more_deets').hide();
-}
 
 function addDesignee() {
     var html_bef = '<div class="col-xs-10 bottom5 caretaker">';
     html_bef += '<input type="text" class="careName" placeholder="Caretaker\'s name" /> ';
     html_bef += '<input type="email" class="careEmail" placeholder="Caretaker\'s e-mail" />';
-    html_bef += '<input type="button" value="Delete" class="deleteCt" />';
+    html_bef += '<input type="button" value="Add This Caretaker" onclick="addCaretaker();" />';
+    html_bef += '<input type="button" value="cancel" class="deleteCt" />';
     html_bef += '</div>';
     $('#desspace').before(html_bef);
     if ($('#designate').val() === 'Designate') {
@@ -81,7 +78,11 @@ function addDesignee() {
 }
 
 function reveal(section) {
-    $('#' + section).show();
+    if ($('#' + section).css('display') === 'none') {
+        $('#' + section).show();
+    } else {
+        $('#' + section).hide();
+    }
 }
 
 function registerDog() {
@@ -118,13 +119,14 @@ function registerDog() {
         chip_id: $('#chip_id').val(),
         caretakers: caretakers,
         'csrf_test_name' : $('[name=csrf_test_name]').val(),
-        confirm: 0
+        confirm: 0,
+        update: 0
     };
     
     $.post('/index.php/log/register_a_dog', register_data, function(data) {
         if (data['success']) {
             // dog successfully registered
-            dogRegistered($('#dog_name').val());
+            dogRegistered($('#dog_name').val(), false);
         } else if (data['error'].indexOf('Do you want to add this dog anyway') > 0) {
             $('#ltd_dual_options_modal_subheader').html(data['error']);
             $('#ltd_dual_options_left_button').html('No');
@@ -149,10 +151,17 @@ function registerDog() {
 
 $(document).on('click', '.deleteCt', function() {
     $(this).parent().remove();
-});    
+});
 
-function dogRegistered(name) {
-    $('#ltd_confirm_modal_subheader').html(name + ' has been registered.');
+function dogRegistered(name, is_update) {
+    var dt;
+    if (is_update) {
+        dt = "'s details have been changed.";
+    } else {
+        dt = " has been registered.";
+    }
+    
+    $('#ltd_confirm_modal_subheader').html(name + dt);
     $('#ltd_confirm_modal').modal('show');
     $('#ltd_confirm_modal_ok').on('click', function() {
         location.href = '/';
@@ -567,7 +576,17 @@ function updatePassword(id) {
 }
 
 function selectDog() {
-    populateDog($('#dog_choice').val())
+    if ($('#dog_choice').val() === 'new') {
+        resetRegistry();
+        $('#dog_registry').css('display', 'block');
+        $('.edit-dog').css('display', 'none');
+        $('.add-dog').css('display', 'inline');
+        return;
+    } else {
+        $('.edit-dog').css('display', 'inline');
+        $('.add-dog').css('display', 'none');
+    }
+    populateDog($('#dog_choice').val());
 }
 
 function populateDog(idx) {
@@ -576,6 +595,7 @@ function populateDog(idx) {
         'csrf_test_name' : $('[name=csrf_test_name]').val(),
     };
     $.post('/log/popDogDeets', post_vars, function(data) {
+        resetRegistry();
         if (typeof data.dogID !== 'undefined') {
             // DO STUFF
             $('#dog_id').val(data.dogID);
@@ -607,6 +627,280 @@ function populateDog(idx) {
             }
             
             $('#breed').val(data.breed);
+            $('#color').val(data.dogColor);
+            $("#features").val(data.dogFeatures);
+            
+            if (data.dogBirthdate != '' && data.dogBirthdate !== null) {
+                var birthdate = data.dogBirthdate.split(' ');
+                if (birthdate[0] === 'Approx.') {
+                    if (birthdate.length === 3) {
+                        $('#birth_year').val(birthdate[2]);
+                        $('#birth_month').val(getNumberFromMonth(birthdate[1]));
+                    } else if (birthdate.length === 2) {
+                        $('#birth_year').val(birthdate[1]);
+                    }
+                } else if (birthdate[1].indexOf(',') > -1) {
+                    $('#birth_year').val(birthdate[2]);
+                    $('#birth_month').val(getNumberFromMonth(birthdate[0]));
+                    var birthday = birthdate[1].split(',');
+                    $('#birth_date').val(birthday[0]);
+                }
+            }
+            
+            $('#alt_name').val(data.dogAltName);
+            $('#afflictions').val(data.dogAfflictions);
+            $('#fears').val(data.dogFear);
+            $('#commands').val(data.commands);
+            
+            if (data.chipped == '1') {
+                $('#is_chipped').prop('checked', true);
+                $('#chip_block').css('display', 'block');
+                $('#chip_brand').val(data.chip_brand);
+                $('#chip_id').val(data.chip_id);
+            }
+            
+            // get caretakers
+            var ct_data = { 
+                'dog_id' : data.dogID,
+                'csrf_test_name' : $('[name=csrf_test_name]').val()
+            }; 
+            $.post('/log/getCaretakers', ct_data, function(ct_stuff) {
+                var ctl = ct_stuff.length;
+                var html = '';
+                if (ctl > 0) {
+                    $("#designated_edit .container").css('display', 'block');
+                    var y = 0;
+                    for (var x = 0; x < ctl; x++) {
+                        x = parseInt(x);
+                        html += '<div class="row" id="ct_row_' + x + '">';
+                        html += '<input type="hidden" id="ct_id_' + x + '" value="' + ct_stuff[x].id + '" />';
+                        html += '<div class="col-xs-3">';
+                        html += '<span id="ctName' + x + '">' + ct_stuff[x].caretakerName + '</span>';
+                        html += '</div>';
+                        html += '<div class="col-xs-4">';
+                        html += '<span class="col-xs-10" id="ctEmail' + x + '">' + ct_stuff[x].caretakerEmail + '</span>'
+                        html += '</div>';
+                        html += '<div class="col-xs-4">';
+                        html += '<input class="pull-right" type="button" value="Update" onclick="updateCt(' + x + ');" />';
+                        html += '</div>';
+                        html += '</div>';
+                        y = x;
+                    }
+                    $('#designated_edit .container').append(html);
+                    $('#ct_row_'+y).css('border-bottom', 0);
+                }
+            }, 'json');
+            $('select[id!=dog_choice]').trigger('change');  
+            showRegistryButton();
         }
     }, 'json');
+}
+
+function getNumberFromMonth(monthWord) {
+    var month = {
+        'January' : '1',
+        'February' : '2',
+        'March' : '3',
+        'April' : '4',
+        'May' : '5',
+        'June' : '6',
+        'July' : '7',
+        'August' : '8',
+        'September' : '9',
+        'October' : '10',
+        'November' : '11',
+        'December' : '12'
+    };
+    return month[monthWord];
+}
+
+function showRegistryButton() {
+    if ($('#dog_id').val() != '') {
+        $('#change_the_dog').css('display', 'block');
+    } else {
+        $('#register_the_dog').css('display', 'block');
+    }
+}
+
+function resetRegistry(inc_dog_choice) {
+    var csrf = $('[name=csrf_test_name]').val();
+    // Reset the dropdowns
+    $('select').each(function() {
+        var id = '#' + $(this).attr('id');
+        if (id !== '#dog_choice' || inc_dog_choice) {
+            $(id).val($(id+' option:first').val());
+        }
+    });
+    
+    // Reset the input boxes
+    $('input[type!=button]').val('');
+    
+    // Reset the checkboxes
+    $('input[type=checkbox]').prop('checked', false);
+    
+    // Reset the caretakers
+    $('#designated_edit .container').empty().css('display','none');    
+    
+    // Maintain the CSRF contents
+    $('[name=csrf_test_name]').val(csrf);
+    return;
+}
+
+function addCaretaker() {
+    $('#ct_add_dogID').val($('#dog_id').val());
+    $('#ct_add_modal').modal('show');
+    
+    $('#ct_add_right_button').on('click', function(e) {
+        e.preventDefault();
+        var post_vars = {
+            csrf_test_name : $('[name=csrf_test_name]').val(),
+            dogID : $('#ct_add_dogID').val(),
+            caretakerName : $('#ct_add_name').val(),
+            caretakerEmail: $('#ct_add_email').val()
+        };
+        $.post('/log/newCaretaker', post_vars, function(data) {
+            $('#ct_add_modal').modal('hide');
+            setTimeout(function() {
+                if (data.success) {
+                    var num_rows = $('[id^=ct_row_]').length;
+                    var html = '<div class="row" id="ct_row_' + num_rows + '">';
+                    html += '<input id="ct_id_' + num_rows + '" type="hidden" value="' + data.insert_id + '" />' ;
+                    html += '<div class="col-xs-3">';
+                    html += '<span id="ctName' + num_rows + '">' + post_vars.caretakerName + '</span>';
+                    html += '</div>';
+                    html += '<div class="col-xs-4">';
+                    html += '<span id="ctEmail' + num_rows + '" class="col-xs-10">' + post_vars.caretakerEmail + '</span>';
+                    html += '</div>';
+                    html += '<div class="col-xs-4">';
+                    html += '<input class="pull-right" type="button" onclick="updateCt(' + num_rows + ');" value="Update" />';
+                    html += '</div>';
+                    html += '</div>';
+                    alert(num_rows);
+                    $('#designated_edit .container').append(html);
+                    $('#ct_row_' + (num_rows-1)).css('border-bottom-width', '1px');
+                    $('#ct_row_' + (num_rows-1)).css('border-bottom-color', '#000');
+                    $('#ct_row_' + (num_rows-1)).css('border-bottom-style', 'solid');
+                    $('#ct_row_' + num_rows).css('border-bottom', 0);
+                    $('#ltd_confirm_modal_subheader').html('Caretaker has been added!');
+                    $('#ltd_confirm_modal').modal('show');
+                } else {
+                    if (data.error) {
+                        $('#ltd_error_modal_text').html(data.error);
+                        $('#ltd_error_modal').modal('show');
+                    }
+                }
+            }, 500);
+        }, 'json');
+    });
+}
+
+function changeDog() {
+    var neutered = $('#neutered').prop('checked') ? 1 : 0;
+    var chipped = $('#is_chipped').prop('checked') ? 1 : 0;
+
+    var post_vars = {
+        dog_id: $('#dog_id').val(),
+        dog_name : $('#dog_name').val(),
+        dog_weight: $('#weight').val(),
+        dog_length: $('#length').val(),
+        dog_height: $('#height').val(),
+        dog_gender: $('#dog_gender').val(),
+        neutered: neutered,
+        breed: $('#breed').val(),
+        dog_color: $('#color').val(),
+        dog_features: $('#features').val(),
+        dog_bmonth: $('#birth_month').val(),
+        dog_bdate: $('#birth_date').val(),
+        dog_byear: $('#birth_year').val(),
+        dog_altName: $('#alt_name').val(),
+        dog_afflictions: $('#afflitions').val(),
+        dog_fears: $('#fears').val(),
+        commands: $('#commands').val(),
+        chipped: chipped,
+        chip_brand: $('#chip_brand').val(),
+        chip_id: $('#chip_id').val(),
+        confirm: 1,
+        csrf_test_name : $('[name=csrf_test_name]').val(),
+        update: 1
+    };
+    
+    $.post('/log/register_a_dog', post_vars, function(data) {
+        if (data.success) {
+            dogRegistered(post_vars.dog_name, true);
+        } else {
+            $('#ltd_error_modal_text').html("There was a problem and " + post_vars.dog_name + "'s info might not have updated.");
+            $('#ltd_error_modal').modal('show');
+        }
+    },'json');
+}
+
+function deleteCt() {
+    var post_vars = {
+        id: $('#ct_edit_id').val(),
+        csrf_test_name : $('[name=csrf_test_name]').val(),
+    };
+    $.post('/log/removeCaretaker', post_vars, function(data) {
+        $('#ct_edit_modal').modal('hide');
+        setTimeout(function() {
+            if (data.success) {
+                $($('#row_to_delete').val()).remove();
+                var r = $('[id^=ct_row_]').length;
+                if (r === 0) {
+                    $('#designated_edit .container').css('display', 'none');
+                } else {
+                    $('#ct_row_' + (r-1)).css('border-bottom', 0);
+                }
+                $('#ltd_confirm_modal_subheader').html('Caretaker successfully removed!');
+                $('#ltd_confirm_modal').modal('show');
+            } else {
+                $('#ltd_error_modal_text').html("There was a problem; that caretaker may not have been removed.");
+                $('#ltd_error_modal').modal('show');
+            }
+        }, 500);
+    }, 'json');
+}
+
+function updateCt(x) {
+    var id = $('#ct_id_' + x).val();
+    var caretakerName = $('#ctName' + x).text();
+    var caretakerEmail = $('#ctEmail' + x).text();
+
+    $('#ct_edit_id').val(id);
+    $('#ct_name').val(caretakerName);
+    $('#ct_email').val(caretakerEmail);
+    $('#ct_edit_modal').modal('show');
+    $("#row_to_delete").val('#' + 'ct_row_' + x);
+    $('#ct_right_button').on('click', function(e) {
+        e.preventDefault();
+        var post_vars = {
+            id : $('#ct_edit_id').val(),
+            caretakerName : $('#ct_name').val(),
+            caretakerEmail: $('#ct_email').val(),
+            csrf_test_name : $('[name=csrf_test_name]').val()
+        };
+        $.post('/log/editCaretaker', post_vars, function(data) {
+            $('#ct_edit_modal').modal('hide');
+            setTimeout(function() {
+                if (data.success) {
+                    $('#ltd_confirm_modal_subheader').html('Update successful!');
+                    $('#ltd_confirm_modal').modal('show');
+                    $('#ctName' + x).text(post_vars.caretakerName);
+                    $('#ctEmail' + x).text(post_vars.caretakerEmail);
+                } else {
+                    $('#ltd_error_modal_text').html("There was a problem; that caretaker's details may not have been updated.");
+                    $('#ltd_error_modal').modal('show');
+                }
+            }, 500);
+        }, 'json');
+    });
+}
+
+function validateEmail(email) {
+    var error = false;
+    var email_regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!email_regex.test(email)) {
+        error = 'Please provide a valid e-mail address.';
+    }
+    
+    return error;
 }

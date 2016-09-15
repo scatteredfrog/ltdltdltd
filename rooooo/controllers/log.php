@@ -194,7 +194,8 @@ class Log extends CI_Controller {
             'chip_brand' => $this->input->post('chip_brand'),
             'chip_id' => $this->input->post('chip_id'),
             'birth_date' => $birth_date,
-            'confirm' => $this->input->post('confirm')
+            'confirm' => $this->input->post('confirm'),
+            'update' => $this->input->post('update')
         );
 
         if (strlen($dog['name']) < 1) {
@@ -235,12 +236,43 @@ class Log extends CI_Controller {
         }
 
         if ($success) {
-            $dog_added = $this->log_model->addDog($dog);
-
-            if ($dog_added['success']) {
+            if ($dog['update']) {
+                $dog['dog_id'] = $this->input->post('dog_id', TRUE);
+                $dog_added = $this->log_model->updateDog($dog);
+                if ($dog_added) {
+                    // update the dogs in the session
+                    foreach ($_SESSION['dogs'] as $k => $v) {
+                        if ($v['dogID'] === $dog['dog_id']) {
+                            $_SESSION['dogs'][$k]['dogName'] = $dog['name'];
+                            $_SESSION['dogs'][$k]['gender'] = $dog['gender'];
+                            $_SESSION['dogs'][$k]['spayneuter'] = $dog['neutered'];
+                            $_SESSION['dogs'][$k]['breed'] = $dog['breed'];
+                            $_SESSION['dogs'][$k]['dogWeight'] = $dog['weight'];
+                            $_SESSION['dogs'][$k]['dogLength'] = $dog['length'];
+                            $_SESSION['dogs'][$k]['dogHeight'] = $dog['height'];
+                            $_SESSION['dogs'][$k]['dogColor'] = $dog['color'];
+                            $_SESSION['dogs'][$k]['dogFeatures'] = $dog['features'];
+                            $_SESSION['dogs'][$k]['dogAltName'] = $dog['alt_name'];
+                            $_SESSION['dogs'][$k]['dogBirthdate'] = $dog['birth_date'];
+                            $_SESSION['dogs'][$k]['dogFear'] = $dog['fears'];
+                            $_SESSION['dogs'][$k]['dogAfflictions'] = $dog['afflictions'];
+                            $_SESSION['dogs'][$k]['chipped'] = $dog['chipped'];
+                            $_SESSION['dogs'][$k]['chip_brand'] = $dog['chip_brand'];
+                            $_SESSION['dogs'][$k]['chip_id'] = $dog['chip_id'];
+                            $_SESSION['dogs'][$k]['commands'] = $dog['commands'];
+                            break;
+                        } else {
+                            continue;
+                        }
+                    }
+                }
+            } else {
+                $dog_added = $this->log_model->addDog($dog);
+            }
+            if ($dog_added['success'] && !$dog['update']) {
                 if (count($caretakers > 0)) {
                     $ct_added = $this->log_model->addCaretaker($caretakers, $dog_added['insert_id']);
-                }
+                }   
             }
         }
         
@@ -538,6 +570,46 @@ class Log extends CI_Controller {
     public function popDogDeets() {
         $idx = $this->input->post('idx', TRUE);
         echo json_encode($_SESSION['dogs'][$idx]);
+        exit();
+    }
+    
+    public function getCaretakers() {
+        $dog_id = $this->input->post('dog_id', TRUE);
+        $this->load->model('log_model');
+        $caretakers = $this->log_model->retrieveCaretakers($dog_id);
+        echo json_encode($caretakers);
+        exit();
+    }
+    
+    public function removeCaretaker() {
+        $id = $this->input->post('id', TRUE);
+        $this->load->model('log_model');
+        $success = $this->log_model->deleteCaretaker($id);
+        echo json_encode($success);
+        exit();
+    }
+    
+    public function editCaretaker() {
+        $ct = array(
+            'id' => $this->input->post('id', TRUE),
+            'caretakerName' => $this->input->post('caretakerName', TRUE),
+            'caretakerEmail' => $this->input->post('caretakerEmail', TRUE)
+        );
+        $this->load->model('log_model');
+        $success = $this->log_model->updateCaretaker($ct);
+        echo json_encode($success);
+        exit();
+    }
+    
+    function newCaretaker() {
+        $ct = array(
+            'dogID' => $this->input->post('dogID', TRUE),
+            'caretakerName' => $this->input->post('caretakerName', TRUE),
+            'caretakerEmail' => $this->input->post('caretakerEmail', TRUE)
+        );
+        $this->load->model('log_model');
+        $success = $this->log_model->insertCaretaker($ct);
+        echo json_encode($success);
         exit();
     }
 }

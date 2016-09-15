@@ -18,14 +18,9 @@
                 <input type="text" class="col-xs-10" id="dog_name" name="dog_name" placeholder="Name" />
             </div>
         </div>
-        <div class="row" id="more_deets">
-            <div class="col-xs-12 bottom5 top5">
-                <a onclick="additionalDetails();">Want to add more details about your dog? Click here.</a>
-            </div>
-        </div>
         <div id="reg_ex_container">
             <div class="row">
-                <a onclick="reveal('physical_description');"><h4>Add physical description...</h4></a>
+                <a onclick="reveal('physical_description');"><h4><span class="add-dog">Add p</span><span class="edit-dog">P</span>hysical description...</h4></a>
             </div>
             <div id="physical_description">
                 <div class="row">
@@ -73,7 +68,7 @@
                 </div>
             </div>
             <div class="row">
-                <a onclick="reveal('dog_misc');"><h4>Add miscellaneous info (birthdate, chipping, etc.)...</h4></a>
+                <a onclick="reveal('dog_misc');"><h4><span class="add-dog">Add m</span><span class="edit-dog">M</span>iscellaneous info (birthdate, chipping, etc.)...</h4></a>
             </div>
             <div id="dog_misc">
                 <div class="row">
@@ -151,26 +146,101 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row" id="designation_row">
-            <div class="col-xs-10 bottom5 top5">
-                You will be automatically designated as this dog's caretaker. If you would like to 
-                designate others (family members, dog walkers, etc.) to take care of your dog,
-                please click the "Designate" button -- and be sure to have their e-mail addresses handy!
-                (You may designate caretakers later if you wish.)<br />
-                <input class="top5" type="button" id="designate" value="Designate" onclick="addDesignee();" /><br />
+            <div class="row">
+                <a onclick="reveal('caretakers');"><h4>Designated caretakers...</h4></a>
+            </div>
+            <div id="caretakers">
+                <div class="row edit-dog" id="designated_edit">
+                    <div class="container col-xs-10">
+                        
+                    </div>
+                </div>
+                <div class="row add-dog" id="designation_row">
+                    <div class="col-xs-10 bottom5 top5">
+                        You will be automatically designated as this dog's caretaker. If you would like to 
+                        designate others (family members, dog walkers, etc.) to take care of your dog,
+                        please click the "Designate" button -- and be sure to have their e-mail addresses handy!
+                        (You may designate caretakers later if you wish.)<br />
+                        <input class="top5" type="button" id="designate" value="Designate" onclick="addDesignee();" /><br />
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="pad-left-20"><a onclick="addCaretaker();" class="dark-red pointer">
+                            Click here to add a caretaker</a>
+                    </span>
+                </div>
             </div>
             <div id="desspace" class="col-xs-10 bottom5 top5 underscore"></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-10 top5">
-                <button type="button" id="register_the_dog" onclick="registerDog();">
-                    Register Dog
-                </button>
+            <div class="row">
+                <div class="col-xs-10 top5">
+                    <button type="button" id="register_the_dog" onclick="registerDog();">
+                        Register Dog
+                    </button>
+                    <button type="button" id="change_the_dog" onclick="changeDog();">
+                        Save Changes
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
+    <div id="ct_edit_modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header yella">
+                    <h4 id='ct_edit_modal_header_text' class="modal-title">Edit / Remove Caretaker</h4>
+                </div>
+                <div class="modal-body" id="ct_details">
+                    <input type="hidden" id="ct_edit_id" />
+                    <div class="row pad-bot-10">
+                        <span class="pull-right pad-right-20 font-size-12">
+                            <a class="pointer dark-red" onclick="deleteCt();">Remove caretaker</a>
+                        </span>
+                    </div>
+                    <div class="row pad-bot-10">
+                        <input type="hidden" id="row_to_delete" />
+                        <span class="col-xs-4 bold font-size-16">Caretaker's name:</span>
+                        <span class="col-xs-6"><input class="col-xs-10" type="text" id="ct_name" /></span>
+                    </div>
+                    <div class="row">
+                        <span class="col-xs-4 font-size-16 bold">Caretaker's e-mail:</span>
+                        <span class="col-xs-6"><input class="col-xs-10" type="text" id="ct_email" /></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="ct_left_button" class="btn pull-left" data-dismiss="modal">Cancel</button>
+                    <button id="ct_right_button" class="btn btn-default">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ct_add_modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header yella">
+                    <h4 id='ct_add_modal_header_text' class="modal-title">Add a Caretaker</h4>
+                </div>
+                <div class="modal-body" id="ct_add_details">
+                    <input type="hidden" id="ct_add_dogID" />
+                    <div class="row pad-bot-10">
+                        <span class="col-xs-4 bold font-size-16">Caretaker's name:</span>
+                        <span class="col-xs-6"><input class="col-xs-10" type="text" id="ct_add_name" /></span>
+                    </div>
+                    <div class="row">
+                        <span class="col-xs-4 font-size-16 bold">Caretaker's e-mail<span class="super">*</span>:</span>
+                        <span class="col-xs-6"><input class="col-xs-10" type="text" id="ct_add_email" /></span>
+                    </div>
+                    <div class="row">
+                        <span class="dark-red italic font-size-12 pad-left-20"><span class="super">*</span>required</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="ct_add_left_button" class="btn pull-left" data-dismiss="modal">Cancel</button>
+                    <button id="ct_add_right_button" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <?
     for ($x = 0; $x < 5; $x++) {
         echo '&nbsp;<br />';
