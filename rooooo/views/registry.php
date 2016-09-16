@@ -159,9 +159,8 @@
                     <div class="col-xs-10 bottom5 top5">
                         You will be automatically designated as this dog's caretaker. If you would like to 
                         designate others (family members, dog walkers, etc.) to take care of your dog,
-                        please click the "Designate" button -- and be sure to have their e-mail addresses handy!
+                        please click the link below -- and be sure to have their e-mail addresses handy!
                         (You may designate caretakers later if you wish.)<br />
-                        <input class="top5" type="button" id="designate" value="Designate" onclick="addDesignee();" /><br />
                     </div>
                 </div>
                 <div class="row">

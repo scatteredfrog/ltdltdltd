@@ -685,9 +685,12 @@ function populateDog(idx) {
                         html += '</div>';
                         html += '</div>';
                         y = x;
-                    }
+                    } 
                     $('#designated_edit .container').append(html);
                     $('#ct_row_'+y).css('border-bottom', 0);
+                } else {
+                        $('#designated_edit').hide();
+                        $('#designation_row').show();
                 }
             }, 'json');
             $('select[id!=dog_choice]').trigger('change');  
@@ -762,6 +765,8 @@ function addCaretaker() {
             $('#ct_add_modal').modal('hide');
             setTimeout(function() {
                 if (data.success) {
+                    $('#designated_edit').show();
+                    $('#designated_edit .container').show();
                     var num_rows = $('[id^=ct_row_]').length;
                     var html = '<div class="row" id="ct_row_' + num_rows + '">';
                     html += '<input id="ct_id_' + num_rows + '" type="hidden" value="' + data.insert_id + '" />' ;
@@ -775,7 +780,6 @@ function addCaretaker() {
                     html += '<input class="pull-right" type="button" onclick="updateCt(' + num_rows + ');" value="Update" />';
                     html += '</div>';
                     html += '</div>';
-                    alert(num_rows);
                     $('#designated_edit .container').append(html);
                     $('#ct_row_' + (num_rows-1)).css('border-bottom-width', '1px');
                     $('#ct_row_' + (num_rows-1)).css('border-bottom-color', '#000');

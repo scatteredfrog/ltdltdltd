@@ -2,7 +2,7 @@
 <div class="container">
 <?php
 
-if (count($_SESSION['dogs']) > 1) {
+if (isset($_SESSION['dogs'])) {
 ?>
     <style>
         #dog_registry { display: none; }
@@ -18,6 +18,16 @@ if (count($_SESSION['dogs']) > 1) {
         <option value="new">Add a dog</option>
     </select>
     <input type="button" onclick="selectDog();" value="Select" />
+<?
+} else {
+?>
+    <input type="hidden" id="dog_choice" value="new" />
+    <script>
+        $(document).ready(function () {
+            $('#register_the_dog').css('display', 'block');
+            selectDog();        
+        });
+    </script>
 <?
 }
 ?>

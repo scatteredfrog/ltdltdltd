@@ -30,9 +30,7 @@ class Log extends CI_Controller {
             header('Location: /');
         }
         $this->load->helper('form');
-        if (isset($_SESSION['dogs'])) {
-            $this->load->view('edit_registry');
-        }
+        $this->load->view('edit_registry');
         $this->load->view('registry');
         $this->load->view('error_modal');
     }
