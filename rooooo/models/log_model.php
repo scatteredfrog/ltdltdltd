@@ -105,12 +105,28 @@
             return $dogInfo;
         }
         
+        public function retrieveMeds($dogID) {
+            $retArray = array();
+            $this->db->select('id, dogID, medName, medNotes, withMeal, dosage');
+            $this->db->where('dogID = ' . $dogID);
+            $query = $this->db->get('LTDtbMedicine');
+            if ($query->num_rows() > 0) {
+                $x = 0;
+                foreach($query->result() as $row) {
+                    $retArray[$x]['id'] = $row->id;
+                    $retArray[$x]['dogID'] = $row->dogID;
+                    $retArray[$x]['medName'] = $row->medName;
+                    $retArray[$x]['medNotes'] = $row->medNotes;
+                    $retArray[$x]['withMeal'] = $row->withMeal;
+                    $retArray[$x]['dosage'] = $row->dosage;
+                    $x++;
+                }
+            }
+            return $retArray;
+        }
+        
         public function retrieveCaretakers($dogID, $include_user = false) {
             $retArray = array();
-            /*
-             * Table: LTDtbCaretaker
-             * Fields: id, dogID, caretakerName, caretakerEmail
-             */
             $this->db->select('id,dogID,caretakerName,caretakerEmail');
             $this->db->where('dogID = ' . $dogID);
             if (!$include_user) {
@@ -431,6 +447,23 @@
             return $retArray;
         }
 
+        public function deleteMed($id) {
+            $retArray = array();
+            $retArray['success'] = $this->db->delete('LTDtbMedicine', array('id' => $id));
+            return $retArray;
+        }
+        
+        public function updateMed($med) {
+            $retArray = array();
+            $id = $med['id'];
+            
+            unset($med['id']);
+            $this->db->where('id', $id);
+            $retArray['success'] = $this->db->update('LTDtbMedicine', $med);
+            
+            return $retArray;
+        }
+        
         public function updateCaretaker($ct) {
             $retArray = array();
             $ctDeets = array(
@@ -456,7 +489,7 @@
                 $success = $this->addCaretaker($addArray, $ct['dogID']);
                 
                 if (!$success) {
-                    $retArray['error'] = 'There was a problem, and that caretaker might not have been added.';
+                    $retArray['error'] = 'There was a problem, and this caretaker might not have been added.';
                 } else {
                     $retArray['insert_id'] = $success;
                 }
@@ -466,6 +499,20 @@
             
             $retArray['success'] = $success;
             
+            return $retArray;
+        }
+
+        public function insertMedicine($med) {
+            $retArray = array();
+            if ($this->db->insert('LTDtbMedicine', $med)) {
+                $success = $this->db->insert_id();
+            }
+            if (!$success) {
+                $retArray['error'] = 'There was a problem, and this medicine might not have been added.';
+            } else {
+                $retArray['insert_id'] = $success;
+            }
+            $retArray['success'] = $success;
             return $retArray;
         }
     }

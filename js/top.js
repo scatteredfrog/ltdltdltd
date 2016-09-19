@@ -63,20 +63,6 @@ function chipClick() {
     }
 }
 
-
-function addDesignee() {
-    var html_bef = '<div class="col-xs-10 bottom5 caretaker">';
-    html_bef += '<input type="text" class="careName" placeholder="Caretaker\'s name" /> ';
-    html_bef += '<input type="email" class="careEmail" placeholder="Caretaker\'s e-mail" />';
-    html_bef += '<input type="button" value="Add This Caretaker" onclick="addCaretaker();" />';
-    html_bef += '<input type="button" value="cancel" class="deleteCt" />';
-    html_bef += '</div>';
-    $('#desspace').before(html_bef);
-    if ($('#designate').val() === 'Designate') {
-        $('#designate').val('Designate another');
-    }
-}
-
 function reveal(section) {
     if ($('#' + section).css('display') === 'none') {
         $('#' + section).show();
@@ -664,11 +650,50 @@ function populateDog(idx) {
                 'dog_id' : data.dogID,
                 'csrf_test_name' : $('[name=csrf_test_name]').val()
             }; 
+            
+            // get meds
+            $.post('/log/getMeds', ct_data, function(med_data) {
+                var mdl = med_data.length;
+                var mhtml = '';
+                if (mdl > 0) {
+                    $('#medicine_edit .container').css('display', 'block');
+                    var b = 0;
+                    for (var a = 0; a < mdl; a++) {
+                        a = parseInt(a);
+                        mhtml += '<div class="row med-row" id="med_row_' + a + '">';
+                        mhtml += '<input type="hidden" id="med_id_' + a + '"value="' + med_data[a].id + '" />';
+                        mhtml += '<div class="col-xs-3">';
+                        mhtml += '<span id="medName' + a + '">' + med_data[a].medName + '</span>';
+                        mhtml += '<span id="mealToggle' + a + '">';
+                        if (med_data[a].withMeal != '0') {
+                            mhtml += ' (w/meal)</span><input type="hidden" id="withMeal' + a + '" value="1" />';
+                        } else {
+                            mhtml += '</span><input type="hidden" id="withMeal' + a + '" value="0" />';
+                        }
+                        mhtml += '</div>';
+                        mhtml += '<div class="col-xs-3">';
+                        mhtml += '<span class="col-xs-10 crunch" id="dosage' + a + '">' + med_data[a].dosage + '</span>';
+                        mhtml += '</div>';
+                        mhtml += '<div class="col-xs-4">';
+                        mhtml += '<span class="col-xs-10 crunch" id="notes' + a + '">' + med_data[a].medNotes + '</span>';
+                        mhtml += '</div>';
+                        mhtml += '<div class="col-xs-2">';
+                        mhtml += '<input class="pull-right" type="button" value="Update" onclick="updateMed(' + a + ');" />';
+                        mhtml += '</div>';
+                        mhtml += '</div>';
+                        b = a;
+                    }
+                    $('#medicine_edit .container').append(mhtml);
+                    $('#med_row_' + b).css('border-bottom', 0);
+                }
+            }, 'json');
+
+            // get caretakers
             $.post('/log/getCaretakers', ct_data, function(ct_stuff) {
                 var ctl = ct_stuff.length;
                 var html = '';
                 if (ctl > 0) {
-                    $("#designated_edit .container").css('display', 'block');
+                    $('#designated_edit .container').css('display', 'block');
                     var y = 0;
                     for (var x = 0; x < ctl; x++) {
                         x = parseInt(x);
@@ -678,7 +703,7 @@ function populateDog(idx) {
                         html += '<span id="ctName' + x + '">' + ct_stuff[x].caretakerName + '</span>';
                         html += '</div>';
                         html += '<div class="col-xs-4">';
-                        html += '<span class="col-xs-10" id="ctEmail' + x + '">' + ct_stuff[x].caretakerEmail + '</span>'
+                        html += '<span class="col-xs-10" id="ctEmail' + x + '">' + ct_stuff[x].caretakerEmail + '</span>';
                         html += '</div>';
                         html += '<div class="col-xs-4">';
                         html += '<input class="pull-right" type="button" value="Update" onclick="updateCt(' + x + ');" />';
@@ -747,6 +772,66 @@ function resetRegistry(inc_dog_choice) {
     // Maintain the CSRF contents
     $('[name=csrf_test_name]').val(csrf);
     return;
+}
+
+function addMedicine() {
+    $('#med_add_dogID').val($('#dog_id').val());
+    $('#med_add_modal').modal('show');
+    
+    $('#med_add_right_button').on('click', function(e) {
+        e.preventDefault();
+        var post_vars = {
+            csrf_test_name : $('[name=csrf_test_name]').val(),
+            dogID : $('#med_add_dogID').val(),
+            medName: $('#med_add_name').val(),
+            dosage: $('#med_add_dosage').val(),
+            medNotes: $('#med_add_notes').val(),
+            withMeal: $('#med_add_with_meal').prop('checked') ? 1 : 0
+        };
+        $.post('/log/newMedicine', post_vars, function(data) {
+            $('#med_add_modal').modal('hide');
+            setTimeout(function() {
+                if (data.success) {
+                    $('#medicine_edit').show();
+                    $('#medicine_edit .container').show();
+                    var num_rows = $('[id^=med_row_]').length;
+                    var html = '<div class="row" id="med_row_' + num_rows + '">';
+                    html += '<input id="med_id_' + num_rows + '" type="hidden" value="' + data.insert_id + '" />' ;
+                    html += '<div class="col-xs-3 crunch">';
+                    html += '<span id="medName' + num_rows + '">' + post_vars.medName + '</span>';
+                    html += '<span id="mealToggle' + num_rows + '">';
+                    if (post_vars.withMeal) {
+                        html += ' (w/meal)</span><input type="hidden" id="withMeal' + num_rows + '" value="1" />' ;
+                    } else {
+                        html += '</span><input type="hidden" id="withMeal' + num_rows + '" value="0" />';
+                    }
+                    html += '</div>';
+                    html += '<div class="col-xs-3">';
+                    html += '<span id="dosage' + num_rows + '" class="col-xs-10 crunch">' + post_vars.dosage + '</span>';
+                    html += '</div>';
+                    html += '<div class="col-xs-4">';
+                    html += '<span class="col-xs-10 crunch" id="notes' + num_rows + '">' + post_vars.medNotes + '</span>';
+                    html += '</div>';
+                    html += '<div class="col-xs-2">';
+                    html += '<input class="pull-right" type="button" onclick="updateMed(' + num_rows + ');" value="Update" />';
+                    html += '</div>';
+                    html += '</div>';
+                    $('#medicine_edit .container').append(html);
+                    $('#med_row_' + (num_rows-1)).css('border-bottom-width', '1px');
+                    $('#med_row_' + (num_rows-1)).css('border-bottom-color', '#000');
+                    $('#med_row_' + (num_rows-1)).css('border-bottom-style', 'solid');
+                    $('#med_row_' + num_rows).css('border-bottom', 0);
+                    $('#ltd_confirm_modal_subheader').html('Medicine has been added!');
+                    $('#ltd_confirm_modal').modal('show');
+                } else {
+                    if (data.error) {
+                        $('#ltd_error_modal_text').html(data.error);
+                        $('#ltd_error_modal').modal('show');
+                    }
+                }
+            }, 500);
+        }, 'json');
+    });
 }
 
 function addCaretaker() {
@@ -838,6 +923,33 @@ function changeDog() {
     },'json');
 }
 
+function deleteMed() {
+    var post_vars = {
+        id: $('#med_edit_id').val(),
+        csrf_test_name : $('[name=csrf_test_name]').val(),
+    };
+    
+    $.post('/log/removeMed', post_vars, function(data) {
+        $('#med_edit_modal').modal('hide');
+        setTimeout(function() {
+            if (data.success) {
+                $($('#med_row_to_delete').val()).remove();
+                var r= $('[id^=med_row_]').lenth;
+                if (r === 0) {
+                    $('#medicine_edit .container').css('display', 'none');
+                } else {
+                    $('#med_row_' + (r-1)).css('border-bottom', 0);
+                }
+                $('#ltd_confirm_modal_subheader').html('Medicine successfully removed!');
+                $('#ltd_confirm_modal').modal('show');
+            } else {
+                $('#ltd_error_modal_text').html("There was a problem; that medicine may not have been removed.");
+                $('#ltd_error_modal').modal('show');
+            }
+        }, 500);
+    }, 'json');
+}
+
 function deleteCt() {
     var post_vars = {
         id: $('#ct_edit_id').val(),
@@ -864,6 +976,64 @@ function deleteCt() {
     }, 'json');
 }
 
+function updateMed(x) {
+    var updateData = {
+        id : $('#med_id_' + x).val(),
+        medName : $('#medName' + x).text(),
+        dosage : $('#dosage' + x).text(),
+        withMeal : $('#withMeal' + x).val(),
+        medNotes : $('#notes' + x).text(),
+        dogID : $('#dog_id').val()
+    }
+    $('#med_row_to_delete').val('#med_row_' + x);
+    $('#med_edit_dogID').val(updateData.dogID);
+    $('#med_edit_name').val(updateData.medName);
+    $('#med_edit_dosage').val(updateData.dosage);
+    $('#med_edit_notes').val(updateData.medNotes);
+    $('#med_edit_id').val(updateData.id);
+    
+    if (updateData.withMeal == '1') {
+        $('#med_edit_with_meal').prop('checked', true);
+    } else {
+        $('#med_edit_with_meal').prop('checked', false);
+    }
+        
+    $('#med_edit_modal').modal('show');
+    $('#med_edit_right_button').on('click', function(e) {
+        e.preventDefault();
+        var post_vars = {
+            id : updateData.id,
+            dogID: updateData.dogID,
+            dosage: $('#med_edit_dosage').val(),
+            withMeal: $('#med_edit_with_meal').prop('checked') == true ? '1' : '0',
+            medNotes: $('#med_edit_notes').val(),
+            medName: $('#med_edit_name').val(),
+            csrf_test_name : $('[name=csrf_test_name]').val()
+        };
+        $.post('/log/editMedicine', post_vars, function(data) {
+            $('#med_edit_modal').modal('hide');
+            setTimeout(function() {
+                if (data.success) {
+                    $('#ltd_confirm_modal_subheader').html('Update successful!');
+                    $('#ltd_confirm_modal').modal('show');
+                    $('#medName' + x).text(post_vars.medName);
+                    $('#withMeal' + x).val(post_vars.withMeal);
+                    $('#dosage' + x).text(post_vars.dosage);
+                    $('#notes' + x).text(post_vars.medNotes);
+                    if (post_vars.withMeal == '0') {
+                        $('#mealToggle' + x).text('');
+                    } else {
+                        $('#mealToggle' + x).text(' (w/meal)');
+                    }
+                } else {
+                    $('#ltd_error_modal_text').html("There was a problem; that caretaker's details may not have been updated.");
+                    $('#ltd_error_modal').modal('show');
+                }
+            }, 500);
+        }, 'json');
+    });
+}
+
 function updateCt(x) {
     var id = $('#ct_id_' + x).val();
     var caretakerName = $('#ctName' + x).text();
@@ -873,7 +1043,7 @@ function updateCt(x) {
     $('#ct_name').val(caretakerName);
     $('#ct_email').val(caretakerEmail);
     $('#ct_edit_modal').modal('show');
-    $("#row_to_delete").val('#' + 'ct_row_' + x);
+    $("#row_to_delete").val('#ct_row_' + x);
     $('#ct_right_button').on('click', function(e) {
         e.preventDefault();
         var post_vars = {

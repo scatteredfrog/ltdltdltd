@@ -579,6 +579,14 @@ class Log extends CI_Controller {
         exit();
     }
     
+    public function getMeds() {
+        $dog_id = $this->input->post('dog_id', TRUE);
+        $this->load->model('log_model');
+        $meds = $this->log_model->retrieveMeds($dog_id);
+        echo json_encode($meds);
+        exit();
+    }
+    
     public function removeCaretaker() {
         $id = $this->input->post('id', TRUE);
         $this->load->model('log_model');
@@ -587,6 +595,31 @@ class Log extends CI_Controller {
         exit();
     }
     
+    public function removeMed() {
+        $id = $this->input->post('id', TRUE);
+        $this->load->model('log_model');
+        $success = $this->log_model->deleteMed($id);
+        echo json_encode($success);
+        exit();
+    }
+    
+    public function editMedicine() {
+        $med = array(
+            'id' => $this->input->post('id', TRUE),
+            'medName' => $this->input->post('medName', TRUE),
+            'dogID' => $this->input->post('dogID', TRUE),
+            'dosage' => $this->input->post('dosage', TRUE),
+            'withMeal' => $this->input->post('withMeal', TRUE),
+            'medNotes' => $this->input->post('medNotes', TRUE)
+        );
+        
+        $this->load->model('log_model');
+        $success = $this->log_model->updateMed($med);
+        
+        echo json_encode($success);
+        exit();
+    }
+
     public function editCaretaker() {
         $ct = array(
             'id' => $this->input->post('id', TRUE),
@@ -607,6 +640,20 @@ class Log extends CI_Controller {
         );
         $this->load->model('log_model');
         $success = $this->log_model->insertCaretaker($ct);
+        echo json_encode($success);
+        exit();
+    }
+    
+    function newMedicine() {
+        $med = array (
+            'dogID' => $this->input->post('dogID', TRUE),
+            'medName' => $this->input->post('medName', TRUE),
+            'dosage' => $this->input->post('dosage', TRUE),
+            'withMeal' => $this->input->post('withMeal', TRUE),
+            'medNotes' => $this->input->post('medNotes', TRUE)
+        );
+        $this->load->model('log_model');
+        $success = $this->log_model->insertMedicine($med);
         echo json_encode($success);
         exit();
     }

@@ -14,7 +14,7 @@ body {    background-color: #ffffe4!important; }
     .desktop-only {        display: none !important;    }
 }
 
-#chip_block, #caretakers, #physical_description, #dog_misc { display: none; }
+#chip_block, #caretakers, #physical_description, #dog_misc, #medicine { display: none; }
 #dog_registry a { cursor: pointer; }
 .menuAnchor { color: #000; }
 
@@ -154,7 +154,7 @@ body {    background-color: #ffffe4!important; }
     padding-top: 3px;
 }
 
-#designated_edit .container {
+#designated_edit .container, #medicine_edit .container {
     border-radius: 5px;
     border-color: #000;
     border-width: 1px;
@@ -163,7 +163,7 @@ body {    background-color: #ffffe4!important; }
     background-color: #ccc;
 }
 
-#designated_edit .row {
+#designated_edit .row, #medicine_edit .row {
     border-color: #000;
     border-width: 1px;
     border-style: solid;
@@ -172,16 +172,28 @@ body {    background-color: #ffffe4!important; }
     border-top: 0;
 }
 
-#designated_edit .container .row {
+#designated_edit .container .row, #medicine_edit .container .row {
     padding-top: 5px;
     padding-bottom: 3px;
 }
+
+.crunch {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.med-row { 
+    height: 30px; 
+    font-size: 13px;
+}
+
 #create_account h1 {    font-size: 24px!important; }
 .oddReg { background-color: #ffffff; }
 .pointer { cursor: pointer; }
 #ql_num { width: 50px; }
 #register_the_dog, #change_the_dog { display: none; }
-.add-dog, .edit-dog { display: none;}
+.add-dog, .edit-dog, .add-med { display: none;}
 .pad-right-20 { padding-right: 20px; }
 .pad-bot-10 { padding-bottom: 10px; }
 .pad-left-20 { padding-left: 20px; }
