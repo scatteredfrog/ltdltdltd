@@ -146,10 +146,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="newDog row">
                 <a onclick="reveal('caretakers');"><h4>Designated caretakers...</h4></a>
             </div>
-            <div id="caretakers">
+            <div class="newDog" id="caretakers">
                 <div class="row edit-dog" id="designated_edit">
                     <div class="container col-xs-10">
                         
@@ -157,7 +157,7 @@
                 </div>
                 <div class="row add-dog" id="designation_row">
                     <div class="col-xs-10 bottom5 top5">
-                        You will be automatically designated as this dog's caretaker. If you would like to 
+                        You are automatically designated as this dog's caretaker. If you would like to 
                         designate others (family members, dog walkers, etc.) to take care of your dog,
                         please click the link below -- and be sure to have their e-mail addresses handy!
                         (You may designate caretakers later if you wish.)<br />
@@ -169,10 +169,10 @@
                     </span>
                 </div>
             </div>
-            <div class="row">
+            <div class="newDog row">
                 <a onclick="reveal('medicine');"><h4>Medicine...</h4></a>
             </div>
-            <div id="medicine">
+            <div class="newDog" id="medicine">
                 <div class="row edit-med pad-bot-10" id="medicine_edit">
                     <div class="container col-xs-10">
                         
@@ -255,7 +255,7 @@
             </div>
         </div>
     </div>
-    <div id="med_add_modal" class="modal fade">
+        <div id="med_add_modal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header yella">

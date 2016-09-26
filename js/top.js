@@ -564,11 +564,13 @@ function updatePassword(id) {
 function selectDog() {
     if ($('#dog_choice').val() === 'new') {
         resetRegistry();
+        $('.newDog').hide();
         $('#dog_registry').css('display', 'block');
         $('.edit-dog').css('display', 'none');
         $('.add-dog').css('display', 'inline');
         return;
     } else {
+        $('.newDog').show();
         $('.edit-dog').css('display', 'inline');
         $('.add-dog').css('display', 'none');
     }
