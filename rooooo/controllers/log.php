@@ -633,7 +633,7 @@ class Log extends CI_Controller {
             'dogID' => $this->input->post('dogID', TRUE),
             'dosage' => $this->input->post('dosage', TRUE),
             'withMeal' => $this->input->post('withMeal', TRUE),
-            'medNotes' => $this->input->post('medNotes', TRUE)
+            'notes' => $this->input->post('medNotes', TRUE)
         );
         
         $this->load->model('log_model');
@@ -673,7 +673,7 @@ class Log extends CI_Controller {
             'medName' => $this->input->post('medName', TRUE),
             'dosage' => $this->input->post('dosage', TRUE),
             'withMeal' => $this->input->post('withMeal', TRUE),
-            'medNotes' => $this->input->post('medNotes', TRUE)
+            'notes' => $this->input->post('medNotes', TRUE)
         );
         $this->load->model('log_model');
         $success = $this->log_model->insertMedicine($med);

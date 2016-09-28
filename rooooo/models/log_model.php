@@ -107,7 +107,7 @@
         
         public function retrieveMeds($dogID) {
             $retArray = array();
-            $this->db->select('id, dogID, medName, medNotes, withMeal, dosage');
+            $this->db->select('id, dogID, medName, notes, withMeal, dosage');
             $this->db->where('dogID = ' . $dogID);
             $query = $this->db->get('LTDtbMedicine');
             if ($query->num_rows() > 0) {
@@ -116,7 +116,7 @@
                     $retArray[$x]['id'] = $row->id;
                     $retArray[$x]['dogID'] = $row->dogID;
                     $retArray[$x]['medName'] = $row->medName;
-                    $retArray[$x]['medNotes'] = $row->medNotes;
+                    $retArray[$x]['medNotes'] = $row->notes;
                     $retArray[$x]['withMeal'] = $row->withMeal;
                     $retArray[$x]['dosage'] = $row->dosage;
                     $x++;
