@@ -223,7 +223,13 @@
         public function retrieveActivityDeets($activity, $id, $justAction = false) {
             $retArray = array();
             $table = 'LTDtb' . ucfirst($activity);
-            if (($activity === 'treat') || ($activity === 'med')) {
+            if ($activity === 'med') {
+                if ($justAction) {
+                    $select = $activity . 'Type';
+                } else {
+                    $select = $activity . 'Date,' . $activity . 'Type,' . $activity . 'Notes';
+                }
+            } else if ($activity === 'treat') {
                 if ($justAction) {
                     $select = $activity . 'Type';
                 } else {
@@ -249,7 +255,13 @@
                     $retArray['date'] = $datetime[0];
                     $retArray['time'] = $datetime[1];
                 }
-                if (($activity === 'treat') || ($activity === 'med')) {
+                if ($activity === 'med') {
+                    if (is_numeric($row->medType)) {
+                        $retArray['type'] = $this->retrieveMedName($row->medType);
+                    } else {
+                        $retArray['type'] = $row->medType;
+                    }
+                } else if ($activity === 'treat') {
                     $aEv = $activity . 'Type';
                     $retArray['type'] = $row->$aEv;
                 } else if ($activity === 'walk') {
@@ -262,6 +274,20 @@
             return $retArray;
         }
 
+        public function retrieveMedName($id) {
+            $medType = '';
+            $this->db->select('medName');
+            $this->db->from('LTDtbMedicine');
+            $this->db->where(array('id' => $id));
+            $query = $this->db->get();
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
+                    $medType = $row->medName;
+                }
+            }
+            return $medType;
+        }
+        
         public function retrieveLatestData($dogID) {
             $getArray = array();
             $retArray = array();
@@ -300,6 +326,9 @@
                 for ($i = 0; $i < $gc; $i++) {
                     if ($getArray[$i]['date'] !== $tempDate) {
                         $tempDate = $getArray[$i]['date'];
+                    }
+                    if ($getArray[$i]['activity'] === 'med') {
+                        $retArray[$tempDate][$getArray[$i]['time']]['type'] = $getArray[$i]['type'];
                     }
                     if (isset($retArray[$tempDate][$getArray[$i]['time']]['action'])) {
                         $retArray[$tempDate][$getArray[$i]['time']]['action'] = $getArray[$i]['action'];
@@ -383,16 +412,40 @@
                 'medDate' => $medData['medDate'],
                 'medNotes' => $medData['medNotes'],
                 'userID' => $medData['userID'],
+                'medType' => $medData['medType']
             );
             
             if ($this->db->insert('LTDtbMed', $insert)) {
                 $success = true;
+                $retArray['insert_id'] = $this->db->insert_id();
             }
             
             $retArray['success'] = $success;
             return $retArray;
         }
 
+        public function addMultiMeds($medData) {
+            $success = false;
+            $submit_med = array();
+            foreach ($medData['medArray'] as $k => $v) {
+                $submit_med[$k]['dogID'] = $medData['dogID'];
+                $submit_med[$k]['medDate'] = $medData['medDate'];
+                $submit_med[$k]['userID'] = $medData['userID'];
+                $submit_med[$k]['medNotes'] = $medData['medNotes'];
+                $submit_med[$k]['medType'] = $v;
+            }
+            
+            foreach ($submit_med as $insert) {
+                if ($this->db->insert('LTDtbMed', $insert)) {
+                    $success = true;
+                } else {
+                    $success = false;
+                }
+            }
+            
+            return array('success' => $success);
+        }
+        
         public function addTreat($treatData) {
             $success = false;
             $retArray = array();

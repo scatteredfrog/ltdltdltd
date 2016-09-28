@@ -51,7 +51,6 @@
             Type of medicine:
         </div>
         <div class="col-xs-6 bdr-bot bottom5 top5" id="med_type_container">
-            <input id="med_type" type="text" placeholder="(optional)" />
         </div>
     </div>
     <div class="row">
