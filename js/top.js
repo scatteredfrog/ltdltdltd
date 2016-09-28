@@ -907,6 +907,8 @@ function addMedicine(logMed) {
                 medNotes: $('#med_add_notes').val(),
                 withMeal: $('#med_add_with_meal').prop('checked') ? 1 : 0
             };
+            
+            postNewMed(post_vars, false);
         });
     } else {
         var post_vars = {
