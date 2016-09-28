@@ -183,12 +183,14 @@ function getMeds(post_vars) {
             } else {
                 $('#med_add_dogID').val(post_vars.dog_id);
                 $('#med_add_modal').modal('show');
-                $('#med_add_right_button').on('click', function() {
-                    $('#med_add_modal').modal('hide');
-                    setTimeout(function() {
-                        addMedicine(true);
-                    }, 500);
-                });
+                setTimeout(function() {
+                    $('#med_add_right_button').on('click', function() {
+                        $('#med_add_modal').modal('hide');
+                        setTimeout(function() {
+                            addMedicine(true);
+                        }, 500);
+                    });
+                }, 500);
             }
             html += '</select>';
             $('#med_type_container').html(html);
