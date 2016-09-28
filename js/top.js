@@ -155,8 +155,74 @@ function dogRegistered(name, is_update) {
 }
 
 $(document).on('click', '#select_this_dog', function () {
-   getDogDeets($('#dog_selector').val());
+    var post_vars = {
+        dog_id : $('#dog_selector').val(),
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+    };
+    
+    getDogDeets(post_vars.dog_id);
+    if ((location.href.indexOf('med') > -1) || (location.href.indexOf('meal') > -1)) {
+        getMeds(post_vars);
+    }
 }); 
+
+function getMeds(post_vars) {
+    if ($('#med_select').length > 0) {
+        $('#med_select').remove();
+    }
+    $.post('/log/getMeds', post_vars, function(data) {
+        var dc = data.length;
+        if (location.href.indexOf('med') > -1) {
+            var html = '<select id="med_select">';
+            if (data.length > 0) {
+                for (var x = 0; x < dc; x++) {
+                    html += '<option value="' + data[x].id + '">';
+                    html += data[x].medName + '</option>';
+                }
+                html += '<option value="_">** other **</option>';
+            } else {
+                $('#med_add_dogID').val(post_vars.dog_id);
+                $('#med_add_modal').modal('show');
+                $('#med_add_right_button').on('click', function() {
+                    $('#med_add_modal').modal('hide');
+                    setTimeout(function() {
+                        addMedicine(true);
+                    }, 500);
+                });
+            }
+            html += '</select>';
+            $('#med_type_container').html(html);
+
+            $('#med_select').on('change', function() {
+                if ($('#med_select').val() === '_') {
+                    $('#med_add_modal').modal('show');
+                    $('#med_add_right_button').on('click', function() {
+                        $('#med_add_modal').modal('hide');
+                        setTimeout(function() {
+                            addMedicine(true);
+                        }, 500);
+                    });
+                }
+            });
+        } else if (location.href.indexOf('meal') > -1) {
+            var html = '';
+            for (var x = 0; x < dc; x++) {
+                if (data[x].withMeal == '1') {
+                    html += '<div class="row">';
+                    html += '<input type="checkbox" id="med_check_' + x + '" value="' + data[x].id + '" /> ';
+                    html += data[x].medName;
+                    html += '</div>';
+                }
+            }
+            if (html !== '') {
+                $('#med_checklist').html(html);
+                $('#med_with_meal').css('display', 'block');
+            } else {
+                $('#med_with_meal').css('display', 'none');
+            }
+        }
+    }, 'json');
+}
 
 function getDogDeets(dogID) {
     var activity;
@@ -262,7 +328,7 @@ function submitWalk() {
         'walkNotes' : $('#walk_notes').val(),
         'userID' : $('#user_id').val()
     };
-    
+
     $.post('/index.php/log/logWalk', post_vars, function (data) {
         if (data['success'] == true) {
             $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
@@ -276,6 +342,7 @@ function submitWalk() {
             $('#ltd_dual_options_right_button').on('click', function () {
                 location.href = '/log/walk';
             });
+            
         } else {
             $('#ltd_error_modal_text').html('There was a problem; this walk might not have been logged.');
             $('#ltd_error_modal').modal('show');
@@ -312,19 +379,62 @@ function submitMeal() {
         'userID' : $('#user_id').val()
     };
     
+    // If we're logging medicine too...
+    if ($('#med_with_meal').css('display') === 'block') {
+        var med_string = '';
+        $('[id^=med_check_]').each(function() {
+            if ($(this).prop('checked') == true) {
+                med_string += $(this).val() + '~';
+            }
+        });
+        med_string = med_string.slice(0, -1);
+        
+        var med_post = {
+            'csrf_test_name' : $('[name=csrf_test_name]').val(),
+            'dogID' : $('#dog_selector').val(),
+            'userID' : $('#user_id').val(),
+            'medDate' : mealDate,
+            'medNotes' : $('#meal_notes').val(),
+            'medString' : med_string
+        }
+    }
+    
     $.post('/index.php/log/logMeal', post_vars, function (data) {
         if (data['success'] == true) {
-            $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
-            $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s meal has been logged!');
-            $('#ltd_dual_options_left_button').html('Return home');
-            $('#ltd_dual_options_right_button').html('Log another meal');
-            $('#ltd_dual_options_modal').modal('show');
-            $('#ltd_dual_options_left_button').on('click', function () {
-                location.href = '/';
-            });
-            $('#ltd_dual_options_right_button').on('click', function () {
-                location.href = '/log/meal';
-            });
+            if (typeof med_post !== 'undefined') {
+                $.post('/log/logMultimeds', med_post, function(mdata) {
+                    if (mdata['success'] == true) {
+                        $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
+                        $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s meal and medicine have been logged!');
+                        $('#ltd_dual_options_left_button').html('Return home');
+                        $('#ltd_dual_options_right_button').html('Log another meal');
+                        $('#ltd_dual_options_modal').modal('show');
+                        $('#ltd_dual_options_left_button').on('click', function () {
+                            location.href = '/';
+                        });
+                        $('#ltd_dual_options_right_button').on('click', function () {
+                            location.href = '/log/meal';
+                        });
+                    } else {
+                        var mhtml = 'The food has been logged, but there was a problem logging the ';
+                        mhtml += 'medicine, which may not have been successfully logged.';
+                        $('#ltd_error_modal_text').html(mhtml);
+                        $('#ltd_error_modal').modal('show');
+                    }
+                }, 'json');
+            } else {
+                $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
+                $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s meal has been logged!');
+                $('#ltd_dual_options_left_button').html('Return home');
+                $('#ltd_dual_options_right_button').html('Log another meal');
+                $('#ltd_dual_options_modal').modal('show');
+                $('#ltd_dual_options_left_button').on('click', function () {
+                    location.href = '/';
+                });
+                $('#ltd_dual_options_right_button').on('click', function () {
+                    location.href = '/log/meal';
+                });
+            }
         } else {
             $('#ltd_error_modal_text').html('There was a problem; this meal might not have been logged.');
             $('#ltd_error_modal').modal('show');
@@ -387,7 +497,7 @@ function submitMed() {
     var time_parts = $('#med_time').val().split(':');
     time_parts[2] = $('#med_seconds').val();
     time_parts[0] = parseInt(time_parts[0]);
-    
+
     // format the time
     if ($('#med_ampm').val() === 'pm') {
         if (time_parts[0] != 12) {
@@ -398,17 +508,17 @@ function submitMed() {
     } else {
         time_parts[0] = ("0" + time_parts[0]).slice(-2);
     }
-    
+
     var medDate = date_parts[2] + '-' + date_parts[0] + '-' + date_parts[1];
-    
+
     medDate += ' ' + time_parts[0] + ':' + time_parts[1] + ':' + time_parts[2];
-    
+
     var post_vars = {
         'csrf_test_name' : $('[name=csrf_test_name]').val(),
         'dogID' : $('#dog_selector').val(),
         'medDate' : medDate,
         'medNotes' : $('#med_notes').val(),
-        'medType' : $('#med_type').val(),
+        'medType' : $('#med_select').val(),
         'userID' : $('#user_id').val()
     };
     
@@ -776,12 +886,27 @@ function resetRegistry(inc_dog_choice) {
     return;
 }
 
-function addMedicine() {
-    $('#med_add_dogID').val($('#dog_id').val());
-    $('#med_add_modal').modal('show');
+function addMedicine(logMed) {
+    if (typeof logMed === 'undefined') {
+        logMed = false;
+    }
     
-    $('#med_add_right_button').on('click', function(e) {
-        e.preventDefault();
+    if (!logMed) {
+        $('#med_add_dogID').val($('#dog_id').val());
+        $('#med_add_modal').modal('show');
+        
+        $('#med_add_right_button').on('click', function(e) {
+            e.preventDefault();
+            var post_vars = {
+                csrf_test_name : $('[name=csrf_test_name]').val(),
+                dogID : $('#med_add_dogID').val(),
+                medName: $('#med_add_name').val(),
+                dosage: $('#med_add_dosage').val(),
+                medNotes: $('#med_add_notes').val(),
+                withMeal: $('#med_add_with_meal').prop('checked') ? 1 : 0
+            };
+        });
+    } else {
         var post_vars = {
             csrf_test_name : $('[name=csrf_test_name]').val(),
             dogID : $('#med_add_dogID').val(),
@@ -790,10 +915,20 @@ function addMedicine() {
             medNotes: $('#med_add_notes').val(),
             withMeal: $('#med_add_with_meal').prop('checked') ? 1 : 0
         };
-        $.post('/log/newMedicine', post_vars, function(data) {
-            $('#med_add_modal').modal('hide');
-            setTimeout(function() {
-                if (data.success) {
+        
+        postNewMed(post_vars, true);
+    }
+}
+
+function postNewMed(post_vars, logMed) {
+    if (typeof logMed === 'undefined') {
+        logMed = false;
+    }
+    $.post('/log/newMedicine', post_vars, function(data) {
+        $('#med_add_modal').modal('hide');
+        setTimeout(function() {
+            if (data.success) {
+                if (!logMed) {
                     $('#medicine_edit').show();
                     $('#medicine_edit .container').show();
                     var num_rows = $('[id^=med_row_]').length;
@@ -826,14 +961,16 @@ function addMedicine() {
                     $('#ltd_confirm_modal_subheader').html('Medicine has been added!');
                     $('#ltd_confirm_modal').modal('show');
                 } else {
-                    if (data.error) {
-                        $('#ltd_error_modal_text').html(data.error);
-                        $('#ltd_error_modal').modal('show');
-                    }
+                    $('#med_select').append('<option selected = "selected" value="' + data.insert_id + '">' + post_vars.medName + '</option>');
                 }
-            }, 500);
-        }, 'json');
-    });
+            } else {
+                if (data.error) {
+                    $('#ltd_error_modal_text').html(data.error);
+                    $('#ltd_error_modal').modal('show');
+                }
+            }
+        }, 500);
+    }, 'json');
 }
 
 function addCaretaker() {

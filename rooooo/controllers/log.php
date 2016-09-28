@@ -33,6 +33,7 @@ class Log extends CI_Controller {
         $this->load->view('edit_registry');
         $this->load->view('registry');
         $this->load->view('error_modal');
+        $this->load->view('add_med_modal');
     }
     
     public function getQuickLook() {
@@ -91,6 +92,7 @@ class Log extends CI_Controller {
         $this->load->helper('form');
         $this->load->view('log_a_med', $data);
         $this->load->view('error_modal');
+        $this->load->view('add_med_modal');
     }
 
     // Load the "Log a Treat" page
@@ -354,7 +356,11 @@ class Log extends CI_Controller {
                                             $v_activity = 'Went for a walk ';
                                             break;
                                         case 'med':
-                                            $v_activity = 'Took some medicine ';
+                                            if (isset($vv['type']) && !empty($vv['type'])) {
+                                                $v_activity = 'Took some ' . $vv['type'] . ' ';
+                                            } else {
+                                                $v_activity = 'Took some medicine ';
+                                            }
                                             break;
                                         case 'treat':
                                             $v_activity = 'Had a treat ';
@@ -472,13 +478,29 @@ class Log extends CI_Controller {
     
     public function logMeal() {
         // TODO: validation (date, missing data, etc.)
-        $meal_data = array();
-        $meal_data['dogID'] = $this->input->post('dogID');
-        $meal_data['mealDate'] = $this->input->post('mealDate');
-        $meal_data['mealNotes'] = $this->input->post('mealNotes');
-        $meal_data['userID'] = $this->input->post('userID');
+        $meal_data = array(
+            'dogID' => $this->input->post('dogID', TRUE),
+            'mealDate' => $this->input->post('mealDate', TRUE),
+            'mealNotes' => $this->input->post('mealNotes', TRUE),
+            'userID' => $this->input->post('userID', TRUE)
+        );
         $this->load->model('log_model');
         $success = $this->log_model->addMeal($meal_data);
+        echo json_encode($success);
+        exit();
+    }
+    
+    public function logMultiMeds() {
+        $this->load->model('log_model');
+        $med_string = $this->input->post('medString', TRUE);
+        $med_data = array(
+            'dogID' => $this->input->post('dogID', TRUE),
+            'medDate' => $this->input->post('medDate', TRUE),
+            'medNotes' => $this->input->post('medNotes', TRUE),
+            'medArray' => explode('~', $med_string),
+            'userID' => $this->input->post('userID', TRUE)
+        );
+        $success = $this->log_model->addMultiMeds($med_data);
         echo json_encode($success);
         exit();
     }
@@ -488,6 +510,7 @@ class Log extends CI_Controller {
         $med_data = array();
         $med_data['dogID'] = $this->input->post('dogID');
         $med_data['medDate'] = $this->input->post('medDate');
+        $med_data['medType'] = $this->input->post('medType');
         $med_data['medNotes'] = $this->input->post('medNotes');
         $med_data['userID'] = $this->input->post('userID');
         $this->load->model('log_model');
@@ -549,7 +572,7 @@ class Log extends CI_Controller {
             $id = $dog[0];
             $name = $dog[1];
             $dogOptions .= '<input id="dog_selector" type="hidden" value="' . $id. '" />        ';
-            $dogOptions .= '<script>getDogDeets("' . $id . '");</script>';
+            $dogOptions .= '<script>getDogDeets("' . $id . '"); getMeds({ dog_id: ' . $id . ', csrf_test_name: $("[name=csrf_test_name]").val() });</script>';
         } else { // redirect to main menu if there are no dogs; show modal first
             $dogOptions .= '<script>';
             $dogOptions .= '$(document).ready(function() {';

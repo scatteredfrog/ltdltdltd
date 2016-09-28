@@ -46,6 +46,14 @@
         </div>
         <div class="col-xs-6"></div>
     </div>
+    <div class="row" id="med_with_meal">
+        <div class="col-xs-12 top5">
+            Medicines given with this meal:<br />
+        </div>
+        <div class="container bdr-bot bottom5 col-xs-6" id="med_checklist">
+            
+        </div>
+    </div>
     <div class="row">
         <div class="col-xs-12 top5">
             Additional info:
