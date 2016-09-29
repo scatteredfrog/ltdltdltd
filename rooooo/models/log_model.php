@@ -427,9 +427,10 @@
         public function addMultiMeds($medData) {
             $success = false;
             $submit_med = array();
+            $temp_sec = (int) substr($medData['medDate'],-2);
             foreach ($medData['medArray'] as $k => $v) {
                 $submit_med[$k]['dogID'] = $medData['dogID'];
-                $submit_med[$k]['medDate'] = $medData['medDate'];
+                $submit_med[$k]['medDate'] = substr_replace($medData['medDate'], $temp_sec + $k + 1, -2);
                 $submit_med[$k]['userID'] = $medData['userID'];
                 $submit_med[$k]['medNotes'] = $medData['medNotes'];
                 $submit_med[$k]['medType'] = $v;
