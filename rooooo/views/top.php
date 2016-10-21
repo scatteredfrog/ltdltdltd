@@ -135,6 +135,12 @@
                         <span class="hidden-xs"> My Account</span>
                     </div>
                 </a>
+                <a href="/edit">
+                    <div class="dn-item">
+                        <span class="icon-pencil icon-white"></span>
+                        <span class="hidden-xs"> Edit Mode</span>
+                    </div>
+                </a>
                 <div class='dn-item' onclick='logOut();'>
                     <span class='dn-ext'></span><span class='hidden-xs'> Log Out</span>
                 </div>

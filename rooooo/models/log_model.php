@@ -79,7 +79,7 @@
          * @param boolean $is_account
          * @return string
          */
-        public function retrieveDogNames($caretaker, $is_account) {
+        public function retrieveDogNames($caretaker, $is_account = false) {
             $select_stuff = 'c.dogID, d.dogName';
             if ($is_account) {
                 $select_stuff .= ', d.breed';

@@ -203,3 +203,12 @@ body {    background-color: #ffffe4!important; }
 .dark-red { color: #a00; }
 .italic { font-style: italic; }
 #med_with_meal { display: none; }
+.evenRow { background-color: #d4d5a6; }
+.prev, .next { display: none;}
+.hideTable { display: none; }
+.notesSpan { width: 200px;}
+.tableHeader { background-color: #e4e4e4; }
+.editTable td { padding: 5px !important; }
+.editTable th { text-align: center; }
+.blankRow { height: 34px; }
+.datepick-popup { z-index: 1050!important; }

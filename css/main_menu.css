@@ -1,10 +1,11 @@
-.menuBox {
-    background-color: yellow;
+.menuBox, .blueBox {
     border-color: #000;
     border-width: 3px;
     border-style: solid;
 }
 
+.blueBox { background-color: #acd; }
+.menuBox { background-color: yellow; }
 .menuText {    text-align: center; }
 #ql_modal_text legend { margin-bottom: 0; }
 #ql_modal_text fieldset { padding-bottom: 15px; }
@@ -32,7 +33,7 @@
         font-weight: bold;
     }
     
-    .menuBox {
+    .menuBox, .menuNox, .blueBox {
         margin: 5px;
         padding: 5px;
     }
@@ -43,7 +44,7 @@
         font-weight: bold;
     }
     
-    .menuBox {
+    .menuBox, .menuNox, .blueBox {
         margin: 3px;
         padding: 3px;
     }
