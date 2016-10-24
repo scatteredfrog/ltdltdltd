@@ -674,17 +674,21 @@ function updatePassword(id) {
 }
 
 function selectDog() {
+    $('#dog_choice option[value="no"]').prop('disabled', 'disabled');
     if ($('#dog_choice').val() === 'new') {
         resetRegistry();
         $('.newDog').hide();
         $('#dog_registry').css('display', 'block');
         $('.edit-dog').css('display', 'none');
         $('.add-dog').css('display', 'inline');
+        $('#register_the_dog').css('display', 'block');
+        $('#change_the_dog').css('display', 'none');
         return;
     } else {
         $('.newDog').show();
         $('.edit-dog').css('display', 'inline');
         $('.add-dog').css('display', 'none');
+        $('#register_the_dog').css('display', 'none');
     }
     populateDog($('#dog_choice').val());
 }

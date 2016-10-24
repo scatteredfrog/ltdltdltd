@@ -10,7 +10,7 @@
     <input type="hidden" id="dog_id" />
     <div id="dog_registry" class="container">
         <div class="row">
-            <h1>Register a Dog</h1>
+            <h1>Dog Registry</h1>
         </div>
         <div class="row">
             <div class="col-xs-12 bottom5 top5">
