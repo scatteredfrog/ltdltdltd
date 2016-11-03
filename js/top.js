@@ -195,9 +195,10 @@ function getMeds(post_vars) {
             html += '</select>';
             $('#med_type_container').html(html);
 
-            $('#med_select').on('change', function() {
+                $('#med_select').on('change', function() {
                 if ($('#med_select').val() === '_') {
                     $('#med_add_modal').modal('show');
+                    $('#med_add_dogID').val($('#dog_selector').val());
                     $('#med_add_right_button').on('click', function() {
                         $('#med_add_modal').modal('hide');
                         setTimeout(function() {
@@ -898,7 +899,7 @@ function addMedicine(logMed) {
     }
     
     if (!logMed) {
-        $('#med_add_dogID').val($('#dog_id').val());
+        $('#med_add_dogID').val($('#dog_id').val());    
         $('#med_add_modal').modal('show');
         
         $('#med_add_right_button').on('click', function(e) {
