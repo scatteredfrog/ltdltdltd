@@ -4,11 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Volumes/Coding/logthedog.com/rooooo/views/edit_registry.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/mainmenu.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/css/main.css</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/top.php</file>
-            <file>file:/Volumes/Coding/logthedog.com/js/top.js</file>
-            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/registry.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/edit_a_walk.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/controllers/edit.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/edit_walk_modal.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/models/edit_model.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/edit_a_meal.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/js/edit.js</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/new_user.php</file>
+            <file>file:/Volumes/Coding/logthedog.com/rooooo/views/password_reset.php</file>
         </group>
     </open-files>
 </project-private>

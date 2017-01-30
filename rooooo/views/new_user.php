@@ -18,13 +18,13 @@
         </div>
         <div class="row">
             <div class="col-xs-12 bottom5 top5">
-                Your name:<br />
+                <span class="ruthie">Your name:</span><br />
                 <input type="text" class="col-xs-10" id="user_name" name="user_name" placeholder="Name" />
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 bottom5 top5">
-                Your e-mail address:<br />
+                <span class="ruthie">Your e-mail address:</span><br />
                 <input class="col-xs-10" type="email" id="user_email" name="user_email" placeholder="someone@somewhere.com" />
             </div>
         </div>
