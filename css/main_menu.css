@@ -7,11 +7,11 @@
 .blueBox { background-color: #acd; }
 .menuBox { background-color: yellow; }
 .menuText {    text-align: center; }
-#med_box { background-color: #fff;}
-#walk_box { background-color: #97ff00; }
-#treat_box { background-color: #fea7ff; }
-#register_box { background-color: #fe9512;}
-#quick_box { background-color: #00c760; }
+.medBox { background-color: #fff;}
+.walkBox { background-color: #97ff00; }
+.treatBox { background-color: #fea7ff; }
+.registerBox { background-color: #fe9512;}
+.quickBox { background-color: #00c760; }
 #ql_modal_text legend { margin-bottom: 0; }
 #ql_modal_text fieldset { padding-bottom: 15px; }
 
