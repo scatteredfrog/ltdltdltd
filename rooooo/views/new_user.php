@@ -1,4 +1,5 @@
 <?php
+//    phpinfo();
     echo link_tag(base_url().'css/formValidation.css');
     echo link_tag(base_url().'css/main.css');
     echo '<script src="'.base_url().'js/home.js"></script>';
@@ -73,7 +74,7 @@
                 <input type="button" value="Create Account" onclick="submitCreate();"/>
             </div>
         </div>
-    <?
+    <?php
         for ($x = 0; $x < 5; $x++) {
             echo '&nbsp;<br />';
         }

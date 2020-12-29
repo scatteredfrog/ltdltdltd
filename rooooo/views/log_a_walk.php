@@ -1,4 +1,4 @@
-<?
+<?php
     echo link_tag(base_url().'css/walk.css');
     echo link_tag(base_url().'css/jquery.datepick.css');
     echo '<script src="' . base_url() . 'js/jquery.plugin.js"></script>';
@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-xs-6 bdr-bot bottom5 top5" id="walk_date_container">
             <input id='walk_date' type="text" />
-            <input id="user_id" type="hidden" value="<?= $this->session->userdata('userID') ?>"/>
+            <input id="user_id" type="hidden" value="<?php echo $this->session->userdata('userID'); ?>"/>
         </div>
         <div class="col-xs-6"></div>
     </div>
@@ -53,8 +53,8 @@
     </div>
     <div class="row">
         <div class="col-xs-6 bdr-bot bottom5 top5" id="walk_actions">
-            <input id="num1" type="checkbox" /> <?= PEED ?> <br />
-            <input id="num2" type="checkbox" /> <?= POOPED ?> <br />
+            <input id="num1" type="checkbox" /> <?php echo PEED; ?> <br />
+            <input id="num2" type="checkbox" /> <?php echo POOPED; ?> <br />
         </div>
         <div class="col-xs-6"></div>
     </div>
@@ -76,7 +76,7 @@
         <div class="col-lg-6"></div>
     </div>
 </div>
-<?
+<?php
     for ($x = 0; $x < 5; $x++) {
         echo '&nbsp;<br />';
     }

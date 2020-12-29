@@ -4,7 +4,7 @@
         <script>
             setTimeout(function () {
                 $('#ltd_error_modal_header_text').html('Cannot reset password');
-                $('#ltd_error_modal_text').html('<h4><?=$message ?></h4>');
+                $('#ltd_error_modal_text').html('<h4><?php echo $message; ?></h4>');
                 $('#ltd_error_modal_ok').on('click', function() {
                     $('#ltd_error_modal').modal('hide');
                     location.href = '/';
@@ -12,7 +12,7 @@
                 $('#ltd_error_modal').modal('show');
             }, 500);
         </script>
-    <?
+    <?php
     }
     
     if ($success) {
@@ -37,7 +37,7 @@
 <div class="row-fluid">
     <div class="formField span12">
         <h4 class="text-center drop12">
-            <input id="reset_submit" onclick="updatePassword(<?= $id ?>)" type="button" value="Submit" />
+            <input id="reset_submit" onclick="updatePassword(<?php echo $id; ?>)" type="button" value="Submit" />
         </h4>
     </div>
 </div>

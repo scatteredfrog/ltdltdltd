@@ -46,7 +46,7 @@
 */
 
 $active_group = 'default';
-$active_record = TRUE;
+$query_builder = TRUE;
 
 $rt = $_SERVER['DOCUMENT_ROOT'];
 $hs = $_SERVER['HTTP_HOST'];
@@ -59,8 +59,8 @@ if (substr($hs,0,5) === 'local' && stristr($rt,'Junk')) {
 } else if (substr($hs,0,5) === 'local' && (stristr($rt,'Junk') || stristr($rt,'Coding'))) {
     $db['default']['hostname'] = 'localhost';
     $db['default']['username'] = 'root';
-    $db['default']['password'] = 'sqflirzel';
-    $db['default']['database'] = 'fab4it_com';    
+    $db['default']['password'] = 'sqFlirzel24!';
+    $db['default']['database'] = 'logthedo_fab4it_com';
 } else {
     $db['default']['hostname'] = 'localhost';
     $db['default']['username'] = 'logthedo_fab4it';
@@ -68,7 +68,7 @@ if (substr($hs,0,5) === 'local' && stristr($rt,'Junk')) {
     $db['default']['database'] = 'logthedo_fab4it_com';
 }
 
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;

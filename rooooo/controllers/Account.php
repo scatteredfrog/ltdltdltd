@@ -48,11 +48,15 @@ class Account extends CI_Controller {
         $dogs = $this->log_model->retrieveDogNames($email,true);
         $expDogs= explode('~', $dogs);
         $regDogs = array();
-        foreach ($expDogs as $dog => $deets) {
-            $tempDog = explode('^', $deets);
-            $tempBreed = explode('*', $tempDog[1]);
-            $regDogs[$dog]['name'] = $tempBreed[0];
-            $regDogs[$dog]['breed'] = $tempBreed[1];
+        if (is_countable($expDogs) && count($expDogs) > 0) {
+            foreach ($expDogs as $dog => $deets) {
+                if (!empty($dog)) {
+                    $tempDog = explode('^', $deets);
+                    $tempBreed = explode('*', $tempDog[1]);
+                    $regDogs[$dog]['name'] = $tempBreed[0];
+                    $regDogs[$dog]['breed'] = $tempBreed[1];
+                }
+            }
         }
         return $regDogs;
     }

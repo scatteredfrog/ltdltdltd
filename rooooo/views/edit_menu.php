@@ -1,6 +1,6 @@
-<?= link_tag(base_url().'css/main_menu.css'); ?>
+<?php echo link_tag(base_url().'css/main_menu.css'); ?>
 <script src="/js/home.js"></script>
-<?= form_open() ?>
+<?php echo form_open(); ?>
 <!--_______________________________ NOT PHONE ________________________________-->
 <div class="container landscapeOnly">
     <div class="row">
@@ -89,7 +89,7 @@
         </div>
     </div>
 </div>
-<?= form_close() ?>
+<?php echo form_close(); ?>
 <script>
     $(function() {
         $('[data-toggle="tooltip"]').tooltip();

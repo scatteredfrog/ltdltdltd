@@ -1,4 +1,4 @@
-<?
+<?php
     $form_attribs = array(
         'class' => 'form-inline',
         'id' => 'registry_form'
@@ -94,7 +94,7 @@
                         </select>
                         <select id='birth_date'>
                             <option value='0'>(date)</option>
-                            <?
+                            <?php
                                 for ($x = 1; $x < 30; $x++) {
                                     echo '<option value="' . $x . '">' . $x . '</option>';
                                 }
@@ -102,7 +102,7 @@
                             <option value='30' class='notFebruary' style='display: none;'>30</option>
                             <option value='31' class='only31' style='display: none;'>31</option>
                         </select>, 
-                        <input type='number' id='birth_year' placeholder='Year' name='birth_year' min='1982' max='<?= Date("Y"); ?>' />
+                        <input type='number' id='birth_year' placeholder='Year' name='birth_year' min='1982' max='<?php echo Date("Y"); ?>' />
                     </div>
                 </div>
                 <div class="row">
@@ -298,7 +298,7 @@
             </div>
         </div>
     </div>
-<?
+<?php
     for ($x = 0; $x < 5; $x++) {
         echo '&nbsp;<br />';
     }

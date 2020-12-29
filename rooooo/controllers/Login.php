@@ -18,6 +18,7 @@ class Login extends CI_Controller {
     }
 
     public function create_account() {
+        $this->load->helper('ltd');
         //TODO: verify created account
         $sp = '<br />&nbsp;<br />';
         $this->load->model('login_model');
@@ -34,6 +35,13 @@ class Login extends CI_Controller {
         $success = true;
         $invalid = false; // flag to reduce redundant error messaging
         $error = '';
+//        error_log("Mail to futz: $user_email");
+//        $futzed_mail = mailFutz($user_email);
+//        error_log("Futzed mail: $futzed_mail");
+//        error_log("DEFUTZING.....");
+//        $defutzed_mail = mailDefutz($futzed_mail);
+//        error_log("Defutzed mail: $defutzed_mail");
+        exit("done done");
 
         // Do we have a name?
         if (strlen($user_name) < 2) {

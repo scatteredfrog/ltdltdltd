@@ -1,7 +1,7 @@
 <?php
     echo '<div style="position: relative; left: 7px;">';
     echo form_open('/home/beagle',array('name' => 'testerform'));
-    
+    echo '<input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">';
     $solve = mt_rand(0,1);
     
     if ($solve === 1) {

@@ -1,4 +1,4 @@
-    <?
+    <?php
         $submit_array = array(
             'name' => 'ltd_home_form_button',
             'id' => 'ltd_home_form_button',
@@ -28,7 +28,7 @@
     </div>
 
     <div class='container' id='ltd_home_form'>
-        <?= form_open('login/log_in'); ?>
+        <?php echo form_open('login/log_in'); ?>
         <div id='login_email' class='row-fluid'>
             <div class='formField span12'>
                 <h4>
@@ -51,12 +51,12 @@
         </div>
         <div class='row-fluid'>
             <div class='formField span12'>
-                <?
+                <?php
                     echo form_button($submit_array);
                 ?>
             </div>
         </div>
-        <?= form_close(); ?>
+        <?php echo form_close(); ?>
     <div class='row-fluid'>
         <div class='formField span12 fine-print text-center'>
             <a class='pointer' onclick="forgotPassword();">Forgot your password?<br />

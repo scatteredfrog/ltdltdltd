@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Log extends CI_Controller {
+class Logit extends CI_Controller {
 
     private $_months = array(
         '1' => 'January',
@@ -63,6 +63,20 @@ class Log extends CI_Controller {
         $data = array('dogs' =>$dogOptions);
         $this->load->helper('form');
         $this->load->view('log_a_walk', $data);
+        $this->load->view('error_modal');
+    }
+
+    // Load the "Log a Potty" page
+    public function potty() {
+        if (!$this->session->userdata('logged_in')) {
+            header('Location: /');
+        }
+
+        $pottyDogOptions = $this->_getDogOptions();
+
+        $pottyData = array('dogs' =>$pottyDogOptions);
+        $this->load->helper('form');
+        $this->load->view('log_a_potty', $pottyData);
         $this->load->view('error_modal');
     }
 
@@ -178,10 +192,10 @@ class Log extends CI_Controller {
 
         $dog = array(
             'name' => $this->input->post('dog_name'),
-            'weight' => $this->input->post('dog_weight'),
-            'height' => $this->input->post('dog_height'),
-            'length' => $this->input->post('dog_length'),
-            'neutered' => $this->input->post('neutered'),
+            'weight' => $this->input->post('dog_weight') ? (int)$this->input->post('dog_weight') : null,
+            'height' => $this->input->post('dog_height') ? (int)$this->input->post('dog_height') : null,
+            'length' => $this->input->post('dog_length') ? (int)$this->input->post('dog_length') : null,
+            'neutered' => (int)$this->input->post('neutered'),
             'breed' => $this->input->post('breed'),
             'gender' => $gender,
             'color' => $this->input->post('dog_color'),
@@ -391,22 +405,20 @@ class Log extends CI_Controller {
     public function getLatestWalk($dogID) {
         $this->load->model('log_model');
         $walkInfo = $this->log_model->retrieveLatestWalk($dogID);
-        if ($walkInfo['action'] > -1) {
-            $now = time();
-            $walkdate = strtotime($walkInfo['datetime']);
-            $tempdatetime = new DateTime($walkInfo['datetime']);
-            $timediff = (int)floor(($now - $walkdate) / 86400);
-            if ($timediff === 0) {
-                $walkInfo['date'] = 'today';
-            } else if ($timediff === 1) {
-                $walkInfo['date'] = 'yesterday'; 
-            } else if ($timediff > 2 && $timediff < 7) {
-                $walkInfo['date'] = date_format($tempdatetime,'l');
-            } else {
-                $walkInfo['date'] = date_format($tempdatetime,'F j');
-            }
-            $walkInfo['time'] = date_format($tempdatetime,'g:i a');
+        $now = time();
+        $walkdate = strtotime($walkInfo['datetime']);
+        $tempdatetime = new DateTime($walkInfo['datetime']);
+        $timediff = (int)floor(($now - $walkdate) / 86400);
+        if ($timediff === 0) {
+            $walkInfo['date'] = 'today';
+        } else if ($timediff === 1) {
+            $walkInfo['date'] = 'yesterday';
+        } else if ($timediff > 2 && $timediff < 7) {
+            $walkInfo['date'] = date_format($tempdatetime,'l');
+        } else {
+            $walkInfo['date'] = date_format($tempdatetime,'F j');
         }
+        $walkInfo['time'] = date_format($tempdatetime,'g:i a');
         return $walkInfo;
     }
 
@@ -546,7 +558,21 @@ class Log extends CI_Controller {
         echo json_encode($success);
         exit();
     }
-    
+
+    public function logPotty() {
+        // TODO: validation (date, missing data, etc.)
+        $potty_data = array();
+        $potty_data['dogID'] = $this->input->post('dogID');
+        $potty_data['pottyDate'] = $this->input->post('pottyDate');
+        $potty_data['action'] = $this->input->post('action');
+        $potty_data['pottyNotes'] = $this->input->post('pottyNotes');
+        $potty_data['userID'] = $this->input->post('userID');
+        $this->load->model('log_model');
+        $success = $this->log_model->addPotty($potty_data);
+        echo json_encode($success);
+        exit();
+    }
+
     // turns dog names and IDs into select options
     private function _getDogOptions($is_quick = false) {
         $currentUser = $this->session->userdata('eMail');
@@ -554,7 +580,7 @@ class Log extends CI_Controller {
         $currentDogs = empty($retrievedDogs) ? NULL : explode('~',$retrievedDogs);
         $dogOptions = '';
         
-        if (count($currentDogs) > 1) {
+        if (is_countable($currentDogs) && count($currentDogs) > 1) {
             $dogOptions .= '<select id="dog_selector">';
             foreach ($currentDogs as $d) {
                 $dog = explode('^', $d);
@@ -567,7 +593,7 @@ class Log extends CI_Controller {
             $dogOptions .= '<input type="button" id="select_this_dog" value="';
             $dogOptions .= $is_quick ? 'Get a quick look at this dog' : 'Log this dog';
             $dogOptions .= '" />';
-        } else if (count($currentDogs) === 1) {
+        } else if (is_countable($currentDogs) && count($currentDogs) === 1) {
             $dog = explode('^', $currentDogs[0]);
             $id = $dog[0];
             $name = $dog[1];

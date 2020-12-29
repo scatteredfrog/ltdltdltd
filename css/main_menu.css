@@ -11,9 +11,11 @@
 .walkBox { background-color: #97ff00; }
 .treatBox { background-color: #fea7ff; }
 .registerBox { background-color: #fe9512;}
-.quickBox { background-color: #00c760; }
+.quickBox { background-color: #0ee3ad; }
 #ql_modal_text legend { margin-bottom: 0; }
 #ql_modal_text fieldset { padding-bottom: 15px; }
+.bathBox { background-color: #eb1818; }
+.pottyBox { background-color: #6be6f6; }
 
 #ql_modal_text {
     max-height: 200px;

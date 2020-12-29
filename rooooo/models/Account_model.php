@@ -18,8 +18,15 @@
         }
         
         public function updateAccount($acct) {
+            // TODO: Refactor to turn success into array
             $this->db->where('userID', $this->session->userdata('userID'));
-            $success = $this->db->update('LTDtbUser', $acct);
+            $account_success = $this->db->update('LTDtbUser', $acct);
+            $this->db->where('caretakerEmail', $this->session->userdata('eMail'));
+            $caretaker_success = $this->db->update('LTDtbCaretaker', array('caretakerEmail' => $acct['eMail']));
+            $success = $caretaker_success && $account_success;
+            if ($success) {
+                $this->session->set_userdata('eMail',$acct['eMail']);
+            }
             return $success;
         }
         

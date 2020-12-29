@@ -47,7 +47,7 @@
                 <input type="button" value="Submit" onclick="submitContact();"/>
             </div>
         </div>
-        <?
+        <?php
             for ($x = 0; $x < 5; $x++) {
                 echo '&nbsp;<br />';
             }

@@ -14,7 +14,20 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$allowed_domains = array('logthedog.com', 'local.logthedog.com');
+$default_domain = 'logthedog.com';
+
+if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE)) {
+    $domain = $_SERVER['HTTP_HOST'];
+} else {
+    $domain = $default_domain;
+}
+
+if ( ! empty($_SERVER['HTTPS'])) {
+    $config['base_url'] = 'https://'.$domain;
+} else {
+    $config['base_url'] = 'http://'.$domain;
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -246,13 +259,11 @@ $config['encryption_key'] = 'bSms6WiSHr1LMsTlS2s0tWCwATPJ';
 */
 $config['sess_cookie_name']		= 'ltd_session';
 $config['sess_expiration']		= 7200;
-$config['sess_expire_on_close']         = FALSE;
-$config['sess_encrypt_cookie']          = FALSE;
 $config['sess_use_database']            = FALSE;
 $config['sess_table_name']		= 'ci_sessions';
 $config['sess_match_ip']		= FALSE;
-$config['sess_match_useragent']         = TRUE;
 $config['sess_time_to_update']          = 300;
+$config['sess_save_path'] = '/tmp';
 
 /*
 |--------------------------------------------------------------------------

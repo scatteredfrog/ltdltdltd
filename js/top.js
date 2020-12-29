@@ -109,7 +109,7 @@ function registerDog() {
         update: 0
     };
     
-    $.post('/index.php/log/register_a_dog', register_data, function(data) {
+    $.post('/index.php/logit/register_a_dog', register_data, function(data) {
         if (data['success']) {
             // dog successfully registered
             dogRegistered($('#dog_name').val(), false);
@@ -121,7 +121,7 @@ function registerDog() {
             $('#ltd_dual_options_right_button').on('click', function() {
                 $('#ltd_dual_options_modal').modal('hide');
                 register_data.confirm = true;
-                $.post('/index.php/log/register_a_dog', register_data, function(subData) {
+                $.post('/index.php/logit/register_a_dog', register_data, function(subData) {
                     if (subData['success']) {
                         // dog successfully registered
                         dogRegistered($('#dog_name').val());
@@ -170,7 +170,7 @@ function getMeds(post_vars) {
     if ($('#med_select').length > 0) {
         $('#med_select').remove();
     }
-    $.post('/log/getMeds', post_vars, function(data) {
+    $.post('/logit/getMeds', post_vars, function(data) {
         var dc = data.length;
         if (location.href.indexOf('med') > -1) {
             var html = '<select id="med_select">';
@@ -242,7 +242,7 @@ function getDogDeets(dogID) {
         'activity' : activity
     };
     
-    $.post('/index.php/log/getDogInfo', post_data, function(data) {
+    $.post('/index.php/logit/getDogInfo', post_data, function(data) {
         if (data && data['success']) {
             $('.dogName').html(data['dog']['dogName']);
             $('#doggie_data').css('display','block');
@@ -256,7 +256,7 @@ function getDogDeets(dogID) {
                     var gender_walk = data['dog']['gender'] == '1' ? 'Her ' : 'His ';
                     gender_walk += 'latest ' + activity + ' was ';
                     $('#gender_' + activity).html(gender_walk);
-                    $('#when_' + activity + '_was').html(data['dog']['latest_' + activity]['date'] + ' at ' + data['dog']['latest_' + activity]['time']);
+                    $('#when_' + activity + '_was').html(data['dog']['latest_' + activity]['date'] + ' at ' + data['dog']['latest_' + activity]['time'] + '.');
                 } else {
                     $('#gender_' + activity).html('This will be ' + data['dog']['dogName'] + '\'s first logged ' + activity + '!');
                     $('#when_' + activity + '_was').html('');
@@ -332,7 +332,7 @@ function submitWalk() {
         'userID' : $('#user_id').val()
     };
 
-    $.post('/index.php/log/logWalk', post_vars, function (data) {
+    $.post('/index.php/logit/logWalk', post_vars, function (data) {
         if (data['success'] == true) {
             $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
             $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s walk has been logged!');
@@ -343,11 +343,73 @@ function submitWalk() {
                 location.href = '/';
             });
             $('#ltd_dual_options_right_button').on('click', function () {
-                location.href = '/log/walk';
+                location.href = '/logit/walk';
             });
             
         } else {
             $('#ltd_error_modal_text').html('There was a problem; this walk might not have been logged.');
+            $('#ltd_error_modal').modal('show');
+        }
+    },'json');
+}
+
+function submitPotty() {
+    var date_parts = $('#potty_date').val().split('/');
+    var time_parts = $('#potty_time').val().split(':');
+    time_parts[2] = $('#potty_seconds').val();
+    time_parts[0] = parseInt(time_parts[0]);
+
+    // format the time
+    if ($('#potty_ampm').val() === 'pm') {
+        if (time_parts[0] != 12) {
+            time_parts[0] += 12;
+        }
+    } else if (time_parts[0] == 12) {
+        time_parts[0] = '00';
+    } else {
+        time_parts[0] = ("0" + time_parts[0]).slice(-2);
+    }
+
+    var pottyDate = date_parts[2] + '-' + date_parts[0] + '-' + date_parts[1];
+    var action = 0;
+
+    pottyDate += ' ' + time_parts[0] + ':' + time_parts[1] + ':' + time_parts[2];
+
+    if ($('#num1').prop('checked') == true) {
+        if ($('#num2').prop('checked') == true) {
+            action = 3;
+        } else {
+            action = 1;
+        }
+    } else if ($('#num2').prop('checked')) {
+        action = 2;
+    }
+
+    var post_vars = {
+        'csrf_test_name' : $('[name=csrf_test_name]').val(),
+        'dogID' : $('#dog_selector').val(),
+        'pottyDate' : pottyDate,
+        'action' : action,
+        'pottyNotes' : $('#potty_notes').val(),
+        'userID' : $('#user_id').val()
+    };
+
+    $.post('/index.php/logit/logPotty', post_vars, function (data) {
+        if (data['success'] == true) {
+            $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
+            $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s potty has been logged!');
+            $('#ltd_dual_options_left_button').html('Return home');
+            $('#ltd_dual_options_right_button').html('Log another walk');
+            $('#ltd_dual_options_modal').modal('show');
+            $('#ltd_dual_options_left_button').on('click', function () {
+                location.href = '/';
+            });
+            $('#ltd_dual_options_right_button').on('click', function () {
+                location.href = '/logit/walk';
+            });
+
+        } else {
+            $('#ltd_error_modal_text').html('There was a problem; this potty might not have been logged.');
             $('#ltd_error_modal').modal('show');
         }
     },'json');
@@ -402,10 +464,10 @@ function submitMeal() {
         }
     }
     
-    $.post('/index.php/log/logMeal', post_vars, function (data) {
+    $.post('/index.php/logit/logMeal', post_vars, function (data) {
         if (data['success'] == true) {
             if (typeof med_post !== 'undefined') {
-                $.post('/log/logMultimeds', med_post, function(mdata) {
+                $.post('/logit/logMultimeds', med_post, function(mdata) {
                     if (mdata['success'] == true) {
                         $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
                         $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s meal and medicine have been logged!');
@@ -416,7 +478,7 @@ function submitMeal() {
                             location.href = '/';
                         });
                         $('#ltd_dual_options_right_button').on('click', function () {
-                            location.href = '/log/meal';
+                            location.href = '/logit/meal';
                         });
                     } else {
                         var mhtml = 'The food has been logged, but there was a problem logging the ';
@@ -435,7 +497,7 @@ function submitMeal() {
                     location.href = '/';
                 });
                 $('#ltd_dual_options_right_button').on('click', function () {
-                    location.href = '/log/meal';
+                    location.href = '/logit/meal';
                 });
             }
         } else {
@@ -475,7 +537,7 @@ function submitTreat() {
         'userID' : $('#user_id').val()
     };
     
-    $.post('/index.php/log/logTreat', post_vars, function (data) {
+    $.post('/index.php/logit/logTreat', post_vars, function (data) {
         if (data['success'] == true) {
             $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
             $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s treat has been logged!');
@@ -486,7 +548,7 @@ function submitTreat() {
                 location.href = '/';
             });
             $('#ltd_dual_options_right_button').on('click', function () {
-                location.href = '/log/treat';
+                location.href = '/logit/treat';
             });
         } else {
             $('#ltd_error_modal_text').html('There was a problem; this treat might not have been logged.');
@@ -525,7 +587,7 @@ function submitMed() {
         'userID' : $('#user_id').val()
     };
     
-    $.post('/index.php/log/logMed', post_vars, function (data) {
+    $.post('/index.php/logit/logMed', post_vars, function (data) {
         if (data['success'] == true) {
             $('#ltd_dual_options_modal_subheader').html('What would you like to do next?');
             $('#ltd_dual_options_modal_header_text').html($('.dogName:first').text() + '\'s medicine has been logged!');
@@ -536,7 +598,7 @@ function submitMed() {
                 location.href = '/';
             });
             $('#ltd_dual_options_right_button').on('click', function () {
-                location.href = '/log/med';
+                location.href = '/logit/med';
             });
         } else {
             $('#ltd_error_modal_text').html('There was a problem; this medicine might not have been logged.');
@@ -699,7 +761,7 @@ function populateDog(idx) {
         'idx' : idx,
         'csrf_test_name' : $('[name=csrf_test_name]').val(),
     };
-    $.post('/log/popDogDeets', post_vars, function(data) {
+    $.post('/logit/popDogDeets', post_vars, function(data) {
         resetRegistry();
         if (typeof data.dogID !== 'undefined') {
             // DO STUFF
@@ -771,7 +833,7 @@ function populateDog(idx) {
             }; 
             
             // get meds
-            $.post('/log/getMeds', ct_data, function(med_data) {
+            $.post('/logit/getMeds', ct_data, function(med_data) {
                 var mdl = med_data.length;
                 var mhtml = '';
                 if (mdl > 0) {
@@ -808,7 +870,7 @@ function populateDog(idx) {
             }, 'json');
 
             // get caretakers
-            $.post('/log/getCaretakers', ct_data, function(ct_stuff) {
+            $.post('/logit/getCaretakers', ct_data, function(ct_stuff) {
                 var ctl = ct_stuff.length;
                 var html = '';
                 if (ctl > 0) {
@@ -933,7 +995,7 @@ function postNewMed(post_vars, logMed) {
     if (typeof logMed === 'undefined') {
         logMed = false;
     }
-    $.post('/log/newMedicine', post_vars, function(data) {
+    $.post('/logit/newMedicine', post_vars, function(data) {
         $('#med_add_modal').modal('hide');
         setTimeout(function() {
             if (data.success) {
@@ -994,7 +1056,7 @@ function addCaretaker() {
             caretakerName : $('#ct_add_name').val(),
             caretakerEmail: $('#ct_add_email').val()
         };
-        $.post('/log/newCaretaker', post_vars, function(data) {
+        $.post('/logit/newCaretaker', post_vars, function(data) {
             $('#ct_add_modal').modal('hide');
             setTimeout(function() {
                 if (data.success) {
@@ -1061,7 +1123,7 @@ function changeDog() {
         update: 1
     };
     
-    $.post('/log/register_a_dog', post_vars, function(data) {
+    $.post('/logit/register_a_dog', post_vars, function(data) {
         if (data.success) {
             dogRegistered(post_vars.dog_name, true);
         } else {
@@ -1077,7 +1139,7 @@ function deleteMed() {
         csrf_test_name : $('[name=csrf_test_name]').val(),
     };
     
-    $.post('/log/removeMed', post_vars, function(data) {
+    $.post('/logit/removeMed', post_vars, function(data) {
         $('#med_edit_modal').modal('hide');
         setTimeout(function() {
             if (data.success) {
@@ -1103,7 +1165,7 @@ function deleteCt() {
         id: $('#ct_edit_id').val(),
         csrf_test_name : $('[name=csrf_test_name]').val(),
     };
-    $.post('/log/removeCaretaker', post_vars, function(data) {
+    $.post('/logit/removeCaretaker', post_vars, function(data) {
         $('#ct_edit_modal').modal('hide');
         setTimeout(function() {
             if (data.success) {
@@ -1158,7 +1220,7 @@ function updateMed(x) {
             medName: $('#med_edit_name').val(),
             csrf_test_name : $('[name=csrf_test_name]').val()
         };
-        $.post('/log/editMedicine', post_vars, function(data) {
+        $.post('/logit/editMedicine', post_vars, function(data) {
             $('#med_edit_modal').modal('hide');
             setTimeout(function() {
                 if (data.success) {
@@ -1200,7 +1262,7 @@ function updateCt(x) {
             caretakerEmail: $('#ct_email').val(),
             csrf_test_name : $('[name=csrf_test_name]').val()
         };
-        $.post('/log/editCaretaker', post_vars, function(data) {
+        $.post('/logit/editCaretaker', post_vars, function(data) {
             $('#ct_edit_modal').modal('hide');
             setTimeout(function() {
                 if (data.success) {

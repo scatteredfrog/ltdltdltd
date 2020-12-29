@@ -116,10 +116,10 @@
                         <select class="col-xs-10" id="edit_walk_activity">
                             <option value="0">didn't go</option>
                             <option value="1">
-                                <?= $l_action[$lang]['1'] ?>
+                                <?php echo $l_action[$lang]['1']; ?>
                             </option>
                             <option value="2">
-                                <?= $l_action[$lang]['2'] ?>
+                                <?php echo $l_action[$lang]['2']; ?>
                             </option>
                             <option value="3">Both</option>
                         </select>

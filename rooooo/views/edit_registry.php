@@ -10,7 +10,7 @@ if (isset($_SESSION['dogs'])) {
 
     <select id="dog_choice" onchange="selectDog();">
         <option value="no">(Select or a dog)</option>
-<?
+<?php
     foreach ($_SESSION['dogs'] as $k => $v) {
         echo '<option value="' . $k . '">' . $v['dogName'] . '</option>';
     }
@@ -18,7 +18,7 @@ if (isset($_SESSION['dogs'])) {
         <option value="new">Add a dog</option>
     </select>
     <input type="button" onclick="selectDog();" value="Select" />
-<?
+<?php
 } else {
 ?>
     <input type="hidden" id="dog_choice" value="new" />
@@ -28,7 +28,7 @@ if (isset($_SESSION['dogs'])) {
             selectDog();        
         });
     </script>
-<?
+<?php
 }
 ?>
 </div>

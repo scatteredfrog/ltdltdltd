@@ -63,7 +63,7 @@
 	</style>
 </head>
 <body>
-    <?
+    <?php
         echo link_tag(base_url().'css/main.css');
         echo link_tag(base_url().'css/home.css');
         echo link_tag(base_url().'css/dauber-navbar.css');
@@ -77,15 +77,15 @@
     ?>
 
     <div class='dauber-navbar no-select'>
-    <?
+    <?php
         $this->load->helper('form');
         echo form_open();
     ?>
-    <? if ($this->session->userdata('logged_in')) : ?>
+    <?php if ($this->session->userdata('logged_in')) { ?>
         <a href="/home/main_menu">
-    <? else: ?>
+    <?php } else { ?>
         <a href="/">
-    <? endif ?>
+    <?php } ?>
             <div class='dn-item'>
                 <span class='icon-home icon-white'></span><span class='hidden-xs'> Home</span>
             </div>
@@ -101,7 +101,7 @@
                 <span class='dn-msg'></span><span class='hidden-xs'> Contact Us</span>
             </div>
         </a>
-        <?
+        <?php
             if ($this->session->userdata('firstName') === 'Friend') {
                 ?> 
                 <a href="/home/create_account">
@@ -109,7 +109,7 @@
                         <span class='icon-user icon-white'></span><span class='hidden-xs'> Create Account</span>
                     </div>
                 </a>
-        <?
+        <?php
             } else {
                 switch ($this->session->userdata('language')) {
                     case '0': // physiological terms
@@ -144,15 +144,15 @@
                 <div class='dn-item' onclick='logOut();'>
                     <span class='dn-ext'></span><span class='hidden-xs'> Log Out</span>
                 </div>
-        <?
+        <?php
             }
         ?>
         <div class='dn-item' style="float: right;">
             <span class="hidden-xs hidden-sm">Welcome, </span>
-            <span class="hidden-md hidden-lg">Hi, </span>
-                <? echo $this->session->userdata('firstName'); ?>!
+            <span id="<?php echo $this->session->userdata('firstName'); ?>" class="hidden-md hidden-lg">Hi, </span>
+                <?php echo $this->session->userdata('firstName'); ?>!
         </div>
-        <?
+        <?php
             echo form_close();
         ?>
     </div>

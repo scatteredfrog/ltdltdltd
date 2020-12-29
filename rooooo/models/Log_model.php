@@ -366,23 +366,58 @@
             }
             return $retArray;
         }
-        
-        public function addWalk($walkData) {
+
+        public function addPotty($pottyData) {
             $success = false;
+            $pottyArray = array();
+            $potty_insert = array (
+                'dogID' => $pottyData['dogID'],
+                'walkDate' => $pottyData['pottyDate'],
+                'walkNotes' => $pottyData['pottyNotes'],
+                'userID' => $pottyData['userID'],
+            );
+
+            if ($this->db->insert('LTDtbPotty', $potty_insert)) {
+                $success = true;
+            }
+
+            $pottyArray['success'] = $success;
+
+            return $pottyArray;
+        }
+
+        public function addWalk($walkData) {
+            $walk_success = false;
+            $potty_success = true;
             $retArray = array();
             $insert = array (
                 'dogID' => $walkData['dogID'],
                 'walkDate' => $walkData['walkDate'],
-                'action' => $walkData['action'],
                 'walkNotes' => $walkData['walkNotes'],
                 'userID' => $walkData['userID'],
             );
             
             if ($this->db->insert('LTDtbWalk', $insert)) {
-                $success = true;
+                $walk_success = true;
+            }
+
+            if (!empty($walkData['action'])) {
+                $pottyInsert = array(
+                    'dogID' => $walkData['dogID'],
+                    'date' => $walkData['walkDate'],
+                    'action' => $walkData['action'],
+                    'userID' => $walkData['userID']
+                );
+            }
+
+            if (!$this->db->insert('LTDtbPotty', $pottyInsert)) {
+                $potty_success = false;
             }
             
-            $retArray['success'] = $success;
+            $retArray['walk_success'] = $walk_success;
+            $retArray['potty_success'] = $potty_success;
+            $retArray['success'] = $walk_success && $potty_success;
+
             return $retArray;
         }
 
