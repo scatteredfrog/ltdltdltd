@@ -1,4 +1,4 @@
-<?
+<?php
     echo link_tag(base_url().'css/walk.css');
     echo link_tag(base_url().'css/jquery.datepick.css');
     echo '<script src="' . base_url() . 'js/jquery.plugin.js"></script>';
@@ -6,6 +6,7 @@
     $form_attribs = array(
         'class' => 'form-inline',
         'id' => 'log_form',
+        'name' => 'treat_form'
     );
     echo form_open('',$form_attribs);
     echo $dogs;
@@ -47,11 +48,20 @@
         <div class="col-xs-6"></div>
     </div>
     <div class="row">
-        <div class="cox-xs-12">
+        <div class="col-xs-12">
             Type of treat:
         </div>
         <div class="col-xs-6 bdr-bot bottom5 top5" id="treat_type_container">
-            <input id="treat_type" type="text" placeholder="(optional)" />
+            <select id="treat_type"><option value="">(optional)</option></select>
+            <input type="text" class="otherTreat" id="other_treat" placeholder="type of treat"/>
+        </div>
+    </div>
+    <div class="row otherTreat">
+        <div class="col-xs-12">
+            Notes about <span id="new_treat">new treat</span>:
+        </div>
+        <div class="col-xs-6 bdr-bot bottom5 top5">
+            <textarea id="other_notes" rows="2" cols="36" placeholder=" (optional)"></textarea>
         </div>
     </div>
     <div class="row">

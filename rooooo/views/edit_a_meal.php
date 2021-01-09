@@ -1,4 +1,4 @@
-<?
+<?php
     echo link_tag(base_url().'css/walk.css');
     echo link_tag(base_url().'css/jquery.datepick.css');
     echo '<script src="' . base_url() . 'js/edit.js"></script>';

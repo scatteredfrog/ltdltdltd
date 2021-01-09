@@ -7,6 +7,7 @@
     $form_attribs = array(
         'class' => 'form-inline',
         'id' => 'log_form',
+        'name' => 'log_treat_form'
     );
     echo form_open('',$form_attribs);
     echo '<div class="row-fluid">';
@@ -16,8 +17,8 @@
 
 <div id="doggie_data" class="container">
     <div class="row">
-        <h3><span class="dogName"></span>'s Walks</h3>
+        <h3><span class="dogName"></span>'s Treats</h3>
     </div>
 </div>
-<div id="walk_list_container" class="text-center">
+<div id="treat_list_container" class="text-center">
 </div>

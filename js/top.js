@@ -241,7 +241,7 @@ function getDogDeets(dogID) {
         'csrf_test_name' : $('[name=csrf_test_name]').val(),
         'activity' : activity
     };
-    
+
     $.post('/index.php/logit/getDogInfo', post_data, function(data) {
         if (data && data['success']) {
             $('.dogName').html(data['dog']['dogName']);
@@ -252,6 +252,32 @@ function getDogDeets(dogID) {
                     $('#ql_modal_text').html(data.html);
                 }
             } else {
+                // If we're logging a treat...
+                if (activity == 'treat') {
+                    if (data['dog']['treat_list'] && (data['dog']['treat_list'].length > 0)) {
+                        data['dog']['treat_list'].forEach(function (t) {
+                            $('#treat_type').append(new Option(t.treatName, t.id));
+                        });
+                    }
+                    $('#treat_type').append(new Option('(other)', 'flirzelkwerp'));
+
+                    $('#treat_type').on('change', function() {
+                        if ($('#treat_type').val() == 'flirzelkwerp') {
+                            $('.otherTreat').show();
+                            $('#other_treat').on('change', function() {
+                                if ($('#other_treat').val() != '') {
+                                    $('#new_treat').html($('#other_treat').val());
+                                } else {
+                                    $('#new_treat').html('new treat');
+                                }
+                            });
+                        } else {
+                            $('.otherTreat').hide();
+                            $('#other_treat').off('change');
+                        }
+                    });
+                }
+
                 if (data['dog']['latest_' + activity]['date']) {
                     var gender_walk = data['dog']['gender'] == '1' ? 'Her ' : 'His ';
                     gender_walk += 'latest ' + activity + ' was ';
@@ -534,6 +560,7 @@ function submitTreat() {
         'treatDate' : treatDate,
         'treatNotes' : $('#treat_notes').val(),
         'treatType' : $('#treat_type').val(),
+        'otherType' : $('#other_treat').val(),
         'userID' : $('#user_id').val()
     };
     

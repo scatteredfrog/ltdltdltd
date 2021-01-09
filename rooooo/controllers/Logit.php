@@ -317,6 +317,8 @@ class Logit extends CI_Controller {
                         break;
                     case 'treat' :
                         $resp['dog']['latest_treat'] = $this->getLatestTreat($dogID);
+                        $this->load->model('edit_model');
+                        $resp['dog']['treat_list'] = $this->edit_model->retrieveTreatNames($dogID);
                         break;
                     case 'med' :
                         $resp['dog']['latest_med'] = $this->getLatestMed($dogID);
@@ -531,16 +533,38 @@ class Logit extends CI_Controller {
         exit();
     }
     
-    public function logTreat() {
-        // TODO: validation (date, missing data, etc.)
+    public function logTreat(): void {
+        // TODO:
+        // - validation (date, missing data, etc.)
+        // - clear confirmation if adding a new treat fails
+
+        $nSuccess = true;
         $treat_data = array();
         $treat_data['dogID'] = $this->input->post('dogID');
         $treat_data['treatDate'] = $this->input->post('treatDate');
         $treat_data['treatNotes'] = $this->input->post('treatNotes');
         $treat_data['treatType'] = $this->input->post('treatType');
+        $treat_data['other_treat'] = $this->input->post('otherType');
+        $treat_data['other_notes'] = $this->input->post('other_notes');
         $treat_data['userID'] = $this->input->post('userID');
         $this->load->model('log_model');
+
+        // If there's a new type of treat, add it to LTDtbTreats.
+        if ($treat_data['treatType'] == 'flirzelkwerp') {
+            $newTreatData = array(
+                'dogId' => $treat_data['dogID'],
+                'treatName' => $treat_data['other_treat'],
+                'notes' => $treat_data['other_notes']
+            );
+            $nSuccess = $this->log_model->insertTreat($newTreatData);
+            if ($nSuccess) {
+                $treat_data['treatType'] = $nSuccess['success'];
+                unset($treat_data['other_treat'], $treat_data['other_notes']);
+            }
+        }
+
         $success = $this->log_model->addTreat($treat_data);
+        $success['success'] = $success['success'] && $nSuccess;
         echo json_encode($success);
         exit();
     }

@@ -591,8 +591,21 @@
             return $retArray;
         }
 
-        public function insertMedicine($med) {
-            $retArray = array();
+        /**
+         * @param $med
+         * @return array
+         * $retArray['insert_id'] = id of the latest insert
+         * $retArray['success'] = either insert_id or false
+         *
+         * $med parameters should include:
+         *  dogId
+         *  medName
+         *  dosage
+         *  withMeal - 0 or 1
+         *  notes - can be null
+         */
+        public function insertMedicine($med): array {
+            $retArray = [];
             if ($this->db->insert('LTDtbMedicine', $med)) {
                 $success = $this->db->insert_id();
             }
@@ -603,5 +616,21 @@
             }
             $retArray['success'] = $success;
             return $retArray;
+        }
+
+        public function insertTreat($treat): array {
+            $retTypeArray = [];
+            if ($this->db->insert('LTDtbTreats', $treat)) {
+                $ntSuccess = $this->db->insert_id();
+            }
+
+            if (!$ntSuccess) {
+                $retTypeArray['error'] = 'There was a problem, and the new treat might not have been added.';
+                $retTypeArray['success'] = 0;
+            } else {
+                $retTypeArray['success'] = $ntSuccess;
+            }
+
+            return $retTypeArray;
         }
     }

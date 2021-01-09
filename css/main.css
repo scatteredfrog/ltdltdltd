@@ -212,3 +212,5 @@ body {    background-color: #ffffe4!important; }
 .editTable th { text-align: center; }
 .blankRow { height: 34px; }
 .datepick-popup { z-index: 1050!important; }
+.otherMedRow, .otherTreat { display: none; }
+#other_treat { margin-left: 5px; }
